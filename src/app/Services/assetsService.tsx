@@ -13,3 +13,13 @@ export default function WaveSeparator() {
 </svg>
   );
 }
+
+export const heroContent = {
+	title: "BENVENUTI ALLA CASA DEL BURGER",
+	text: "Oltre i confini del burger"
+}
+
+export const heroImage = {
+	src: "/HeroImage/Hero-Image.webp",
+	alt: "Hero image"
+}
