@@ -1,0 +1,78 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+    padding:0 !important;
+width: 100%;
+
+}
+.navContent {
+  display: flex;
+  justify-content: center; /* Center all children */
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: 15rem; /* space between left nav, logo, and right nav */
+}
+.navSide {
+  display: flex;
+  gap: 1.8rem;
+
+  /* Optional: add margin to push links closer/further from logo */
+  /* For example: margin: 0 1rem; */
+}
+.navSide :global(.nav-link) {
+    color: #fff6ea;
+font-family: var(--font-oswald), sans-serif;
+font-weight: 900;
+font-size: larger;
+/* transform: scaleY(1.2); */ /* makes it 20% taller */
+}
+.navSide :global(.nav-link:hover) {
+  color: #005b48; /* or whatever color you want on hover */
+}
+.navbarBrandCentered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+top: 20px;
+}
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  min-height: 140px; /* or a bit larger than your logo height */
+  height: 20px;
+background-color: #ce7d2d;
+
+}
+.navbarContentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.waveWrapper svg {
+  height: 70px;       /* Make wave shorter */
+  width: 100%;        /* Stretch full width */
+  display: block;     /* remove inline gap */
+}
+.waveWrapper svg path {
+  fill: #ce7d2d !important;  /* Override color to red */
+}
+
+@media (max-width: 768px) {
+  .navbarBrandCentered img {
+    width: 70px;
+  }
+  .navbarBrandCentered {
+    position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  top: -30px;
+  }
+  .navbarContainer {
+    min-height: 60px;
+  }
+}
