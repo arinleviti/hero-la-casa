@@ -1,4 +1,4 @@
-import { text } from "stream/consumers";
+
 
 export default function WaveSeparator() {
   return (
@@ -27,7 +27,7 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "VideoSection/smash-burger.mp4",
+	src: "VideoSection/smash-burger-resize.mp4",
 	title: "Instagram Video"
 }
 export const textVideoData = {

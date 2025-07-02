@@ -1,7 +1,9 @@
 .videoWrapper {
   display: flex;
   width: 100%;
-  gap: 2rem;
+
+ padding-top: clamp(2rem, 10vh, 4rem);
+  padding-bottom: clamp(2rem, 10vh, 4rem);
 }
 .videoContainer {
   display: flex;
@@ -18,17 +20,19 @@
 
 .polaroidFrame {
   position: relative;
-  width: 320px;
-  aspect-ratio: 3 / 4;
+  width: 354px;
+  height: 433px;
+  /* aspect-ratio: 3/4; */
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* subtle shadow */
+  transform: rotate(-3deg); /* Rotate counterclockwise by 3 degrees */
 }
 
 .videoFrame {
-  width: 100%;
+  width: 95%;
   height:  95%;
   display: block;
   border-radius: 0;
@@ -46,5 +50,63 @@
   pointer-events: none;  /* so clicks go through to video */
   user-select: none;
   z-index: 2;            /* on top of the video */
+}
+.videoText {
+  text-align: left;
+
+}
+.videoText h2 {
+      font-family: var(--font-oswald), sans-serif;
+      font-weight: 1000;
+      font-size: 3rem; /* increase as needed */
+      color: #005b48;
+}
+.videoText p {
+    font-family: var(--font-oswald), sans-serif;
+    font-size: 1.3rem; /* increase as needed */
+    color: #005b48;
+}
+.soundToggleButton {
+  z-index: 3;
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .polaroidFrame { 
+    width: 300px;
+  height: 366px;
+  }
+  
+  .videoWrapper {
+    flex-direction: column;
+  }
+
+  .videoContainer,
+  .videoText {
+    flex-basis: auto;  /* Let them take full width */
+    width: 100%;
+  }
+
+  /* Optional: add some spacing between the two sections */
+  .videoContainer {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .polaroidFrame {
+    width: 250px;
+    height: 306px;
+  }
 }
 
