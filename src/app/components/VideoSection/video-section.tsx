@@ -3,7 +3,7 @@
 import styles from './video-section.module.css';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { easeInOut, motion, useScroll, useTransform, Variants } from 'framer-motion';
 
 interface VideoSectionProps {
     videoData: {
@@ -20,6 +20,38 @@ interface VideoSectionProps {
 
     };
 }
+
+const textVariants: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 1,  // stagger appearance by 0.3s per item
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const sparkleVariants = {
+  hidden: { opacity: 0, rotate: 0 },
+  visible: {
+    opacity: 1,
+    rotate: 720, // spins twice
+    transition: {
+      duration: 2,
+      ease: easeInOut,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      delay: 2,
+      duration: 1,
+    },
+  },
+};
 
 export default function VideoSection({ videoData, textVideoData }: VideoSectionProps) {
 
@@ -42,16 +74,17 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
 
     // <<< NEW: Scroll progress tied to containerRef
     const { scrollYProgress } = useScroll({
-  target: containerRef,
-  offset:  ["start end", "end start"],
-});
+        target: containerRef,
+        offset: ["start end", "end start"],
+    });
+
 
     // <<< NEW: Animate opacity from 0 to 1 as scroll progresses
     const opacity = useTransform(scrollYProgress, [0, 0.2, 1], [0, 0.8, 1]);
     // <<< NEW: Animate x position from -100px (offscreen left) to 0 (final)
 
     const xMobile = useTransform(scrollYProgress, [0, 0.2], [-120, 0]);
-const xDesktop = useTransform(scrollYProgress, [0, 1], [-400, 600]);
+    const xDesktop = useTransform(scrollYProgress, [0, 1], [-400, 600]);
 
     const x = isMobile ? xMobile : xDesktop;
 
@@ -63,9 +96,8 @@ const xDesktop = useTransform(scrollYProgress, [0, 1], [-400, 600]);
 
     const toggleMute = () => {
         if (videoRef.current) {
-            const newMutedState = !videoRef.current.muted;
-            videoRef.current.muted = newMutedState;
-            setIsMuted(newMutedState);
+            videoRef.current.muted = !videoRef.current.muted;
+        setIsMuted(videoRef.current.muted);
         }
     };
 
@@ -113,13 +145,39 @@ const xDesktop = useTransform(scrollYProgress, [0, 1], [-400, 600]);
 
             </motion.div>
             <div className={styles.videoText}>
-                <h2>{textVideoData.title1}</h2>
-                <p>{textVideoData.text1}</p>
-                <h2>{textVideoData.title2}</h2>
-                <p>{textVideoData.text2}</p>
-                <h2>{textVideoData.title3}</h2>
-                <p>{textVideoData.text3}</p>
-            </div>
+  {[ // array for mapping, makes it easier to apply stagger
+    { title: textVideoData.title1, text: textVideoData.text1, extra: 'sparkles' },
+    { title: textVideoData.title2, text: textVideoData.text2 },
+    { title: textVideoData.title3, text: textVideoData.text3 },
+  ].map(({ title, text, extra }, i) => (
+    <motion.div
+      key={title}
+      custom={i}
+      variants={textVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.8 }}  // <-- Triggers when 50% visible, runs once
+      className={styles.textBlock} // Optional, for spacing etc
+    >
+      <h2>{title}</h2>
+      <p>{text}</p>
+
+      {/* Sparkles and WOW fade out after 1 second */}
+    {(extra === 'sparkles' || extra === 'wow') && (
+      <motion.img
+  src={`/VideoSection/${extra}.png`}
+  alt={extra}
+  className={styles[extra]}
+  variants={sparkleVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.6 }}
+/>
+    )}
+    </motion.div>
+  ))}
+</div>
+
         </div>
     );
 }

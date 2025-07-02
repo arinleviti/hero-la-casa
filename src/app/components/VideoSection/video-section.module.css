@@ -80,7 +80,22 @@
   justify-content: center;
   background-color: transparent;
 }
+.textBlock {
+  position: relative;  /* anchor for absolutely positioned children */
 
+}
+.sparkles{
+  position: absolute;
+  top: 00px;  /* adjust to your liking */
+  left: 10px;  /* moves sparkle inside the text block */
+  width: 50px;
+  pointer-events: none;
+  animation: spin 1s linear 5 forwards; /* spins every 1 second, repeats 5 times */
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 @media (max-width: 768px) {
   .polaroidFrame { 
     width: 300px;
