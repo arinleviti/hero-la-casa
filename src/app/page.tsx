@@ -3,7 +3,8 @@
 import Navbar from './components/Navbar/Navbar';
 import Landing from './components/LandingPage/landing-page';
 import HeroSection from './components/HeroSection/hero-section';
-import {heroContent, heroImage} from './Services/assetsService';
+import {heroContent, heroImage, videoData, textVideoData} from './Services/assetsService';
+import VideoSection from './components/VideoSection/video-section';
 
 export default function HomePage() {
 
@@ -16,6 +17,7 @@ export default function HomePage() {
         <div style={{ height: '150vh' }}></div> {/* add vertical space to scroll */}
       </main>
       <HeroSection textData={heroContent} imageData={heroImage} />
+      <VideoSection videoData={videoData} textVideoData={textVideoData} />
     </div>
 
   );

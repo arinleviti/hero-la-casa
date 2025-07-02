@@ -1,3 +1,5 @@
+import { text } from "stream/consumers";
+
 export default function WaveSeparator() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
@@ -22,4 +24,17 @@ export const heroContent = {
 export const heroImage = {
 	src: "/HeroImage/Hero-Image.webp",
 	alt: "Hero image"
+}
+
+export const videoData = {
+	src: "VideoSection/smash-burger.mp4",
+	title: "Instagram Video"
+}
+export const textVideoData = {
+	title1: "Un locale raffinatamente semplice",
+	title2: "Il burger che ti sorprende",
+	title3: "Scopri il nostro menu",
+	text1: "Design curato, atmosfera top, staff impeccabile. Da HERO ti senti sempre a casa.",
+	text2: "Burger anche vegan e gluten free, perché amiamo il pianeta quanto il sapore.",
+	text3: "HERO nasce esplorando il mondo. Ogni morso racconta una storia."	
 }
