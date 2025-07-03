@@ -56,15 +56,21 @@
 
 }
 .videoText h2 {
+  
       font-family: var(--font-oswald), sans-serif;
       font-weight: 1000;
       font-size: 3rem; /* increase as needed */
       color: #005b48;
 }
 .videoText p {
+ 
     font-family: var(--font-oswald), sans-serif;
     font-size: 1.3rem; /* increase as needed */
     color: #005b48;
+}
+.videoText a {
+  text-decoration: none;
+  color: inherit; /* Keeps text color same as surrounding text */
 }
 .soundToggleButton {
   z-index: 3;
@@ -82,7 +88,7 @@
 }
 .textBlock {
   position: relative;  /* anchor for absolutely positioned children */
-
+text-decoration: none;
 }
 .sparkles{
   position: absolute;
@@ -90,7 +96,20 @@
   left: 10px;  /* moves sparkle inside the text block */
   width: 50px;
   pointer-events: none;
-  animation: spin 1s linear 5 forwards; /* spins every 1 second, repeats 5 times */
+}
+.wow{
+  position: absolute;
+  top: 00px;  /* adjust to your liking */
+  right: 150px;  /* moves wow inside the text block */
+  width: 30px;
+  pointer-events: none;
+}
+.arrow {
+  position: absolute;
+  top: 22px;  /* adjust to your liking */
+  right: 210px;  /* moves arrow inside the text block */
+  width: 60px;
+  pointer-events: none;
 }
 @keyframes spin {
   from { transform: rotate(0deg); }
