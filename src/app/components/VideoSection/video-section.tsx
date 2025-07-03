@@ -94,9 +94,9 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
   const [isMuted, setIsMuted] = useState(true);
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null); // <<< NEW: ref for scroll tracking
+  const containerRef = useRef<HTMLDivElement>(null); // <<< ref for scroll tracking
 
-  // <<< NEW: Scroll progress tied to containerRef
+  //Scroll progress tied to containerRef
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -108,21 +108,12 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
   // <<< NEW: Animate x position from -100px (offscreen left) to 0 (final)
 
   const xMobile = useTransform(scrollYProgress, [0, 0.2], [-120, 0]);
-  const xDesktop = useTransform(scrollYProgress, [0, 1], [-400, 600]);
+  const xDesktop = useTransform(scrollYProgress, [0, 0.4], [-400, 0]);
 
   const x = isMobile ? xMobile : xDesktop;
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted;
-    }
-  }, [isMuted]);
-
   const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
+    setIsMuted(prev => !prev);
   };
 
   return (

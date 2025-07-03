@@ -38,3 +38,9 @@ export const textVideoData = {
 	text2: "Burger anche vegan e gluten free, perché amiamo il pianeta quanto il sapore.",
 	text3: "HERO nasce esplorando il mondo. Ogni morso racconta una storia."	
 }
+
+export const picturesForBelt1 = [
+	{ src: "/PictureBelt/sabrina.webp", alt: "Picture 1" },
+	{ src: "/PictureBelt/mauro-serving-cro.webp", alt: "Picture 2" },
+	{ src: "/PictureBelt/chantal-reduced.webp", alt: "Picture 3" }
+];
