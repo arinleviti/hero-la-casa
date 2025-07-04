@@ -92,15 +92,15 @@ text-decoration: none;
 }
 .sparkles{
   position: absolute;
-  top: 00px;  /* adjust to your liking */
-  left: 10px;  /* moves sparkle inside the text block */
+  top: -10px;  /* adjust to your liking */
+  left: -20px;  /* moves sparkle inside the text block */
   width: 50px;
   pointer-events: none;
 }
 .wow{
   position: absolute;
   top: 00px;  /* adjust to your liking */
-  right: 150px;  /* moves wow inside the text block */
+  left: -40px;  /* moves wow inside the text block */
   width: 30px;
   pointer-events: none;
 }
