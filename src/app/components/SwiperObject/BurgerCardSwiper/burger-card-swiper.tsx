@@ -1,4 +1,4 @@
-import styles from './swiper-slide.module.css';
+import styles from './burger-card-swiper.module.css';
 import Image from 'next/image';
 import { Burger } from '../../../Services/menuItems';
 
@@ -15,10 +15,11 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
     <div className={styles.card} onClick={onClick}>
       <div className={styles.imageWrapper}>
         <Image
-          src={burger.image || '/images/placeholder.png'}
+          src={burger.imageSmallUrl || '/images/placeholder.png'}
           alt={burger.name}
-          layout="fill"
-          objectFit="cover"
+          width={250}
+  height={250}
+          style={{ objectFit: "cover" }}
           priority={true}
         />
       </div>

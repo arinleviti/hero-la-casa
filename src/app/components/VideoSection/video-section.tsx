@@ -3,7 +3,7 @@
 import styles from './video-section.module.css';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
-import { easeInOut, motion, useScroll, useTransform, Variants } from 'framer-motion';
+import { easeInOut, motion, useScroll, useTransform, Variants} from 'framer-motion';
 import Link from 'next/link';
 
 interface VideoSectionProps {
@@ -48,18 +48,22 @@ const sparkleVariants: Variants = {
   },
 
 };
-const wowVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.5 },
+const highlightImageVariants: Variants = {
+  hidden: {
+    opacity: 0.6,
+    transform: 'scaleX(0)', // ✨ full transform string
+    transformOrigin: 'left center',
+  },
   visible: {
-    opacity: [1, 1, 0],
-    scale: [0.5, 1.9, 1],
+    opacity: 0.6,
+    transform: 'scaleX(1)', // ✨ full transform string
     transition: {
-      duration: 3,
-      ease: easeInOut,
-      times: [0, 0.7, 1],
+      duration: 1.2,
+      ease: 'easeInOut',
     },
   },
 };
+
 
 const arrowVariants: Variants = {
   hidden: { opacity: 0, x: 0 },
@@ -105,8 +109,6 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
 
   // <<< NEW: Animate opacity from 0 to 1 as scroll progresses
   const opacity = useTransform(scrollYProgress, [0, 0.2, 1], [0, 0.8, 1]);
-  // <<< NEW: Animate x position from -100px (offscreen left) to 0 (final)
-
   const xMobile = useTransform(scrollYProgress, [0, 0.2], [-120, 0]);
   const xDesktop = useTransform(scrollYProgress, [0, 0.4], [-400, 0]);
 
@@ -115,6 +117,8 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
   const toggleMute = () => {
     setIsMuted(prev => !prev);
   };
+
+
 
   return (
     <div ref={containerRef} className={styles.videoWrapper}>
@@ -162,8 +166,8 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
       <div className={styles.videoText}>
         {[ // array for mapping, makes it easier to apply stagger
           { title: textVideoData.title1, text: textVideoData.text1, extra: 'sparkles' },
-          { title: textVideoData.title2, text: textVideoData.text2, extra: 'wow' },
-          { title: textVideoData.title3, text: textVideoData.text3, extra: 'arrow' },
+          { title: textVideoData.title2, text: textVideoData.text2, /* extra: 'wow' */ },
+          { title: textVideoData.title3, text: textVideoData.text3, extra: 'highlight' },
         ].map(({ title, text, extra }, i, arr) => {
           const isLast = i === arr.length - 1;
 
@@ -178,20 +182,66 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                   viewport={{ once: true, amount: 0.8 }}
                   className={styles.textBlock}
                 >
+                  <h2 className={styles.highlightWrapper}>
+                    <span className={styles.highlightedText}>{title}</span>
+                    <div className={styles.highlight}>
+                      <motion.div
+                        className={styles.highlightInner}
+
+                      >
+                        {/* The actual image */}
+                        <Image
+                          src="/VideoSection/highlight.png"
+                          alt="highlight"
+                          className={styles.highlightImage}
+                          width={300}
+                          height={50}
+                          priority
+                        />
+
+                        {/* The sliding mask */}
+                        <motion.div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            height: '100%',
+                            width: '100%',
+                            backgroundColor: 'white',  // or your background color
+                            zIndex: 2,
+                          }}
+                          initial={{ x: 0 }}
+                          whileInView={{ x: '100%' }}
+                          viewport={{ once: true, amount: 0.6 }} // triggers when 100% of it is visible
+                          transition={{ duration: 1.2, ease: 'easeInOut', delay: 2 }}
+                        />
+                      </motion.div>
+                    </div>
+                  </h2>
+                  <p>{text}</p>
+                </motion.div>
+              </Link>
+            );
+          }
+          /* if (isLast) {
+            return (
+              <Link key={title} href="/target-page" passHref>
+                <motion.div
+                  custom={i}
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.8 }}
+                  className={styles.textBlock}
+                >
                   <h2>{title}</h2>
                   <p>{text}</p>
-                  {(extra === 'sparkles' || extra === 'wow' || extra === 'arrow') && (
+                  {(extra === 'highlight') && (
                     <motion.img
-                      src={`/VideoSection/${extra}.png`}
-                      alt={extra}
-                      className={styles[extra]}
-                      variants={
-                        extra === 'sparkles'
-                          ? sparkleVariants
-                          : extra === 'wow'
-                            ? wowVariants
-                            : arrowVariants
-                      }
+                      src="/VideoSection/highlight.png"
+                      alt="highlight"
+                      className={styles.highlight}
+                      variants={highlightVariants}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.6 }}
@@ -200,7 +250,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                 </motion.div>
               </Link>
             );
-          }
+          } */
           return (
 
             <motion.div
@@ -225,7 +275,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                     extra === 'sparkles'
                       ? sparkleVariants
                       : extra === 'wow'
-                        ? wowVariants
+                        ? highlightImageVariants
                         : arrowVariants
                   }
                   initial="hidden"

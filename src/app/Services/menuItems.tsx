@@ -8,7 +8,8 @@ export interface Burger {
   categories: string[];
   priceOptions: WeightOption[]; // replaces single price
   extras?: ExtraOption[];
-  image?: string;
+  imageSmallUrl?: string;
+  imageLargeUrl?: string; // optional for UI, if you have larger images
 }
 
 export interface WeightOption {
@@ -40,7 +41,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png"
   },
   {
     id: 2, // unique identifier
@@ -60,7 +62,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png"
   },
   {
     id: 3, // unique identifier
@@ -77,7 +80,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
   {
     id: 4, // unique identifier
@@ -102,7 +106,8 @@ export const burgers: Burger[] = [
       { weight: 220, price: 14.9 },
     ],
     extras: [{ name: "Cipolle caramellate", price: 1.5 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639875/Nostrano_rree3j.png"
   },
   {
     id: 5, // unique identifier
@@ -122,7 +127,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
   {
     id: 6, // unique identifier
@@ -144,7 +150,8 @@ export const burgers: Burger[] = [
       { name: "Cipolle caramellate", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
     ],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png"
   },
   {
     id: 7, // unique identifier
@@ -164,7 +171,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini", "uova"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   },
   {
     id: 8, // unique identifier
@@ -187,10 +195,11 @@ export const burgers: Burger[] = [
       { name: "Formaggio", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
     ],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png", // optional for UI
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
   },
   {
-    id: 8, // unique identifier
+    id: 9, // unique identifier
     name: "IL CRUNCH",
     ingredients: [
       "Burger di frumento panato",
@@ -211,10 +220,11 @@ export const burgers: Burger[] = [
       { name: "Salsa al formaggio cheddar", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
     ],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png", // optional for UI
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   },
   {
-    id: 9, // unique identifier
+    id: 10, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -230,10 +240,11 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 150, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
   {
-    id: 9, // unique identifier
+    id: 11, // unique identifier
     name: "GREEN BURGER",
     ingredients: [
       "Burger vegetale Beyond Meat",
@@ -249,6 +260,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 115, price: 13.99 }],
-    image: "/images/classic-beef-burger.png", // optional for UI
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
 ];

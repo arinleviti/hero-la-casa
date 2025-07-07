@@ -1,4 +1,4 @@
-// components/BurgerSwiper.tsx
+
 
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,12 +6,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './BurgerSwiper.css'; // You can create this for custom styles
+import styles from './swiper-object.module.css'; // You can create this for custom styles
 
 // Swiper modules
-import { Pagination } from 'swiper/modules';
-import  {Burger} from '../../Services/menuItems'; // Adjust the import path as necessary
-import BurgerModal from './BurgerModal';
+import { Burger } from '../../Services/menuItems'; // Adjust the import path as necessary
+import BurgerModal from './SwiperModal/swiper-modal';
 import BurgerCardSwiper from './BurgerCardSwiper/burger-card-swiper';
 
 interface Props {
@@ -22,14 +21,17 @@ const BurgerSwiper = ({ burgers }: Props) => {
   const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
 
   return (
-    <>
+    <div className={styles.mySwiperWrapper}>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={30}
-        centeredSlides={true}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
+        loop={true}
         className="mySwiper"
+        speed={4000}   // duration of slide animation in ms
+        autoplay={{
+          delay: 1,        // no delay between slides
+          disableOnInteraction: false,
+        }}
       >
         {burgers.map((burger) => (
           <SwiperSlide key={burger.id}>
@@ -44,7 +46,7 @@ const BurgerSwiper = ({ burgers }: Props) => {
       {selectedBurger && (
         <BurgerModal burger={selectedBurger} onClose={() => setSelectedBurger(null)} />
       )}
-    </>
+    </div>
   );
 };
 

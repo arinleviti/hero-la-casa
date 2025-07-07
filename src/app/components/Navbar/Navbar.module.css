@@ -4,7 +4,6 @@
   z-index: 1000;
     padding:0 !important;
 width: 100%;
-
 }
 .navContent {
   display: flex;
@@ -24,6 +23,7 @@ width: 100%;
 .navSide :global(.nav-link) {
     color: #fff6ea;
 font-family: var(--font-oswald), sans-serif;
+
 font-weight: 900;
 font-size: larger;
 /* transform: scaleY(1.2); */ /* makes it 20% taller */
@@ -50,7 +50,6 @@ background-color: #ce7d2d;
   display: flex;
   flex-direction: column;
   width: 100%;
-
 }
 .waveWrapper svg {
   height: 70px;       /* Make wave shorter */

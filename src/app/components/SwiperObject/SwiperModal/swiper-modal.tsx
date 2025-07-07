@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { Burger } from '../../../Services/menuItems';
 import Image from 'next/image';
-import styles from './BootstrapBurgerModal.module.css';
+import styles from './swiper-modal.module.css';
 
 interface Props {
   burger: Burger | null;
@@ -20,7 +20,7 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
       <Modal.Body>
         <div className={styles.imageWrapper}>
           <Image
-            src={burger.image || '/images/placeholder.png'}
+            src={burger.imageLargeUrl || '/images/placeholder.png'}
             alt={burger.name}
             layout="fill"
             objectFit="cover"

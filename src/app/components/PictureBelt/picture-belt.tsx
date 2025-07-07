@@ -29,6 +29,7 @@ export default function PictureBelt({ pictures }: PictureBeltProps) {
                 src={pic.src}
                 alt={pic.alt}
                 fill             // Replaces layout="responsive"
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
   style={{ objectFit: 'cover' }}
               />
             </Col>

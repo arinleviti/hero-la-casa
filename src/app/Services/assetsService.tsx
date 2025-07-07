@@ -31,9 +31,9 @@ export const videoData = {
 	title: "Instagram Video"
 }
 export const textVideoData = {
-	title1: "Un locale raffinatamente semplice",
-	title2: "Il burger che ti sorprende",
-	title3: "Scopri il nostro menu",
+	title1: "UN LOCALE RAFFINATAMENTE SEMPLICE",
+	title2: "IL BURGER CHE TI SORPRENDE",
+	title3: "SCOPRI IL NOSTRO MENU",
 	text1: "Design curato, atmosfera top, staff impeccabile. Da HERO ti senti sempre a casa.",
 	text2: "Burger anche vegan e gluten free, perché amiamo il pianeta quanto il sapore.",
 	text3: "HERO nasce esplorando il mondo. Ogni morso racconta una storia."	
