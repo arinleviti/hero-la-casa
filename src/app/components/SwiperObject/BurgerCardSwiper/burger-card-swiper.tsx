@@ -15,11 +15,11 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
     <div className={styles.card} onClick={onClick}>
       <div className={styles.imageWrapper}>
         <Image
-          src={burger.imageSmallUrl || '/images/placeholder.png'}
+         src={burger.imageSmallUrl || '/images/placeholder.png'}
           alt={burger.name}
           width={250}
-  height={250}
-          style={{ objectFit: "cover" }}
+          height={250}
+          style={{ objectFit: 'contain' }}
           priority={true}
         />
       </div>
@@ -28,7 +28,7 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
 
       <p className={styles.description}>
         {burger.description.length > 80
-          ? burger.description.slice(0, 80) + '...'
+          ? burger.description.slice(0, 100) + '...'
           : burger.description}
       </p>
     </div>

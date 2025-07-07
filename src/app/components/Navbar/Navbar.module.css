@@ -36,12 +36,12 @@ font-size: larger;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-top: 20px;
+top: 10px;
 }
 .navbarContainer {
   display: flex;
   align-items: center;
-  min-height: 140px; /* or a bit larger than your logo height */
+  min-height: 80px; /* or a bit larger than your logo height */
   height: 20px;
 background-color: #ce7d2d;
 

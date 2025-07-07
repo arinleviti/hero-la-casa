@@ -11,10 +11,10 @@ export default function LandingInner() {
   // Scroll-based animations.
   //When scrollYProgress is 0 → make opacity 1 (fully visible) 
   //When scrollYProgress reaches 0.3 → make opacity 0 (fully invisible)
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const logoScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.7]);
-  const logoY = useTransform(scrollYProgress, [0, 0.3], [0, -250]);
-  const logoOpacity = useTransform(scrollYProgress, [0,0.29, 0.3], [1,1, 0]);
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const logoScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.4]);
+  const logoY = useTransform(scrollYProgress, [0, 0.2], [0, -315]);
+  const logoOpacity = useTransform(scrollYProgress, [0,0.19, 0.195, 0.2], [1,1, 0.3, 0]);
 
 
   return (

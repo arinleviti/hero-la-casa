@@ -13,28 +13,29 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
   if (!burger) return null;
 
   return (
-    <Modal show={true} onHide={onClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>{burger.name}</Modal.Title>
+    <Modal show={true} onHide={onClose} centered dialogClassName={styles.modalDialog}
+  contentClassName={styles.modalContent}>
+      <Modal.Header closeButton className={styles.modalHeader}>
+        <Modal.Title  className={styles.modalTitle}>{burger.name}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className={styles.modalBody}>
         <div className={styles.imageWrapper}>
           <Image
             src={burger.imageLargeUrl || '/images/placeholder.png'}
             alt={burger.name}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
         <p className={styles.description}>{burger.description}</p>
-        <h5>Ingredients:</h5>
+        <h5>INGREDIENTI:</h5>
         <ul className={styles.ingredients}>
           {burger.ingredients.map((ingredient, i) => (
-            <li key={i}>{ingredient}</li>
+            <li key={i} className={styles.ingredientItem}>{ingredient}</li>
           ))}
         </ul>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className={styles.modalFooter}>
         <Button variant="secondary" onClick={onClose}>
           Close
         </Button>

@@ -13,8 +13,8 @@ export default function NavbarBasic() {
 
     const { scrollYProgress } = useScroll();
 
-    // Navbar logo opacity: 0 at top, 1 after 0.3 scroll
-    const navbarLogoOpacity = useTransform(scrollYProgress, [0,0.29, 0.3], [0,0, 1]);
+    // Navbar logo opacity: 0 at top, 1 after 0.2 scroll
+    const navbarLogoOpacity = useTransform(scrollYProgress, [0,0.19, 0.2], [0,0, 1]);
 
 
     return (
@@ -28,7 +28,7 @@ export default function NavbarBasic() {
                     {/* Center logo */}
                     {/* Navbar Brand with motion opacity */}
                     <motion.div style={{ opacity: navbarLogoOpacity }}><Navbar.Brand href="/" className={styles.navbarBrandCentered}>
-                        <Image src="/logos/logo-crema.svg" alt="MyRestaurant logo" width={150} height={130} />
+                        <Image src="/logos/logo-crema.svg" alt="MyRestaurant logo" width={130} height={100} />
                     </Navbar.Brand></motion.div>
 
                     <Navbar.Collapse id="navbar-nav">
