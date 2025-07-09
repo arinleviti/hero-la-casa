@@ -1,3 +1,6 @@
+.card {
+  background-color: #fff8f1; /* or any color you want */
+}
 .burgerCardTitle {
       font-family: var(--font-anton);
       font-weight: 300;
@@ -11,7 +14,7 @@
 }
 .burgerCardImageWrapper:hover {
     transform: scale(1.1);
-  z-index: 10;
+  z-index: 1;
 }
 
 .burgerCardIngredients, .burgerCardPrice {

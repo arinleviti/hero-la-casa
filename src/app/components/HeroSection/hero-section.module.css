@@ -31,6 +31,24 @@
    /*  font-family: var(--font-anton); */
     color: #005b48;
 }
+.reserveButton {
+  background-color: #ce7d2d;     
+  border: none;                  /* optional: remove border */
+  color: #005b48;                  /* white text */
+  font-family: var(--font-anton);
+  font-size: 1.4rem;             /* adjust size if needed */
+  padding: 0.2rem 1rem;        /* spacing around text */
+  border-radius: 6px;            /* optional: round corners */
+  transition: background-color 0.2s ease;
+}
+.reserveButton:hover,
+.reserveButton:focus {
+  background-color: #005b48;     /* darker red on hover */
+  color: white;
+}
+.buttonContainer {
+  padding-top: 2rem; /* Add space above button */
+}
 @media (max-width: 600px) {
   .heroWrapper {
     flex-direction: column;

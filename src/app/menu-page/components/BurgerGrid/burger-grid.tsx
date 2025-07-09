@@ -5,6 +5,7 @@ import { useState } from 'react';
 import FilterBar from '../FilterBar/filter-bar';
 import BurgerCard from '../BurgerCard/burger-card'
 import { Burger } from '../../../Services/menuItems';
+import { div } from 'framer-motion/client';
 
 interface Props {
     burgers: Burger[];
@@ -31,21 +32,25 @@ export default function BurgerGrid({ burgers, onSelect }: Props) {
     });
 
     return (
-        <Container fluid>
-            <FilterBar filters={filters} setFilters={setFilters} />
+        <>
+            <div className={styles.filterBar}>
+                <FilterBar filters={filters} setFilters={setFilters} />
+            </div>
+            <Container fluid>
 
 
-            <Row>
-                {filteredBurgers.map(burger => (
-                    <Col key={burger.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
-                        <BurgerCard burger={burger} onClick={() => onSelect(burger)} />
-                    </Col>
-                ))}
-            </Row>
+                <Row>
+                    {filteredBurgers.map(burger => (
+                        <Col key={burger.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
+                            <BurgerCard burger={burger} onClick={() => onSelect(burger)} />
+                        </Col>
+                    ))}
+                </Row>
 
-            {filteredBurgers.length === 0 && (
-                <p className="text-muted text-center mt-5">Nessun burger corrisponde ai filtri selezionati.</p>
-            )}
-        </Container>
+                {filteredBurgers.length === 0 && (
+                    <p className="text-muted text-center mt-5">Nessun burger corrisponde ai filtri selezionati.</p>
+                )}
+            </Container>
+            </>
     );
 }

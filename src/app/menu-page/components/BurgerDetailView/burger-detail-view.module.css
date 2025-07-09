@@ -1,0 +1,20 @@
+.detailView {
+  padding-top: 10rem;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.burgerImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.infoCol {
+  padding-left: 1rem;
+}

@@ -1,5 +1,6 @@
 'use client';
-
+import styles from './filter-bar.module.css';
+import { div } from 'framer-motion/client';
 import { ButtonGroup, ToggleButton } from 'react-bootstrap';
 
 interface Filters {
@@ -27,61 +28,63 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
   };
 
   return (
-    <ButtonGroup className="mb-4 flex-wrap">
+    <div className={styles.filterBar}>
+    <ButtonGroup className=" flex-wrap">
       <ToggleButton
         id="filter-vegan"
         value="vegan"
         type="checkbox"
-        variant={filters.vegan ? 'success' : 'outline-success'}
+        className={`${styles.button} ${styles.vegan}`}
         checked={filters.vegan}
         onClick={() => toggleFilter('vegan')}
       >
-        Vegano
+        VEGANO
       </ToggleButton>
 
       <ToggleButton
         id="filter-beef"
         value="beef"
         type="checkbox"
-        variant={filters.beef ? 'danger' : 'outline-danger'}
+        className={`${styles.button} ${styles.beef}`}
         checked={filters.beef}
         onClick={() => toggleFilter('beef')}
       >
-        Manzo
+        MANZO
       </ToggleButton>
 
       <ToggleButton
         id="filter-mediumSpicy"
         value="mediumSpicy"
         type="checkbox"
-        variant={filters.mediumSpicy ? 'warning' : 'outline-warning'}
+        className={`${styles.button} ${styles.mediumSpicy}`}
         checked={filters.mediumSpicy}
         onClick={() => toggleFilter('mediumSpicy')}
       >
-        Leggermente Piccante
+        LEGGERMENTE PICCANTE
       </ToggleButton>
 
       <ToggleButton
         id="filter-spicy"
         value="spicy"
         type="checkbox"
-        variant={filters.spicy ? 'warning' : 'outline-warning'}
+        className={`${styles.button} ${styles.spicy}`}
         checked={filters.spicy}
         onClick={() => toggleFilter('spicy')}
       >
-        Piccante
+        PICCANTE
       </ToggleButton>
 
       <ToggleButton
         id="filter-fish"
         value="fish"
+        className={`${styles.button} ${styles.fish}`}
         type="checkbox"
-        variant={filters.fish ? 'info' : 'outline-info'}
         checked={filters.fish}
         onClick={() => toggleFilter('fish')}
       >
-        Pesce
+        PESCE
       </ToggleButton>
     </ButtonGroup>
+    </div>
   );
 }

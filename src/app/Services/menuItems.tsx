@@ -25,7 +25,7 @@ export interface ExtraOption {
 export const burgers: Burger[] = [
   {
     id: 1, // unique identifier
-    name: "ANGUS di ABERDEEN",
+    name: "ANGUS DI ABERDEEN",
     ingredients: [
       "Carne di Angus",
       "Lattuga",

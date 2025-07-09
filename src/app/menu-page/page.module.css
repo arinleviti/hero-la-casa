@@ -16,7 +16,7 @@ width: 100%;
 .gridPage {
   width: 100%;
 /*   flex-shrink: 0; */
-  padding: 0 2rem;
+  padding: 0 0rem;
   box-sizing: border-box;
 }
 .detailPage {
