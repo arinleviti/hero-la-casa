@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import WaveSeparator from '../../Services/assetsService'
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export default function NavbarBasic() {
     const [expanded, setExpanded] = useState(false);
@@ -14,8 +15,9 @@ export default function NavbarBasic() {
     const { scrollYProgress } = useScroll();
 
     // Navbar logo opacity: 0 at top, 1 after 0.2 scroll
-    const navbarLogoOpacity = useTransform(scrollYProgress, [0,0.19, 0.2], [0,0, 1]);
-
+    const navbarLogoOpacity = useTransform(scrollYProgress, [0, 0.19, 0.2], [0, 0, 1]);
+    const pathname = usePathname();
+    const isHome = pathname === '/';
 
     return (
         <Navbar expand="lg" expanded={expanded} className={styles.navbar}>
@@ -27,15 +29,21 @@ export default function NavbarBasic() {
                     />
                     {/* Center logo */}
                     {/* Navbar Brand with motion opacity */}
-                    <motion.div style={{ opacity: navbarLogoOpacity }}><Navbar.Brand href="/" className={styles.navbarBrandCentered}>
-                        <Image src="/logos/logo-crema.svg" alt="MyRestaurant logo" width={130} height={100} />
-                    </Navbar.Brand></motion.div>
-
+                    {isHome && (
+                        <motion.div style={{ opacity: navbarLogoOpacity }}><Navbar.Brand href="/" className={styles.navbarBrandCentered}>
+                            <Image src="/logos/logo-crema.svg" alt="MyRestaurant logo" width={130} height={100} />
+                        </Navbar.Brand></motion.div>
+                    )}
+                    {!isHome && (
+                        <Navbar.Brand href="/" className={styles.navbarBrandCentered}>
+                            <Image src="/logos/logo-crema.svg" alt="MyRestaurant logo" width={130} height={100} />
+                        </Navbar.Brand>
+                    )}
                     <Navbar.Collapse id="navbar-nav">
                         <div className={styles.navContent}>
                             {/* Left side links */}
                             <Nav className={styles.navSide}>
-                                <Nav.Link as={Link} href="/">MENU</Nav.Link>
+                                <Nav.Link as={Link} href="/menu-page">MENU</Nav.Link>
                                 <Nav.Link as={Link} href="/menu">CHI SIAMO</Nav.Link>
                             </Nav>
 

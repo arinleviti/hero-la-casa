@@ -1,0 +1,34 @@
+.burgerCardTitle {
+      font-family: var(--font-anton);
+      font-weight: 300;
+      font-size: 2rem; /* increase as needed */
+      color: #005b48;
+      text-align: center;
+
+}
+.burgerCardImageWrapper{
+ transition: transform 0.3s ease;
+}
+.burgerCardImageWrapper:hover {
+    transform: scale(1.1);
+  z-index: 10;
+}
+
+.burgerCardIngredients, .burgerCardPrice {
+font-family: var(--font-oswald), sans-serif;
+   /*  font-family: var(--font-anton); */
+    color: #005b48;
+    text-align: center;
+}
+.burgerCardPrice{
+    font-weight: 900;
+font-family: var(--font-oswald), sans-serif;
+  color: #005b48;
+  text-align: center;
+  margin-top: auto; /* Push it to bottom */
+}
+.burgerCardBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

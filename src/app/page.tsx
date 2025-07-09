@@ -1,6 +1,5 @@
 "use client";
 import styles from './page.module.css';
-import Navbar from './components/Navbar/Navbar';
 import Landing from './components/LandingPage/landing-page';
 import HeroSection from './components/HeroSection/hero-section';
 import {heroContent, heroImage, videoData, textVideoData, picturesForBelt1} from './Services/assetsService';
@@ -14,7 +13,7 @@ export default function HomePage() {
   return (
     <div className={styles.homeWrapper}>
       <Landing />
-      <Navbar />
+      {/* <Navbar /> */}
       <main style={{ padding: '2rem' }}>
         
         <div style={{ height: '60vh' }}></div> {/* add vertical space to scroll */}
