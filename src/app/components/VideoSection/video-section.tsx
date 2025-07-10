@@ -38,12 +38,13 @@ const textVariants: Variants = {
 const sparkleVariants: Variants = {
   hidden: { opacity: 0, rotate: 0 },
   visible: {
-    opacity: [1, 1, 0], // fade in, hold, then fade out
-    rotate: [0, 600, 600], // spin once
+    opacity: [0,1, 1, 0], // fade in, hold, then fade out
+    rotate: [0,0, 800, 800], // spin once
     transition: {
-      duration: 1.5,
+      delay: 3.2,
+      duration: 2.5,
       ease: easeInOut,
-      times: [0, 0.85, 1],
+      times: [0, 0.2, 0.85, 1],
     },
   },
 

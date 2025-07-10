@@ -30,7 +30,7 @@ export default function BurgerCard({ burger, onClick }: Props) {
       )}
 
       <Card.Body className={`${styles.burgerCardBody}`}>
-        <Card.Title className={`${styles.burgerCardTitle} text-center `} style={{ fontSize: '1.2rem' }}>
+        <Card.Title className={`${styles.burgerCardTitle} text-center `}>
           {burger.name}
         </Card.Title>
 
