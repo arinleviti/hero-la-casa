@@ -5,7 +5,6 @@ import { useState } from 'react';
 import FilterBar from '../FilterBar/filter-bar';
 import BurgerCard from '../BurgerCard/burger-card'
 import { Burger } from '../../../Services/menuItems';
-import { div } from 'framer-motion/client';
 
 interface Props {
     burgers: Burger[];
@@ -36,8 +35,8 @@ export default function BurgerGrid({ burgers, onSelect }: Props) {
             <div className={styles.filterBar}>
                 <FilterBar filters={filters} setFilters={setFilters} />
             </div>
-            <Container fluid>
-
+            <Container fluid className={styles.burgerGridContainer}>
+                <h2 className={styles.gridTitle}>I NOSTRI BURGER</h2>
 
                 <Row>
                     {filteredBurgers.map(burger => (
@@ -51,6 +50,6 @@ export default function BurgerGrid({ burgers, onSelect }: Props) {
                     <p className="text-muted text-center mt-5">Nessun burger corrisponde ai filtri selezionati.</p>
                 )}
             </Container>
-            </>
+        </>
     );
 }

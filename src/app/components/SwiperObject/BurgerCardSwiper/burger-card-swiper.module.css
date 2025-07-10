@@ -21,6 +21,7 @@
 .description {
   font-family: var(--font-oswald), sans-serif;
    /*  font-family: var(--font-anton); */
+   font-family: var(--font-kalam);
     color: #005b48;
     text-align: center;
 }

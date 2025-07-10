@@ -5,3 +5,15 @@
     width: 100%;
     background-color: #005b48;
 }
+.gridTitle {
+  font-family: var(--font-anton);
+  font-size: 3rem;
+  text-align: center;
+  color: #005b48;
+  margin: 2rem 0;
+}
+.burgerGridContainer {
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

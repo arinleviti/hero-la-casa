@@ -173,7 +173,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
 
           if (isLast) {
             return (
-              <Link key={title} href="/target-page" passHref>
+              <Link key={title} href="/menu-page" passHref>
                 <motion.div
                   custom={i}
                   variants={textVariants}
@@ -195,7 +195,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                           alt="highlight"
                           className={styles.highlightImage}
                           width={300}
-                          height={50}
+                          height={40}
                           priority
                         />
 
@@ -207,13 +207,13 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                             left: 0,
                             height: '100%',
                             width: '100%',
-                            backgroundColor: 'white',  // or your background color
+                            backgroundColor: '#edd5c3',  // or your background color
                             zIndex: 2,
                           }}
                           initial={{ x: 0 }}
                           whileInView={{ x: '100%' }}
                           viewport={{ once: true, amount: 0.6 }} // triggers when 100% of it is visible
-                          transition={{ duration: 1.2, ease: 'easeInOut', delay: 2 }}
+                          transition={{ duration: 0.6, ease: 'easeInOut', delay: 2.5 }}
                         />
                       </motion.div>
                     </div>
@@ -223,34 +223,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
               </Link>
             );
           }
-          /* if (isLast) {
-            return (
-              <Link key={title} href="/target-page" passHref>
-                <motion.div
-                  custom={i}
-                  variants={textVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.8 }}
-                  className={styles.textBlock}
-                >
-                  <h2>{title}</h2>
-                  <p>{text}</p>
-                  {(extra === 'highlight') && (
-                    <motion.img
-                      src="/VideoSection/highlight.png"
-                      alt="highlight"
-                      className={styles.highlight}
-                      variants={highlightVariants}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true, amount: 0.6 }}
-                    />
-                  )}
-                </motion.div>
-              </Link>
-            );
-          } */
+        
           return (
 
             <motion.div

@@ -31,6 +31,22 @@ font-size: larger;
 .navSide :global(.nav-link:hover) {
   color: #005b48; /* or whatever color you want on hover */
 }
+.navSide :global(.nav-link:focus),
+.navSide :global(.nav-link:active) {
+  color: #fff6ea !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navSide :global(.nav-link.active),
+.navSide :global(.nav-link[aria-current="page"]) {
+  color: #fff6ea !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 .navbarBrandCentered {
   position: absolute;
   left: 50%;

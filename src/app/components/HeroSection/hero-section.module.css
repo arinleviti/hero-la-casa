@@ -22,12 +22,15 @@
 .heroText h1 {
       /* font-family: var(--font-oswald), sans-serif; */
       font-family: var(--font-anton);
+      /* font-family: var(--font-kalam); */
+      /* font-family: var(--font-alfa-slab); */
       font-weight: 1000;
       font-size: 3rem; /* increase as needed */
       color: #005b48;
 }
 .heroText h3 {
     font-family: var(--font-oswald), sans-serif;
+    font-family: var(--font-kalam);
    /*  font-family: var(--font-anton); */
     color: #005b48;
 }

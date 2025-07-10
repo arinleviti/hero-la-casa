@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Nunito, Oswald, Anton } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Nunito, Oswald, Anton, Alfa_Slab_One, Kalam } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 
@@ -36,6 +36,17 @@ const anton = Anton({
   subsets: ['latin'],
   variable: '--font-anton',
 });
+const alfaSlab = Alfa_Slab_One({
+  weight: "400", // Only one weight available
+  subsets: ["latin"],
+  variable: "--font-alfa-slab",
+});
+
+const kalam = Kalam({
+  weight: ["300", "400", "700"], // all available weights
+  subsets: ["latin"],
+  variable: "--font-kalam",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -49,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
         <Navbar />
         {children}
       </body>

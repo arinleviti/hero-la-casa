@@ -1,7 +1,19 @@
-.detailView {
-  padding-top: 10rem;
+.detailViewWrapper {
+  background-color: #fff8f1;
+   border-radius: 8px;
 }
 
+.detailView {
+  margin-top: 9rem;
+  padding: 2rem 2rem;
+ 
+}
+.burgerTitle {
+  display: flex;
+  justify-content: space-between; /* push name left, icons right */
+  align-items: center;
+  padding-bottom: 1rem;
+}
 .imageCol {
   display: flex;
   justify-content: center;
@@ -17,4 +29,40 @@
 
 .infoCol {
   padding-left: 1rem;
+   
+}
+.infoCol h2 {
+   font-family: var(--font-anton);
+      font-weight: 300;
+      font-size: 3rem; /* increase as needed */
+      color: #005b48;
+}
+.infoCol {
+  font-family: var(--font-oswald), sans-serif;
+  font-family: var(--font-kalam);
+   /*  font-family: var(--font-anton); */
+    color: #005b48;
+    font-size: 1.2rem; /* increase as needed */
+}
+
+.reserveButton {
+  background-color: #ce7d2d;     
+  border: none;                  /* optional: remove border */
+  color: #005b48;                  /* white text */
+  font-family: var(--font-anton);
+  font-size: 1.4rem;             /* adjust size if needed */
+  padding: 0.2rem 1rem;        /* spacing around text */
+  border-radius: 6px;            /* optional: round corners */
+  transition: background-color 0.2s ease;
+}
+.reserveButton:hover,
+.reserveButton:focus {
+  background-color: #005b48;     /* darker red on hover */
+  color: white;
+}
+.buttonContainer {
+  padding-top: 2rem; /* Add space above button */
+}
+.reserveButtonWrapper {
+  padding-top: 2rem; /* Add space above button */
 }

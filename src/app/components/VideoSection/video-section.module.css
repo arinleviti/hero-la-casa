@@ -66,6 +66,7 @@
 .videoText p {
  
     font-family: var(--font-oswald), sans-serif;
+    font-family: var(--font-kalam);
     font-size: 1.45rem; /* increase as needed */
     color: #005b48;
 }
@@ -118,15 +119,16 @@ text-decoration: none;
 }
 .highlightImage {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: contain;
   user-select: none;
   pointer-events: none;
 }
 .highlightInner {
   width: 100%;
-  height: 100%;
+  height: 80%;
   transform-origin: left center;
+
 }
 /* new */
 .highlightedText {
@@ -137,6 +139,7 @@ text-decoration: none;
   position: relative;
   display: inline-block;
   z-index: 1;
+
 }
 
 @keyframes spin {
