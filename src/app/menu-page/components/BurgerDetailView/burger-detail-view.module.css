@@ -20,13 +20,23 @@
   align-items: center;
   margin-bottom: 1rem;
 }
-
-.burgerImage {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.imageWrapper {
+  display: flex;
+  flex-direction: column;  /* stack images vertically */
+  align-items: center;     /* center horizontally */
+  gap: 0;                  /* no gap, or add small gap if you want */
 }
-
+.burgerImage {
+  width: 100%;
+  height: auto;
+  display: block; /* avoid inline spacing issues */
+  max-width: 400px; /* or whatever max size you want */
+}
+.burgerImage,
+.shadowImage {
+  display: block;          /* remove any inline issues */
+  max-width: 100%;         /* responsive */
+}
 .infoCol {
   padding-left: 1rem;
    

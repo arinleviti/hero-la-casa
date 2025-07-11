@@ -22,7 +22,7 @@ export const heroContent = {
 }
 
 export const heroImage = {
-	src: "/HeroImage/Hero-Image.webp",
+	src: "/HeroImage/Kepporko-no-bg.webp",
 	alt: "Hero image"
 }
 

@@ -5,6 +5,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { Burger } from './../../../Services/menuItems';
 import Image from 'next/image';
 import styles from './burger-detail-view.module.css';
+import { motion } from 'framer-motion';
 
 export default function BurgerDetailView({
   burger,
@@ -40,6 +41,15 @@ export default function BurgerDetailView({
         <Row>
           {/* Left: Image */}
           <Col xs={12} md={5} className={styles.imageCol}>
+          <div className={styles.imageWrapper}>
+            <motion.div
+              animate= {{y: [0,-7,0]}}
+              transition= {{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              >
             <Image
               src={burger.imageLargeUrl ?? '/fallback-image.png'}
               alt={burger.name}
@@ -47,6 +57,14 @@ export default function BurgerDetailView({
               height={400}
               className={styles.burgerImage}
             />
+            </motion.div>
+            <Image
+              src= "/shadow.png"
+              alt= "shadow"
+              width={550}
+              height={100}
+              />
+              </div>
           </Col>
 
           {/* Right: Details */}

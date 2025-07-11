@@ -32,3 +32,13 @@
 .landingLogo {
   user-select: none;
 }
+.logoWrapper {
+  
+  display: flex;
+  flex-direction: column;  /* stack images vertically */
+  align-items: center;     /* center horizontally */
+  gap: 3rem;
+}
+.scrollLogo{
+  
+}

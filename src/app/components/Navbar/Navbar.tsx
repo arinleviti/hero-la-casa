@@ -12,10 +12,13 @@ import { usePathname } from 'next/navigation';
 export default function NavbarBasic() {
     const [expanded, setExpanded] = useState(false);
 
-    const { scrollYProgress } = useScroll();
+    /* const { scrollYProgress } = useScroll();
 
-    // Navbar logo opacity: 0 at top, 1 after 0.2 scroll
-    const navbarLogoOpacity = useTransform(scrollYProgress, [0, 0.19, 0.2], [0, 0, 1]);
+    const navbarLogoOpacity = useTransform(scrollYProgress, [0, 0.19, 0.2], [0, 0, 1]); */
+
+    const { scrollY } = useScroll();
+const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
+
     const pathname = usePathname();
     const isHome = pathname === '/';
 

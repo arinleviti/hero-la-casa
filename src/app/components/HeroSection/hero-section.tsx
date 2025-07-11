@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import styles from './hero-section.module.css';
 import { Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 interface HeroSectionProps {
   textData: {
@@ -28,7 +29,16 @@ export default function HeroSection({ textData, imageData }: HeroSectionProps) {
                 </div>
             </div>
             <div className={styles.heroImage}>
-                <Image src={imageData.src} alt={imageData.alt} width={650} height={500} />
+              <motion.div
+              animate= {{y: [0,-7,0]}}
+              transition= {{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              >
+                <Image src={imageData.src} alt={imageData.alt} width={550} height={550} />
+                </motion.div>
 
 
             </div>

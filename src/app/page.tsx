@@ -16,7 +16,7 @@ export default function HomePage() {
       {/* <Navbar /> */}
       <main style={{ padding: '2rem' }}>
         
-        <div style={{ height: '60vh' }}></div> {/* add vertical space to scroll */}
+        <div style={{ height: '35vh' }}></div> {/* add vertical space to scroll */}
       </main>
       <HeroSection textData={heroContent} imageData={heroImage} />
       <VideoSection videoData={videoData} textVideoData={textVideoData} />
