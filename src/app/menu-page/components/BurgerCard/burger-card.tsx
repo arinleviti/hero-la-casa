@@ -4,7 +4,6 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Burger } from '../../../Services/menuItems'; // adjust the path if needed
 import styles from './burger-card.module.css'; // optional if you want custom styles
-import { style } from 'framer-motion/client';
 
 interface Props {
   burger: Burger;

@@ -173,14 +173,52 @@ Grazie a tutti coloro che hanno partecipato e hanno reso questo concorso un vero
   ],
 },
 {
-  title: "July Update: Sunshine & Stories",
-  slug: "july-update",
-  excerpt: "This month we focused on rest, sunshine, and long walks.",
+  title: "Diario di Bordo – Giugno 2024",
+  slug: "diario-giugno-2024",
+  excerpt: "Abbiamo inaugurato il club esclusivo 'Gli amici di Hero'",
   content: `
-    <p>Welcome to our July update! <strong>Things were hot</strong>, but our stories were hotter.</p>
-    <p>We spent time on the beach, took long walks, and worked on some creative projects.</p>
-  `,
-  createdAt: new Date("2023-07-10T10:00:00Z"),
+  <img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+    <p>Il mese di giugno ci ha travolti con la sua energia, portando con sé gioie intense e festeggiamenti indimenticabili, oltre che gustose novità qui da Hero la Casa del Burger!
+
+Abbiamo inaugurato il club esclusivo <strong>Gli amici di Hero</strong> con una cena memorabile, creando un’atmosfera unica e intima per i nostri clienti più fedeli.
+
+Ma non è tutto! Dal 25 giugno abbiamo lanciato il nuovo menù, con due ricette freschissime e irresistibili: il <strong>MEDITERRANEO</strong> (no meat), un’innovazione vegana che porta i sapori del Mediterraneo direttamente nel vostro piatto, e il <strong>>CAPO NORD</strong>, con salmone norvegese affumicato e sfilacciato, perfetto per chi ama i sapori del mare.
+
+Per celebrare la qualificazione dell’Italia agli Euro2024, abbiamo deciso di far indossare le vesti azzurre al nostro Burger <strong>L’ITALIANO</strong> creando una special series dai toni freschi e suggestivi, il tutto reso ancora più esclusivo permettendo di assaporare questo capolavoro solo a 35 fortunati di voi!
+
+Preparatevi per scoprire i dettagli e le novità e di viaggiare con noi durante ogni momento di questo fantastico mese!</p>
+    <h2>La prima cena del Club esclusivo 'Gli amici di Hero'</h2>
+    <p>Il 19 giugno abbiamo avuto l’onore di ospitare la prima cena del nostro club esclusivo <strong>Gli amici di Hero</strong>. Questo evento speciale è stato dedicato ai nostri <strong>clienti più fedeli</strong>, coloro che hanno contributo a fare di Hero la Casa del Burger un luogo di eccellenza.
+
+La serata è stata pensata per <strong>celebrare il legame</strong> che abbiamo con i nostri clienti, offrendo loro, un’altra volta, un’esperienza culinaria indimenticabile. L’atmosfera era intima e accogliente, perfetta per una cena tra amici. Tra risate, chiacchiere e brindisi, abbiamo trascorso una serata indimenticabile, rafforzando ulteriormente i nostri legami e creando <strong>ricordi che viaggeranno per sempre nella valigia di Hero</strong>. Le foto della serata raccontano meglio di qualsiasi parola l’energia e la gioia che abbiamo condiviso.
+ Siamo grati a tutti coloro che hanno partecipato e non vediamo l’ora di organizzare nuovi eventi esclusivi per “Gli amici di Hero”!</p>
+ <img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+ <h2>Limited Edition HAMBURG – Un viaggio nel Tempo e nei Sapori</h2>
+ <p>Dal 20 giugno al 7 luglio, abbiamo presentato il nostro hamburger limited Edition <strong>“HAMBURG”</strong>, un tributo alla storia e alla tradizione. Questo panino speciale celebra i 130 anni dalla nascita del primo Hamburger ad Amburgo, creato nel 1894 dal cuoco <strong>Otto Quasch</strong>.
+
+Il nostro <strong>“HAMBURG”</strong> è stato ispirato a quel primo <strong>“Deutsches beefsteak”</strong>, che conquistò i cuori dei lavoratori e dei marinai nel porto di Amburgo prima di attraversare l’oceano e diventare il celebre <strong>“Hamburger Steak”</strong> a New York. Un vero e proprio viaggio nel tempo, che vi riporta alle origini di questo iconico piatto.
+
+Questa edizione limitata non è solo una celebrazione storica ma anche un omaggio agli Euro2024 che quest’anno si svolgono in Germania.
+
+Non perdete l’occasione di assaporare questo capolavoro culinario, disponibile solo per un periodo limitato. Venite a trovarci e lasciatevi trasportare dai sapori autentici del nostro HAMBURG!</p>
+<h2> Nuovo Menù Estivo – Freschezza e innovazione nel vostro piatto</h2>
+<p>Il 25 giugno abbiamo lanciato il <strong>nuovo menù estivo</strong> qui da Hero la Casa del Burger, portando una ventata di <strong>freschezza e innovazione</strong>. Siamo entusiasti, inoltre, di presentare due nuove ricette che hanno già conquistato i nostri clienti: il <strong>“MEDITERRANEO”</strong> e il <strong>“CAPO NORD”</strong>.
+
+Il <strong>“MEDITERRANEO”</strong> è la nostra nuova proposta vegan, creata per includere tutti i nostri clienti e offrire a un’opzione deliziosa e salutare. Questo panino è preparato con pane alla curcuma, salsa rimescolata e coleslaw, un burger dal cuore verde di cavolo riccio, spinaci e broccoli. Il tutto arricchito da mozzarella vegan e pomodori secchi, per un’esplosione di sapori mediterranei.
+
+Dall’altra parte, il <strong>“CAPO NORD”</strong> è un Hamburger di pesce unico nel suo genere. Il pane nero come il carbone avvolge 120 grammi di salmone affumicato e sfilacciato, accompagnato da insalata gentile, robiola fresca, pomodori soleggiati e una spolverata di origano. Un mix perfetto di ingredienti che evoca i sapori del Nord e rende un omaggio alla cucina scandinava.
+
+Con queste nuove aggiunte, il nostro menù estivo è pronto a sorprendere e deliziare tutti i nostri ospiti. Venite a provarlo e lasciatevi conquistare dalle nostre creazioni culinarie!</p>
+<h2>L’italiano Veste azzurro – Edizione Speciale per Euro2024</h2>
+<p>Il 28 giugno abbiamo lasciato una special serires davvero unica: <strong>“L’ITALIANO Veste Azzurro”</strong>. Per celebrare la partecipazione della nazionale italiana agli <strong>ottavi di finale di Euro2024</strong>, noi di Hero, non potevamo non omaggiare i nostri connazionali con un Hamburger davvero speciale!
+
+Il nostro classico Burger “L’ITALIANO” è stato vestito di Azzurro, con gli ingredienti che ricordano i nostri amati colori, creando un’esperienza visiva e gustativa unica!
+
+Solo 35 fortunati di voi hanno potuto gustare questo strepitoso burger in veste azzurra. Ma non è tutto: abbiamo lanciato un concorso sui social: condividendo una foto del tuo <strong>“Italiano Veste Azzurro”</strong> sulle piattaforme social, uno di questi 35 fortunati vince una <strong>t-shirt griffata HERO</strong>! L’entusiasmo è stato palpabile e le foto che abbiamo ricevuto sono state incredibili.
+
+Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. Continuate a seguirci per altre edizioni e soprese future!</p>
+`,
+  createdAt: new Date("2024-07-09T10:00:00Z"),
   images: [
     {
       url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
@@ -190,30 +228,81 @@ Grazie a tutti coloro che hanno partecipato e hanno reso questo concorso un vero
       url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
       caption: "Evening light on the boardwalk",
     },
-  ],
-  comments: [
     {
-      name: "Anna",
-      email: "anna@example.com",
-      content: "This post was beautiful! Thanks for sharing 💛",
-      createdAt: new Date("2023-07-11T08:30:00Z"),
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
     },
     {
-      name: "Luca",
-      email: "luca@example.com",
-      content: "Makes me want to take a vacation!",
-      createdAt: new Date("2023-07-12T12:15:00Z"),
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
     },
-  ],
+    {
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
+    },
+    {
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
+    }
+  ]
 },{
-  title: "July Update: Sunshine & Stories",
-  slug: "july-update",
-  excerpt: "This month we focused on rest, sunshine, and long walks.",
+  title: "Diario di bordo – Luglio 2024",
+  slug: "diario-luglio-2025",
+  excerpt: "A luglio, l’entusiasmo non ha conosciuto soste qui da Hero – la Casa del Burger.",
   content: `
-    <p>Welcome to our July update! <strong>Things were hot</strong>, but our stories were hotter.</p>
-    <p>We spent time on the beach, took long walks, and worked on some creative projects.</p>
+
+<p>A luglio, l’entusiasmo non ha conosciuto soste qui da Hero – la Casa del Burger, con un susseguirsi ininterrotto di sorprese e novità. Dalle vacanze dei nostri clienti, che hanno portato lo spirito di Hero in giro per il mondo, alle nuove sorprese riservate al club <strong>“gli amici di Hero”</strong>, non ci siamo mai fermati. Come sempre del resto…</p>
+
+<p>Il nostro planisfero si sta riempiendo di foto delle vostre avventure, mentre noi continuiamo a stupirvi con edizioni limitate come l’hamburger <strong>EL PARDACIAN</strong>, dedicato alla celebrazione di San Giacomo, il <strong>patrono di Predazzo</strong>, che ha unito la nostra comunità in una giornata di festa.</p>
+
+<p>E, per chi ama la nostra birra artigianale, siamo felici di annunciare una nuova cotta della nostra birra CAMM. Con tutto questo e molto altro, luglio è stato un mese da ricordare!</p>
+
+<h2>Il nostro planisfero prende forma!</h2>
+
+<p>Grazie alle vostre vacanze e alle foto che ci avete inviato, il nostro <strong>planisfero</strong> sta prendendo vita. Ogni scatto racconta la vostra storia e ci mostra come portate un pezzo di Hero con voi ovunque andiate. Continuate a condividere i vostri viaggi con noi; la vostra passione per l’esplorazione e la vostra lealtà sono la vera essenza di ciò che rende Hero speciale. Siamo entusiasti di far parte delle vostre avventure e aspettiamo con impazienza di vedere dove vi porteranno i prossimi mesi!</p>
+
+<img src="https://your-image-url.com/photo1.jpg" alt="Foto inviata dai clienti" />
+
+<h2>Nuove sorprese per il club “gli amici di Hero”</h2>
+
+<p>Per i membri del nostro club esclusivo <strong>“Gli Amici di Hero”</strong>, luglio ha riservato una sorpresa molto speciale: un bicchiere personalizzato! Questo regalo è un piccolo segno della nostra grande gratitudine per il vostro continuo supporto e la vostra incondizionata fedeltà.</p>
+
+<p>Ogni bicchiere, unico come ognuno di voi, simbolizza il nostro impegno a costruire una relazione duratura con i nostri clienti più affezionati. Siamo lieti di poter offrire qualcosa che possa rimanere con voi come ricordo delle belle esperienze condivise. Ricordatevi di rimanere connessi e di seguirci attentamente; abbiamo in serbo molte altre sorprese esclusive per i nostri membri.</p>
+
+<p>Questi gesti sono il nostro modo di mostrarvi quanto apprezziamo ogni momento passato insieme e quanto siamo eccitati all’idea di quello che ci riserva il futuro.</p>
+
+<img src="https://your-image-url.com/photo2.jpg" alt="Bicchiere club Hero" />
+
+<h2>Con la celebrazione di San Giacomo arriva EL PARDACIAN Limited Edition</h2>
+
+<p>Il 25 luglio, Predazzo ha vibrato di festa per celebrare il suo patrono, <strong>San Giacomo</strong>. Le campane hanno risuonato in tutto il paese, portando gioia e un senso di comunità mentre tutti si univano ai festeggiamenti. Noi di Hero – la Casa del Burger, abbiamo abbracciato questa festa con grande entusiasmo, offrendo ai nostri clienti un modo unico per partecipare ai festeggiamenti con il nostro speciale burger del mese, EL PARDACIAN.</p>
+
+<p>Questo burger non è solo un piatto da gustare, ma un vero e proprio tributo ai sapori della nostra terra. Ogni morso di <strong>EL PARDACIAN</strong> racchiude l’essenza del nostro territorio, trasformando ingredienti locali in una deliziosa esperienza culinaria.</p>
+
+<p>Protagonista di questa ricetta sorprendente è il nostro amato Puzzone di Moena, un formaggio che con il suo sapore deciso riporta subito ai panorami mozzafiato di Predazzo. Abbinato perfettamente alla delicatezza di un burger di Scottona Nostrana, EL PARDACIAN offre un’esperienza gustativa che incanta i palati più raffinati.</p>
+
+<p>Ma non finisce qui: l’acidità dei crauti con mela verde croccante del Trentino e la nota affumicata dello speck cotto creano un connubio di sapori che trasforma ogni morso in un’intensa avventura culinaria. Se non hai ancora avuto il coraggio di addentarlo, è giunto il momento di lasciarti tentare da questo viaggio di sapori unico e irripetibile.</p>
+
+<p>È stata una giornata che ha unito la comunità e ha portato gioia a tutti coloro che hanno partecipato, celebrando non solo San Giacomo ma anche l’autenticità e la ricchezza dei sapori e della gente di Predazzo.</p>
+
+<!-- Insert Image -->
+<img src="https://your-image-url.com/photo3.jpg" alt="EL PARDACIAN burger" />
+
+<h2>Nuova cotta della nostra birra CAMM</h2>
+
+<p>Infine, siamo orgogliosi di annunciare l’arrivo di una <strong>nuova cotta della nostra birra artigianale CAMM</strong>! Siamo già alla sesta produzione da 2000 litri dal novembre 2021, un traguardo che testimonia il successo e l’apprezzamento della nostra birra tra i nostri clienti.</p>
+
+<p><strong>Cosa significa una nuova cotta di birra</strong>? Una cotta rappresenta il processo di produzione di un lotto di birra. Questo termine deriva dal processo di “cottura” del mosto, che è la miscela di acqua e malto d’orzo (e talvolta altri cereali) che viene riscaldata con l’aggiunta di luppolo. Dopo la cottura, il mosto viene fermentato, maturato e infine filtrato o rifermentato per diventare la birra che troviamo nei bicchieri.</p>
+
+<p>Ogni cotta può variare leggermente a seconda delle tecniche utilizzate, degli ingredienti specifici e del tempo dedicato alla maturazione, rendendo ogni lotto unico.</p>
+
+<p>Venite a provarla e lasciatevi conquistare dal suo sapore unico! Ogni sorso racconta la storia del nostro impegno per l’eccellenza e la passione per l’arte birraia. Condividete con noi il piacere di gustare una birra artigianale di qualità, creata con dedizione e attenzione al dettaglio.</p>
+
+<!-- Insert Image -->
+<img src="https://your-image-url.com/photo4.jpg" alt="Birra CAMM" />
+
   `,
-  createdAt: new Date("2023-07-10T10:00:00Z"),
+  createdAt: new Date("2024-08-13T10:00:00Z"),
   images: [
     {
       url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
@@ -223,21 +312,20 @@ Grazie a tutti coloro che hanno partecipato e hanno reso questo concorso un vero
       url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
       caption: "Evening light on the boardwalk",
     },
-  ],
-  comments: [
-    {
-      name: "Anna",
-      email: "anna@example.com",
-      content: "This post was beautiful! Thanks for sharing 💛",
-      createdAt: new Date("2023-07-11T08:30:00Z"),
+     {
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
     },
-    {
-      name: "Luca",
-      email: "luca@example.com",
-      content: "Makes me want to take a vacation!",
-      createdAt: new Date("2023-07-12T12:15:00Z"),
+     {
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
+    },
+     {
+      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      caption: "Evening light on the boardwalk",
     },
   ],
+  
 },{
   title: "July Update: Sunshine & Stories",
   slug: "july-update",

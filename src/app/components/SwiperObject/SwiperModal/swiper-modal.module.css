@@ -5,9 +5,10 @@
   margin-bottom: 0rem;
   border-radius: 3px;
   overflow: hidden;
+  background-color: #edd5c3;
 }
 .modalHeader {
- 
+ background-color: #ce7d2d;
 }
 .headerContent {
   display: flex;
@@ -36,7 +37,10 @@
   margin-right: 3px;
 }
 .modalContent {
-  height: 95vh; /* or whatever height you prefer */
+  max-height: 95vh; /* or whatever height you prefer */
+  background-color: #edd5c3;
+    display: flex;            /* add this */
+  flex-direction: column;   /* add this */
 }
 .modalTitle {
   font-family: var(--font-anton);
@@ -45,13 +49,21 @@
   color: #005b48;
 
 }
+.modalBody {
+    flex-grow: 1;         /* fill available space */
+  overflow-y: auto;     /* scroll if content too tall */
+  padding-right: 1rem;  /* optional, room for scrollbar */
+}
 .modalBody , .modalBody p  {
-  font-family: var(--font-oswald), sans-serif;
+      font-family: var(--font-oswald), sans-serif;
+  font-family: var(--font-kalam);
    /*  font-family: var(--font-anton); */
     color: #005b48;
+    font-size: 1rem; /* increase as needed */
 }
 .modalBody p {
-  font-size: 1.2rem;
+   
+  font-size: 1rem;
 
 }
 .modalBody h5{
@@ -74,4 +86,24 @@
 .reserveButton:focus {
   background-color: #a93226;     /* darker red on hover */
   color: white;
+}
+.goToMenuButton {
+  background-color: #005b48;     
+  border: none;                  /* optional: remove border */
+  color:  #ce7d2d;                  /* white text */
+  font-family: var(--font-anton);
+  font-size: 1.1rem;             /* adjust size if needed */
+  padding: 0.5rem 1.2rem;        /* spacing around text */
+  border-radius: 6px;            /* optional: round corners */
+  transition: background-color 0.2s ease;
+}
+
+.goToMenuButton:hover,
+.goToMenuButton:focus {
+  background-color: #a93226;     /* darker red on hover */
+  color: white;
+}
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
 }

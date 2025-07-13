@@ -1,6 +1,5 @@
 'use client';
 import styles from './filter-bar.module.css';
-import { div } from 'framer-motion/client';
 import { ButtonGroup, ToggleButton } from 'react-bootstrap';
 
 interface Filters {

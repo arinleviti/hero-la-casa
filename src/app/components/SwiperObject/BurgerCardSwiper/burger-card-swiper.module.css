@@ -1,10 +1,13 @@
 .card {
-  width: 250px;
+  width: 150px;
+  flex-shrink: 1;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .imageWrapper {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   border-radius: 8px;
    transition: transform 0.3s ease;
@@ -13,7 +16,7 @@
 .name {
    font-family: var(--font-anton);
       font-weight: 300;
-      font-size: 2rem; /* increase as needed */
+      font-size: 1rem; /* increase as needed */
       color: #005b48;
       text-align: center;
 }

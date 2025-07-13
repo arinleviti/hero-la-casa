@@ -17,8 +17,8 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
         <Image
          src={burger.imageSmallUrl || '/images/placeholder.png'}
           alt={burger.name}
-          width={250}
-          height={250}
+          width={150}
+          height={150}
           style={{ objectFit: 'contain' }}
           priority={true}
         />
@@ -26,11 +26,11 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
 
       <h3 className={styles.name}>{burger.name}</h3>
 
-      <p className={styles.description}>
+     {/*  <p className={styles.description}>
         {burger.description.length > 80
           ? burger.description.slice(0, 100) + '...'
           : burger.description}
-      </p>
+      </p> */}
     </div>
   );
 };

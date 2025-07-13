@@ -7,6 +7,7 @@ import VideoSection from './components/VideoSection/video-section';
 import PictureBelt from './components/PictureBelt/picture-belt';
 import SwiperObject from './components/SwiperObject/swiper-object';
 import{ burgers} from './Services/menuItems';
+import { StaffSection } from './components/StaffSection/staff-section';
 
 export default function HomePage() {
 
@@ -22,6 +23,7 @@ export default function HomePage() {
       <VideoSection videoData={videoData} textVideoData={textVideoData} />
       <PictureBelt pictures={picturesForBelt1} />
       <SwiperObject burgers={burgers} />
+      <StaffSection />
     </div>
 
   );

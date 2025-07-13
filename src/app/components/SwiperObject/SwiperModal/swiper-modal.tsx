@@ -71,6 +71,9 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
         </ul>
       </Modal.Body>
       <Modal.Footer className={styles.modalFooter}>
+        <Button href="/menu-page" className={styles.goToMenuButton} onClick={onClose}>
+          VAI AL MENU COMPLETO
+        </Button>
         <Button className={styles.reserveButton} onClick={onClose}>
           RISERVA UN TAVOLO
         </Button>

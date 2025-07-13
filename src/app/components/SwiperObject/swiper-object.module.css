@@ -1,4 +1,54 @@
 .mySwiperWrapper {
   position: relative;
-  padding: 20px 0px;
+  padding-top: 80px;
+  padding-bottom: 50px;
 }
+.swiperFix {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.mySwiperWrapper h1 {
+     /* font-family: var(--font-oswald), sans-serif; */
+      font-family: var(--font-anton);
+      /* font-family: var(--font-kalam); */
+      /* font-family: var(--font-alfa-slab); */
+      font-weight: 1000;
+      font-size: 3rem; /* increase as needed */
+      color: #005b48;
+}
+.mySwiperWrapper p {
+    font-family: var(--font-oswald), sans-serif;
+    font-family: var(--font-kalam);
+    font-size: 1.45rem; /* increase as needed */
+    color: #005b48;
+}
+/* Remove horizontal padding on the right column */
+.noPaddingRight {
+  padding-right: 0 !important;
+
+}
+.sliderContainer {
+  position: relative;
+
+
+
+}
+
+.fadeLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20px; /* adjust fade width */
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(to right, #edd5c3, transparent);
+  /* Replace 'white' with your background color */
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+

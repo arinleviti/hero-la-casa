@@ -1,0 +1,19 @@
+.mainContainer{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.textContainer h1 {
+      /* font-family: var(--font-oswald), sans-serif; */
+      font-family: var(--font-anton);
+      /* font-family: var(--font-kalam); */
+      /* font-family: var(--font-alfa-slab); */
+      font-weight: 1000;
+      font-size: 3rem; /* increase as needed */
+      color: #005b48;
+}
+.textContainer p {
+     font-family: var(--font-oswald), sans-serif;
+    font-family: var(--font-kalam);
+    font-size: 1.45rem; /* increase as needed */
+    color: #005b48;
+}

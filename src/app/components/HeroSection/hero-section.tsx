@@ -20,7 +20,8 @@ export default function HeroSection({ textData, imageData }: HeroSectionProps) {
     return (
         <div className={styles.heroWrapper}>
             <div className={styles.heroText}>
-                <h1>{textData.title}</h1>
+                <h1>{textData.title1}</h1>
+                <h1>{textData.title2}</h1>
                 <h3>{textData.text}</h3>
                 <div className={styles.buttonContainer}>
                   <Button className={styles.reserveButton}>
