@@ -34,51 +34,63 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
   if (!burger) return null;
 
   return (
-    <Modal show={true} onHide={onClose} centered dialogClassName={styles.modalDialog}
-      contentClassName={styles.modalContent}>
-      <Modal.Header closeButton className={styles.modalHeader}>
-        <div className={styles.headerContent}>
-        <Modal.Title className={styles.modalTitle}>{burger.name}</Modal.Title>
-        <div className={styles.categoryIcons}>
-          {burger.categories.map((category, i) => (
-            <Image
-              key={i}
-              src={getCategoryIconPath(category)}
-              alt={category}
-              width={35}
-              height={35}
-              title={category}
-            />
-          ))}
-        </div>
-        </div>
-      </Modal.Header>
-      <Modal.Body className={styles.modalBody}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={burger.imageLargeUrl || '/images/placeholder.png'}
-            alt={burger.name}
-            layout="fill"
-            objectFit="contain"
+
+    <div className={styles.modalWrapper}>
+
+
+      <Modal show={true} onHide={onClose} centered dialogClassName={styles.modalDialog}
+        contentClassName={styles.modalContent}>
+
+
+        <Modal.Header closeButton className={styles.modalHeader}>
+          <div className={styles.headerContent}>
+            <Modal.Title className={styles.modalTitle}>{burger.name}</Modal.Title>
+            <div className={styles.categoryIcons}>
+              {burger.categories.map((category, i) => (
+                <Image
+                  key={i}
+                  src={getCategoryIconPath(category)}
+                  alt={category}
+                  width={35}
+                  height={35}
+                  title={category}
+                />
+              ))}
+            </div>
+          </div>
+        </Modal.Header>
+        <Modal.Body className={styles.modalBody}>
+          <div
+            className={styles.backgroundImage}
+            style={{ backgroundImage: `url(${burger.backgroundImage})` }}
           />
-        </div>
-        <p className={styles.description}>{burger.description}</p>
-        <h5>INGREDIENTI:</h5>
-        <ul className={styles.ingredients}>
-          {burger.ingredients.map((ingredient, i) => (
-            <li key={i} className={styles.ingredientItem}>{ingredient}</li>
-          ))}
-        </ul>
-      </Modal.Body>
-      <Modal.Footer className={styles.modalFooter}>
-        <Button href="/menu-page" className={styles.goToMenuButton} onClick={onClose}>
-          VAI AL MENU COMPLETO
-        </Button>
-        <Button className={styles.reserveButton} onClick={onClose}>
-          RISERVA UN TAVOLO
-        </Button>
-      </Modal.Footer>
-    </Modal>
+          <div className={burger.backgroundImage ? styles.imageWrapperWithOrigin : styles.imageWrapper}>
+            <Image
+              src={burger.imageLargeUrl || '/images/placeholder.png'}
+              alt={burger.name}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          <p className={styles.description}>{burger.description}</p>
+          <h5>INGREDIENTI:</h5>
+          <ul className={styles.ingredients}>
+            {burger.ingredients.map((ingredient, i) => (
+              <li key={i} className={styles.ingredientItem}>{ingredient}</li>
+            ))}
+          </ul>
+        </Modal.Body>
+        <Modal.Footer className={styles.modalFooter}>
+          <Button href="/menu-page" className={styles.goToMenuButton} onClick={onClose}>
+            VAI AL MENU COMPLETO
+          </Button>
+          <Button className={styles.reserveButton} onClick={onClose}>
+            RISERVA UN TAVOLO
+          </Button>
+        </Modal.Footer>
+
+      </Modal>
+    </div>
   );
 };
 

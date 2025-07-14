@@ -25,6 +25,7 @@ const BurgerCardSwiper: React.FC<Props> = ({ burger, onClick }) => {
       </div>
 
       <h3 className={styles.name}>{burger.name}</h3>
+      <h4 className={styles.origin}>{burger.origin}</h4>
 
      {/*  <p className={styles.description}>
         {burger.description.length > 80

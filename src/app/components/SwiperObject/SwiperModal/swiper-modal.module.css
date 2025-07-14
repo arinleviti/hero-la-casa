@@ -7,6 +7,14 @@
   overflow: hidden;
   background-color: #edd5c3;
 }
+.imageWrapperWithOrigin{
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 0rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
 .modalHeader {
  background-color: #ce7d2d;
 }
@@ -106,4 +114,31 @@
 .modalFooter {
   display: flex;
   justify-content: space-between;
+}
+.modalWrapper {
+  position: relative;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.modalContent {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 95vh;
+  background-color: #edd5c3;
+  display: flex;
+  flex-direction: column;
 }

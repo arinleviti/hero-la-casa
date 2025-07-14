@@ -19,7 +19,7 @@ export default function WaveSeparator() {
 export const heroContent = {
 	title1: "BENVENUTI DA HERO",
 	title2: "LA CASA DEL BURGER",
-	text: "Oltre i confini del burger"
+	text: "Viaggia con noi oltre i confini del burger"
 }
 
 export const heroImage = {

@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 
 interface HeroSectionProps {
   textData: {
-    title: string;
+    title1: string;
+    title2: string;
     text: string;
   };
   imageData: {
