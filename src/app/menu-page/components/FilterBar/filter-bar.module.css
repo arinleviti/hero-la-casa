@@ -7,7 +7,11 @@
   font-family: var(--font-anton);
   z-index: 1000;
 }
-
+.filterControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Add gap between filter buttons and reset */
+}
 /* Shared button styles */
 .button {
   background-color: #ce7d2d;
@@ -25,7 +29,28 @@
   box-sizing: border-box;
   line-height: 1;
 }
+.resetButton {
+  background-color: #c35355;
+  color: #fff6ea;
+  border: 1px solid transparent;
+  padding: 0.130rem 0.65rem; /* Bootstrap standard */
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  max-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.resetButton:hover {
+  background-color: #00c9ad;
+}
 /* VEGAN */
 .vegan:hover {
   background-color: #1e7e34 !important;

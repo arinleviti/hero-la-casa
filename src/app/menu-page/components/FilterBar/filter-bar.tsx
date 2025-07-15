@@ -28,6 +28,7 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
 
   return (
     <div className={styles.filterBar}>
+      <div className={styles.filterControls}>
     <ButtonGroup className=" flex-wrap">
       <ToggleButton
         id="filter-vegan"
@@ -83,7 +84,21 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
       >
         PESCE
       </ToggleButton>
-    </ButtonGroup>
+  
+    </ButtonGroup >
+    {/* Separate button */}
+
+      <button id="reset-filters" value="reset" className={`${styles.button} ${styles.resetButton}`} onClick={() => setFilters({
+      vegan: false,
+      beef: false,
+      mediumSpicy: false,
+      spicy: false,
+      fish: false
+    })}>
+      TOGLI I FILTRI
+    </button>
     </div>
+    </div>
+    
   );
 }
