@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
-import { blogPosts } from '../src/app/Services/seedBlogData';
+import { PrismaClient } from '../src/generated/prisma/client.js';
+import { blogPosts } from '../src/app/Services/seedBlogData.js';
 
 const prisma = new PrismaClient();
 

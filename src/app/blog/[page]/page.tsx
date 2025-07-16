@@ -1,5 +1,5 @@
 import { PrismaClient } from '@/generated/prisma';
-import { Container, Button, Pagination } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -20,7 +20,9 @@ const POSTS_PER_PAGE = 1;
 // This enables pagination or other dynamic content based on the URL.
 
 export default async function BlogPage({ params }: PageProps) {
-  const currentPage = parseInt(params.page, 10);
+   // Await params to ensure it’s resolved if async
+  const resolvedParams = await params;
+  const currentPage = parseInt(resolvedParams.page, 10);
     //isNaN = is Not a Number
   if (isNaN(currentPage) || currentPage < 1) {
     notFound(); // return 404 if the page is invalid
@@ -61,25 +63,29 @@ export default async function BlogPage({ params }: PageProps) {
       </article>
     ))}
 
-    <Pagination>
-      {currentPage > 1 && (
-        <Pagination.Prev>
-          <Link href={`/blog/${currentPage - 1}`} passHref legacyBehavior>
-            <Button variant="outline-primary" as="a">← Previous</Button>
-          </Link>
-        </Pagination.Prev>
-      )}
+   <nav aria-label="Page navigation example">
+  <ul className="pagination">
+    {currentPage > 1 && (
+      <li className="page-item">
+        <Link href={`/blog/${currentPage - 1}`} className="page-link">
+          ← Previous
+        </Link>
+      </li>
+    )}
 
-      <Pagination.Item active>{currentPage}</Pagination.Item>
+    <li className="page-item active" aria-current="page">
+      <span className="page-link">{currentPage}</span>
+    </li>
 
-      {currentPage < totalPages && (
-        <Pagination.Next>
-          <Link href={`/blog/${currentPage + 1}`} passHref legacyBehavior>
-            <Button variant="outline-primary" as="a">Next →</Button>
-          </Link>
-        </Pagination.Next>
-      )}
-    </Pagination>
+    {currentPage < totalPages && (
+      <li className="page-item">
+        <Link href={`/blog/${currentPage + 1}`} className="page-link">
+          Next →
+        </Link>
+      </li>
+    )}
+  </ul>
+</nav>
   </Container>
   );
 }

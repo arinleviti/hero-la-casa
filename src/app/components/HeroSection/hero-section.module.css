@@ -26,18 +26,18 @@
       /* font-family: var(--font-alfa-slab); */
       font-weight: 1000;
       font-size: 4rem; /* increase as needed */
-      color: #005b48;
+      color: #4A7729;
 }
 .heroText h3 {
     font-family: var(--font-oswald), sans-serif;
     font-family: var(--font-kalam);
    /*  font-family: var(--font-anton); */
-    color: #005b48;
+    color:  #5E4B3C;
 }
 .reserveButton {
-  background-color: #ce7d2d;     
+  background-color:  #7BA6DE;     
   border: none;                  /* optional: remove border */
-  color: #005b48;                  /* white text */
+  color: #edd5c3;                  /* white text */
   font-family: var(--font-anton);
   font-size: 1.4rem;             /* adjust size if needed */
   padding: 0.2rem 1rem;        /* spacing around text */
@@ -46,7 +46,7 @@
 }
 .reserveButton:hover,
 .reserveButton:focus {
-  background-color: #005b48;     /* darker red on hover */
+  background-color: #4A7729;     /* darker red on hover */
   color: white;
 }
 .buttonContainer {

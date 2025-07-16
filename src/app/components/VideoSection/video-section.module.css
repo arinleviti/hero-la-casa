@@ -61,14 +61,14 @@
       font-family: var(--font-anton), sans-serif;
       font-weight: 1000;
       font-size: 3rem; /* increase as needed */
-      color: #005b48;
+      color: #4A7729;
 }
 .videoText p {
  
     font-family: var(--font-oswald), sans-serif;
     font-family: var(--font-kalam);
     font-size: 1.45rem; /* increase as needed */
-    color: #005b48;
+    color:  #5E4B3C;
 }
 .videoText a {
   text-decoration: none;

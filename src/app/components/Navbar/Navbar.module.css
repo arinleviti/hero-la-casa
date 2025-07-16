@@ -29,7 +29,7 @@ font-size: larger;
 /* transform: scaleY(1.2); */ /* makes it 20% taller */
 }
 .navSide :global(.nav-link:hover) {
-  color: #005b48; /* or whatever color you want on hover */
+  color:  #7BA6DE; /* or whatever color you want on hover */
 }
 .navSide :global(.nav-link:focus),
 .navSide :global(.nav-link:active) {
@@ -59,7 +59,7 @@ top: 10px;
   align-items: center;
   min-height: 80px; /* or a bit larger than your logo height */
   height: 20px;
-background-color: #ce7d2d;
+background-color: #5E4B3C;
 
 }
 .navbarContentWrapper {
@@ -73,7 +73,7 @@ background-color: #ce7d2d;
   display: block;     /* remove inline gap */
 }
 .waveWrapper svg path {
-  fill: #ce7d2d !important;  /* Override color to red */
+  fill: #5E4B3C !important;  /* Override color to red */
 }
 
 @media (max-width: 768px) {

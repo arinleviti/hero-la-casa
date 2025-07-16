@@ -3,7 +3,7 @@ export interface Burger {
   name: string;
   ingredients: string[];
   description: string;
-  side: string;
+  side?: string;
   allergens: string[];
   categories: string[];
   priceOptions: WeightOption[]; // replaces single price
@@ -13,7 +13,17 @@ export interface Burger {
   backgroundImage?: string;
   origin?: string;
 }
-
+export interface Beer {
+  id: number;
+  name: string;
+  characteristics: string[];
+  description: string;
+  beerType: string;
+  priceOptions: WeightOption[];
+  imageSmallUrl: string;
+  imageLargeUrl: "",
+    backgroundImage?: ""
+}
 export interface WeightOption {
   weight: number; // in grams
   price: number;
@@ -270,3 +280,92 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
 ];
+
+
+export const beers: Beer[] = [
+   {
+    id: 1, // unique identifier
+    name: "KALTENBERG KELLER",
+    characteristics: [
+      "COLORE • Paglierino opalescente",
+      "GUSTO • Amabilmente maltato e leggermente luppolato",
+      "RETROGUSTO • Intensi sentori di lievito",
+      "GRADO ALCOLICO • 5,1%"
+    ],
+    description:
+      "SUA ALTEZZA, LA BIRRA. Tutto nasce con il casato dei Wittelsbach che ha regnato per oltre 700 anni in Baviera, influenzando e caratterizzando fortemente la tradizione e la cultura birraria tedesca. Oggi il Principe Luitpold di Baviera continua a tramandare le speciali ricette della gamma König Ludwig e Kaltenberg, garantendone la qualità.",
+    beerType: "Lager non filtrata", // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/karltenberg-keller-small_btncjy.png",
+    imageLargeUrl: "",
+    backgroundImage: ""
+  },
+  {
+    id: 2, // unique identifier
+    name: "PATER LINUS BLANCHE",
+    characteristics: [
+      "COLORE • Bianco opalescente",
+      "GUSTO • Fresco, fruttato (agrumato), leggermente speziato",
+      "RETROGUSTO • Note di coriandolo e di arance Curaçao",
+      "GRADO ALCOLICO • 4,5%"
+    ],
+    description:
+      "QUANDO LA BIRRA È UNA VOCAZIONE. Godersi una birra d’abbazia è un’esperienza che va ben oltre il gusto. Dietro c’è un mondo fatto di passione e pazienza, come nel caso della Pater Linus, la cui ricetta è stata creata dall’omonimo priore dell’Abbazia di Koenigmuenster, in Germania, e tramandata fino a oggi grazie all’ostinazione dei monaci benedettini che l’hanno custodita senza alterarne l’anima.",
+    beerType: "Abbazia Blanche",
+    priceOptions: [{ weight: 0.25, price: 3.50 },{weight: 0.50, price: 6.00}],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/pater-linus-small_o9p264.png",
+    imageLargeUrl: "",
+    backgroundImage: ""
+  },
+{
+    id: 3, // unique identifier
+    name: "OBERBRÄU DOPPIO MALTO ROSSA",
+    characteristics: [
+      "COLORE • Ambrato intenso",
+      "GUSTO • Aroma intenso e fruttato",
+      "RETROGUSTO • Note di malto e caramello",
+      "GRADO ALCOLICO • 6,5%"
+    ],
+    description:
+      "CAPOLAVORO DELL’ARTE BIRRARIA BAVARESE. Oberbräu 1605 ha le sue origini in Holzkirchen, un paesino incastonato nelle innevate alpi bavaresi. Nel 1605 la famiglia reale Wittelsbach concesse agli abitanti di Holzkirchen i diritti di produzione della birra. Il giorno dell’ufficializzazione di questo permesso, tutti gli abitanti festeggiarono per le strade cantando e ballando e non si sprecò tempo nell’inaugurare il birrificio locale per la produzione della birra denominata inizialmente Holzkirchener Oberbräu. Questo momento segnò l’inizio di un patrimonio di birra d’eccellenza. Da allora e in stretta aderenza alla legge di purezza, Oberbräu 1605 è magistralmente prodotta con acqua, luppolo e orzo. Più di 400 anni dopo, la birreria di Holzkirchen produce ancora questo autentico capolavoro dell’arte birarria bavarese sotto il controllo del Principe Luitpold di Baviera.",
+    beerType: "Doppio malto rossa, bassa fermentazione", // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/oberrau-dm-small_r90sjj.png",
+    imageLargeUrl: "",
+    backgroundImage: ""
+  },
+  {
+    id: 4, // unique identifier
+    name: "RYE RIVER RETRO IPA",
+    characteristics: [
+      "COLORE • Dorato intenso",
+      "GUSTO • Equilibrato, maltato e floreale",
+      "RETROGUSTO • Balsamico, floreale e agrumato",
+      "GRADO ALCOLICO • 5,6%"
+    ],
+    description:
+      "Rye River è un birrificio artigianale indipendente nato nel 2013 nella contea di Kildare, vicino a Dublino (Irlanda). Ha vinto oltre 180 premi internazionali per le sue birre, tutte realizzate con grande passione. Tutte le ricette hanno un profilo dell’acqua unico che corrisponde allo stile della birra. Utilizzano malti selezionati a mano con combinazioni diverse per ogni birra selezionando i migliori luppoli da tutto il mondo per assicurarsi che siano il più freschi possibile.",
+   beerType: "IPA", 
+    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/rye-river-small_soky7d.png",
+    imageLargeUrl: "",
+    backgroundImage: ""
+  },
+  {
+    id:5, // unique identifier
+    name: "WARSTEINER PREMIUM FRESH (ALC. 0,0%)",
+    characteristics: [
+      "COLORE • Oro chiaro",
+      "GUSTO • Vivace, leggermente amarognolo, con delicato sentore di malto",
+      "RETROGUSTO • Fresco, vivace e leggermente fruttato",
+      "GRADO ALCOLICO • 0,0%"
+    ],
+    description:
+      "Rye River è un birrificio artigianale indipendente nato nel 2013 nella contea di Kildare, vicino a Dublino (Irlanda). Ha vinto oltre 180 premi internazionali per le sue birre, tutte realizzate con grande passione. Tutte le ricette hanno un profilo dell’acqua unico che corrisponde allo stile della birra. Utilizzano malti selezionati a mano con combinazioni diverse per ogni birra selezionando i migliori luppoli da tutto il mondo per assicurarsi che siano il più freschi possibile.",
+   beerType: "Premium pilsner analcolica", // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 0.30, price: 3.50},{weight: 0.20, price: 6}],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/warsteiner-small_tmbezy.png",
+    imageLargeUrl: "",
+    backgroundImage: ""
+  }
+]

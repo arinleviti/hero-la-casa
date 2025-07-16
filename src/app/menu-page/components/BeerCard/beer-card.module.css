@@ -1,7 +1,7 @@
 .card {
   background-color: #fff8f1; /* or any color you want */
 }
-.burgerCardTitle {
+.beerCardTitle {
       font-family: var(--font-anton);
       font-weight: 400;
       font-size: 2rem; /* increase as needed */
@@ -10,32 +10,32 @@
       text-align: center;
 
 }
-.burgerCardImageWrapper{
+.beerCardImageWrapper{
  transition: transform 0.3s ease;
 }
-.burgerCardImageWrapper:hover {
+.beerCardImageWrapper:hover {
     transform: scale(1.1);
   z-index: 1;
 }
-.burgerCardIngredients {
+.beerCardIngredients {
   font-family: var(--font-kalam), sans-serif;
     color: #5E4B3C;
      text-align: center;
 }
-.burgerCardPrice {
+.beerCardPrice {
 font-family: var(--font-oswald), sans-serif;
    /*  font-family: var(--font-anton); */
     color: #4A7729;
     text-align: center;
 }
-.burgerCardPrice{
+.beerCardPrice{
     font-weight: 900;
 font-family: var(--font-oswald), sans-serif;
   color: #4A7729;
   text-align: center;
   margin-top: auto; /* Push it to bottom */
 }
-.burgerCardBody {
+.beerCardBody {
   display: flex;
   flex-direction: column;
   height: 100%;

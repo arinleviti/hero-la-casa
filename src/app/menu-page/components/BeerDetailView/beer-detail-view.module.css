@@ -48,7 +48,8 @@
    font-family: var(--font-anton);
       font-weight: 300;
       font-size: 3rem; /* increase as needed */
-      color: #4A7729
+      color: #4A7729;
+      padding-bottom: 1rem;
 ;
 }
 .infoCol {

@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 .modalHeader {
- background-color: #ce7d2d;
+ background-color:  #5E4B3C;
 }
 .headerContent {
   display: flex;
@@ -54,7 +54,7 @@
   font-family: var(--font-anton);
   font-weight: 300;
   font-size: 2rem; /* increase as needed */
-  color: #005b48;
+  color: #edd5c3;
 
 }
 .modalBody {
@@ -66,7 +66,7 @@
       font-family: var(--font-oswald), sans-serif;
   font-family: var(--font-kalam);
    /*  font-family: var(--font-anton); */
-    color: #005b48;
+    color:  #5E4B3C;
     font-size: 1rem; /* increase as needed */
 }
 .modalBody p {
@@ -78,12 +78,12 @@
   font-family: var(--font-anton);
   font-weight: 300;
   font-size: 1.2rem; /* increase as needed */
-  color: #005b48;
+  color: #4A7729;
 }
 .reserveButton {
-  background-color: #ce7d2d;     
+  background-color:  #7BA6DE;     
   border: none;                  /* optional: remove border */
-  color: #005b48;                  /* white text */
+  color: #edd5c3;                  /* white text */
   font-family: var(--font-anton);
   font-size: 1.1rem;             /* adjust size if needed */
   padding: 0.5rem 1.2rem;        /* spacing around text */
@@ -96,9 +96,9 @@
   color: white;
 }
 .goToMenuButton {
-  background-color: #005b48;     
+  background-color: #4A7729;     
   border: none;                  /* optional: remove border */
-  color:  #ce7d2d;                  /* white text */
+  color:  #edd5c3;                  /* white text */
   font-family: var(--font-anton);
   font-size: 1.1rem;             /* adjust size if needed */
   padding: 0.5rem 1.2rem;        /* spacing around text */
