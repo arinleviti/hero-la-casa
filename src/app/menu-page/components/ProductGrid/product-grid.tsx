@@ -1,7 +1,7 @@
 'use client';
 import styles from './product-grid.module.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import { JSX, useState } from 'react';
+import { JSX, useState, useRef, useEffect } from 'react';
 import FilterBar from '../FilterBar/filter-bar';
 
 import { Burger, Beer } from '../../../Services/menuItems';
@@ -28,19 +28,39 @@ export default function BurgerGrid<T extends Burger | Beer>({
         fish: false
     })
 
-    // The special return type 'eatItem is Burger' tells TypeScript:
-    //   "If this returns true, treat 'eatItem' as a Burger from now on."
-    //function isBurger(item: Burger | Beer): item is Burger {
-        // 'itemAsBurger' is just telling TypeScript to treat 'eatItem' like a Burger here
-        // We check if 'categories' exists on it — that's how we know it's a Burger
-        //return (item as Burger).categories !== undefined;
-    //}
-    //If showFilters is true, apply the filters on the items array.
-    //Otherwise, just use the full items list (e.g. for beers).
-  
-   
+    // refs for the burger grid wrapper and filter bar
+    const burgerGridRef = useRef<HTMLDivElement | null>(null);
+    const [isSticky, setIsSticky] = useState(false);
+
+    // Scroll handler to toggle sticky state
+    // Add event listeners INSIDE useEffect to set them up once and clean them up properly.
+    // This prevents memory leaks and avoids adding multiple listeners on every render.
+    // Always add event listeners inside useEffect to ensure they are registered
+    // only when needed, and clean them up properly to avoid duplicates or memory leaks.
+    // The cleanup function removes the listener when the component unmounts or dependencies change.
+    useEffect(() => {
+        if (!showFilters) return;
+
+        const onScroll = () => {
+            if (!burgerGridRef.current) return;
+            //getBoundingClientRect() returns the size and position of the burger grid container relative to the viewport.
+            const rect = burgerGridRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // If the bottom of the burger grid is below the viewport bottom,
+            // the filter bar should stick to viewport bottom
+            //bottom: distance from the top of the viewport to the bottom of the element
+            setIsSticky(rect.bottom > viewportHeight);
+        };
+
+        window.addEventListener('scroll', onScroll);
+        onScroll(); // check immediately
+
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [showFilters]);
+
     const filteredItems = showFilters
-        ?(items as Burger[]).filter(item => {
+        ? (items as Burger[]).filter(item => {
             if (filters.vegan && !item.categories.includes('vegano')) return false;
             if (filters.beef && !item.categories.includes('manzo')) return false;
             if (filters.mediumSpicy && !item.categories.includes('leggermente piccante')) return false;
@@ -48,14 +68,11 @@ export default function BurgerGrid<T extends Burger | Beer>({
             if (filters.fish && !item.categories.includes('pesce')) return false;
             return true;
         }) as T[] : items;
-console.log("Filtered items count:", filteredItems.length);
+
     return (
-        <>
-            {showFilters && (
-                <div className={styles.filterBar}>
-                    <FilterBar filters={filters} setFilters={setFilters} />
-                </div>
-            )}
+
+        <div className={styles.burgerGridWrapper} ref={burgerGridRef}>
+
             <Container fluid className={styles.burgerGridContainer}>
                 <h2 className={styles.gridTitle}>{title}</h2>
 
@@ -70,7 +87,17 @@ console.log("Filtered items count:", filteredItems.length);
                 {filteredItems.length === 0 && (
                     <p className="text-muted text-center mt-5">Nessun burger corrisponde ai filtri selezionati.</p>
                 )}
+
+                {showFilters && (
+                    <div className={`${styles.filterBar} ${isSticky ? styles.sticky : styles.static}`}>
+                        <FilterBar filters={filters} setFilters={setFilters} />
+                    </div>
+                )}
+
             </Container>
-        </>
+
+
+        </div>
+
     );
 }

@@ -18,7 +18,6 @@ interface FilterBarProps {
 export default function FilterBar({ filters, setFilters }: FilterBarProps) {
 
   const toggleFilter = (key: keyof Filters) => {
-    console.log("Toggling filter:", key);
     setFilters(prev => ({
         // Copy all the properties from the previous filters object
 // Then overwrite the property named by 'key' with the opposite of its current value

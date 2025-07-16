@@ -1,21 +1,39 @@
-.filterBar {
-    position:fixed;
-    bottom: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: #4A7729
-;
+.burgerGridWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* Ensures the wrapper scrolls if content is tall */
+  min-height: 100vh;
 }
+
+.burgerGridContainer {
+  padding-bottom: 6rem; /* Space for the sticky bar */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
 .gridTitle {
   font-family: var(--font-anton);
   font-size: 3rem;
   text-align: center;
-  color: #4A7729
-;
+  color: #4A7729;
   margin: 2rem 0;
 }
-.burgerGridContainer {
-  padding-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+
+.filterBar {
+   width: 100%;
+  background-color: #4A7729;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.static {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

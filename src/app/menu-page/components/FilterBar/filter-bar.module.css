@@ -14,7 +14,7 @@
 }
 /* Shared button styles */
 .button {
-  background-color: #ce7d2d;
+  background-color: #7BA6DE;
   color: #fff6ea !important;
   border: none;
 
@@ -30,7 +30,7 @@
   line-height: 1;
 }
 .resetButton {
-  background-color: #c35355;
+  background-color: #5E4B3C;
   color: #fff6ea;
   border: 1px solid transparent;
   padding: 0.130rem 0.65rem; /* Bootstrap standard */
