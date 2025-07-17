@@ -8,6 +8,7 @@ import PictureBelt from './components/PictureBelt/picture-belt';
 import SwiperObject from './components/SwiperObject/swiper-object';
 import{ burgers} from './Services/menuItems';
 import { StaffSection } from './components/StaffSection/staff-section';
+import MarqueeSection from './components/Marquee/marquee';
 
 export default function HomePage() {
 
@@ -20,6 +21,7 @@ export default function HomePage() {
         <div style={{ height: '35vh' }}></div> {/* add vertical space to scroll */}
       </main>
       <HeroSection textData={heroContent} imageData={heroImage} />
+      <MarqueeSection />
       <VideoSection videoData={videoData} textVideoData={textVideoData} />
       <PictureBelt pictures={picturesForBelt1} />
       <SwiperObject burgers={burgers} />

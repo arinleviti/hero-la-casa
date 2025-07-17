@@ -1,0 +1,70 @@
+.marqueeContainer {
+  background-color: #edd5c3; /* Tailwind bg-yellow-50 */
+  padding: 0.75rem 0;        /* Tailwind py-3 */
+  display: flex;
+  gap: 0rem;                 /* Tailwind space-x-12 approximation */
+  max-height: 2cm;
+  align-items: center;
+  overflow: hidden;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Tailwind space-x-4 */
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.itemWrapper:hover {
+  text-decoration: underline;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-left: 0rem; /* space between items */
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem; /* space between items */
+     white-space: normal; /* ← allow wrapping */
+  max-width: 250px;     /* or whatever fits nicely */
+}
+
+.burgerLabel {
+  font-size: 0.875rem; /* Tailwind text-sm */
+  font-weight: 600;    /* Tailwind font-semibold */
+  color: #5E4B3C;       /* Tailwind text-red-700 */
+  font-family: var(--font-kalam);
+}
+
+.burgerName {
+  font-weight: 700;    /* Tailwind font-bold */
+  font-size: 1.125rem; /* Tailwind text-lg */
+  color: #4A7729;
+  font-family: var(--font-anton);
+}
+
+.newsLink {
+  max-width: 300px;         /* or adjust to fit your layout */
+  white-space: normal;      /* allow wrapping */
+  word-break: break-word;   /* wrap long words if needed */
+  overflow: hidden;
+
+  color: #5E4B3C;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: var(--font-kalam);
+}
+
+.newsLink:hover {
+  text-decoration: underline;
+}

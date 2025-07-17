@@ -7,6 +7,7 @@ export interface Burger {
   allergens: string[];
   categories: string[];
   priceOptions: WeightOption[]; // replaces single price
+  burgerOfTheMonth: boolean;
   extras?: ExtraOption[];
   imageSmallUrl?: string;
   imageLargeUrl?: string; // optional for UI, if you have larger images
@@ -53,6 +54,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
+    burgerOfTheMonth: true,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
@@ -76,6 +78,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     backgroundImage:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
@@ -96,6 +99,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
@@ -121,6 +125,7 @@ export const burgers: Burger[] = [
       { weight: 160, price: 13.9 },
       { weight: 220, price: 14.9 },
     ],
+    burgerOfTheMonth: false,
     extras: [{ name: "Cipolle caramellate", price: 1.5 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639875/Nostrano_rree3j.png"
@@ -143,6 +148,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
@@ -162,6 +168,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 220, price: 13.99 }],
+    burgerOfTheMonth: false,
     extras: [
       { name: "Cipolle caramellate", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
@@ -187,6 +194,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini", "uova"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   },
@@ -207,6 +215,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
+    burgerOfTheMonth: false,
     extras: [
       { name: "Formaggio", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
@@ -232,6 +241,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano", "leggermente piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
+    burgerOfTheMonth: false,
     extras: [
       { name: "Salsa al formaggio cheddar", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
@@ -256,6 +266,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 150, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
@@ -276,6 +287,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 115, price: 13.99 }],
+    burgerOfTheMonth: false,
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
