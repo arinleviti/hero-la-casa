@@ -5,7 +5,7 @@ import styles from './page.module.css';
 import { StoryBlock, storyBlocks } from '../Services/our-story';
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
-
+import FootPrint from './Footprint/footprints'
 
 export function StoryBlockComponent({ year, title, text, imageUrl, reverse = false }: StoryBlock) {
     const controls = useAnimation();
@@ -53,12 +53,13 @@ export function StoryBlockComponent({ year, title, text, imageUrl, reverse = fal
 
 export default function StoryPage() {
     return (
-         <div className={styles.storyPage}>
-        {storyBlocks.map((block, index) => (
-            <div style={{ marginBlock: '8rem' }} key={index}>
-            <StoryBlockComponent key= {index} title={block.title} year= {block.year} text={block.text} imageUrl={block.imageUrl} reverse={block.reverse} />
-        </div>
-        ))}
+        <div className={styles.storyPage}>
+            <FootPrint/>
+            {storyBlocks.map((block, index) => (
+                <div style={{ marginBlock: '8rem' }} key={index}>
+                    <StoryBlockComponent key={index} title={block.title} year={block.year} text={block.text} imageUrl={block.imageUrl} reverse={block.reverse} />
+                </div>
+            ))}
         </div>
     )
 }

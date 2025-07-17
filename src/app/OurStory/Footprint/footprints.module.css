@@ -1,0 +1,31 @@
+.footprintsContainer {
+  position: fixed;
+  bottom: 2rem;
+  left: 4rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2.5rem;
+  pointer-events: none;
+  z-index: 999;
+  height: 60vh;
+  overflow: visible;
+}
+
+/* This is the wrapper div around the next/image */
+.footprint {
+  position: relative; /* required for next/image fill */
+  width: 30px;        /* fixed width */
+  height: 55px;       /* fixed height */
+  transition: opacity 0.3s ease;
+}
+
+.leftFoot {
+  transform: rotate(-20deg);
+  margin-left: 0;
+}
+
+.rightFoot {
+  transform: rotate(20deg) scaleX(-1);
+  margin-left: 1.5rem;
+}
+
