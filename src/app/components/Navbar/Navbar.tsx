@@ -45,15 +45,21 @@ const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
                     <Navbar.Collapse id="navbar-nav">
                         <div className={styles.navContent}>
                             {/* Left side links */}
-                            <Nav className={styles.navSide}>
+                            <Nav className={`${styles.navSide} ${styles.left}`}>
                                 <Nav.Link as={Link} href="/menu-page">MENU</Nav.Link>
                                 <Nav.Link as={Link} href="/menu">CHI SIAMO</Nav.Link>
+                                <Nav.Link as={Link} href="/contact">LO STAFF</Nav.Link>
+                                <Nav.Link as={Link} href="/blog/1">DIARIO DI BORDO</Nav.Link>
+<Nav.Link as={Link} href="/about">ESPERIENZE</Nav.Link>
                             </Nav>
 
                             {/* Right side links */}
-                            <Nav className={styles.navSide}>
-                                <Nav.Link as={Link} href="/about">DIARIO</Nav.Link>
-                                <Nav.Link as={Link} href="/contact">LO STAFF</Nav.Link>
+                            <Nav className={`${styles.navSide} ${styles.right}`}>
+                                
+                                
+                                <Nav.Link as={Link} href="/OurStory">LA NOSTRA STORIA</Nav.Link>
+                                <Nav.Link as={Link} href="/contact">LAVORA CON NOI</Nav.Link>
+                                <Nav.Link as={Link} href="/contact">COME RAGGIUNGERCI</Nav.Link>
                             </Nav>
                         </div>
                     </Navbar.Collapse>

@@ -1,0 +1,49 @@
+.storyPage {
+  padding: 0rem 2rem;
+
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 0;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.imageWrapper img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.titleWrapper {
+  font-size: 1.5rem;
+  color: #4A7729;
+  font-family: var(--font-anton);
+}
+.textWrapper {
+  flex: 1;
+}
+
+.year {
+  font-size: 3rem;
+  color: #4A7729;
+  font-family: var(--font-anton);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 1.45rem;
+  color: #5E4B3C;
+  line-height: 1.6;
+   font-family: var(--font-kalam);
+}

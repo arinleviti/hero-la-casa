@@ -10,22 +10,30 @@ width: 100%;
   justify-content: center; /* Center all children */
   align-items: center;
   width: 100%;
+  justify-content: space-between; /* Distribute left and right sides */
   position: relative;
   gap: 15rem; /* space between left nav, logo, and right nav */
 }
 .navSide {
   display: flex;
-  gap: 1.8rem;
-
+  gap: 1.2rem;
+flex: 1;
   /* Optional: add margin to push links closer/further from logo */
   /* For example: margin: 0 1rem; */
+}
+.navSide.left {
+  justify-content: flex-end; /* Align links toward the logo */
+}
+
+.navSide.right {
+  justify-content: flex-start; /* Align links toward the logo */
 }
 .navSide :global(.nav-link) {
     color: #fff6ea;
 font-family: var(--font-oswald), sans-serif;
 
 font-weight: 900;
-font-size: larger;
+font-size: medium;
 /* transform: scaleY(1.2); */ /* makes it 20% taller */
 }
 .navSide :global(.nav-link:hover) {
