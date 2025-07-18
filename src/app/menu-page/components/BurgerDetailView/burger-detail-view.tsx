@@ -31,6 +31,8 @@ export default function BurgerDetailView({
         return '/CategoryIcons/mildlyHot.png';
       case 'piccante':
         return '/CategoryIcons/hot.png';
+         case 'pollo':
+        return '/CategoryIcons/chicken.png';
       default:
         return '/images/default-icon.png';
     }

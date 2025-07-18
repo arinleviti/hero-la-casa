@@ -23,6 +23,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
     const [filters, setFilters] = useState({
         vegan: false,
         beef: false,
+        chicken:false,
         mediumSpicy: false,
         spicy: false,
         fish: false
@@ -63,6 +64,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
         ? (items as Burger[]).filter(item => {
             if (filters.vegan && !item.categories.includes('vegano')) return false;
             if (filters.beef && !item.categories.includes('manzo')) return false;
+            if (filters.chicken && !item.categories.includes('pollo')) return false;
             if (filters.mediumSpicy && !item.categories.includes('leggermente piccante')) return false;
             if (filters.spicy && !item.categories.includes('piccante')) return false;
             if (filters.fish && !item.categories.includes('pesce')) return false;

@@ -91,7 +91,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3; /* faint */
+  opacity: 0.2; /* faint */
   z-index: 0;   /* behind content */
   pointer-events: none;
   border-radius: 8px; /* match container rounding */

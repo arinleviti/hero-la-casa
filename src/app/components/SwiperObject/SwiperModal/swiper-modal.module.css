@@ -1,4 +1,4 @@
-.imageWrapper {
+ .imageWrapper {
   position: relative;
   width: 100%;
   height: 250px;
@@ -44,30 +44,33 @@
 .ingredients li::before {
   margin-right: 3px;
 }
-.modalContent {
-  max-height: 95vh; /* or whatever height you prefer */
+/* .modalContent {
+  max-height: 95vh; 
   background-color: #edd5c3;
-    display: flex;            /* add this */
-  flex-direction: column;   /* add this */
-}
+    display: flex;            
+  flex-direction: column;   
+} */
 .modalTitle {
   font-family: var(--font-anton);
   font-weight: 300;
-  font-size: 2rem; /* increase as needed */
+  font-size: 2rem; 
   color: #edd5c3;
 
 }
+
 .modalBody {
-    flex-grow: 1;         /* fill available space */
-  overflow-y: auto;     /* scroll if content too tall */
-  padding-right: 1rem;  /* optional, room for scrollbar */
+  position: relative;
+  min-height: 400px; /* Minimum height */
+  width: 100%; /* Full width */
+  overflow-y: auto;
+  padding: 1rem;
 }
 .modalBody , .modalBody p  {
       font-family: var(--font-oswald), sans-serif;
   font-family: var(--font-kalam);
-   /*  font-family: var(--font-anton); */
+
     color:  #5E4B3C;
-    font-size: 1rem; /* increase as needed */
+    font-size: 1rem; 
 }
 .modalBody p {
    
@@ -77,38 +80,38 @@
 .modalBody h5{
   font-family: var(--font-anton);
   font-weight: 300;
-  font-size: 1.2rem; /* increase as needed */
+  font-size: 1.2rem; 
   color: #4A7729;
 }
 .reserveButton {
   background-color:  #7BA6DE;     
-  border: none;                  /* optional: remove border */
-  color: #edd5c3;                  /* white text */
+  border: none;                 
+  color: #edd5c3;                  
   font-family: var(--font-anton);
-  font-size: 1.1rem;             /* adjust size if needed */
-  padding: 0.5rem 1.2rem;        /* spacing around text */
-  border-radius: 6px;            /* optional: round corners */
+  font-size: 1.1rem;            
+  padding: 0.5rem 1.2rem;        
+  border-radius: 6px;            
   transition: background-color 0.2s ease;
 }
 .reserveButton:hover,
 .reserveButton:focus {
-  background-color: #a93226;     /* darker red on hover */
+  background-color: #a93226;     
   color: white;
 }
 .goToMenuButton {
   background-color: #4A7729;     
-  border: none;                  /* optional: remove border */
-  color:  #edd5c3;                  /* white text */
+  border: none;                 
+  color:  #edd5c3;                  
   font-family: var(--font-anton);
-  font-size: 1.1rem;             /* adjust size if needed */
-  padding: 0.5rem 1.2rem;        /* spacing around text */
-  border-radius: 6px;            /* optional: round corners */
+  font-size: 1.1rem;            
+  padding: 0.5rem 1.2rem;        
+  border-radius: 6px;           
   transition: background-color 0.2s ease;
 }
 
 .goToMenuButton:hover,
 .goToMenuButton:focus {
-  background-color: #a93226;     /* darker red on hover */
+  background-color: #a93226;     
   color: white;
 }
 .modalFooter {
@@ -121,15 +124,16 @@
 
 .backgroundImage {
   position: absolute;
-  top: 0;
+   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%;      /* cover full modalBody */
+  min-height: 100%; /* make sure it stretches */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3;
-  z-index: -10;
+  opacity: 0.2;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -142,3 +146,9 @@
   display: flex;
   flex-direction: column;
 }
+
+ .modalContentOverlay {
+  position: relative;
+  z-index: 1;
+  padding: 1rem; 
+ } 

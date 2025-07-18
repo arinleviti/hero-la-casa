@@ -55,7 +55,10 @@
 .vegan:hover {
   background-color: #1e7e34 !important;
 }
-
+/* CHICKEN */
+.chicken:hover {
+  background-color: #c66600 !important;
+}
 /* BEEF */
 .beef:hover {
   background-color: #a71d2a !important;
@@ -63,12 +66,12 @@
 
 /* MEDIUM SPICY */
 .mediumSpicy:hover {
-  background-color: #e0a800 !important;
+  background-color: #e07000 !important;
 }
 
 /* SPICY */
 .spicy:hover {
-  background-color: #c65900 !important;
+  background-color: #c62400 !important;
 }
 
 /* FISH */

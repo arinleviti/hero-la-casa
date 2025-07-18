@@ -25,6 +25,8 @@ const getCategoryIconPath = (category: string): string => {
       return '/CategoryIcons/mildlyHot.png';
     case 'piccante':
       return '/CategoryIcons/hot.png';
+      case 'pollo':
+      return '/CategoryIcons/chicken.png';
     default:
       return '/images/default-icon.png';
   }
@@ -64,6 +66,7 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
             className={styles.backgroundImage}
             style={{ backgroundImage: `url(${burger.backgroundImage})` }}
           />
+          <div className={styles.modalContentOverlay}>
           <div className={burger.backgroundImage ? styles.imageWrapperWithOrigin : styles.imageWrapper}>
             <Image
               src={burger.imageLargeUrl || '/images/placeholder.png'}
@@ -72,13 +75,14 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
               objectFit="contain"
             />
           </div>
-          <p className={styles.description}>{burger.description}</p>
+          <p className={styles.description}>{burger.modalDescription}</p>
           <h5>INGREDIENTI:</h5>
           <ul className={styles.ingredients}>
             {burger.ingredients.map((ingredient, i) => (
               <li key={i} className={styles.ingredientItem}>{ingredient}</li>
             ))}
           </ul>
+          </div>
         </Modal.Body>
         <Modal.Footer className={styles.modalFooter}>
           <Button href="/menu-page" className={styles.goToMenuButton} onClick={onClose}>

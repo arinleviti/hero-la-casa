@@ -5,6 +5,7 @@ import { ButtonGroup, ToggleButton } from 'react-bootstrap';
 interface Filters {
   vegan: boolean;
   beef: boolean;
+  chicken: boolean;
   mediumSpicy: boolean;
   spicy: boolean;
   fish: boolean;
@@ -53,6 +54,16 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
       </ToggleButton>
 
       <ToggleButton
+        id="filter-chicken"
+        value="chicken"
+        type="checkbox"
+        className={`${styles.button} ${styles.chicken}`}
+        checked={filters.chicken}
+        onClick={() => toggleFilter('chicken')}
+      >
+        POLLO
+      </ToggleButton>
+      <ToggleButton
         id="filter-mediumSpicy"
         value="mediumSpicy"
         type="checkbox"
@@ -91,6 +102,7 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
       <button id="reset-filters" value="reset" className={`${styles.button} ${styles.resetButton}`} onClick={() => setFilters({
       vegan: false,
       beef: false,
+      chicken: false,
       mediumSpicy: false,
       spicy: false,
       fish: false

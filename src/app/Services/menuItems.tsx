@@ -2,7 +2,8 @@ export interface Burger {
   id: number;
   name: string;
   ingredients: string[];
-  description: string;
+  description?: string;
+  modalDescription?: string;
   side?: string;
   allergens: string[];
   categories: string[];
@@ -23,7 +24,7 @@ export interface Beer {
   priceOptions: WeightOption[];
   imageSmallUrl: string;
   imageLargeUrl: "",
-    backgroundImage?: ""
+  backgroundImage?: ""
 }
 export interface WeightOption {
   weight: number; // in grams
@@ -49,19 +50,25 @@ export const burgers: Burger[] = [
       "Pane HERO",
     ],
     description:
-      "Pane HERO, 200 g di carne proveniente da Aberdeen, territorio incontaminato del nord della Scozia",
+      "Un burger dal gusto deciso con carne di Angus di alta qualità, arricchito da croccante lattuga, pomodoro fresco, bacon saporito e delicata insalata gentile. Il tutto accompagnato da una fetta di formaggio Cheddar fuso e racchiuso nel soffice e fragrante pane HERO.",
+      modalDescription:"Burger di Angus con bacon, Cheddar e verdure fresche nel pane HERO.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
     burgerOfTheMonth: true,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
     origin: "2227 Km"
   },
-  {
-    id: 2, // unique identifier
+ /*  {
+    id: 2, 
     name: "HOKKAIDO",
     ingredients: [
       "100 g Tartare di WAGYU di HOKKAIDO A4 BMS 12",
@@ -75,15 +82,20 @@ export const burgers: Burger[] = [
     description:
       "Pane Home Made, 100 g Tartare di WAGYU di HOKKAIDO A4 BMS 12, aromatizzata al Porcino polverizzato, alga Wakame con mousse di Trentingrana, Rapanello e germogli di Pisello",
     side: "Accompagnato da patatine non fritte",
-    allergens: ["glutine"], // list allergens for allergy info
-    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    allergens: ["glutine"], 
+    categories: ["manzo"], 
     priceOptions: [{ weight: 100, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
-    backgroundImage:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
     origin: "12.593 Km"
-  },
+  } */
   {
     id: 3, // unique identifier
     name: "MANGIAFUOCO",
@@ -94,12 +106,18 @@ export const burgers: Burger[] = [
       "Cheddar al Tabasco",
       "Pane al peperoncino",
     ],
-    description: "Un mix di ingredienti super piccanti!",
+    description: "Un'esplosione di sapori piccanti con carne speziata, bacon alla paprika affumicata e formaggio Cheddar al Tabasco, accompagnati da fresca insalata gentile e racchiusi in un pane al peperoncino che aggiunge un tocco di fuoco a ogni morso.",
+    modalDescription: "Burger piccante con bacon alla paprika, Cheddar al Tabasco e pane al peperoncino.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
@@ -116,8 +134,9 @@ export const burgers: Burger[] = [
       "Pane HERO",
     ],
     description:
-      "Pane HERO, 200 g di carne proveniente da Aberdeen, territorio incontaminato del nord della Scozia",
-    side: "Accompagnato da patatine non fritte",
+      "Un morso e sei tra le cime delle Dolomiti: succulenta carne di manzo avvolta dalla freschezza dell’insalata gentile e del pomodoro maturo. A dare carattere, un tocco affumicato di Speck delle Dolomiti, mentre una generosa colata di Fontal di Cavalese scivola lenta e cremosa, abbracciando ogni ingrediente. Il tutto è legato da un classico abbinamento di maionese e ketchup, racchiuso in un fragrante pane HERO. Un tributo ai sapori autentici, per chi ama sentirsi a casa ovunque.",
+    modalDescription: "Burger di manzo con speck delle Dolomiti, Fontal di Cavalese e salsa speciale nel pane HERO.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
@@ -126,9 +145,15 @@ export const burgers: Burger[] = [
       { weight: 220, price: 14.9 },
     ],
     burgerOfTheMonth: false,
-    extras: [{ name: "Cipolle caramellate", price: 1.5 }],
+    extras: [{ name: "Cipolle caramellate", price: 1.5 },
+    { name: "Bacon nelle patate", price: 1.50 },
+    { name: "Cheddar nelle patate", price: 1.50 },
+    { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639875/Nostrano_rree3j.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
+    origin: "Km 0"
   },
   {
     id: 5, // unique identifier
@@ -143,12 +168,18 @@ export const burgers: Burger[] = [
       "Pane HERO",
     ],
     description:
-      "Per gli amanti della carne cruda, un mix di ingredienti freschi e gustosi",
-    side: "Accompagnato da patatine non fritte",
+      "Un burger che osa con classe: pregiata tartare di Fassona piemontese, lasciata cruda per esaltarne tutta la purezza e la delicatezza. Ad accompagnarla, insalata gentile, pomodori soleggiati e germogli freschi, in un equilibrio di freschezza e profondità. La cipolla caramellata aggiunge dolcezza, mentre la salsa tartare firma il piatto con un tocco deciso. Il tutto racchiuso nel morbido pane HERO. Crudo, sì—ma con stile.",
+    modalDescription: "Burger con tartare di Fassona piemontese, cipolla caramellata e salsa tartare nel pane HERO.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
@@ -163,7 +194,8 @@ export const burgers: Burger[] = [
       "Salsa al pepe rosa fatta in casa",
       "Pane HERO",
     ],
-    description: "Il burger ufficiale del Timber Team Giacomelli!",
+    description: "Il burger ufficiale del Timber Team Giacomelli! Una carica di energia e gusto pensata per chi non teme il bosco né la fame. Robusta carne di manzo, accompagnata da peperoni grigliati e speck scottato alla perfezione, per un’esplosione affumicata e succosa. La rosella alla piastra aggiunge carattere e croccantezza, mentre la protagonista è lei: una salsa al pepe rosa fatta in casa, intensa e profumata come una passeggiata tra i larici. Il tutto avvolto nel fidato pane HERO. Un panino da veri boscaioli. Ma con stile.",
+    modalDescription: "Burger di manzo con speck grigliato, peperoni e salsa al pepe rosa nel pane HERO.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
@@ -172,9 +204,13 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Cipolle caramellate", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
   },
   {
     id: 7, // unique identifier
@@ -184,22 +220,185 @@ export const burgers: Burger[] = [
       "Insalata gentile",
       "PorKetta alla piastra",
       "Pomodoro",
-      "Insalata gentile",
       "Formaggio Cheddar",
       "Pane HERO",
     ],
     description:
-      "Per gli amanti della porKetta e della carne di manzo, un mix di ingredienti freschi e gustosi",
-    side: "Accompagnato da patatine non fritte",
+      "Quando la carne di manzo incontra la porKetta alla piastra, nasce un panino dal cuore doppio e deciso. La freschezza dell’insalata gentile (raddoppiata per chi ama il verde!), la succosità del pomodoro e la cremosità del formaggio Cheddar creano un’armonia irresistibile. Il tutto racchiuso nel classico pane HERO, pronto a tenere testa a tanta goduria.",
+    modalDescription: "Burger di manzo con porchetta alla piastra, Cheddar e verdure fresche nel pane HERO.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini", "uova"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   },
   {
     id: 8, // unique identifier
+    name: "GOLOSO",
+    ingredients: [
+      "Pane nero come il carbone",
+      "Carne di manzo",
+      "Mortadella pistacchiata",
+      "Insalata gentile",
+      "Peperoni grigliati",
+      "Spalmata di gorgonzola dolce"
+    ],
+    description:
+      "Un’esplosione di gusto racchiusa in un pane nero come carbone. La succulenta carne di manzo si fonde con la morbida mortadella pistacchiata, mentre l’insalata gentile aggiunge freschezza e croccantezza. I peperoni grigliati donano una dolcezza affumicata, completata dalla spalmata avvolgente di gorgonzola dolce: un equilibrio perfetto tra sapori intensi e vellutati.",
+    modalDescription: "Burger di manzo con mortadella pistacchiata, gorgonzola dolce e peperoni nel pane nero.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 12.90 },
+      { weight: 160, price: 13.90 },
+      { weight: 220, price: 14.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Uovo al tegamino", price: 1.50 },
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
+
+
+  },
+  {
+    id: 9, // unique identifier
+    name: "IL TARTUFO",
+    ingredients: [
+      "Pane nero come il carbone",
+      "Tartare di Fassona Piemontese",
+      "Stracciatella di burrata pugliese",
+      "Granella di pistacchi di Bronte",
+      "Scaglie di tartufo nero",
+      "Olio al tartufo"
+    ],
+    description:
+      "Un’eleganza intensa racchiusa in un pane nero come carbone. La pregiata tartare di Fassona Piemontese si fonde con la vellutata stracciatella di burrata pugliese, mentre la croccante granella di pistacchi di Bronte aggiunge un tocco di carattere. Scaglie di tartufo nero e un filo di olio al tartufo esaltano ogni morso, trasformando questo burger in un viaggio raffinato tra profumi e sapori preziosi.",
+    modalDescription: "Burger con tartare di Fassona, burrata, pistacchi di Bronte e tartufo nero nel pane nero.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 19.90 },
+      { weight: 200, price: 22.90 },
+      { weight: 300, price: 25.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png"
+
+  },
+  {
+    id: 10, // unique identifier
+    name: "ITALIANO",
+    ingredients: [
+      "Pane HERO",
+      "Carne di manzo",
+      "Insalata gentile",
+      "Crudo di Parma",
+      "Mozzarella di bufala campana DOP",
+      "Pomodoro fresco",
+      "Maionese e ketchup"
+    ],
+    description:
+      "Un classico intramontabile rivisitato con ingredienti d’eccellenza. Il pane HERO racchiude succulenta carne di manzo, fresca insalata gentile e il pregiato crudo di Parma. La mozzarella di bufala campana DOP si fonde con il pomodoro fresco, mentre una delicata maionese e un tocco di ketchup completano questo burger dal sapore autentico e irresistibile.",
+    modalDescription: "Burger di manzo con crudo di Parma, mozzarella di bufala e verdure fresche nel pane HERO.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 12.90 },
+      { weight: 160, price: 13.90 },
+      { weight: 220, price: 14.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
+  },
+  {
+    id: 11, // unique identifier
+    name: "SEASON BURGER",
+    ingredients: [
+      "Pane ai 7 cereali",
+      "Filetto di pollo panato",
+      "Mozzarella di bufala campana DOP",
+      "Pomodoro ramato",
+      "Basilico ligure fresco"
+    ],
+    description:
+      "Il gusto della freschezza di stagione in ogni morso. Un soffice pane ai 7 cereali accoglie un filetto di pollo panato, dorato e croccante. La mozzarella di bufala campana DOP, cremosa e avvolgente, si sposa con il pomodoro ramato succoso e il profumo intenso del basilico fresco ligure, per un burger leggero ma ricco di sapore.",
+    modalDescription: "Burger di pollo panato con mozzarella di bufala, pomodoro e basilico nel pane ai 7 cereali.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 15.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
+
+  },
+  {
+    id: 12, // unique identifier
+    name: "MIKONOS",
+    ingredients: [
+      "Pane 'Non siamo mica SEMI'",
+      "Filetto di pollo grigliato",
+      "Letto di carciofi con gambo",
+      "Yogurt greco",
+      "Spolveratina di paprika dolce"
+    ],
+    description:
+      "Un viaggio di sapori mediterranei racchiuso nel pane “Non siamo mica SEMI”, morbido e fragrante. Il filetto di pollo grigliato si posa su un letto di carciofi croccanti con gambo, avvolto dalla freschezza cremosa dello yogurt greco. Il tocco finale? Una spolverata di paprika dolce che regala un leggero brivido di gusto, perfetto per chi ama i sapori autentici e solari.",
+    modalDescription: "Burger di pollo grigliato con carciofi, yogurt greco e paprika nel pane ‘Non siamo mica SEMI’.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 14.50 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
+    origin: "1260 Km"
+  },
+  {
+    id: 13, // unique identifier
     name: "L'ORTOLANO",
     ingredients: [
       "Burger di verdure",
@@ -210,8 +409,9 @@ export const burgers: Burger[] = [
       "Pane 'non siamo mica SEMI'",
     ],
     description:
-      "Per i nostri amici vegani, un mix di verdure fresche e gustose",
-    side: "Accompagnato da patatine non fritte",
+      "Un’esplosione di colori e freschezza per chi ama il verde senza perdere il gusto. Il burger di verdure è il cuore di questo panino, accompagnato dalla croccantezza dell’insalata gentile, la dolcezza del pomodoro, la vivacità delle carote e la nota avvolgente della cipolla caramellata. Il tutto abbracciato dal simpaticissimo pane “non siamo mica SEMI”, che dice la verità: qui si mangia serio, anche senza carne. Vegetariano sì, ma con grinta!",
+    modalDescription: "Burger di verdure con insalata, pomodoro e cipolla caramellata nel pane ‘Non siamo mica SEMI’.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
@@ -219,12 +419,15 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Formaggio", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
   },
   {
-    id: 9, // unique identifier
+    id: 14, // unique identifier
     name: "IL CRUNCH",
     ingredients: [
       "Burger di frumento panato",
@@ -236,8 +439,9 @@ export const burgers: Burger[] = [
       "Pane casereccio",
     ],
     description:
-      "Pane casereccio che fa cruuunch ad ogni morso, con un mix di ingredienti freschi e gustosi",
-    side: "Accompagnato da patatine non fritte",
+      "Un morso e senti crunch — il segnale che sei nel posto giusto. Il protagonista è un burger di frumento panato, dorato e irresistibile, esaltato da un tocco di paprika leggermente piccante. A completare l’opera: insalata gentile, pomodori semicerchi sott’olio, e l’inaspettata sorpresa del bacon di barbabietola, che stupisce per sapore e texture. La maionese vegana aggiunge cremosità, mentre il pane casereccio chiude il cerchio con la sua anima rustica. Vegetale, sì. Ma con carattere da vero rockstar.",
+    modalDescription: "Burger di frumento panato con bacon di barbabietola, pomodori sott'olio e maionese vegana nel pane casereccio.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano", "leggermente piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
@@ -245,12 +449,15 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Salsa al formaggio cheddar", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   },
   {
-    id: 10, // unique identifier
+    id: 15, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -261,17 +468,23 @@ export const burgers: Burger[] = [
       "Ciabattina croccante e morbida",
     ],
     description:
-      "Il vegan burger più dark che ci sia, con un mix di ingredienti freschi e gustosi",
-    side: "Accompagnato da patatine non fritte",
+      "Burger di patata viola, asparagi rustici, patè di olive nere e pomodoro al forno Hero Made, avvolti da zucchine grigliate e una ciabattina croccante e morbida. Intensa, raffinata, indimenticabile.",
+    modalDescription: "Burger di patata viola con asparagi, patè di olive nere e pomodoro al forno nella ciabattina croccante.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 150, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
   {
-    id: 11, // unique identifier
+    id: 16, // unique identifier
     name: "GREEN BURGER",
     ingredients: [
       "Burger vegetale Beyond Meat",
@@ -282,20 +495,111 @@ export const burgers: Burger[] = [
       "Pane verde come la natura",
     ],
     description:
-      "Il burger Beyond Meat si veste di verde, con un mix di ingredienti freschi e gustosi",
-    side: "Accompagnato da patatine non fritte",
+      "Il protagonista è il succoso burger vegetale Beyond Meat, accompagnato dalla cremosità dell’hummus di ceci, le gocce di peperoni dolci e i pomodorini datterini gialli sott’olio per un’esplosione di gusto e colore. Il tutto bilanciato dall’amaro elegante del radicchio rosso e racchiuso in un pane verde come la natura. Un panino che parla chiaro: sostenibile, sorprendente, super buono.",
+    modalDescription: "Burger vegetale Beyond Meat con hummus, peperoni dolci e pomodorini gialli nel pane verde naturale.",
+      side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 115, price: 13.99 }],
     burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
+  },
+  {
+    id: 17, // unique identifier
+    name: "IL KRAKEN",
+    ingredients: [
+      "Ciabattina croccante e morbida",
+      "Tentacolo di polpo cotto a bassa temperatura",
+      "Insalatina di pomodorini e sedano",
+      "Stracciatella di burrata pugliese",
+      "Pesto di basilico senz'aglio"
+    ],
+    description:
+      "Un tuffo nei sapori del mare e della natura, racchiuso in una ciabattina croccante e soffice. Il tentacolo di polpo, cotto lentamente a bassa temperatura, si scioglie al morso, accompagnato da un’insalatina fresca di pomodorini e sedano. La cremosa stracciatella di burrata pugliese avvolge il tutto, mentre il pesto di basilico, delicato e senza aglio, regala una ventata di freschezza.",
+    modalDescription: "Burger con tentacolo di polpo cotto a bassa temperatura, burrata e pesto di basilico nella ciabattina croccante.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 115, price: 18.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
+  },
+  {
+    id: 18, // unique identifier
+    name: "AVISIO",
+    ingredients: [
+      "Pane ai 7 cereali",
+      "Tartare di Biotrota delle Dolomiti",
+      "Condimento con sale, olio e scorza di lime",
+      "Finocchio fresco",
+      "Salsa yogurt con mandorle croccanti",
+      "Pomodoro datterino giallo sott'olio"
+    ],
+    description:
+      "Come le acque limpide del torrente che gli dà il nome, questo burger scorre leggero e fresco. Il pane ai 7 cereali avvolge una pregiata tartare di Biotrota delle Dolomiti, insaporita con sale, olio e un tocco di scorza di lime. Il finocchio fresco e la salsa yogurt con mandorle croccanti aggiungono freschezza e croccantezza, mentre il pomodoro datterino giallo sott’olio regala un’esplosione di dolcezza mediterranea. Un equilibrio puro che celebra la natura e il territorio.",
+    modalDescription: "Burger con tartare di Biotrota delle Dolomiti, finocchio fresco e salsa yogurt alle mandorle nel pane ai 7 cereali.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
+    origin: "Km 0"
+
+  },
+  {
+    id: 19, // unique identifier
+    name: "CAPO NORD",
+    ingredients: [
+      "Pane nero come il carbone",
+      "Salmone affumicato sfilacciato",
+      "Insalata gentile",
+      "Robiola fresca",
+      "Pomodori soleggiati",
+      "Spolverata di origano"
+    ],
+    description:
+      "Un viaggio ai confini del gusto, racchiuso in un pane nero come carbone. Il salmone affumicato sfilacciato incontra la delicatezza dell’insalata gentile e la morbidezza della robiola fresca. I pomodori soleggiati donano un tocco di dolcezza mediterranea, mentre una leggera spolverata di origano completa questo burger dal carattere deciso e raffinato.",
+    
+    modalDescription: "Burger con salmone affumicato, robiola fresca e pomodori soleggiati nel pane nero.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 120, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839753/CAPO-NORD_1_zcgapt.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png"
   },
 ];
 
 
 export const beers: Beer[] = [
-   {
+  {
     id: 1, // unique identifier
     name: "KALTENBERG KELLER",
     characteristics: [
@@ -307,7 +611,7 @@ export const beers: Beer[] = [
     description:
       "SUA ALTEZZA, LA BIRRA. Tutto nasce con il casato dei Wittelsbach che ha regnato per oltre 700 anni in Baviera, influenzando e caratterizzando fortemente la tradizione e la cultura birraria tedesca. Oggi il Principe Luitpold di Baviera continua a tramandare le speciali ricette della gamma König Ludwig e Kaltenberg, garantendone la qualità.",
     beerType: "Lager non filtrata", // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    priceOptions: [{ weight: 0.20, price: 2.90 }, { weight: 0.40, price: 5.50 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/karltenberg-keller-small_btncjy.png",
     imageLargeUrl: "",
     backgroundImage: ""
@@ -324,12 +628,12 @@ export const beers: Beer[] = [
     description:
       "QUANDO LA BIRRA È UNA VOCAZIONE. Godersi una birra d’abbazia è un’esperienza che va ben oltre il gusto. Dietro c’è un mondo fatto di passione e pazienza, come nel caso della Pater Linus, la cui ricetta è stata creata dall’omonimo priore dell’Abbazia di Koenigmuenster, in Germania, e tramandata fino a oggi grazie all’ostinazione dei monaci benedettini che l’hanno custodita senza alterarne l’anima.",
     beerType: "Abbazia Blanche",
-    priceOptions: [{ weight: 0.25, price: 3.50 },{weight: 0.50, price: 6.00}],
+    priceOptions: [{ weight: 0.25, price: 3.50 }, { weight: 0.50, price: 6.00 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/pater-linus-small_o9p264.png",
     imageLargeUrl: "",
     backgroundImage: ""
   },
-{
+  {
     id: 3, // unique identifier
     name: "OBERBRÄU DOPPIO MALTO ROSSA",
     characteristics: [
@@ -341,7 +645,7 @@ export const beers: Beer[] = [
     description:
       "CAPOLAVORO DELL’ARTE BIRRARIA BAVARESE. Oberbräu 1605 ha le sue origini in Holzkirchen, un paesino incastonato nelle innevate alpi bavaresi. Nel 1605 la famiglia reale Wittelsbach concesse agli abitanti di Holzkirchen i diritti di produzione della birra. Il giorno dell’ufficializzazione di questo permesso, tutti gli abitanti festeggiarono per le strade cantando e ballando e non si sprecò tempo nell’inaugurare il birrificio locale per la produzione della birra denominata inizialmente Holzkirchener Oberbräu. Questo momento segnò l’inizio di un patrimonio di birra d’eccellenza. Da allora e in stretta aderenza alla legge di purezza, Oberbräu 1605 è magistralmente prodotta con acqua, luppolo e orzo. Più di 400 anni dopo, la birreria di Holzkirchen produce ancora questo autentico capolavoro dell’arte birarria bavarese sotto il controllo del Principe Luitpold di Baviera.",
     beerType: "Doppio malto rossa, bassa fermentazione", // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    priceOptions: [{ weight: 0.20, price: 2.90 }, { weight: 0.40, price: 5.50 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/oberrau-dm-small_r90sjj.png",
     imageLargeUrl: "",
     backgroundImage: ""
@@ -357,14 +661,14 @@ export const beers: Beer[] = [
     ],
     description:
       "Rye River è un birrificio artigianale indipendente nato nel 2013 nella contea di Kildare, vicino a Dublino (Irlanda). Ha vinto oltre 180 premi internazionali per le sue birre, tutte realizzate con grande passione. Tutte le ricette hanno un profilo dell’acqua unico che corrisponde allo stile della birra. Utilizzano malti selezionati a mano con combinazioni diverse per ogni birra selezionando i migliori luppoli da tutto il mondo per assicurarsi che siano il più freschi possibile.",
-   beerType: "IPA", 
-    priceOptions: [{ weight: 0.20, price: 2.90 },{weight: 0.40, price: 5.50}],
+    beerType: "IPA",
+    priceOptions: [{ weight: 0.20, price: 2.90 }, { weight: 0.40, price: 5.50 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/rye-river-small_soky7d.png",
     imageLargeUrl: "",
     backgroundImage: ""
   },
   {
-    id:5, // unique identifier
+    id: 5, // unique identifier
     name: "WARSTEINER PREMIUM FRESH (ALC. 0,0%)",
     characteristics: [
       "COLORE • Oro chiaro",
@@ -374,8 +678,8 @@ export const beers: Beer[] = [
     ],
     description:
       "Rye River è un birrificio artigianale indipendente nato nel 2013 nella contea di Kildare, vicino a Dublino (Irlanda). Ha vinto oltre 180 premi internazionali per le sue birre, tutte realizzate con grande passione. Tutte le ricette hanno un profilo dell’acqua unico che corrisponde allo stile della birra. Utilizzano malti selezionati a mano con combinazioni diverse per ogni birra selezionando i migliori luppoli da tutto il mondo per assicurarsi che siano il più freschi possibile.",
-   beerType: "Premium pilsner analcolica", // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 0.30, price: 3.50},{weight: 0.20, price: 6}],
+    beerType: "Premium pilsner analcolica", // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 0.30, price: 3.50 }, { weight: 0.20, price: 6 }],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752652306/warsteiner-small_tmbezy.png",
     imageLargeUrl: "",
     backgroundImage: ""
