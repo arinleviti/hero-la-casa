@@ -20,29 +20,29 @@ export default function CammBeer({ title, subtitle, description, priceOptions }:
             md={6} makes columns take 50% width (side-by-side) on medium and larger screens. */}
                 <Col xs={12} md={6} className={styles.imageContainer}>
                     <motion.img
-  src="/rays.png"
-  alt="rays"
-  className={styles.rays}
-  initial={{ scale: 0.5, opacity: 0.6, rotate: 0 }}
-  animate={{
-    rotate: 360,
-    scale: [1.3, 1.8, 1.3]  // pulse scale up and down smoothly
-  }}
-  transition={{
-    rotate: {
-      duration: 5,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "loop"
-    },
-    scale: {
-      duration: 5,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatType: "mirror"  // goes 0.5 -> 1.5 -> 0.5 continuously
-    }
-  }}
-/>
+                        src="/rays.png"
+                        alt="rays"
+                        className={styles.rays}
+                        initial={{ scale: 0.5, opacity: 0.6, rotate: 0 }}
+                        animate={{
+                            rotate: 360,
+                            scale: [1.3, 1.8, 1.3]  // pulse scale up and down smoothly
+                        }}
+                        transition={{
+                            rotate: {
+                                duration: 5,
+                                ease: "linear",
+                                repeat: Infinity,
+                                repeatType: "loop"
+                            },
+                            scale: {
+                                duration: 5,
+                                ease: "easeInOut",
+                                repeat: Infinity,
+                                repeatType: "mirror"  // goes 0.5 -> 1.5 -> 0.5 continuously
+                            }
+                        }}
+                    />
                     <Image
                         src={'https://res.cloudinary.com/dvr9t29vj/image/upload/v1753085946/CAMM-la-biurra-degli-eroi_1_x48wty.png'}
                         alt='cammBeer'
@@ -57,8 +57,8 @@ export default function CammBeer({ title, subtitle, description, priceOptions }:
                         whileInView={{ y: 0, scale: 1.2, opacity: 1 }}
                         transition={{
                             type: "spring",
-                            stiffness: 500,
-                            damping: 8,
+                            stiffness: 800,
+                            damping: 20,
                             delay: 0.8
                         }}
                         viewport={{ once: true, amount: 0.5 }}

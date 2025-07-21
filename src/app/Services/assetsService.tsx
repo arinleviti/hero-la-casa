@@ -46,3 +46,6 @@ export const picturesForBelt1 = [
 	{ src: "/PictureBelt/chantal-reduced.webp", alt: "Picture 3" }
 ];
 
+export const picsForStaffAndRestaurantSwiper = [
+	
+]

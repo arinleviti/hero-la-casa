@@ -47,8 +47,8 @@ const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
                             {/* Left side links */}
                             <Nav className={`${styles.navSide} ${styles.left}`}>
                                 <Nav.Link as={Link} href="/menu-page">MENU</Nav.Link>
-                                <Nav.Link as={Link} href="/menu">CHI SIAMO</Nav.Link>
-                                <Nav.Link as={Link} href="/contact">LO STAFF</Nav.Link>
+                                {/* <Nav.Link as={Link} href="/menu">CHI SIAMO</Nav.Link> */}
+                                <Nav.Link as={Link} href="/staffAndPremises">LO STAFF E IL LOCALE</Nav.Link>
                                 <Nav.Link as={Link} href="/blog/1">DIARIO DI BORDO</Nav.Link>
 <Nav.Link as={Link} href="/about">ESPERIENZE</Nav.Link>
                             </Nav>
