@@ -12,6 +12,7 @@
   height: auto;
   display: block;
   margin: 0 auto; /* center image */
+  z-index: 1;
 }
 
 .cammText {
@@ -58,4 +59,14 @@
    top: 10vh;       /* 10% of viewport height */
   right: 6vw;     /* 10% of viewport width */
      pointer-events: none;
+     z-index: 2;
+}
+.rays {
+  position: absolute;
+
+  width: 350px;
+
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6; /* optional glow look */
 }
