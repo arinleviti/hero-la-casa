@@ -5,19 +5,25 @@ import { JSX, useState, useRef, useEffect } from 'react';
 import FilterBar from '../FilterBar/filter-bar';
 
 import { Burger, Beer } from '../../../Services/menuItems';
+import CammBeer from '../CammBeer/camm-beer';
+import { cammBeer } from '../../../Services/menuItems';
 
 interface Props<T extends Burger | Beer> {
     items: T[];
     title: string;
     showFilters?: boolean;
     renderCard: (item: T) => JSX.Element; // function that returns a card component for item T
+    isBeer: boolean;
 }
 //The component is generic — it works for any type T that is either a Burger or a Beer.
+//Because in React + TypeScript, components receive a single props object.
+//So you can't define each individual prop like a normal function — instead, you define a single object that contains them all.
 export default function BurgerGrid<T extends Burger | Beer>({
     items,
     title,
     renderCard,
-    showFilters = true
+    showFilters = true,
+    isBeer = false
 }: Props<T>) {
 
     const [filters, setFilters] = useState({
@@ -77,6 +83,8 @@ export default function BurgerGrid<T extends Burger | Beer>({
 
             <Container fluid className={styles.burgerGridContainer}>
                 <h2 className={styles.gridTitle}>{title}</h2>
+
+                {isBeer && <CammBeer title={cammBeer.title} subtitle={cammBeer.subtitle} description={cammBeer.description} priceOptions={cammBeer.priceOptions}/>}
 
                 <Row>
                     {filteredItems.map(item => (

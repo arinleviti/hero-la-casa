@@ -30,7 +30,7 @@ export default function BeerDetailView({
                 }}
               >
                 <Image
-                  src={beer.imageLargeUrl || '/fallback-image.png'}
+                  src={beer.imageLargeUrl || '/logo-nero.png'}
                   alt={beer.name}
                   width={400}
                   height={400}

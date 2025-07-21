@@ -685,3 +685,14 @@ export const beers: Beer[] = [
     backgroundImage: ""
   }
 ]
+
+export const cammBeer = {
+	title: "CAMM - LA REGINA DELLE BIRRE!",
+	subtitle: " PRODOTTA IN ESCLUSIVA PER HERO. Non pastorizzata,  a bassa fermentazione beverina e con una nota pepata",
+	description: "CAMM è una birra artigianale nata dalla collaborazione tra Mauro, Anna, Chantal e il birrificio di Fiemme, con il Mastro Birraio Michele Gilmozzi. Dopo mesi di sperimentazioni, hanno creato una Helles non pastorizzata, senza conservanti, maturata per 40 giorni. Il suo gusto equilibrato e amarognolo è arricchito dal pepe di Sichuan, che le dona un aroma originale. CAMM rappresenta la passione, l’amicizia e l’innovazione dei quattro amici, offrendo un’esperienza unica ad ogni sorso.",
+
+  priceOptions: [
+    {weight: 200, price: 2.90},
+    {weight: 400, price: 5.50}
+  ] as WeightOption[]
+}

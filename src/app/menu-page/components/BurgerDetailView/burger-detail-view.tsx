@@ -31,7 +31,7 @@ export default function BurgerDetailView({
         return '/CategoryIcons/mildlyHot.png';
       case 'piccante':
         return '/CategoryIcons/hot.png';
-         case 'pollo':
+      case 'pollo':
         return '/CategoryIcons/chicken.png';
       default:
         return '/images/default-icon.png';
@@ -55,7 +55,7 @@ export default function BurgerDetailView({
                 }}
               >
                 <Image
-                  src={burger.imageLargeUrl ?? '/fallback-image.png'}
+                  src={burger.imageLargeUrl ?? '/logo-nero.png'}
                   alt={burger.name}
                   width={400}
                   height={400}
@@ -68,15 +68,15 @@ export default function BurgerDetailView({
                 width={550}
                 height={100}
               />
-              {burger.origin && 
-              <div className={styles.origin}>
-                <Image 
-                  src="/location.png"
-                  alt="location"
-                  width={35}
-                  height={40}
-                />
-                <h2>{burger.origin}</h2>
+              {burger.origin &&
+                <div className={styles.origin}>
+                  <Image
+                    src="/location.png"
+                    alt="location"
+                    width={35}
+                    height={40}
+                  />
+                  <h2>{burger.origin}</h2>
                 </div>}
 
             </div>
@@ -86,7 +86,11 @@ export default function BurgerDetailView({
           <Col xs={12} md={7} className={styles.infoCol}>
             <div
               className={styles.backgroundImage}
-              style={{ backgroundImage: `url(${burger.backgroundImage})` }}
+              style={
+                burger.backgroundImage
+                  ? { backgroundImage: `url(${burger.backgroundImage})` }
+                  : undefined
+              }
             />
             <div className={styles.textContent}>
               <div className={styles.burgerTitle}>

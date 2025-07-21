@@ -1,0 +1,61 @@
+.imageContainer {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  padding: 1rem;
+   position:relative;
+}
+
+.beerImage {
+  max-width: 300px;
+  width: 100%; /* responsive */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center image */
+}
+
+.cammText {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  text-align: left;
+}
+
+/* Shared heading styles */
+.cammText h2,
+.cammText h3 {
+  font-family: var(--font-anton);
+  color: #4A7729;
+}
+
+.cammText h2 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.cammText h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Shared paragraph/list styles */
+.cammText p,
+.cammText ul {
+  font-family: var(--font-kalam);
+  font-size: 1.3rem;
+  color: #5E4B3C;
+}
+
+.container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+   
+}
+.stamp{
+    position:absolute;
+    width:12rem;
+   top: 10vh;       /* 10% of viewport height */
+  right: 6vw;     /* 10% of viewport width */
+     pointer-events: none;
+}

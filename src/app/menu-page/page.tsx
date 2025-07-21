@@ -42,13 +42,13 @@ export default function MenuPage() {
         <div className={styles.sliderContainer}>
             <div className={styles.sliderInner}>
                 <div className={styles.gridPage}>
-                    <ProductGrid items={burgers} title="I NOSTRI BURGER" renderCard={(burger) => (
+                    <ProductGrid items={burgers} title="I NOSTRI BURGER" isBeer={false} renderCard={(burger)  => (
                         <BurgerCard
                             burger={burger}
                             onClick={() => handleSelectedBurger(burger)}
                         />
                     )} />
-                    <ProductGrid showFilters={false} items={beers} title="LE NOSTRE BIRRE" renderCard={(beer) => (
+                    <ProductGrid showFilters={false} items={beers} title="LE NOSTRE BIRRE" isBeer={true} renderCard={(beer) => (
                         <BeerCard
                             beer={beer}
                             onClick={() => handleSelectedBeer(beer)}
