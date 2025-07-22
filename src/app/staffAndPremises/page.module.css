@@ -1,45 +1,86 @@
-/* --------------  SECTION: premises -------------- */
+/* -------------- SECTION: premises -------------- */
+
+.premisesContainer {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.backgroundImage {
+  display: none; /* Hide this */
+}
+
+/* Waves mask overlay */
+.premisesContainer .backgroundWaves {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('https://res.cloudinary.com/dvr9t29vj/image/upload/v1753123214/locale_hkowqz.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+ /* PNG wave mask + vertical fade gradient */
+  -webkit-mask-image: 
+    linear-gradient(to top, black 0%, transparent 100%),
+    url('/wave-trans-btm.png');
+  -webkit-mask-composite: destination-in;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: 
+    linear-gradient(to top, black 0%, transparent 100%),
+    url('/wave-trans-btm.png');
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+  mask-position: bottom;
+  mask-size: 100% 100%;
+
+  opacity: 0.9;
+}
+
+/* Layout and other styles */
 
 .premisesWrapper {
-  /* let Bootstrap keep the flex‑row layout */
-  align-items: flex-start;   /* vertical‑centre text beside image */
-  margin: 4rem 0;        /* section spacing */
+  position: relative;
+  z-index: 2;
+  align-items: flex-start;
+  margin: 4rem 0;
 }
 
 .imageWrapper {
-  padding: 0;            /* kill the extra Bootstrap gutter inside <Col> */
+  padding: 0;
 }
 
-/* NEW: this div sets the size the image must fill */
 .ratioBox {
-  position: relative;    /* <Image fill> references this */
-  width: 100%;           /* full width of its <Col> */
-  padding-top: 66.66%;   /* 3 : 2 aspect‑ratio (height = 2/3 width)  */
-  overflow: hidden;      /* crop any overflow */
-  border-radius: 8px;    /* optional rounded corners */
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* 3:2 aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-/* <Image fill> needs these two lines */
 .image {
-  position: absolute;    /* supplied automatically by next/image, but keep for safety */
-  inset: 0;              /* top:0 right:0 bottom:0 left:0 */
-  object-fit: contain;     /* fill the box without distortion, crop excess */
-  z-index:2;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  z-index: 2;
 }
-
-/* ----------  text column styling ---------- */
 
 .textWrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;   /* prevent horizontal stretch */
-  padding: 0rem;
-  z-index:1;
-  height: 100%;   
+  align-items: flex-start;
+  padding: 0;
+  z-index: 1;
+  height: 100%;
 }
 
 .titleWrapper {
+  font-family: var(--font-anton);
+  color: #4A7729;
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -50,45 +91,26 @@
   font-size: 1.3rem;
   color: #282727;
 }
-.premisesContainer {
-  position: relative;
-  overflow: hidden;
-}
-.premisesBackground {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: url('https://res.cloudinary.com/dvr9t29vj/image/upload/v1753123214/locale_hkowqz.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
 
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  pointer-events: none;
-
-}
-.titleWrapper {
-    font-family: var(--font-anton);
-  color: #4A7729;
-}
-.reserveButton{
-  background-color:  #7BA6DE;  
-  align-self: flex-start;  /* align button to left inside flex container */
-  width: auto;          /* prevent it from stretching */   
-  border: none;                  /* optional: remove border */
-  color: #edd5c3;                  /* white text */
+.reserveButton {
+  background-color: #7BA6DE;
+  align-self: flex-start;
+  width: auto;
+  border: none;
+  color: #edd5c3;
   font-family: var(--font-anton);
-  font-size: 1.4rem;             /* adjust size if needed */
-  padding: 0.2rem 1rem;        /* spacing around text */
-  border-radius: 6px;            /* optional: round corners */
+  font-size: 1.4rem;
+  padding: 0.2rem 1rem;
+  border-radius: 6px;
   transition: background-color 0.2s ease;
 }
+
 .reserveButton:hover,
 .reserveButton:focus {
-  background-color: #4A7729;     /* darker red on hover */
+  background-color: #4A7729;
   color: white;
 }
+
 .titleContainer {
   font-family: var(--font-anton);
   font-size: 3rem;
@@ -96,3 +118,9 @@
   color: #4A7729;
   margin: 2rem 0;
 }
+.swiper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+

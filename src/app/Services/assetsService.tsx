@@ -47,5 +47,22 @@ export const picturesForBelt1 = [
 ];
 
 export const picsForStaffAndRestaurantSwiper = [
-	
-]
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192703/21.06-54-min_yvrslc.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192698/21.06-95-min_t5tofy.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192696/21.06-41-min_ieodze.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192697/21.06-50-min_hf2t2k.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192684/21.06-61-min_x3eoua.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192684/21.06-85-min_eof4ps.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192682/21.06-6-min_yt2hjw.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192684/21.06-27-min_nm1tns.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192679/21.06-16-min_f8n87w.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192671/21.06-111-min_biwzuw.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192658/21.06-44-min_uhwlbz.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192657/21.06-120-min_jsd9y1.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192654/21.06-13-min_uzoznv.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192653/21.06-23-min_ephmqt.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192652/21.06-34-min_szahaf.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192648/21.06-32-min_hyy51z.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192647/21.06-2-min_fb5uvf.jpg" },
+	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192645/21.06-12-min_nlbioq.jpg" },
+];
