@@ -1,0 +1,7 @@
+.formContainer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.roundedImage {
+  border-radius: 8px; /* or whatever radius you prefer */
+}

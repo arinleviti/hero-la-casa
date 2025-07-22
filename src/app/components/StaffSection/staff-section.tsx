@@ -1,6 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import style from './staff-section.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function StaffSection() {
   return (
@@ -18,11 +19,14 @@ export function StaffSection() {
             />
         </Col>
         <Col md={6} className={style.textContainer}>
+         <Link href="/staffAndPremises" passHref className={style.clickableText}>
+         
           <h1>IL LOCALE E LO STAFF</h1>
           <p>
             Servire un esperienza differenziante parte anche dall’offrire un locale e un’accoglienza unica. Un ambiente esclusivo ed elegante ma allo stesso tempo
             avvolgente e profumato come il legno dei boschi della valle
           </p>
+          </Link>
         </Col>
       </Row>
     </Container>

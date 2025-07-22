@@ -58,7 +58,7 @@ const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
                                 
                                 
                                 <Nav.Link as={Link} href="/OurStory">LA NOSTRA STORIA</Nav.Link>
-                                <Nav.Link as={Link} href="/contact">LAVORA CON NOI</Nav.Link>
+                                <Nav.Link as={Link} href="/WorkWithUs">LAVORA CON NOI</Nav.Link>
                                 <Nav.Link as={Link} href="/contact">COME RAGGIUNGERCI</Nav.Link>
                             </Nav>
                         </div>
