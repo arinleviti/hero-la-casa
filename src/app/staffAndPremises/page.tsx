@@ -60,40 +60,40 @@ export default function StaffPremises() {
 
           </Row>
         </Container>
-        
+
       </div>
-      <Swiper 
-      spaceBetween={20} 
-      slidesPerView={1} 
-       breakpoints={{
-    640: { slidesPerView: 2 },   // >=640px wide: show 2 slides
-    1024: { slidesPerView: 5 },  // >=1024px wide: show 3 slides
-  }}
-      loop={true}                           // continuous loop
-  speed={1000}                         // 1 second transition duration
-  autoplay={{
-    delay: 2000,                      // time between transitions
-    disableOnInteraction: false,      // keep autoplay even if user interacts
-    pauseOnMouseEnter: true,          // optional: pause on hover
-  }}
-  modules={[Autoplay]}
-  className={styles.swiper}                                   // enable autoplay module
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        breakpoints={{
+          640: { slidesPerView: 2 },   // >=640px wide: show 2 slides
+          1024: { slidesPerView: 5 },  // >=1024px wide: show 3 slides
+        }}
+        loop={true}                           // continuous loop
+        speed={1000}                         // 1 second transition duration
+        autoplay={{
+          delay: 2000,                      // time between transitions
+          disableOnInteraction: false,      // keep autoplay even if user interacts
+          pauseOnMouseEnter: true,          // optional: pause on hover
+        }}
+        modules={[Autoplay]}
+        className={styles.swiper}                                   // enable autoplay module
       >
-        
-  {picsForStaffAndRestaurantSwiper.map((pic, index) => (
-    <SwiperSlide key={index}>
-      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
-        <Image
-          src={pic.url}
-          alt={`Slide ${index + 1}`}
-          fill
-          style={{ objectFit: 'cover', borderRadius: '10px' }}
-          priority={index === 0}
-        />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+
+        {picsForStaffAndRestaurantSwiper.map((pic, index) => (
+          <SwiperSlide key={index}>
+            <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+              <Image
+                src={pic.url}
+                alt={`Slide ${index + 1}`}
+                fill
+                style={{ objectFit: 'cover', borderRadius: '10px' }}
+                priority={index === 0}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
 
   )

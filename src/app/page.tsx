@@ -1,23 +1,39 @@
-"use client";
+'use client';
 import styles from './page.module.css';
 import Landing from './components/LandingPage/landing-page';
 import HeroSection from './components/HeroSection/hero-section';
-import {heroContent, heroImage, videoData, textVideoData, picturesForBelt1} from './Services/assetsService';
+import { heroContent, heroImage, videoData, textVideoData, picturesForBelt1 } from './Services/assetsService';
 import VideoSection from './components/VideoSection/video-section';
+import FindUs from './components/FindUs/find-us'
 import PictureBelt from './components/PictureBelt/picture-belt';
 import SwiperObject from './components/SwiperObject/swiper-object';
-import{ burgers} from './Services/menuItems';
+import { burgers } from './Services/menuItems';
 import { StaffSection } from './components/StaffSection/staff-section';
 import MarqueeSection from './components/Marquee/marquee';
+import { useEffect } from 'react';
+
 
 export default function HomePage() {
 
+
+  useEffect(() => {
+    // On client, check if the URL has the hash #find-us
+    if (window.location.hash === '#find-us') {
+      // Delay scrolling to allow page to render
+      setTimeout(() => {
+        const el = document.getElementById('find-us');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
   return (
     <div className={styles.homeWrapper}>
       <Landing />
       {/* <Navbar /> */}
       <main style={{ padding: '2rem' }}>
-        
+
         <div style={{ height: '35vh' }}></div> {/* add vertical space to scroll */}
       </main>
       <HeroSection textData={heroContent} imageData={heroImage} />
@@ -26,6 +42,9 @@ export default function HomePage() {
       <PictureBelt pictures={picturesForBelt1} />
       <SwiperObject burgers={burgers} />
       <StaffSection />
+      <div id="find-us">
+        <FindUs />
+      </div>
     </div>
 
   );

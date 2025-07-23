@@ -1,0 +1,40 @@
+.mainContainer {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; 
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text h1 {
+   font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 3rem;
+  color: #4A7729;
+}
+
+.text p {
+ font-family: var(--font-kalam), sans-serif;
+  font-size: 1.45rem;
+  color: #5E4B3C;
+}
+
+.col {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.col :global(img) {
+  /* Make images responsive */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

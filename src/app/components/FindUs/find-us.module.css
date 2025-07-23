@@ -1,0 +1,20 @@
+.mapContainer {
+  width: 100%;
+  height: 300px;
+}
+
+.sectionWrapper {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.text h1{
+  font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 3rem;
+  color: #4A7729;
+}
+.text p{
+ font-family: var(--font-kalam), sans-serif;
+  font-size: 1.45rem;
+  color: #5E4B3C;
+}

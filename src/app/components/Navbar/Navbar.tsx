@@ -17,7 +17,7 @@ export default function NavbarBasic() {
     const navbarLogoOpacity = useTransform(scrollYProgress, [0, 0.19, 0.2], [0, 0, 1]); */
 
     const { scrollY } = useScroll();
-const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
+    const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
 
     const pathname = usePathname();
     const isHome = pathname === '/';
@@ -50,16 +50,16 @@ const navbarLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
                                 {/* <Nav.Link as={Link} href="/menu">CHI SIAMO</Nav.Link> */}
                                 <Nav.Link as={Link} href="/staffAndPremises">LO STAFF E IL LOCALE</Nav.Link>
                                 <Nav.Link as={Link} href="/blog/1">DIARIO DI BORDO</Nav.Link>
-<Nav.Link as={Link} href="/about">ESPERIENZE</Nav.Link>
+                                <Nav.Link as={Link} href="/Experiences">ESPERIENZE</Nav.Link>
                             </Nav>
 
                             {/* Right side links */}
                             <Nav className={`${styles.navSide} ${styles.right}`}>
-                                
-                                
+
+
                                 <Nav.Link as={Link} href="/OurStory">LA NOSTRA STORIA</Nav.Link>
                                 <Nav.Link as={Link} href="/WorkWithUs">LAVORA CON NOI</Nav.Link>
-                                <Nav.Link as={Link} href="/contact">COME RAGGIUNGERCI</Nav.Link>
+                                <Nav.Link as={Link} href="/#find-us">COME RAGGIUNGERCI</Nav.Link>
                             </Nav>
                         </div>
                     </Navbar.Collapse>

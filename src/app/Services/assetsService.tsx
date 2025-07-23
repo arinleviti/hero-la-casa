@@ -66,3 +66,64 @@ export const picsForStaffAndRestaurantSwiper = [
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192647/21.06-2-min_fb5uvf.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192645/21.06-12-min_nlbioq.jpg" },
 ];
+
+export interface ExperienceObject {
+	header: string;
+	subheader: string;
+	picUrls: string[];
+	alt:string;
+	popupImg: string;
+}
+export const expBirthday : ExperienceObject = {
+	header: "BUON COMPLEANNO HERO!",
+	subheader: "Hero: Un viaggio eroico di sapori celebra un altro anno di successi!",
+	alt:"birthday",
+	popupImg:"",
+	picUrls: [
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274769/experiences-1_henwlh.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274769/experiences-2_cevihj.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274768/experiences-3_j6fhj4.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274767/experiences-5_eidlgd.jpg",
+	/* "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274768/experiences-4_mwyouj.jpg" */
+]
+} 
+
+export const expStPatrick  : ExperienceObject = {
+	header: "SERATA SAN PATRIZIO",
+	subheader: "Verde che ti voglio verde: una serata di sorrisi, brindisi e magia irlandese",
+	alt:"patrick",
+	popupImg:"",
+	picUrls: [
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274768/experiences-9_njcvxr.jpg",
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274767/experiences-7_sivyef.jpg",
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274767/experiences-6_obmiax.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-11_gebujw.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-10_uejpq1.jpg",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274766/experiences-8_jytxlh.jpg"
+]}
+
+export const expValentine : ExperienceObject = {
+	header: "SERATA DI SAN VALENTINO",
+	subheader: "Amore a primo morso: dove i cuori si incontrano",
+	alt: "valentine",
+	popupImg:"",
+	picUrls: [
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274766/experiences-12_ehlf1z.webp",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-14_xaatgz.webp",
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-13_bgpnk7.webp",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-17_xgmqtg.webp",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274765/experiences-16_buckfw.webp",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274764/experiences-15_yf5idk.webp"
+]}
+
+export const expHalloween : ExperienceObject = {
+	header: "SERATA DI HALLOWEEN",
+	subheader: "Un morso alla paura: un Halloween con i nostri burger spettrali!",
+	alt:"halloween",
+	popupImg:"/Experiences/expPumpkin.png",
+	picUrls: [
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274771/experiences-19_lx0kbm.webp",
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274770/experiences-20_suxv0z.webp",
+	"https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274769/experiences-21_k1d8aj.webp",
+	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274764/experiences-18_kztdcd.webp"
+]}
