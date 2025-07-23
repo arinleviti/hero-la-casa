@@ -1,3 +1,4 @@
+'use client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,13 +7,15 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function LavoraConNoiPage() {
+
+   
     return (
         <Container className={styles.formContainer}>
             {/* Centered title and paragraph */}
-      <h1 className="text-center mb-3">LAVORA CON NOI</h1>
-      <h3 className="text-center mb-5">
-        Vuoi lavorare in un ambiente stimolante, dove passione e attenzione al cliente fanno davvero la differenza? Compila il form qui sotto e raccontaci di te!
-      </h3>
+            <h1 className="text-center mb-3">LAVORA CON NOI</h1>
+            <h3 className="text-center mb-5">
+                Vuoi lavorare in un ambiente stimolante, dove passione e attenzione al cliente fanno davvero la differenza? Compila il form qui sotto e raccontaci di te!
+            </h3>
             <Row className="align-items-center">
                 {/* LEFT IMAGE */}
                 <Col md={6} className="mb-4 mb-md-0">
@@ -28,12 +31,13 @@ export default function LavoraConNoiPage() {
                 {/* RIGHT FORM */}
                 <Col md={6}>
                     <section className={styles.formSection}>
-                        
+
                         <form
-                            action="mailto:info@herolacasadelburger.it"
+                            action="https://formsubmit.co/arin.leviti@gmail.com"
                             method="POST"
                             encType="multipart/form-data"
                         >
+                            <input type="hidden" name="_subject" value="Nuova candidatura da Lavora Con Noi" />
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="nome" className="form-label">Nome*</label>
@@ -48,7 +52,7 @@ export default function LavoraConNoiPage() {
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="email" className="form-label">Email*</label>
-                                    <input type="text" className="form-control" id="email" name="email" required />
+                                    <input type="email" className="form-control" id="email" name="email" required />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="telefono" className="form-label">Telefono*</label>
@@ -62,13 +66,14 @@ export default function LavoraConNoiPage() {
 
                             <div className="mb-4">
                                 <label htmlFor="cv" className="form-label">Carica il tuo CV*</label>
-                                <input type="file" className="form-control" id="cv" name="cv" required />
+                                <input type="file" className="form-control" id="cv" name="cv"  />
                             </div>
 
-                            <Button variant="dark" type="submit">
+                            <Button type="submit">
                                 Invia
                             </Button>
                         </form>
+
                     </section>
                 </Col>
             </Row>

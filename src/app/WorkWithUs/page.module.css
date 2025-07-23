@@ -5,3 +5,13 @@
 .roundedImage {
   border-radius: 8px; /* or whatever radius you prefer */
 }
+.formContainer h1{
+  font-family: var(--font-anton);
+  font-size: 3rem;
+  color: #4A7729;
+}
+.formContainer h3{
+   font-family: var(--font-kalam);
+  font-size: 1.5rem;
+  color: #282727;
+}
