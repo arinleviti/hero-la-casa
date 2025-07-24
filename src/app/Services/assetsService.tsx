@@ -155,3 +155,62 @@ export const openingHours = [
   { day: 'Sabato', hours: '12:00 - 14:00 | 19:00 - 22:00' },
   { day: 'Domenica', hours: '12:00 - 14:00 | 19:00 - 21:30' },
 ];
+
+export interface Review {
+  id: number;
+  title: string;
+  text: string;
+  rating: number;
+  reviewerName?: string;
+  date?: string;
+  avatarURL?: string;
+  tripAdvisorLogoURL?: string;
+  tripAdvisorReviewURL?: string;
+}
+
+export const reviews: Review[] = [
+  {
+    id: 1,
+	title: "Super Soddisfatta",
+    text: "Che dire Hero è una garanzia, cibo ottimo e personale super gentile !!! Ogni volta che andiamo è sempre una sorpresa!!",
+    rating: 5,
+    reviewerName: "sere842025",
+    date: "Luglio, 2025",
+    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e7/3d/default-avatar-2020-55.jpg?w=100&h=-1&s=1",
+    tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1019832210-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+  },
+  {
+    id: 2,
+	title: "Ottimi burger, ma non solo!",
+    text: "Si tratta di un locale che offre un'esperienza significativa, non solo riguardo al gusto, ma anche per tutto quanto riguarda il servizio. Ottimo il cibo, squisita l'accoglienza, notevoli una serie di attenzioni che circondano il cliente dall'ingresso nel locale. Ottime le proposte di burger, anche vegani, e quella delle birre. La cortesia di tutto il personale è la ciliegina sulla torta. Da provare!",
+    rating: 5,
+    reviewerName: "Massimo C.",
+    date: "Luglio, 2025",
+    avatarURL: "https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif",
+    tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1019675004-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+  },
+  {
+    id: 3,
+	title: "Gentilezza e originalità",
+    text: "Siamo andati per cena su consiglio di un ragazzo del posto ….locale nuovo e ampio con hamburger originali serviti da ragazze giovani e gentili",
+    rating: 4,
+    reviewerName: "Andrea",
+    date: "Luglio, 2025",
+    avatarURL: "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e2/e6/default-avatar-2020-45.jpg",
+    tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1018909935-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+  },
+  {
+    id: 4,
+	title: "Una certezza.",
+    text: "Il cibo è ottimo, il bere pure, ma non è questo il punto più importante. Ciò che più apprezzo di questo luogo è l’accoglienza, la simpatia del personale e la loro competenza nel costruire un rapporto con i clienti. Hero è un luogo che negli anni è cambiato senza mai perdere l’anima. È un luogo nel quale torno ogni volta che posso! È un posto dove sto proprio bene!",
+    rating:5,
+    reviewerName: "Marco A.",
+    date: "Luglio, 2025",
+    avatarURL: "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/f2/7a/default-avatar-2020-25.jpg",
+    tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1017529848-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+  },
+];

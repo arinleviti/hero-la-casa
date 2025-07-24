@@ -1,72 +1,34 @@
+// reviews.tsx
 'use client';
 
-import { useEffect } from 'react';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import ReviewCard from './review-card';
+import { reviews } from '../../Services/assetsService';
+import styles from './reviews.module.css';
 
-export default function TripAdvisorWidgets() {
-  useEffect(() => {
-    // Dynamically load TripAdvisor widget scripts after component mounts
-    const script1 = document.createElement('script');
-    script1.src = "https://www.jscache.com/wejs?wtype=certificateOfExcellence&uniq=380&locationId=15668261&lang=en_US&year=2024&display_version=2";
-    script1.async = true;
-    document.body.appendChild(script1);
-
-    const script2 = document.createElement('script');
-    script2.src = "https://www.jscache.com/wejs?wtype=cdsscrollingravenarrow&uniq=608&locationId=15668261&lang=en_US&border=true&display_version=2";
-    script2.async = true;
-    document.body.appendChild(script2);
-
-    return () => {
-      // Cleanup scripts on unmount
-      document.body.removeChild(script1);
-      document.body.removeChild(script2);
-    };
-  }, []);
-
+export default function Reviews() {
   return (
-    <section style={{ padding: '2rem', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
-      <h2 style={{ marginBottom: '1.5rem', fontWeight: 'bold', fontSize: '1.8rem' }}>
-        COSA DICONO DI NOI
-      </h2>
-
-      <div id="TA_certificateOfExcellence380" className="TA_certificateOfExcellence" style={{ marginBottom: '2rem' }}>
-        <ul id="In9fWK" className="TA_links 7GvRVqb2Ck" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          <li id="cUH2gRkK" className="oKzZbC2I" style={{ display: 'inline-block' }}>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.tripadvisor.com/Restaurant_Review-g670804-d15668261-Reviews-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html"
-            >
-              <img
-                src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2024_L.png"
-                alt="TripAdvisor"
-                className="widCOEImg"
-                id="CDSWIDCOELOGO"
-                style={{ maxWidth: '100%', height: 'auto' }}
+    <section className={styles.section}>
+      <Container>
+        <h1 className={`text-center mb-4 fw-bold ${styles.title}`}>COSA DICONO DI NOI</h1>
+        <Row className="justify-content-center gy-4">
+          {reviews.map(({ id,title, text, rating, reviewerName, date, avatarURL, tripAdvisorLogoURL, tripAdvisorReviewURL }) => (
+            <Col key={id} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center">
+              <ReviewCard
+               text={text}
+               title={title}
+                rating={rating}
+                reviewerName={reviewerName}
+                date={date}
+                avatarURL={avatarURL}
+                tripAdvisorLogoURL={tripAdvisorLogoURL}
+                tripAdvisorReviewURL={tripAdvisorReviewURL}
               />
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div id="TA_cdsscrollingravenarrow608" className="TA_cdsscrollingravenarrow">
-        <ul id="BkOIx7NQg" className="TA_links NuFDlAublX" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          <li id="TN840IbaF" className="QG1uCoKbRBhw" style={{ display: 'inline-block' }}>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.tripadvisor.com/Restaurant_Review-g670804-d15668261-Reviews-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html"
-            >
-              <img
-                src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_vertical.svg"
-                alt="TripAdvisor"
-                className="widEXCIMG"
-                id="CDSWIDEXCLOGO"
-                style={{ maxWidth: '100%', height: 'auto' }}
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 }

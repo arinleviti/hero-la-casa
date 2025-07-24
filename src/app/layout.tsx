@@ -1,8 +1,11 @@
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Nunito, Oswald, Anton, Alfa_Slab_One, Kalam } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/footer";
+import Overlay from "./components/LandingPage/overlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,9 +62,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
+        <Overlay/>
+        
         <Navbar />
         {children}
         <Footer />

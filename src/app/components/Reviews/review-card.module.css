@@ -1,0 +1,52 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar,
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.content {
+  text-align: left;
+}
+
+.rating {
+  color: #4A7729;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.reviewer {
+  font-size: 0.9rem;
+  color: #666;
+}
+.linkWrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

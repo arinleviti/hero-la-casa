@@ -1,0 +1,11 @@
+.section {
+  padding: 2rem 1rem;
+
+}
+
+.title {
+    font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 3rem;
+  color:  #4A7729;
+}

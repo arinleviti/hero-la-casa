@@ -22,8 +22,8 @@ type LeafletMapProps = {
 
 export default function LeafletMap({ position }: LeafletMapProps) {
   return (
-    <div style={{ width: '100%', height: '300px' }}>
-      <MapContainer center={position} zoom={16} style={{ height: '100%', width: '100%' }}>
+    <div style={{ width: '100%', height: '300px', zIndex: '-2' }}>
+      <MapContainer center={position} zoom={16} style={{ height: '100%', width: '100%', zIndex: '-0'  }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

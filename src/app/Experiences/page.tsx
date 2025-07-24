@@ -1,7 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import style from './page.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 import ExperienceSection from './experience-section';
 import { expBirthday, expStPatrick, expValentine, expHalloween } from '../Services/assetsService';
 

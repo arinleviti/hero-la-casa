@@ -11,7 +11,7 @@ import { burgers } from './Services/menuItems';
 import { StaffSection } from './components/StaffSection/staff-section';
 import MarqueeSection from './components/Marquee/marquee';
 import { useEffect } from 'react';
-
+import Reviews from './components/Reviews/reviews'
 
 export default function HomePage() {
 
@@ -29,7 +29,9 @@ export default function HomePage() {
     }
   }, []);
   return (
-    <div className={styles.homeWrapper}>
+  
+    
+    <div className={styles.homeWrapper} >
       <Landing />
       {/* <Navbar /> */}
       <main style={{ padding: '2rem' }}>
@@ -45,6 +47,7 @@ export default function HomePage() {
       <div id="find-us">
         <FindUs />
       </div>
+      <Reviews/>
     </div>
 
   );
