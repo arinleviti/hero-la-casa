@@ -1,0 +1,25 @@
+.openingHours {
+ font-family: var(--font-kalam), sans-serif;
+  font-size: 1.3rem;
+  color: #5E4B3C;
+}
+
+.heading {
+ font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 3rem;
+  color: #4A7729;
+  padding-bottom: 1.5rem;;
+}
+
+.hoursWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  line-height: 0.5;
+}
+
+.hourItem {
+  white-space: nowrap;
+}

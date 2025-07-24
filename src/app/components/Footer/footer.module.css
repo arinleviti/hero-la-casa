@@ -1,0 +1,86 @@
+.footer {
+  background-color:#7BA6DE !important;
+  padding:1rem 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.logoWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.centerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact p,
+.contact a {
+  margin: 0rem 0;
+  color: #eee;
+  text-decoration: none;
+  text-align: center;
+   font-family: var(--font-kalam), sans-serif;
+  font-size: 1rem;
+  font-weight: 600 ;
+  color: #eee;
+}
+
+.rightCol {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+    font-family: var(--font-kalam), sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #eee;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.privacy {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.privacyLink {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .logoWrapper {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .centerCol {
+    margin-bottom: 1rem;
+  }
+
+  .rightCol {
+    align-items: center;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .privacy {
+    text-align: center;
+  }
+}

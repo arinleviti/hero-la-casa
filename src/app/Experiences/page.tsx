@@ -22,13 +22,13 @@ export default function StaffSection() {
             />
         </Col>
         <Col md={6} className={style.textContainer}>
-         <Link href="/staffAndPremises" passHref className={style.clickableText}>
+        
          
           <h1>OGNI BOCCONE UN’ESPERIENZA</h1>
           <p>
             Da Hero, ogni occasione diventa speciale. Che sia l’euforia di Carnevale, la dolcezza di San Valentino, o il calore delle festività tradizionali, c’è sempre un motivo per festeggiare. Le nostre serate a tema sono pensate per sorprenderti, con menù dedicati e atmosfere uniche.Vivi l’esperienza di una festa che si rinnova, dove ogni dettaglio racconta una storia e ogni boccone un viaggio. 
           </p>
-          </Link>
+         
         </Col>
       </Row>
     </Container>

@@ -3,6 +3,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './find-us.module.css';
 import dynamic from 'next/dynamic';
+import OpeningHours from '../OpeningHours/opening-hours'
 
 // Dynamically import LeafletMap to avoid SSR issues
 const LeafletMap = dynamic(() => import('./LeafletMap'), { ssr: false });
@@ -20,6 +21,7 @@ export default function WhereWeAre() {
           <p>
             Hero Burger ha aperto la sua nuova location in Via Minghetti 1, in una posizione centrale e con parcheggio comodo. Il locale mantiene il suo stile unico, offrendo hamburger di alta qualità in un ambiente moderno e accogliente, ideale per una pausa gustosa nel cuore di Predazzo.
           </p>
+          
         </Col>
 
         {/* MAP COLUMN */}
@@ -27,6 +29,7 @@ export default function WhereWeAre() {
           <LeafletMap position={position} />
         </Col>      
       </Row>
+<OpeningHours/>
     </Container>
   );
 }

@@ -34,7 +34,7 @@ export default function ExperienceSection({ header, subheader, picUrls, alt, pop
                         damping: 20,
                     },
                 });
-            }, 800); // 1-second delay
+            }, 300); // 1-second delay
 
             return () => clearTimeout(timeout);
         }
@@ -51,8 +51,8 @@ export default function ExperienceSection({ header, subheader, picUrls, alt, pop
                      animate={controls}
                     style={{
                         position: 'absolute',
-                        top: "2rem",
-                        left: "22rem",
+                        top: "-3vh",
+                        left: "39vw",
                         width: 50,
                         height: 50,
                         zIndex: 2,
@@ -61,7 +61,7 @@ export default function ExperienceSection({ header, subheader, picUrls, alt, pop
                     <Image
                         src={popupImg}
                         alt="theme icon"
-                        width={50}
+                        width={55}
                         height={50}
                     />
                 </motion.div>
