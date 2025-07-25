@@ -3,7 +3,7 @@
 import styles from './video-section.module.css';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
-import { easeInOut, motion, useScroll, useTransform, Variants} from 'framer-motion';
+import { easeInOut, motion, useScroll, useTransform, Variants } from 'framer-motion';
 import Link from 'next/link';
 
 interface VideoSectionProps {
@@ -38,8 +38,8 @@ const textVariants: Variants = {
 const sparkleVariants: Variants = {
   hidden: { opacity: 0, rotate: 0 },
   visible: {
-    opacity: [0,1, 1, 0], // fade in, hold, then fade out
-    rotate: [0,0, 800, 800], // spin once
+    opacity: [0, 1, 1, 0], // fade in, hold, then fade out
+    rotate: [0, 0, 800, 800], // spin once
     transition: {
       delay: 3.2,
       duration: 2.5,
@@ -140,6 +140,21 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
             playsInline
             title={videoData.title || 'Video'}
           />
+          <Link
+            href="https://www.instagram.com/herolacasadelburger/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/VideoSection/instagram.png"
+              alt="InstagramLogo.png"
+              className={styles.instaLogo}
+              aria-hidden="true"
+              draggable={false}
+              width={30}
+              height={30}
+            />
+          </Link>
           <Image
             src="/VideoSection/polaroid-frame-logo.png"
             alt="Polaroid Frame"
@@ -224,7 +239,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
               </Link>
             );
           }
-        
+
           return (
 
             <motion.div

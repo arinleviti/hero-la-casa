@@ -1,0 +1,82 @@
+.blogContainer {
+  max-width: 800px;
+  margin: 0 auto;
+   padding: 0 1rem; /* Adds 1rem padding on both left and right */
+}
+
+.postsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.postTitle {
+     font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 2.5rem;
+  color: #4A7729;
+  margin-bottom: 2rem;
+
+}
+
+.postExcerpt {
+  font-size: 1rem;
+  color: #555;
+}
+
+.postContent {
+  margin-top: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.postContent h2 {
+    font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 2rem;
+  color: #4A7729;
+  padding-bottom:1.2rem;
+  padding-top: 1.2rem;
+}
+.postContent p {
+    font-size: 1.3rem;
+    color: #5E4B3C;
+    font-family: var(--font-kalam), sans-serif;
+}
+.postContent ul {
+    font-size: 1.3rem;
+    color: #5E4B3C;
+    font-family: var(--font-kalam), sans-serif;
+}
+.paginationNav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination :global(.page-item) {
+  margin: 0 4px;
+}
+
+.pagination :global(.page-link) {
+  padding: 0.5rem 1rem;
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.pagination :global(.page-item.active) .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+@media (min-width: 768px) {
+  .blogContainer {
+    padding: 0; /* Remove padding on larger screens if desired */
+  }
+}

@@ -2,6 +2,7 @@ import { PrismaClient } from '@/generated/prisma';
 import { Container } from 'react-bootstrap';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import styles from './page.module.css';
 
 const prisma = new PrismaClient();
 
@@ -20,10 +21,10 @@ const POSTS_PER_PAGE = 1;
 // This enables pagination or other dynamic content based on the URL.
 
 export default async function BlogPage({ params }: PageProps) {
-   // Await params to ensure it’s resolved if async
+  // Await params to ensure it’s resolved if async
   const resolvedParams = await params;
   const currentPage = parseInt(resolvedParams.page, 10);
-    //isNaN = is Not a Number
+  //isNaN = is Not a Number
   if (isNaN(currentPage) || currentPage < 1) {
     notFound(); // return 404 if the page is invalid
   }
@@ -37,8 +38,8 @@ export default async function BlogPage({ params }: PageProps) {
     notFound(); // 404 if page exceeds total
   }
 
-    //.findMany() itself is not an iteration.
-    //It's a query that returns an array of post objects from the database, based on the criteria you provide (skip, take, etc.).
+  //.findMany() itself is not an iteration.
+  //It's a query that returns an array of post objects from the database, based on the criteria you provide (skip, take, etc.).
   const posts = await prisma.post.findMany({
     skip: (currentPage - 1) * POSTS_PER_PAGE,
     take: POSTS_PER_PAGE,
@@ -52,40 +53,48 @@ export default async function BlogPage({ params }: PageProps) {
   });
 
   return (
-   <Container className="py-4">
-    <h1 className="mb-4">Blog – Page {currentPage}</h1>
+    <Container className={`py-4 ${styles.blogContainer}`}>
 
-    {posts.map((post) => (
-      <article key={post.id} className="mb-5">
-        <h2>{post.title}</h2>
-        {post.excerpt && <p><em>{post.excerpt}</em></p>}
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </article>
-    ))}
+      <div className={styles.postsWrapper}>
+        {posts.map((post) => (
+          <article key={post.id} className={styles.post}>
+            <h1 className={styles.postTitle}>{post.title}</h1>
+            {post.excerpt && (
+              <p className={styles.postExcerpt}>
+                <em>{post.excerpt}</em>
+              </p>
+            )}
+            <div
+              className={styles.postContent}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </article>
+        ))}
+      </div>
 
-   <nav aria-label="Page navigation example">
-  <ul className="pagination">
-    {currentPage > 1 && (
-      <li className="page-item">
-        <Link href={`/blog/${currentPage - 1}`} className="page-link">
-          ← Previous
-        </Link>
-      </li>
-    )}
+      <nav className={styles.paginationNav} aria-label="Page navigation example">
+        <ul className={`pagination ${styles.pagination}`}>
+          {currentPage > 1 && (
+            <li className="page-item">
+              <Link href={`/blog/${currentPage - 1}`} className="page-link">
+                ← Previous
+              </Link>
+            </li>
+          )}
 
-    <li className="page-item active" aria-current="page">
-      <span className="page-link">{currentPage}</span>
-    </li>
+          <li className="page-item active" aria-current="page">
+            <span className="page-link">{currentPage}</span>
+          </li>
 
-    {currentPage < totalPages && (
-      <li className="page-item">
-        <Link href={`/blog/${currentPage + 1}`} className="page-link">
-          Next →
-        </Link>
-      </li>
-    )}
-  </ul>
-</nav>
-  </Container>
+          {currentPage < totalPages && (
+            <li className="page-item">
+              <Link href={`/blog/${currentPage + 1}`} className="page-link">
+                Next →
+              </Link>
+            </li>
+          )}
+        </ul>
+      </nav>
+    </Container>
   );
 }
