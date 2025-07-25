@@ -2,6 +2,7 @@
   "name": "hero-la-casa",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +10,7 @@
     "lint": "next lint"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.js"
+    "seed": "ts-node --esm prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
