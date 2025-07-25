@@ -27,7 +27,7 @@ export default function Footer() {
                 src="/logo-giallino.png"
                 alt="Hero Burger Logo"
                 width={70}
-                height={70}
+                height={80}
               />
             </div>
           </Col>
@@ -65,8 +65,19 @@ export default function Footer() {
               &copy; {currentYear} Hero Burger. Tutti i diritti riservati.{' '}
               <Link href="/privacy-policy" className={styles.privacyLink}>
                 Privacy Policy
-              </Link>
+              </Link>             
             </p>
+             <p className={styles.signature}>
+    
+    <a
+      href="https://arinleviti.site"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.signatureLink}
+    >
+     Designed & built by Arin Leviti
+    </a>
+  </p>
           </Col>
         </Row>
         

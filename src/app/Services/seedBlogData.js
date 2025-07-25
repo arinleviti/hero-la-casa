@@ -1,27 +1,4 @@
-/* export interface BlogImage {
-  url: string;
-  caption?: string;
-}
 
-export interface BlogComment {
-  name: string;
-  email: string;
-  content: string;
-  createdAt: Date;
-}
-
-export interface BlogPost {
-  title: string;
-  slug: string;
-  excerpt?: string;
-  content: string;
-  createdAt: Date;
-  images?: BlogImage[];
-  comments?: BlogComment[];
-}
-
-
- */
 
 export const blogPosts  = [
     {
@@ -29,24 +6,43 @@ export const blogPosts  = [
         slug: "intervista-meloleggio",
         excerpt: "Siamo stati intervistati dalla rivista 'Meloleggio magazine'!",
         content: `
-      <p>Siamo stati intervistati dalla rivista <strong>"Meloleggio magazine"!</strong> Nell'articolo parliamo di diverse cose, tra cui consigli per la cucina, la nostra storia,
-       come siamo nati e cresciuti e dei nostri traguardi fra cui la partecipazione alla "BURGER BATTLE ITALIA 2019" nel Triveneto.</p>
+        <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753428832/blog-intervista_vzgp7y.jpg" 
+  alt="Intervista" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
+
+<p>
+  Siamo stati intervistati dalla rivista <strong>"Meloleggio magazine"!</strong> Nell'articolo parliamo di diverse cose, tra cui consigli per la cucina, la nostra storia,
+  come siamo nati e cresciuti e dei nostri traguardi fra cui la partecipazione alla "BURGER BATTLE ITALIA 2019" nel Triveneto.
+</p>
     `,
         createdAt: new Date("2023-10-31"),
+         images : [
+            {
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753428832/blog-intervista_vzgp7y.jpg",
+                caption: "Il nostro ristorante",
+            }
+        ]
     },
     {
         title: "La storia di HERO",
         slug: "Hero-storia",
         excerpt: "Noi siamo HERO",
         content: `
+        <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752220910/blog-storia_sygqqo.jpg" 
+  alt="HERO - La casa del burger" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
     <p>Noi siamo HERO - La casa del burger e oggi vogliamo raccontarti la storia che monta le redini della nostra attività. HERO è il viaggio al quale ha partecipato il burger, dopo aver viaggiato in giro per tutto il mondo vivendo gli odori e i sapori, torna nella sua dimora, la casa del burger per portare colori, sapori e ingredienti dal mondo e racchiuderli all'interno degli HeroBurger.</p>
 
   `,
         createdAt: new Date("2023-10-31T10:00:00Z"),
         images : [
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-                caption: "Our beach view in July",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752220910/blog-storia_sygqqo.jpg",
+                caption: "Mauro all'opera",
             }
         ]
     },
@@ -55,61 +51,81 @@ export const blogPosts  = [
         slug: "5-elementi",
         excerpt: "Benvenuti nel cuore pulsante di Hero, dove ogni hamburger è un viaggio culinario unico.",
         content: `
-       <img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+    <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222214/blog-elementi1_rfn3sd.jpg" 
+  alt="Hero Hamburger Pane" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
+
 <p>Benvenuti nel cuore pulsante di Hero, dove ogni hamburger è un viaggio culinario unico. In un mondo dove ognuno di noi cerca di lasciare il segno, la nostra firma è l’hamburger. Nella nostra incessante ricerca della perfezione, ci siamo spesso chiesti: cosa rende un hamburger eccezionale? Cosa lo eleva da semplice pasto a esperienza indimenticabile? Attraverso anni di sperimentazione e dedizione, abbiamo individuato cinque elementi chiave che fanno degli hamburger di Hero un’esperienza senza pari. Questi elementi non solo raccontano la storia di chi siamo, ma ti porteranno insieme a noi a vivere l’esperienza del viaggio di Hero:</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
-
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222214/blog-elementi2_tlxwah.jpg" 
+  alt="Il Pane" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 <h2>Il Pane</h2>
 <p>Il primo elemento che distingue i nostri hamburger è, senza dubbio, il pane. Non si tratta solo del contenitore del burger, ma di una componente cruciale che ne definisce il sapore e la texture. Da noi di Hero, potete trovare una varietà di panini, dai tradizionali a quelli più innovativi, come il pane ai cereali e le opzioni senza glutine. Ma il nostro segreto non sta solo nella varietà; ogni panino viene accuratamente preparato, scaldando l’esterno fino a renderlo croccante, mentre l’interno rimane incredibilmente morbido. Questo processo garantisce un contrasto di texture che eleva ogni morso a un'esperienza unica, rendendo i nostri hamburger memorabili fin dal primo assaggio.</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
-
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222215/blog-elementi3_pwjyd6.jpg" 
+  alt="La carne" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 <h2>La carne</h2>
 <p>Il secondo pilastro su cui si fonda l’eccezionalità dei nostri hamburger è la carne. La selezione del manzo rappresenta un punto cruciale del nostro processo, poiché la scelta ricade solo nella migliore qualità. Il segreto di una carne di qualità non risiede solo nella scelta del taglio, ma anche nel metodo di lavorazione: tritata una sola volta per preservarne la freschezza. A questo, aggiungiamo un pizzico di condimento extra, che esalta senza sovrastare il sapore naturale del manzo. La conservazione poi, svolge un ruolo altrettanto importante; il mantenimento delle carni deve essere eseguito in condizioni ottimali per garantire che ogni hamburger servito sia sinonimo di eccellenza. Questo impegno verso la qualità e la freschezza della carne è ciò che ci permette di offrire un prodotto che possa soddisfare, e qualcosa in più, le aspettative dei nostri clienti.</p>
 
 <p>Un’altra componente fondamentale nella preparazione di un hamburger che spesso viene sottovalutata è la cottura della carne. Il segreto per ottenere un hamburger perfetto risiede nell’abilità di cuocere il manzo in modo che rimanga cotto all’interno e croccante all’esterno. La cottura ideale si ottiene su una griglia in ghisa, che assicura una distribuzione uniforme del calore. Questo metodo consente ai succhi di distribuirsi omogeneamente all’interno della carne, garantendo un risultato finale morbido e succulento. Seguire questa tecnica di cottura eleva notevolmente la qualità dell’hamburger, rendendolo un’esperienza culinaria superiore.</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
-
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222215/blog-elementi4_g4scvb.jpg" 
+  alt="Le verdure" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 <h2>Le verdure</h2>
 <p>Il terzo elemento chiave per un hamburger indimenticabile è la verdura. La freschezza è il nostro mantra quando si tratta di selezionare la verdura. Crediamo fermamente che verdure fresche, prive di conservanti e di altissima qualità, non solo completino il gusto dell’hamburger, ma ne esaltino ogni singolo sapore. Per questo motivo, l’insalata viene lasciata intera e mai condita in anticipo, per mantenere la sua croccantezza e freschezza, mentre i pomodori vengono tagliati a fette sottili, perfetti per arricchire il burger con la loro dolcezza naturale. Questa attenzione alla qualità e alla freschezza delle verdure è un pilastro della nostra filosofia, assicurando che ogni boccone sia un’esplosione di sapori autentici.</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
-
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222216/blog-elementi5_l7wzo6.jpg" 
+  alt="Il formaggio" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 <h2>Il formaggio</h2>
 <p>Il quarto elemento che eleva i nostri hamburger a vere e proprie opere d’arte culinaria è la scelta del formaggio. Con grande attenzione, selezioniamo solo formaggi di alta qualità, dando priorità ai prodotti del nostro territorio senza però trascurare le eccellenze italiane riconosciute in tutto il mondo. Questa scelta ci permette di offrire un’ampia varietà di sapori, in grado di soddisfare sia gli amanti dei gusti classici che coloro che cercano un’esperienza più audace e innovativa. L’abilità nel combinare il formaggio giusto con il resto degli ingredienti trasforma ogni hamburger in un’esperienza unica, dove la fusione dei sapori diventa protagonista assoluta. La nostra dedizione nel trovare il perfetto equilibrio tra la ricchezza del formaggio e gli altri componenti dell’hamburger testimonia il nostro impegno verso l’eccellenza e l’innovazione culinaria.</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
-
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222216/blog-elementi6_mwkhhd.jpg" 
+  alt="Le salse" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 <h2>Le salse</h2>
 <p>Infine, ma non per importanza, il quinto elemento che definisce l’eccellenza dei nostri hamburger è la scelta delle salse. Le salse sono la firma finale di ogni hamburger, capaci di legare insieme tutti gli ingredienti, esaltandone i sapori. Da noi, troverete solo le migliori salse tradizionali, come la maionese e il ketchup Heinz, selezionati per la loro qualità indiscussa e capaci di conferire quel tocco classico amato da tutti, per un tocco in più la Cheddar Cheese Sauce. La nostra attenzione nella selezione delle salse riflette la nostra passione per i dettagli e il nostro impegno a offrire un’esperienza culinaria senza eguali.</p>
- `,
+`,
         createdAt: new Date("2023-10-31T22:00:00Z"),
         images: [
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-                caption: "Our beach view in July",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222214/blog-elementi1_rfn3sd.jpg",
+                caption: "Una delle nostre specialità",
             },
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-                caption: "Evening light on the boardwalk",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222214/blog-elementi2_tlxwah.jpg",
+                caption: "Il nostro pane",
             },
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-                caption: "Evening light on the boardwalk",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222215/blog-elementi3_pwjyd6.jpg",
+                caption: "La carne - il protagonista delle nostre ricette",
             },
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-                caption: "Evening light on the boardwalk",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222215/blog-elementi4_g4scvb.jpg",
+                caption: "La scelta degli ingredienti",
             },
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-                caption: "Evening light on the boardwalk",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222216/blog-elementi5_l7wzo6.jpg",
+                caption: "Scelta del formaggio",
             },
             {
-                url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-                caption: "Evening light on the boardwalk",
+                url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752222216/blog-elementi6_mwkhhd.jpg" ,
+                caption: "Salse per tutti i gusti!",
             },
         ],
     },
@@ -118,18 +134,25 @@ export const blogPosts  = [
   slug: "compleanno",
   excerpt: "Quest’anno, il 23 settembre, HERO compie anni di attività!",
   content: `
-    <p>Quest’anno, il 23 settembre, HERO compie anni di attività! Per questo noi di HERO – La casa del burger abbiamo deciso di proporre una promozione fantastica, funziona così:</p>
+    <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224185/blog-compleanno_x8b5yw.webp" 
+  alt="Promozione compleanno HERO" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
+
+<p>Quest’anno, il 23 settembre, HERO compie anni di attività! Per questo noi di HERO – La casa del burger abbiamo deciso di proporre una promozione fantastica, funziona così:</p>
 
 <p>Se verrete da settembre a ottobre, noi vi consegneremo una busta misteriosa alla fine del pasto!<br />
 Tutte le buste misteriose contengono un REGALO! Sennò che compleanno sarebbe? Alcuni sono belli, altri bellissimi, altri sono semplicemente pensieri, ma tutte le buste contengono un omaggio.<br />
 Vi piace l’idea? L’abbiamo pensata per voi!</p>
 
+
   `,
   createdAt: new Date("2023-10-31T23:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-      caption: "Our beach view in July",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224185/blog-compleanno_x8b5yw.webp",
+      caption: "Buon compleanno a noi!",
     }
   ]
 },
@@ -138,7 +161,12 @@ Vi piace l’idea? L’abbiamo pensata per voi!</p>
   slug: "diario-maggio-2024",
   excerpt: "Il Miglior Hamburger del Trentino e World Burger Day",
   content: `
- <img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+ <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224187/blog-diario-maggio24-1_rhzslm.png" 
+  alt="Hero maggio eventi 1" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
+
 <p>Hai mai avuto un mese così intenso che ti fa battere il cuore solo a pensarci? Preparati a essere travolto da una fiammata di emozioni! Maggio per la community di Hero è stato un mese da urlo! Ogni giorno, un’avventura. Ogni evento, un trionfo. Ogni hamburger, un’esplosione di gusto. Sei pronto per scoprire tutte le nostre novità? 
 
 Immagina una cascata di eventi memorabili, dove abbiamo conquistato nuovi traguardi e condiviso il nostro viaggio con la nostra community. Siamo diventati su TripAdvisor il <a href="https://www.tripadvisor.it/Restaurants-g1493737-zfd10907-Province_of_Trento_Trentino_Alto_Adige-Hamburger.html">miglior hamburger del Trentino</a>, abbiamo lanciato il Beer Bash del martedì e siamo stati celebrati durante il <a href="https://www.radio-food.it/hamburger-le-tendenze/">World Burger Day</a>. E non è tutto! Siamo onorati di essere diventati uno dei 150 locali fidelizzati Heinz, l’unico in tutto il Trentino Alto Adige! 
@@ -159,7 +187,11 @@ Se sei un cliente <strong><a href="https://heroburger.plateform.app/fidelity">He
 
 Ma cos’è esattamente il Beer Bash? È la nostra celebrazione della birra artigianale, un evento dove amici e appassionati di birra si incontrano per gustare le nostre migliori selezioni, partecipare a giochi divertenti e vincere fantastici premi. È stata l’occasione perfetta per rilassarsi, socializzare e godersi il meglio che Hero ha da offrire.</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224184/blog-diario-maggio24-2_q5smci.webp" 
+  alt="Hero maggio eventi 2" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <h2>World Burger Day – Il nostro riconoscimento</h2>
 <p>Il 28 maggio, in occasione del <strong>World Burger Day</strong>, siamo stati menzionati tra i <strong>migliori locali dove gustare un hamburger gourmet</strong>. Un riconoscimento che ci riempie di orgoglio e che sottolinea la nostra passione per la qualità e l’eccellenza.
@@ -182,22 +214,26 @@ Il 21 maggio abbiamo tenuto l’estrazione finale e Alex Carrara di Bergamo ha v
 
 Grazie a tutti coloro che hanno partecipato e hanno reso questo concorso un vero successo. Restate sintonizzati per altre iniziative e sorprese future. <strong>E ricordate, da HERO la Casa del Burger, non ci si annoia mai!</strong></p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224184/blog-diario-maggio24-3_vejyzp.jpg" 
+  alt="Hero maggio eventi 3" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 `,
   createdAt: new Date("2024-06-11T10:00:00Z"),
   images:  [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-      caption: "Our beach view in July",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224187/blog-diario-maggio24-1_rhzslm.png",
+      caption: "Diario di Maggio 2024",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-      caption: "Evening light on the boardwalk",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224184/blog-diario-maggio24-2_q5smci.webp",
+      caption: "Beer Bash",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
-      caption: "Evening light on the boardwalk",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752224184/blog-diario-maggio24-3_vejyzp.jpg",
+      caption: "Regolamento",
     }
   ],
   comments: [
@@ -220,7 +256,12 @@ Grazie a tutti coloro che hanno partecipato e hanno reso questo concorso un vero
   slug: "diario-giugno-2024",
   excerpt: "Abbiamo inaugurato il club esclusivo 'Gli amici di Hero'",
   content: `
- <img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+ <img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752244436/blog-diario-giugno2024-1_xgtnhz.png" 
+  alt="Hero giugno eventi 1" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
+
 <p>Il mese di giugno ci ha travolti con la sua energia, portando con sé gioie intense e festeggiamenti indimenticabili, oltre che gustose novità qui da Hero la Casa del Burger!
 
 Abbiamo inaugurato il club esclusivo <strong>Gli amici di Hero</strong> con una cena memorabile, creando un’atmosfera unica e intima per i nostri clienti più fedeli.
@@ -238,7 +279,11 @@ La serata è stata pensata per <strong>celebrare il legame</strong> che abbiamo 
 
 Siamo grati a tutti coloro che hanno partecipato e non vediamo l’ora di organizzare nuovi eventi esclusivi per “Gli amici di Hero”!</p>
 
-<img src="https://res.cloudinary.com/demo/image/upload/sample.jpg" alt="" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752244437/blog-diario-giugno2024-2_iaynmm.png" 
+  alt="Cena Gli amici di Hero" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <h2>Limited Edition HAMBURG – Un viaggio nel Tempo e nei Sapori</h2>
 <p>Dal 20 giugno al 7 luglio, abbiamo presentato il nostro hamburger Limited Edition <strong>“HAMBURG”</strong>, un tributo alla storia e alla tradizione. Questo panino speciale celebra i 130 anni dalla nascita del primo Hamburger ad Amburgo, creato nel 1894 dal cuoco <strong>Otto Quasch</strong>.
@@ -267,31 +312,55 @@ Solo 35 fortunati di voi hanno potuto gustare questo strepitoso burger in veste 
 
 Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. Continuate a seguirci per altre edizioni e sorprese future!</p>
 
+<!-- Flex container for last 4 images side by side -->
+<div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: nowrap; margin-top: 1rem;">
+  <img 
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244432/blog-diario-giugno2024-6_aevxs1.jpg" 
+    alt="Hero giugno eventi screenshot 1" 
+    style="height: auto; width: 175px; object-fit: cover;" 
+  />
+  <img 
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244432/blog-diario-giugno2024-4_yw9hwm.jpg" 
+    alt="Hero giugno eventi screenshot 2" 
+    style="height: auto; width: 175px; object-fit: cover;" 
+  />
+  <img 
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244431/blog-diario-giugno2024-3_gxpplg.jpg" 
+    alt="Hero giugno eventi screenshot 3" 
+    style="height: auto; width: 175px; object-fit: cover;" 
+  />
+  <img 
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244431/blog-diario-giugno2024-5_vh7jab.jpg" 
+    alt="Hero giugno eventi screenshot 4" 
+    style="height: auto; width: 175px; object-fit: cover;" 
+  />
+</div>
+
 `,
   createdAt: new Date("2024-07-09T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752244436/blog-diario-giugno2024-1_xgtnhz.png" ,
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1752244437/blog-diario-giugno2024-2_iaynmm.png",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244432/blog-diario-giugno2024-6_aevxs1.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244432/blog-diario-giugno2024-4_yw9hwm.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244431/blog-diario-giugno2024-3_gxpplg.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_175,c_fill/v1752244431/blog-diario-giugno2024-5_vh7jab.jpg",
       caption: "Evening light on the boardwalk",
     }
   ]
@@ -300,6 +369,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-luglio-2024",
   excerpt: "A luglio, l’entusiasmo non ha conosciuto soste qui da Hero – la Casa del Burger.",
   content: `
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431423/diario-luglio24-1_gastjf.png" 
+  alt="Planisfero Hero luglio" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <p>A luglio, l’entusiasmo non ha conosciuto soste qui da Hero – la Casa del Burger, con un susseguirsi ininterrotto di sorprese e novità. Dalle vacanze dei nostri clienti, che hanno portato lo spirito di Hero in giro per il mondo, alle nuove sorprese riservate al club <strong>“gli amici di Hero”</strong>, non ci siamo mai fermati. Come sempre del resto…</p>
 
@@ -311,7 +385,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>Grazie alle vostre vacanze e alle foto che ci avete inviato, il nostro <strong>planisfero</strong> sta prendendo vita. Ogni scatto racconta la vostra storia e ci mostra come portate un pezzo di Hero con voi ovunque andiate. Continuate a condividere i vostri viaggi con noi; la vostra passione per l’esplorazione e la vostra lealtà sono la vera essenza di ciò che rende Hero speciale. Siamo entusiasti di far parte delle vostre avventure e aspettiamo con impazienza di vedere dove vi porteranno i prossimi mesi!</p>
 
-<img src="https://your-image-url.com/photo1.jpg" alt="Foto inviata dai clienti" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431421/diario-luglio24-2_kyuvh2.png" 
+  alt="Bicchiere personalizzato club amici di Hero" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <h2>Nuove sorprese per il club “gli amici di Hero”</h2>
 
@@ -321,7 +399,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>Questi gesti sono il nostro modo di mostrarvi quanto apprezziamo ogni momento passato insieme e quanto siamo eccitati all’idea di quello che ci riserva il futuro.</p>
 
-<img src="https://your-image-url.com/photo2.jpg" alt="Bicchiere club Hero" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431419/diario-luglio24-3_pwegzw.png" 
+  alt="El Pardacian Limited Edition" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <h2>Con la celebrazione di San Giacomo arriva EL PARDACIAN Limited Edition</h2>
 
@@ -335,8 +417,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>È stata una giornata che ha unito la comunità e ha portato gioia a tutti coloro che hanno partecipato, celebrando non solo San Giacomo ma anche l’autenticità e la ricchezza dei sapori e della gente di Predazzo.</p>
 
-<!-- Insert Image -->
-<img src="https://your-image-url.com/photo3.jpg" alt="EL PARDACIAN burger" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431419/diario-luglio24-4_iaaz34.jpg" 
+  alt="El Pardacian burger" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
 <h2>Nuova cotta della nostra birra CAMM</h2>
 
@@ -348,30 +433,33 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>Venite a provarla e lasciatevi conquistare dal suo sapore unico! Ogni sorso racconta la storia del nostro impegno per l’eccellenza e la passione per l’arte birraia. Condividete con noi il piacere di gustare una birra artigianale di qualità, creata con dedizione e attenzione al dettaglio.</p>
 
-<!-- Insert Image -->
-<img src="https://your-image-url.com/photo4.jpg" alt="Birra CAMM" />
+<img 
+  src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431421/diario-luglio24-5_rm9xum.png" 
+  alt="Birra CAMM" 
+  style="display: block; max-width: 100%; height: auto; margin-bottom: 1rem;" 
+/>
 
   `,
   createdAt: new Date("2024-08-13T10:00:00Z"),
   images:  [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431423/diario-luglio24-1_gastjf.png",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431421/diario-luglio24-2_kyuvh2.png",
       caption: "Evening light on the boardwalk",
     },
      {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431419/diario-luglio24-3_pwegzw.png",
       caption: "Evening light on the boardwalk",
     },
      {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431419/diario-luglio24-4_iaaz34.jpg",
       caption: "Evening light on the boardwalk",
     },
      {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431421/diario-luglio24-5_rm9xum.png",
       caption: "Evening light on the boardwalk",
     },
   ],
@@ -380,20 +468,14 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   title: "Diario di bordo – Agosto 2024",
   slug: "diario-agosto-2024",
   excerpt: "Questo mese abbiamo introdotto l’hamburger Limited Edition “Wild",
-  content: `
-    <h1>Diario di bordo – Agosto 2024</h1>
-
+  content: `<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431892/diario-agosto24-1_krwnz2.png" alt="Hero Diario Agosto 1" />
 <p>Agosto ha brillato sotto il sole dell’estate, portandoci non solo calore, ma anche l’opportunità di cavalcare l’onda dei successi dei mesi precedenti. Con i nostri riconoscimenti su TripAdvisor e il successo del nostro nuovo <strong>Limited Edition</strong>, ormai un classico da Hero, abbiamo continuato a elevare il livello delle nostre offerte. Questo mese, abbiamo toccato nuovi vertici di gusto e ospitalità, e non vediamo l’ora di condividere con voi ogni dettaglio!</p>
 
 <h2>Limited edition “Wild”: Un successo straripante</h2>
 
-<img src="images/limited-edition-wild.jpg" alt="Hamburger Wild Limited Edition">
-
 <p>Questo mese abbiamo introdotto l’hamburger <strong>Limited Edition “Wild”</strong>, e siamo entusiasti di annunciare che è stato un enorme successo! Questo hamburger, caratterizzato da sapori audaci e ingredienti inaspettati, ha catturato l’apprezzamento dei nostri clienti, diventando uno dei preferiti in breve tempo. Grazie per aver accolto questa nuova creazione con tanto entusiasmo!</p>
 
 <h2>Preparativi per il “Buon Compleanno Hero”!</h2>
-
-<img src="images/buon-compleanno-hero.jpg" alt="Preparativi per il compleanno di Hero">
 
 <p>Agosto è un mese carico di anticipazione qui a Hero, la Casa del Burger, poiché ci avviciniamo alla celebrazione del nostro anniversario. Quest’anno, i preparativi per il <strong>“Buon Compleanno Hero”</strong> sono più entusiasmanti che mai. Stiamo organizzando un evento che riflette tutto il divertimento, l’innovazione e la passione che abbiamo condiviso con voi nel corso degli anni.</p>
 
@@ -403,35 +485,37 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <h2>Continuano i riconoscimenti su TripAdvisor</h2>
 
-<img src="images/tripadvisor-award.jpg" alt="Premio TripAdvisor Hero">
-
 <p>Grazie al vostro sostegno instancabile, abbiamo mantenuto il titolo di miglior ristorante e miglior hamburger del Trentino su <strong>TripAdvisor</strong>. Ogni recensione che condividete è una testimonianza del lavoro appassionato che il nostro team svolge ogni giorno e del legame speciale che abbiamo costruito con voi, i nostri clienti fedeli.</p>
 
 <p>Questo riconoscimento non è solo un premio; è un promemoria quotidiano del nostro impegno nel superare le vostre aspettative, servendo piatti che deliziano e sorprendono. Continuate a raccontarci la vostra esperienza, la vostra storia, i vostri viaggi, perché ogni parola che condividete ci aiuta a crescere e a innovare.</p>
 
 <p>E se non avete ancora lasciato la vostra recensione, vi invitiamo a farlo. Venite a vivere l’esperienza Hero e scoprite perché siamo, ancora una volta, stati votati i migliori!</p>
 
-  `,
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431888/diario-agosto24-2_zual3y.png" alt="Hero Diario Agosto 2" />
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431891/diario-agosto24-3_xiwet4.png" alt="Hero Diario Agosto 3" />
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431892/diario-agosto24-4_u0citq.png" alt="Hero Diario Agosto 4" />
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431888/diario-agosto24-5_sg1e5i.png" alt="Hero Diario Agosto 5" />
+ `,
   createdAt: new Date("2024-09-09T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431892/diario-agosto24-1_krwnz2.png",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431888/diario-agosto24-2_zual3y.png",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431891/diario-agosto24-3_xiwet4.png",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431892/diario-agosto24-4_u0citq.png",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753431888/diario-agosto24-5_sg1e5i.png",
       caption: "Evening light on the boardwalk",
     }
   ]
@@ -440,13 +524,13 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-settembre-2024",
   excerpt: "La serata del 21 settembre è stata semplicemente indimenticabile! ",
   content: `
-    <h1>Diario di bordo – Settembre 2024</h1>
+ <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433517/diario-settembre24-1_asfgfv.png" alt="Hero Diario Settembre 1" />
 
 <p>Nel mese di settembre, Hero – la Casa del Burger ha celebrato un traguardo speciale: <strong>sei anni di attività all’insegna del gusto e della qualità</strong>. Abbiamo festeggiato con una serata indimenticabile, ricca di divertimento e sapori straordinari.</p>
 
-<h2>BUON COMPLEANNO HERO!</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433516/diario-settembre24-2_p3pbef.jpg" alt="Hero Diario Settembre 2" />
 
-<img src="images/buon-compleanno-hero-settembre.jpg" alt="Festa di compleanno Hero 6 anni">
+<h2>BUON COMPLEANNO HERO!</h2>
 
 <p>La serata del <strong>21 settembre</strong> è stata semplicemente indimenticabile! Per celebrare i sei anni di attività, ci siamo goduti una giornata di buon cibo, belle persone e divertimento a non finire. Gli ospiti si sono lasciati travolgere da un’atmosfera speciale, tra risate, chiacchiere e, ovviamente, i nostri amati Burger. Un compleanno che ha saputo unire vecchi e nuovi amici per brindare insieme a questo grande traguardo!</p>
 
@@ -458,27 +542,34 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p><a href="https://heroburger.plateform.app/promo/promo-compleanno" target="_blank">https://heroburger.plateform.app/promo/promo-compleanno</a></p>
 
+<!-- Flex container for the last three images -->
+<div style="display: flex; gap: 10px; flex-wrap: nowrap;">
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433514/diario-settembre24-3_dsuzsv.jpg" alt="Hero Diario Settembre 3" style="flex: 1; object-fit: cover;" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433515/diario-settembre24-4_k10vmf.jpg" alt="Hero Diario Settembre 4" style="flex: 1; object-fit: cover;" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433597/diario-settembre24-5_iy5wzq.jpg" alt="Hero Diario Settembre 5" style="flex: 1; object-fit: cover;" />
+</div>
+
   `,
   createdAt: new Date("2024-10-08T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433517/diario-settembre24-1_asfgfv.png",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433516/diario-settembre24-2_p3pbef.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433514/diario-settembre24-3_dsuzsv.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433515/diario-settembre24-4_k10vmf.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753433597/diario-settembre24-5_iy5wzq.jpg",
       caption: "Evening light on the boardwalk",
     },
   ]
@@ -487,7 +578,7 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-ottobre-2024",
   excerpt: "Nel mese di ottobre, abbiamo voluto portarvi con noi in un viaggio culinario straordinario qui da Hero.",
   content: `
-    <h1>Diario di bordo – Ottobre 2024</h1>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753434005/diario-ottobre-1_k7rt41.jpg" alt="Hero Diario Ottobre 1" />
 
 <p>Nel mese di ottobre, abbiamo voluto portarvi con noi in un <strong>viaggio culinario</strong> straordinario qui da Hero. Un percorso ideato per nutrire non solo il vostro appetito, ma anche la vostra voglia di condividere emozioni con la comunità, attraverso esperienze che hanno fatto battere i cuori di tutti.</p>
 
@@ -497,15 +588,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <h2>La Desmontegada di Predazzo</h2>
 
-<img src="images/desmontegada-predazzo.jpg" alt="Desmontegada di Predazzo">
-
 <p>Domenica 6 Ottobre, il ritmo della tradizione batteva forte a Predazzo con la celebrazione della <strong>Desmontegada</strong>. 🎉🐮 Una festa che risveglia l’antico spirito della nostra terra, portando le strade alla vita con il rientro colorato e festoso delle mucche dall’alpeggio estivo.</p>
 
 <p>In questa giornata speciale, Hero, la vostra oasi di gusto, ha aperto le sue porte per accogliervi con calore. Molti di voi hanno approfittato di questa meravigliosa occasione.</p>
 
 <h2>Beer To Ride – Un viaggio tra le birre d’Europa</h2>
-
-<img src="images/beer-to-ride.jpg" alt="Beer To Ride - Birre europee">
 
 <p>Quest’anno abbiamo lanciato un’iniziativa entusiasmante: il <a href="https://heroburger.plateform.app/esperienze/" target="_blank"><strong>BEER TO RIDE</strong></a>. 🍻 Un’avventura settimanale che ha invitato gli amanti della birra e del buon cibo a un viaggio unico attraverso i sapori di 8 birrifici europei.</p>
 
@@ -519,9 +606,9 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p><a href="https://heroburger.plateform.app/esperienze/" target="_blank">https://heroburger.plateform.app/esperienze/</a></p>
 
-<h2>Beer Hero Hollow Walley – Una cena da brivido</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753434004/diario-ottobre-2_yaroxr.jpg" alt="Hero Diario Ottobre 2" />
 
-<img src="images/hero-hollow-walley.jpg" alt="Cena di Halloween Hero Hollow Walley">
+<h2>Beer Hero Hollow Walley – Una cena da brivido</h2>
 
 <p>La notte di Halloween è stata speciale qui da Hero! Abbiamo organizzato la cena a tema Hero Hollow Walley, trasformando il nostro locale in un luogo misterioso e affascinante. Tra decorazioni spettrali, piatti tematici e un’atmosfera unica, abbiamo trascorso una serata indimenticabile.</p>
 
@@ -531,11 +618,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   createdAt: new Date("2024-11-11T10:00:00Z"),
   images:  [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753434005/diario-ottobre-1_k7rt41.jpg",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753434004/diario-ottobre-2_yaroxr.jpg",
       caption: "Evening light on the boardwalk",
     },
   ]
@@ -545,7 +632,7 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-novembre-2024",
   excerpt: "Novembre è stato un mese semplicemente incredibile qui a Hero!",
   content: `
-    <h1>Diario di bordo – Novembre 2024</h1>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435137/diario-novembre-1_inxnxt.jpg" alt="Hero Novembre 1" />
 
 <p>Novembre è stato un mese semplicemente incredibile qui a Hero! Tra novità, eventi speciali e tanta energia, non ci siamo fermati un attimo. Finalmente, abbiamo inaugurato la nostra nuova pagina <strong>YouTube</strong>, il mistero delle <strong>buste segrete</strong> si è finalmente svelato, portando con sé emozioni e premi indimenticabili.</p>
 
@@ -554,8 +641,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 <p>Pronti a rivivere con noi tutto quello che è successo?</p>
 
 <h2>Un nuovo inizio su YouTube</h2>
-
-<img src="images/youtube-channel-launch.jpg" alt="Nuova pagina YouTube Hero">
 
 <p>Siamo entusiasti di annunciarlo: abbiamo aperto la nostra nuova pagina YouTube! Era un progetto che sognavamo da tempo e finalmente è realtà. Questo spazio nasce per condividere con voi tutto quello che rende Hero speciale, andando oltre il piatto e raccontando le storie che stanno dietro ai nostri burger.</p>
 
@@ -567,17 +652,15 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <h2>Le buste segrete sono state svelate</h2>
 
-<img src="images/buste-segrete.jpg" alt="Apertura delle buste segrete da Hero">
-
 <p>Finalmente, a novembre, le misteriose buste segrete hanno iniziato a rivelare il loro contenuto, portando con sé un carico di emozioni e sorprese spettacolari.</p>
 
 <p>Le buste, distribuite nei mesi scorsi, hanno saputo regalare momenti unici, trasformando ogni apertura in un’occasione speciale. Un modo per celebrare insieme e rendere l’esperienza da Hero ancora più memorabile.</p>
 
 <p>Se non hai ancora aperto la tua busta, prenota un tavolo e vieni a scoprire cosa ti aspetta!</p>
 
-<h2>Beer to Ride: Il viaggio continua</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435139/diario-novembre-2_far2pp.png" alt="Buste Segrete" />
 
-<img src="images/beer-to-ride-novembre.jpg" alt="Birre del Beer to Ride a novembre">
+<h2>Beer to Ride: Il viaggio continua</h2>
 
 <p>Anche a novembre, il nostro Beer-to-Ride ci ha portato a scoprire nuove birre e territori, continuando questo percorso all’insegna del gusto e della convivialità.</p>
 
@@ -585,13 +668,15 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>Ma il viaggio non si ferma qui: la prossima tappa sarà <strong>il 5 dicembre dove viaggeremo fino in Belgio</strong>. Prenota il tuo tavolo e unisciti a noi per il prossimo appuntamento del Beer-to-Ride!</p>
 
-<h2>La notte dei Krampus!</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435136/diario-novembre-3_xmyoue.jpg" alt="Beer to Ride Continues" />
 
-<img src="images/krampus-night.jpg" alt="Krampus Burger e festa a Cavalese">
+<h2>La notte dei Krampus!</h2>
 
 <p>Il trenta novembre siamo stati a <strong>Cavalese</strong> per la magica notte dei <strong>Krampus</strong>, un evento unico che celebra le tradizioni alpine. Per l’occasione, Hero ha portato il suo tocco speciale con il Krampus Burger, il <strong>burger ufficiale dei Krampus di Fiemme</strong>.</p>
 
 <p>Un mix perfetto di gusto e atmosfera, che ha reso la serata ancora più indimenticabile.</p>
+
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435137/diario-novembre-4_mysho8.jpg" alt="Krampus Burger" />
 
 <h2>I nostri social:</h2>
 
@@ -609,19 +694,19 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   createdAt: new Date("2024-12-10T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435137/diario-novembre-1_inxnxt.jpg",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435139/diario-novembre-2_far2pp.png",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435136/diario-novembre-3_xmyoue.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435137/diario-novembre-4_mysho8.jpg",
       caption: "Evening light on the boardwalk",
     },
   ]
@@ -631,7 +716,7 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-dicembre-2024",
   excerpt: "Dicembre è stato un mese straordinario qui a Hero, ricco di novità, emozioni festive e momenti da condividere. ",
   content: `
-    <h1>Diario di bordo – Dicembre 2024</h1>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435607/diario-dicembre24-1_gphooh.jpg" alt="Dicembre Hero" />
 
 <p>Dicembre è stato un mese straordinario qui a Hero, ricco di novità, emozioni festive e momenti da condividere. Abbiamo accolto il freddo con un caloroso abbraccio grazie al nostro nuovo menu invernale, lanciato con grande entusiasmo e accompagnato da sorprese golose per celebrare la magia del Natale.</p>
 
@@ -663,7 +748,7 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   createdAt: new Date("2025-01-07T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435607/diario-dicembre24-1_gphooh.jpg",
       caption: "Our beach view in July",
     }
   ]
@@ -672,21 +757,19 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-gennaio-2025",
   excerpt: "Il 2025 si è aperto con un’energia contagiosa qui da HERO!",
   content: `
-    <h1>Diario di bordo – Gennaio 2025</h1>
+   <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435807/diario-gennaio25-1_zjcvox.png" alt="Capodanno HERO">
 
 <p>Il 2025 si è aperto con un’energia contagiosa qui da HERO! Abbiamo festeggiato l’arrivo del nuovo anno circondati dai nostri amici, dalla famiglia e, ovviamente, dai nostri burger preferiti. L’atmosfera di festa e la voglia di rimettersi in gioco ci hanno dato la giusta carica per iniziare gennaio con entusiasmo e tante idee in cantiere.</p>
 
 <h2>28 gennaio: sorteggiati i premi “Buon Compleanno HERO”</h2>
 
-<img src="images/sorteggio-premi-compleanno.jpg" alt="Sorteggio premi Buon Compleanno HERO">
-
 <p>Forse ricorderai che a settembre avevamo lanciato la promozione “Buon Compleanno HERO”. Durante questo speciale evento, abbiamo distribuito tantissimi premi, ma alcuni di questi sono rimasti in attesa di un fortunato vincitore.</p>
 
 <p>Ebbene, il 28 gennaio abbiamo finalmente sorteggiato i premi rimasti! È stato un momento emozionante in cui abbiamo chiuso il cerchio di questa iniziativa, regalando ancora un po’ di magia a chi ci segue con passione.</p>
 
-<h2>Buoni propositi per l’anno nuovo</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435803/diario-gennaio25-2_d6voy2.png" alt="Sorteggi HERO">
 
-<img src="images/buoni-propositi-hero.jpg" alt="Buoni propositi Hero 2025">
+<h2>Buoni propositi per l’anno nuovo</h2>
 
 <p>Il nuovo anno porta sempre con sé nuove prospettive e buoni propositi. Anche noi di HERO ne abbiamo tanti:</p>
 
@@ -706,11 +789,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   createdAt: new Date("2025-02-04T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435807/diario-gennaio25-1_zjcvox.png",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753435803/diario-gennaio25-2_d6voy2.png",
       caption: "Evening light on the boardwalk",
     },
   ]
@@ -719,7 +802,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-febbraio-2025",
   excerpt: "Febbraio è stato un mese esplosivo qui da Hero!",
   content: `
-    <h1>Diario di bordo – Febbraio 2025</h1>
 
 <p>Febbraio è stato un mese esplosivo qui da Hero! Tra sorprese, eventi speciali e tanto divertimento, non ci siamo fermati un attimo.</p>
 
@@ -729,15 +811,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <h2>Bevi e Vinci: il concorso che fa felici tutti!</h2>
 
-<img src="images/bevi-e-vinci.jpg" alt="Concorso Bevi e Vinci da Hero">
-
 <p>Grande ritorno per il nostro concorso “Bevi e Vinci”! Ogni birra ordinata ha regalato un gratta e vinci, con la possibilità di vincere subito o di tentare la fortuna con l’estrazione finale. In palio, un fusto da 5L di birra con sei bicchieri, una birra da portare a casa o fantastici gadget targati Hero.</p>
 
 <p>Se non hai ancora tentato la sorte, che aspetti? Vieni a brindare con noi e prova a vincere!</p>
 
 <h2>San Valentino: una serata magica tra luci soffuse e sapori unici</h2>
-
-<img src="images/san-valentino-hero.jpg" alt="Cena di San Valentino da Hero">
 
 <p>Il 14 febbraio da Hero è stato un vero successo! Abbiamo trasformato la nostra veranda in un angolo romantico con luci soffuse e un’atmosfera intima perfetta per celebrare l’amore.</p>
 
@@ -746,8 +824,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 <p>Un’esperienza unica, che ha reso questo San Valentino davvero speciale!</p>
 
 <h2>Carnevale Hero: i burger si mascherano!</h2>
-
-<img src="images/carnevale-hero.jpg" alt="Burger in maschera per il Carnevale da Hero">
 
 <p>Il 22 febbraio il Carnevale ha preso il via e Hero si è trasformato con decorazioni a tema e, soprattutto, burger in maschera!</p>
 
@@ -771,7 +847,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-marzo-2025",
   excerpt: "Marzo si è aperto con una nota festosa qui da Hero",
   content: `
-   <h1>Diario di bordo – Marzo 2025</h1>
 
 <p>Marzo si è aperto con una nota festosa qui da Hero, e non avremmo potuto chiedere inizio migliore! Abbiamo celebrato il compleanno di Mauro, il nostro instancabile titolare, che con la sua passione e carisma è sempre una fonte d’ispirazione per tutti noi. La sua gioia contagiosa ha reso la giornata speciale e abbiamo brindato insieme a questo traguardo. Un momento che ha unito tutto il nostro team e i nostri affezionati clienti.</p>
 
@@ -807,7 +882,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-aprile-2025",
   excerpt: "Aprile è stato un mese di calma apparente qui a Hero – La Casa del Burger, ma dietro le quinte il fermento non si è mai fermato.",
   content: `
-   <h1>Diario di bordo – Aprile 2025</h1>
 
 <p>Aprile è stato un mese di calma apparente qui a Hero – La Casa del Burger, ma dietro le quinte il fermento non si è mai fermato. Poche occasioni ufficiali, tante emozioni: ve le raccontiamo tutte, così da portarvi con noi in questo viaggio verso la nostra prossima, entusiasmante avventura!</p>
 
@@ -850,25 +924,24 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
   slug: "diario-maggiogiugno-2025",
   excerpt: "Questi ultimi due mesi hanno segnato una vera e propria rinascita per la nostra casa",
   content: `
-   <h1>Diario di Bordo – HERO La Casa del Burger Maggio e Giugno 2025</h1>
-
 <p>Cari Amici di HERO,</p>
 
 <p>È difficile trovare le parole giuste per descrivere quanto abbiamo vissuto in questi ultimi due mesi, mesi che hanno segnato una vera e propria rinascita per la nostra casa, HERO La Casa del Burger. Se ci guardiamo indietro, possiamo solo provare un’immensa gratitudine e un’emozione forte, perché ciò che abbiamo conquistato va oltre ogni aspettativa.</p>
 
 <h2>MAGGIO: la fine di un grande viaggio</h2>
 
-<img src="images/trasloco.jpg" alt="Trasloco verso la nuova sede HERO">
-
 <p>Il mese di maggio è stato il mese della conclusione di un capitolo e dell’inizio di un nuovo, più grande e più luminoso. Con impegno e dedizione, abbiamo portato a termine i lavori nella nostra nuova location, trasformando il sogno in realtà di un ambiente ancora più accogliente e spazioso.</p>
 
 <p>Il trasloco dalla vecchia sede, dove tutto è nato, è stato un momento di grande emozione… un arrivederci ai ricordi, un benvenuto a una casa tutta nuova fatta su misura per voi, nostri clienti, amici e familiari.</p>
 
-<img src="images/cantiere-fine.jpg" alt="Ultimi momenti nel cantiere della nuova sede">
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436499/diario-giugno25-1_tblosz.webp" alt="Nuova sede Hero 1" style="width: calc(50% - 0.5rem); height: auto;" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436500/diario-giugno25-2_xgwcan.webp" alt="Nuova sede Hero 2" style="width: calc(50% - 0.5rem); height: auto;" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436498/diario-giugno25-3_tiuoha.webp" alt="Nuova sede Hero 3" style="width: calc(50% - 0.5rem); height: auto;" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436502/diario-giugno25-4_ov2tjn.jpg" alt="Nuova sede Hero 4" style="width: calc(50% - 0.5rem); height: auto;" />
+</div>
 
 <h2>GIUGNO: l’apertura della nuova Casa HERO</h2>
-
-<img src="images/taglio-nastro.jpg" alt="Taglio del nastro alla nuova apertura HERO">
 
 <p>Giugno ci ha visti protagonisti di un evento che abbiamo atteso con il cuore in mano: l’apertura ufficiale della nostra nuova casa, dopo 100 giorni di ristrutturazione intensissima. Quattro giorni di festeggiamenti e momenti indimenticabili che hanno reso ufficiale l’inizio di una nuova era.</p>
 
@@ -876,15 +949,11 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>È stato un giorno di orgoglio, di emozione e di riconoscenza, per aver potuto condividere con voi la realizzazione di questo sogno.</p>
 
-<img src="images/fidelity-vip.jpg" alt="Serata VIP e clienti Fidelity da HERO">
-
 <p>Il 18 giugno abbiamo celebrato i nostri clienti FIDELITY e VIP, dimostrando ancora una volta che qui da HERO non si è solo clienti, ma parte di una grande famiglia.</p>
 
 <p>Il 19 giugno abbiamo aperto in modalità ESCLUSIVA, riservando a chi si è prenotato tramite la nostra newsletter un’esperienza unica, un momento speciale tra amici in un ambiente che già sentiamo nostro.</p>
 
 <p>Il 21 giugno alla serata finale di un percorso meraviglioso abbiamo condiviso un momento di festa con tutti i nostri clienti e ospiti speciali, tra cui il “TIMBER TEAM GIACOMELLI”, protagonisti di UNDERCUT su DMAX e FLORIAN ANDRES MUSIC, arrivato direttamente da Lienz per celebrare questa grande apertura.</p>
-
-<img src="images/festa-apertura.jpg" alt="Festa di apertura con Timber Team e Florian Andres">
 
 <p>È stato un momento di pura energia, musica, emozione… e di tanti sorrisi. Non poteva mancare la specialissima festeggiata, una nostra affezionata cliente che ha spento 50 candeline tra abbracci, risate e buonissimo cibo.</p>
 
@@ -896,8 +965,6 @@ Grazie a tutti per aver partecipato e reso questo evento ancora più speciale. C
 
 <p>E infine, un grazie immenso a voi, i nostri clienti, amici e sostenitori, perché senza di VOI tutto questo non avrebbe senso. La vostra fiducia, il vostro entusiasmo e il vostro affetto sono il cuore pulsante di HERO.</p>
 
-<img src="images/gruppo-team.jpg" alt="Il team HERO e amici durante l'inaugurazione">
-
 <p>Vi aspettiamo per continuare insieme questa straordinaria storia, fatta di hamburger, amicizia e tante emozioni.</p>
 
 <p><em>Con tutto il cuore,<br>
@@ -906,27 +973,29 @@ Titolare di HERO La Casa del Burger</em></p>
 
 <h2>NON FARTELO RACCONTARE… VIVILO CON NOI!</h2>
 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436503/diario-giugno25-5_ulkrfg.webp" alt="Evento inaugurale Hero" style="width: 100%; max-width: 700px; height: auto; display: block; margin: 2rem auto;" />
+
   `,
   createdAt: new Date("2025-07-08T10:00:00Z"),
   images: [
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436499/diario-giugno25-1_tblosz.webp",
       caption: "Our beach view in July",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436500/diario-giugno25-2_xgwcan.webp",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436498/diario-giugno25-3_tiuoha.webp",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436502/diario-giugno25-4_ov2tjn.jpg",
       caption: "Evening light on the boardwalk",
     },
     {
-      url: "https://res.cloudinary.com/demo/image/upload/sample2.jpg",
+      url: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_700,c_fill/v1753436503/diario-giugno25-5_ulkrfg.webp",
       caption: "Evening light on the boardwalk",
     },
   ]

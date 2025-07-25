@@ -54,13 +54,31 @@
 .privacy {
   font-size: 0.85rem;
   color: #ccc;
+  margin-bottom: 0px;
 }
 
 .privacyLink {
   color: #ccc;
   text-decoration: underline;
 }
+.signature {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 0; /* zero space */
+  font-family: var(--font-kalam), sans-serif;
+  font-weight: 300;
+  text-align: right;
+}
+.signatureLink {
+  color: inherit;        /* same color as parent text */
+  text-decoration: none; /* no underline */
+  font-size: 0.85rem;
+}
 
+.signatureLink:hover {
+  color: inherit;        /* no color change on hover */
+  cursor: pointer;       /* still shows pointer for usability */
+}
 @media (max-width: 767px) {
   .logoWrapper {
     justify-content: center;

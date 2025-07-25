@@ -9,3 +9,12 @@
   font-size: 3rem;
   color:  #4A7729;
 }
+.headerContainer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+gap: 1rem;
+}
+.logo {
+  transform: translateY(-8px);
+}
