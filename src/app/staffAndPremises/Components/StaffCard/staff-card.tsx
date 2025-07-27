@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import styles from './staff-card.module.css';
 import { StaffCard } from '../../../Services/staffPremises';

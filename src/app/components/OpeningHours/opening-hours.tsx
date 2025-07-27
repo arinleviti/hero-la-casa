@@ -1,4 +1,4 @@
-'use client';
+
 import styles from './opening-hours.module.css';
 import {openingHours} from '../../Services/assetsService'
 

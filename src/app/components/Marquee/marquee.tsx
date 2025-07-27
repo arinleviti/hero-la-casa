@@ -1,9 +1,10 @@
+'use client'
+
 import styles from './marquee.module.css'
 import Marquee from "react-fast-marquee";
 import { Burger, burgers } from '../../Services/menuItems'
 import { newsItems, NewsItems } from '../../Services/newsItems'
 import SwiperModal from '../SwiperObject/SwiperModal/swiper-modal'
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from 'react';
 

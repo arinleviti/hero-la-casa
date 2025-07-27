@@ -1,4 +1,3 @@
-'use client'
 
 import styles from './picture-belt.module.css';
 import Image from 'next/image';

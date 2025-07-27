@@ -1,3 +1,4 @@
+'use client';
 import styles from './camm-beer.module.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
