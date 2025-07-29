@@ -56,24 +56,74 @@
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  
 }
 
 .pagination :global(.page-item) {
   margin: 0 4px;
+  
 }
 
 .pagination :global(.page-link) {
   padding: 0.5rem 1rem;
-  color: #007bff;
+  color: #7BA6DE;
   text-decoration: none;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
+  
 }
 
 .pagination :global(.page-item.active) .page-link {
-  background-color: #007bff;
+  background-color: #7BA6DE!important;
   color: white;
-  border-color: #007bff;
+  border-color: #7BA6DE;
+}
+.commentsSection {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+.commentsSection h3 {
+      font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 2rem;
+  color: #4A7729;
+}
+.commentList {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.comment {
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+    color: #5E4B3C;
+    font-family: var(--font-kalam), sans-serif;
+}
+
+.formName,
+.formEmail,
+.formComment {
+  width: 100%;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin: 0.3rem 0rem;
+}
+
+.formButton {
+  padding: 0.5rem 1rem;
+  background-color: #7BA6DE!important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.formButton:hover {
+  background-color: #0056b3 !important;
 }
 @media (min-width: 768px) {
   .blogContainer {

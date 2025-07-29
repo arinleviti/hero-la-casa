@@ -68,6 +68,64 @@ export default async function BlogPage({ params }: PageProps) {
               className={styles.postContent}
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
+
+            {/* Comments Section */}
+            <div className={styles.commentsSection}>
+              <h3>Commenti</h3>
+
+              {post.comments.length === 0 ? (
+                <p>Facci sapere cosa ne pensi, lascia un commento qui sotto!</p>
+              ) : (
+                <ul className={styles.commentList}>
+                  {post.comments.map((comment) => (
+                    <li key={comment.id} className={styles.comment}>
+                      <strong>{comment.name}</strong>{' '}
+                      <em>({new Date(comment.createdAt).toLocaleString('it-IT', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false, // ensures 24h format
+                      }).replace(',', '')}
+                        )
+                      </em>
+                      <p>{comment.content}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <form
+                action="/api/comments"
+                method="POST"
+                className={styles.commentForm}
+              >
+                <input type="hidden" name="postId" value={post.id} />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nome"
+                  required
+                  className={styles.formName}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email (non verrà visualizzata nei commenti)"
+                  required
+                  className={styles.formEmail}
+                />
+                <textarea
+                  name="content"
+                  placeholder="Scrivi qui il tuo commento"
+                  required
+                  className={styles.formComment}
+                />
+                <button className={styles.formButton} type="submit">Invia</button>
+              </form>
+            </div>
+
           </article>
         ))}
       </div>
@@ -77,19 +135,19 @@ export default async function BlogPage({ params }: PageProps) {
           {currentPage > 1 && (
             <li className="page-item">
               <Link href={`/blog/${currentPage - 1}`} className="page-link">
-                ← Previous
+                ←
               </Link>
             </li>
           )}
 
-          <li className="page-item active" aria-current="page">
+          <li className={styles.paginationActivePage} aria-current="page">
             <span className="page-link">{currentPage}</span>
           </li>
 
           {currentPage < totalPages && (
             <li className="page-item">
               <Link href={`/blog/${currentPage + 1}`} className="page-link">
-                Next →
+                →
               </Link>
             </li>
           )}
