@@ -1,101 +1,142 @@
+
+
+/* === General Navbar Styles === */
 .navbar {
   position: sticky !important;
   top: 0;
   z-index: 1000;
-    padding:0 !important;
-width: 100%;
-}
-.navContent {
-  display: flex;
-  justify-content: center; /* Center all children */
-  align-items: center;
+  padding: 0 !important;
   width: 100%;
-  justify-content: space-between; /* Distribute left and right sides */
-  position: relative;
-  gap: 15rem; /* space between left nav, logo, and right nav */
-}
-.navSide {
-  display: flex;
-  gap: 1.2rem;
-flex: 1;
-  /* Optional: add margin to push links closer/further from logo */
-  /* For example: margin: 0 1rem; */
-}
-.navSide.left {
-  justify-content: flex-end; /* Align links toward the logo */
 }
 
-.navSide.right {
-  justify-content: flex-start; /* Align links toward the logo */
-}
-.navSide :global(.nav-link) {
-    color: #fff6ea;
-font-family: var(--font-oswald), sans-serif;
-
-font-weight: 900;
-font-size: medium;
-/* transform: scaleY(1.2); */ /* makes it 20% taller */
-}
-.navSide :global(.nav-link:hover) {
-  color:  #7BA6DE; /* or whatever color you want on hover */
-}
-.navSide :global(.nav-link:focus),
-.navSide :global(.nav-link:active) {
-  color: #fff6ea !important;
-  background-color: transparent !important;
-  text-decoration: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-.navSide :global(.nav-link.active),
-.navSide :global(.nav-link[aria-current="page"]) {
-  color: #fff6ea !important;
-  background-color: transparent !important;
-  text-decoration: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-.navbarBrandCentered {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-top: 10px;
-}
 .navbarContainer {
   display: flex;
   align-items: center;
-  min-height: 80px; /* or a bit larger than your logo height */
-  height: 20px;
-background-color: #5E4B3C;
-
+  min-height: 80px;
+  background-color: #5E4B3C;
 }
+
 .navbarContentWrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .waveWrapper svg {
-  height: 70px;       /* Make wave shorter */
-  width: 100%;        /* Stretch full width */
-  display: block;     /* remove inline gap */
-}
-.waveWrapper svg path {
-  fill: #5E4B3C !important;  /* Override color to red */
+  height: 70px;
+  width: 100%;
+  display: block;
 }
 
-@media (max-width: 768px) {
-  .navbarBrandCentered img {
-    width: 70px;
-  }
-  .navbarBrandCentered {
-    position: absolute;
+.waveWrapper svg path {
+  fill: #5E4B3C !important;
+}
+
+/* === Centered Brand === */
+.navbarBrandCenteredWrapper {
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  top: -30px;
+  top: 10px;
+  z-index: 1050;
+}
+
+/* === Burger Icon Right === */
+.navbarToggle {
+  order: 2;
+  margin-left: auto;
+  z-index: 1100;
+}
+
+/* === Desktop Nav Layout === */
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: 15rem;
+}
+
+.navSide {
+  display: flex;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.navSide.left {
+  justify-content: flex-end;
+}
+
+.navSide.right {
+  justify-content: flex-start;
+}
+
+.navSide :global(.nav-link) {
+  color: #fff6ea;
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 900;
+  font-size: medium;
+}
+
+.navSide :global(.nav-link:hover) {
+  color: #7BA6DE;
+}
+
+/* === Fullscreen Mobile Menu === */
+.expandedCollapse {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #5E4B3C;
+  padding-top: 120px; /* space for logo */
+  flex-direction: column !important;
+  display: flex !important;
+  z-index: 1099;
+  overflow-y: auto;
+}
+
+.expandedCollapse .navSide {
+  flex-direction: column;
+  justify-content: flex-start !important;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.expandedCollapse .navSide :global(.nav-link) {
+  display: block;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 0.75rem 0;
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 991px) {
+.navbarBrandCenteredWrapper {
+    position: absolute;      /* ignore flex layout */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;               /* small offset from top */
+    margin: 0;
+    width: auto;             /* logo keeps natural width */
+ 
+  }
+  .navbarBrandCenteredWrapper img {
+    width: 80px;              /* smaller logo on mobile */
+    height: auto;
+  }
+ .navbarToggle {
+    margin-right: 1rem;
   }
   .navbarContainer {
-    min-height: 60px;
+    justify-content: space-between;
+    min-height: 65px;
+  }
+
+  .navContent {
+    gap: 0; /* no huge gaps on mobile */
   }
 }

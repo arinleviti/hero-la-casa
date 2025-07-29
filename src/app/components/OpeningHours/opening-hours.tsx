@@ -1,18 +1,19 @@
 
 import styles from './opening-hours.module.css';
 import {openingHours} from '../../Services/assetsService'
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function OpeningHours() {
   return (
-    <div className={styles.openingHours}>
+    <Container className={styles.openingHours}>
       <h2 className={styles.heading}>ORARI DI APERTURA</h2>
-      <div className={styles.hoursWrapper}>
+      <Row className={styles.hoursWrapper}>
         {openingHours.map(({ day, hours }) => (
-          <span key={day} className={styles.hourItem}>
+          <Col xs={12} sm={6} md={4} key={day} className={styles.hourItem}>
             <strong>{day}:</strong> {hours}
-          </span>
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 }

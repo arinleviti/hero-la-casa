@@ -1,0 +1,30 @@
+.postTitle {
+  font-family: var(--font-anton);
+  font-weight: 1000;
+  font-size: 3rem;
+  color: #4A7729;
+}
+
+.postExcerpt{
+  font-family: var(--font-kalam), sans-serif;
+  font-size: 1.45rem;
+  color: #5E4B3C;
+}
+.postButton {
+  background-color:  #7BA6DE;     
+  border: none;                  /* optional: remove border */
+  color: #edd5c3;                  /* white text */
+  font-family: var(--font-anton);
+  font-size: 1.4rem;             /* adjust size if needed */
+  padding: 0.2rem 1rem;        /* spacing around text */
+  border-radius: 6px;            /* optional: round corners */
+  transition: background-color 0.2s ease;
+}
+.postButton:hover,
+.postButton:focus {
+  background-color: #4A7729;     /* darker red on hover */
+  color: white;
+}
+.buttonContainer {
+  padding-top: 2rem; /* Add space above button */
+}

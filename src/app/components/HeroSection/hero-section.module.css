@@ -3,6 +3,16 @@
     align-items: center;
     width: 100%;           /* Ensure container fills its parent */
 }
+.heroImageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* Optional max size on large screens */
+  aspect-ratio: 1 / 1; /* Keep square shape */
+}
+
+.heroImg {
+  object-fit: contain; /* or cover, depending on your design */
+}
 .heroText,
 .heroImage {
   flex: 0 0 50%;   /* Don't grow or shrink, fixed at 50% */

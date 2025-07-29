@@ -3,7 +3,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './find-us.module.css';
 import dynamic from 'next/dynamic';
-import OpeningHours from '../OpeningHours/opening-hours'
+/* import OpeningHours from '../OpeningHours/opening-hours' */
 
 // Dynamically import LeafletMap to avoid SSR issues
 const LeafletMap = dynamic(() => import('./LeafletMap'), { ssr: false });
@@ -29,7 +29,7 @@ export default function WhereWeAre() {
           <LeafletMap position={position} />
         </Col>      
       </Row>
-<OpeningHours/>
+{/* <OpeningHours/> */}
     </Container>
   );
 }

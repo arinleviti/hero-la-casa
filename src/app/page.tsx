@@ -12,6 +12,8 @@ import { StaffSection } from './components/StaffSection/staff-section';
 import MarqueeSection from './components/Marquee/marquee';
 import { useEffect } from 'react';
 import Reviews from './components/Reviews/reviews'
+import LatestPost from './components/LatestPost/latest-post';
+import OpeningHours from './components/OpeningHours/opening-hours';
 
 export default function HomePage() {
 
@@ -47,7 +49,9 @@ export default function HomePage() {
       <div id="find-us">
         <FindUs />
       </div>
+      <LatestPost/>
       <Reviews/>
+      <OpeningHours/>
     </div>
 
   );

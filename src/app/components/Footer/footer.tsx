@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
             <p className={styles.privacy}>
               &copy; {currentYear} Hero Burger. Tutti i diritti riservati.{' '}
-              <Link href="/privacy-policy" className={styles.privacyLink}>
+              <Link href="/Privacy" className={styles.privacyLink}>
                 Privacy Policy
               </Link>             
             </p>
