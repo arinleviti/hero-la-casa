@@ -99,11 +99,17 @@
   overflow-y: auto;
 }
 
+.expandedCollapse .navContent {
+  flex-direction: column !important;
+  align-items: center!important;       /* Center all links horizontally */
+  gap: 0;                    /* Remove extra horizontal spacing */
+}
 .expandedCollapse .navSide {
   flex-direction: column;
   justify-content: flex-start !important;
-  gap: 1.5rem;
+  gap: 0rem!important;
   padding: 0 2rem;
+  align-items: center;  
 }
 
 .expandedCollapse .navSide :global(.nav-link) {

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './hero-section.module.css';
-import {Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 /* import { motion } from 'framer-motion'; */
 
 interface HeroSectionProps {
@@ -18,8 +18,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ textData, imageData }: HeroSectionProps) {
-    return (
-        <section className={styles.heroWrapper}>
+  return (
+    <section className={styles.heroWrapper}>
       <Container fluid>
         <Row className="align-items-center">
           {/* === Left Column: Text === */}
@@ -36,19 +36,19 @@ export default function HeroSection({ textData, imageData }: HeroSectionProps) {
 
           {/* === Right Column: Image === */}
           <Col md={6} className={styles.heroImage}>
-  <div className={styles.heroImageWrapper}>
-    <Image
-      src={imageData.src}
-      alt={imageData.alt}
-      fill
-      className={styles.heroImg}
-      sizes="(max-width: 768px) 80vw, 50vw"
-      priority
-    />
-  </div>
-</Col>
+            <div className={styles.heroImageWrapper}>
+              <Image
+                src={imageData.src}
+                alt={imageData.alt}
+                fill
+                className={styles.heroImg}
+                sizes="(max-width: 600px) 90vw, (max-width: 1200px) 50vw, 550px"
+                priority
+              />
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>
-    )
+  )
 }

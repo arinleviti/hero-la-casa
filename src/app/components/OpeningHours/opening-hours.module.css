@@ -2,7 +2,7 @@
  font-family: var(--font-kalam), sans-serif;
   font-size: 1.3rem;
   color: #5E4B3C;
-  padding: 2rem 0rem;
+
 }
 
 .heading {
@@ -14,13 +14,14 @@
 }
 
 .hoursWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
 
-  line-height: 0.5;
+
+
+
+  line-height: 1;
 }
 
 .hourItem {
-  white-space: nowrap;
+  white-space: normal;
 }
+

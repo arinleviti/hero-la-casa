@@ -1,17 +1,23 @@
 .videoWrapper {
   display: flex;
   width: 100%;
-
- padding-top: clamp(2rem, 10vh, 4rem);
+  overflow-x: hidden;
+  padding-top: clamp(2rem, 10vh, 4rem);
   padding-bottom: clamp(2rem, 10vh, 4rem);
+  
 }
+
 .videoContainer {
   display: flex;
-  justify-content: center;  /* centers horizontally */
-  align-items: center;      /* centers vertically if needed */
+  justify-content: center;
+  /* centers horizontally */
+  align-items: center;
+  /* centers vertically if needed */
 }
+
 .videoContainer,
 .videoText {
+  position:relative;
   flex-basis: 50%;
   flex-shrink: 0;
   flex-grow: 0;
@@ -27,53 +33,68 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* subtle shadow */
-  transform: rotate(-3deg); /* Rotate counterclockwise by 3 degrees */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* subtle shadow */
+  transform: rotate(-3deg);
+  /* Rotate counterclockwise by 3 degrees */
+
 }
 
 .videoFrame {
   width: 95%;
-  height:  95%;
+  height: 95%;
   display: block;
   border-radius: 0;
   z-index: 1;
   position: relative;
-  object-fit: cover;       /* ADD THIS to crop video nicely */
+  object-fit: cover;
+  /* ADD THIS to crop video nicely */
 }
 
 .polaroidImage {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  pointer-events: none;  /* so clicks go through to video */
+  pointer-events: none;
+  /* so clicks go through to video */
   user-select: none;
-  z-index: 2;            /* on top of the video */
+  z-index: 2;
+  /* on top of the video */
 }
+
 .videoText {
   text-align: left;
 
 }
+
 .videoText h2 {
-  
-      /* font-family: var(--font-oswald), sans-serif; */
-      font-family: var(--font-anton), sans-serif;
-      font-weight: 1000;
-      font-size: 3rem; /* increase as needed */
-      color: #4A7729;
+
+  /* font-family: var(--font-oswald), sans-serif; */
+  font-family: var(--font-anton), sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  /* increase as needed */
+  color: #4A7729;
 }
+
 .videoText p {
- 
-    font-family: var(--font-oswald), sans-serif;
-    font-family: var(--font-kalam);
-    font-size: 1.45rem; /* increase as needed */
-    color:  #5E4B3C;
+
+  font-family: var(--font-oswald), sans-serif;
+  font-family: var(--font-kalam);
+  font-size: 1.45rem;
+  /* increase as needed */
+  color: #5E4B3C;
 }
+
 .videoText a {
   text-decoration: none;
-  color: inherit; /* Keeps text color same as surrounding text */
+  color: inherit;
+  /* Keeps text color same as surrounding text */
 }
+
 .soundToggleButton {
   z-index: 3;
   position: absolute;
@@ -88,24 +109,36 @@
   justify-content: center;
   background-color: transparent;
 }
+
 .textBlock {
-  position: relative;  /* anchor for absolutely positioned children */
-text-decoration: none;
+  position: relative;
+  /* anchor for absolutely positioned children */
+  text-decoration: none;
+  overflow-x: hidden;
 }
-.sparkles{
+
+.sparkles {
   position: absolute;
-  top: -10px;  /* adjust to your liking */
-  left: -20px;  /* moves sparkle inside the text block */
+  top: -10px;
+  /* adjust to your liking */
+  left: -20px;
+  /* moves sparkle inside the text block */
   width: 50px;
   pointer-events: none;
+  overflow: hidden
 }
-.wow{
+
+.wow {
   position: absolute;
-  top: 00px;  /* adjust to your liking */
-  left: -40px;  /* moves wow inside the text block */
+  top: 00px;
+  /* adjust to your liking */
+  left: -40px;
+  /* moves wow inside the text block */
   width: 30px;
   pointer-events: none;
+  overflow: hidden
 }
+
 .highlight {
   position: absolute;
   bottom: 0.0em;
@@ -117,6 +150,7 @@ text-decoration: none;
   z-index: 1;
   pointer-events: none;
 }
+
 .highlightImage {
   width: 100%;
   height: 80%;
@@ -124,23 +158,27 @@ text-decoration: none;
   user-select: none;
   pointer-events: none;
 }
+
 .highlightInner {
   width: 100%;
   height: 80%;
   transform-origin: left center;
 
 }
+
 /* new */
 .highlightedText {
   position: relative;
   z-index: 2;
 }
+
 .highlightWrapper {
   position: relative;
   display: inline-block;
   z-index: 1;
 
 }
+
 .instaLogo {
   position: absolute;
   z-index: 3;
@@ -150,35 +188,65 @@ text-decoration: none;
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 865px) {
+  .highlight {
+    bottom: -0.2em;  /* Move lower under the text */
+    left: -15%;        /* Center or align differently */
+    width: 60%;      /* Make the highlight larger */
+    height: 1.4em;   /* Taller highlight */
+  }
 }
 @media (max-width: 768px) {
-  .polaroidFrame { 
+  .polaroidFrame {
     width: 300px;
-  height: 366px;
+    height: 366px;
   }
-  
+
   .videoWrapper {
     flex-direction: column;
+
   }
 
-  .videoContainer,
+ 
+.highlight {
+    bottom: -0.2em;  /* Move lower under the text */
+    right: -15%;        /* Center or align differently */
+    width: 60%;      /* Make the highlight larger */
+    height: 1.4em;   /* Taller highlight */
+    overflow-x: hidden;
+  }
   .videoText {
-    flex-basis: auto;  /* Let them take full width */
-    width: 100%;
+    padding: 1rem 20px;
   }
-
   /* Optional: add some spacing between the two sections */
   .videoContainer {
     margin-bottom: 2rem;
   }
-}
 
+  .highlightWrapper {
+    padding: 0px;
+  }
+ 
+}
+@media (max-width: 480px) {
+.highlight {
+    bottom: -0.2em;  /* Move lower under the text */
+    right: -15%;        /* Center or align differently */
+    width: 60%;      /* Make the highlight larger */
+    height: 1.4em;   /* Taller highlight */
+  }
+}
 @media (max-width: 350px) {
   .polaroidFrame {
     width: 250px;
     height: 306px;
   }
 }
-

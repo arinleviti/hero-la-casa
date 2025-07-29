@@ -179,6 +179,8 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
 
 
       </motion.div>
+
+ 
       <div className={styles.videoText}>
         {[ // array for mapping, makes it easier to apply stagger
           { title: textVideoData.title1, text: textVideoData.text1, extra: 'sparkles' },
