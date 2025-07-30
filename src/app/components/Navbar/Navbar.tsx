@@ -16,7 +16,7 @@ export default function NavbarBasic() {
 
     const { scrollY } = useScroll();
     const desktopLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
-    const mobileLogoOpacity = useTransform(scrollY, [0, 240, 250], [0, 0, 1]);
+    const mobileLogoOpacity = useTransform(scrollY, [0, 280, 300], [0, 0, 1]);
 
     const pathname = usePathname();
     const isHome = pathname === '/';

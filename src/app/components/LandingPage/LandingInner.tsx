@@ -7,81 +7,57 @@ import { useEffect, useState } from 'react';
 
 export default function LandingInner() {
   const [isMobile, setIsMobile] = useState(false);
-  const [vh, setVh] = useState(800);
 
   useEffect(() => {
-    const updateSizes = () => {
-      setIsMobile(window.innerWidth < 990); // breakpoint at 990px
-      setVh(window.innerHeight);
-    };
-
-    updateSizes();
-    window.addEventListener('resize', updateSizes);
-    return () => window.removeEventListener('resize', updateSizes);
+    const checkMobile = () => setIsMobile(window.innerWidth < 990); // breakpoint at 990px
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const { scrollY } = useScroll();
 
-  // Scroll animation range based on viewport height
-  const maxScroll = Math.min(Math.max(vh * 0.4, 250), 400);
+  // --- Fixed scroll distance for consistent animation ---
+  const maxScroll = 300; // ~matches your current average feel
+  const moveDistance = 280; // how far the logo moves upward
 
-  // Fixed move up distance (pixels)
-  const moveDistance = 280;
-
-  // Scroll ranges: mobile completes animation quicker
+  // Scroll ranges (mobile completes animation faster)
   const desktopScrollRange = maxScroll;
-  const mobileScrollRange = maxScroll * 0.95;
+  const mobileScrollRange = maxScroll * 1;
 
-  // Position Y moves from 0 to -moveDistance faster on mobile
+  // Logo vertical movement
   const logoY = useTransform(
     scrollY,
     [0, isMobile ? mobileScrollRange : desktopScrollRange],
     [0, -moveDistance]
   );
 
-  // Scale changes depending on screen width
+  // Logo scale
   const logoScale = useTransform(
     scrollY,
     [0, maxScroll],
-    [1, isMobile ? 0.30 : 0.40]
+    [1, isMobile ? 0.35 : 0.40]
   );
 
-  // Minimum pixel values for opacity fade points to avoid fading too early on short viewports
-  const MIN_OPACITY_FADE_START = 240;
-  const MIN_OPACITY_FADE_NEAR_END = 280;
-  const MIN_OPACITY_FADE_END = 370;
-
-  // Desktop opacity breakpoints with clamping
-  const desktopOpacityPoints = [
-    0,
-    Math.max(maxScroll * 0.92, MIN_OPACITY_FADE_START),
-    Math.max(maxScroll * 0.95, MIN_OPACITY_FADE_NEAR_END),
-    Math.max(maxScroll, MIN_OPACITY_FADE_END),
-  ];
-
-  // Mobile opacity breakpoints with clamping
-  const mobileOpacityPoints = [
-    0,
-    Math.max(maxScroll * 0.60, MIN_OPACITY_FADE_START),
-    Math.max(maxScroll * 0.65, MIN_OPACITY_FADE_NEAR_END),
-    Math.max(maxScroll, MIN_OPACITY_FADE_END),
-  ];
-
-  // Opacity values same as before
+  // --- Opacity ---
+  // Desktop opacity fade points (pixels)
+  const desktopOpacityPoints = [0, 280, 285, 300];
   const opacityValuesDesktop = [1, 1, 0, 0];
+
+  // Mobile opacity fades faster
+  const mobileOpacityPoints = [0, 280, 285, 300];
   const opacityValuesMobile = [1, 1, 0, 0];
 
-  // Create transforms for opacity
-  const desktopLogoOpacity = useTransform(scrollY, desktopOpacityPoints, opacityValuesDesktop);
-  const mobileLogoOpacity = useTransform(scrollY, mobileOpacityPoints, opacityValuesMobile);
+  const logoOpacity = useTransform(
+    scrollY,
+    isMobile ? mobileOpacityPoints : desktopOpacityPoints,
+    isMobile ? opacityValuesMobile : opacityValuesDesktop
+  );
 
-  // Choose based on device
-  const logoOpacity = isMobile ? mobileLogoOpacity : desktopLogoOpacity;
-
-  // Background fade out (keep using maxScroll)
+  // Background fade out
   const bgOpacity = useTransform(scrollY, [0, maxScroll], [1, 0]);
 
-  // Scroll icon fade out early
+  // Scroll icon fades out early
   const scrollIconOpacity = useTransform(scrollY, [0, maxScroll * 0.07], [1, 0]);
 
   return (
