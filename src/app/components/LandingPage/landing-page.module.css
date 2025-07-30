@@ -33,8 +33,9 @@
   user-select: none;
 }
 .logoWrapper {
-  
+  position:fixed;
   display: flex;
+  top: 214px; 
   flex-direction: column;  /* stack images vertically */
   align-items: center;     /* center horizontally */
   gap: 3rem;

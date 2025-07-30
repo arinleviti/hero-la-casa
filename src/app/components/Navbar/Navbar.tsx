@@ -44,6 +44,7 @@ export default function NavbarBasic() {
                         {isHome ? (
                             <motion.div style={{ opacity: navbarLogoOpacity }}>
                                 <Image
+                                id="navbar-logo"
                                     src="/logos/logo-crema.svg"
                                     alt="Hero Burger logo"
                                     width={130}
@@ -52,6 +53,7 @@ export default function NavbarBasic() {
                             </motion.div>
                         ) : (
                             <Image
+                            
                                 src="/logos/logo-crema.svg"
                                 alt="Hero Burger logo"
                                 width={130}

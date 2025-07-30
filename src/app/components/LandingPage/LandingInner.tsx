@@ -3,45 +3,91 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import styles from './landing-page.module.css';
-
 import { useEffect, useState } from 'react';
 
 export default function LandingInner() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [vh, setVh] = useState(800);
 
-const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const updateSizes = () => {
+      setIsMobile(window.innerWidth < 990); // breakpoint at 990px
+      setVh(window.innerHeight);
+    };
 
- useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    updateSizes();
+    window.addEventListener('resize', updateSizes);
+    return () => window.removeEventListener('resize', updateSizes);
   }, []);
 
-const { scrollY } = useScroll();
+  const { scrollY } = useScroll();
 
-  // 🎯 Replace scrollYProgress with fixed pixel ranges
-  const bgOpacity = useTransform(scrollY, [0, 250], [1, 0]);
-  const desktopScale = useTransform(scrollY, [0, 300], [1, 0.43]);
-  const desktopY = useTransform(scrollY, [0, 300], [0, -270]);
-  const desktopOpacity = useTransform(scrollY, [0, 280, 295, 300], [1, 1, 0.3, 0]);
-  const scrollIconOpacity = useTransform(scrollY, [0, 20], [1, 0]);
+  // Scroll animation range based on viewport height
+  const maxScroll = Math.min(Math.max(vh * 0.4, 250), 400);
 
- // Mobile ranges
-  const mobileScale = useTransform(scrollY, [0, 250], [1, 0.35]);
-  const mobileY = useTransform(scrollY, [0, 250], [0, -280]);
-  const mobileOpacity = useTransform(scrollY, [0, 220, 240, 250], [1, 1, 0.3, 0]);
+  // Fixed move up distance (pixels)
+  const moveDistance = 280;
 
-  const logoScale = isMobile ? mobileScale : desktopScale;
-  const logoY = isMobile ? mobileY : desktopY;
-  const logoOpacity = isMobile ? mobileOpacity : desktopOpacity;
+  // Scroll ranges: mobile completes animation quicker
+  const desktopScrollRange = maxScroll;
+  const mobileScrollRange = maxScroll * 0.95;
+
+  // Position Y moves from 0 to -moveDistance faster on mobile
+  const logoY = useTransform(
+    scrollY,
+    [0, isMobile ? mobileScrollRange : desktopScrollRange],
+    [0, -moveDistance]
+  );
+
+  // Scale changes depending on screen width
+  const logoScale = useTransform(
+    scrollY,
+    [0, maxScroll],
+    [1, isMobile ? 0.30 : 0.40]
+  );
+
+  // Minimum pixel values for opacity fade points to avoid fading too early on short viewports
+  const MIN_OPACITY_FADE_START = 240;
+  const MIN_OPACITY_FADE_NEAR_END = 280;
+  const MIN_OPACITY_FADE_END = 370;
+
+  // Desktop opacity breakpoints with clamping
+  const desktopOpacityPoints = [
+    0,
+    Math.max(maxScroll * 0.92, MIN_OPACITY_FADE_START),
+    Math.max(maxScroll * 0.95, MIN_OPACITY_FADE_NEAR_END),
+    Math.max(maxScroll, MIN_OPACITY_FADE_END),
+  ];
+
+  // Mobile opacity breakpoints with clamping
+  const mobileOpacityPoints = [
+    0,
+    Math.max(maxScroll * 0.60, MIN_OPACITY_FADE_START),
+    Math.max(maxScroll * 0.65, MIN_OPACITY_FADE_NEAR_END),
+    Math.max(maxScroll, MIN_OPACITY_FADE_END),
+  ];
+
+  // Opacity values same as before
+  const opacityValuesDesktop = [1, 1, 0, 0];
+  const opacityValuesMobile = [1, 1, 0, 0];
+
+  // Create transforms for opacity
+  const desktopLogoOpacity = useTransform(scrollY, desktopOpacityPoints, opacityValuesDesktop);
+  const mobileLogoOpacity = useTransform(scrollY, mobileOpacityPoints, opacityValuesMobile);
+
+  // Choose based on device
+  const logoOpacity = isMobile ? mobileLogoOpacity : desktopLogoOpacity;
+
+  // Background fade out (keep using maxScroll)
+  const bgOpacity = useTransform(scrollY, [0, maxScroll], [1, 0]);
+
+  // Scroll icon fade out early
+  const scrollIconOpacity = useTransform(scrollY, [0, maxScroll * 0.07], [1, 0]);
 
   return (
     <section id="landing" className={styles.landingSection}>
-      {/* Background image with fade out */}
-      <motion.div
-        style={{ opacity: bgOpacity }}
-        className={styles.landingBgWrapper}
-      >
+      {/* Background image */}
+      <motion.div style={{ opacity: bgOpacity }} className={styles.landingBgWrapper}>
         <Image
           src="/LandingPageImgs/hero-squad.webp"
           alt="Landing background"
@@ -50,10 +96,11 @@ const { scrollY } = useScroll();
           priority
         />
       </motion.div>
+
       <div className={styles.logoWrapper}>
         {/* Animated logo */}
         <motion.div
-          style={{ scale: logoScale, y: logoY, opacity: logoOpacity }}
+          style={{ y: logoY, scale: logoScale, opacity: logoOpacity }}
           className={styles.landingLogoWrapper}
         >
           <Image
@@ -65,23 +112,25 @@ const { scrollY } = useScroll();
             priority
           />
         </motion.div>
+
+        {/* Scroll down icon */}
         <motion.div
-          style={{scale: logoScale,opacity: scrollIconOpacity }}
-          animate= {{y: [0,-10,0]}}
-              transition= {{
-                duration: 2,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-          >
-        <Image
-          src="/scroll-down.png"
-          alt="Big landing logo"
-          width={50}
-          height={50}
-          className={styles.scrollLogo}
-          priority
-        />
+          style={{ scale: logoScale, opacity: scrollIconOpacity }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <Image
+            src="/scroll-down.png"
+            alt="Scroll down icon"
+            width={50}
+            height={50}
+            className={styles.scrollLogo}
+            priority
+          />
         </motion.div>
       </div>
     </section>
