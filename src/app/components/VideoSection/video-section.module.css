@@ -121,11 +121,11 @@
   position: absolute;
   top: -10px;
   /* adjust to your liking */
-  left: -20px;
+  left: -10px;
   /* moves sparkle inside the text block */
   width: 50px;
   pointer-events: none;
-  overflow: hidden
+
 }
 
 .wow {
@@ -212,9 +212,11 @@
 
   .videoWrapper {
     flex-direction: column;
-
+padding-bottom: 1rem;
   }
-
+.videoText h2 {
+  font-size: 2.5rem;;
+}
  
 .highlight {
     bottom: -0.2em;  /* Move lower under the text */

@@ -40,8 +40,8 @@ export default function BurgerDetailView({
   return (
 
     <div className={styles.detailViewWrapper}>
-      <Container className={`${styles.detailView} rounded-3`}>
-        <Row>
+      <Container fluid className={`${styles.detailView} rounded-3`}>
+        <Row className="gx-0">
           {/* Left: Image */}
           <Col xs={12} md={5} className={styles.imageCol}>
 
@@ -57,9 +57,10 @@ export default function BurgerDetailView({
                 <Image
                   src={burger.imageLargeUrl ?? '/logo-nero.png'}
                   alt={burger.name}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className={styles.burgerImage}
+                  layout="responsive"  // <-- makes the image scale with container width
                 />
               </motion.div>
               <Image
@@ -67,6 +68,7 @@ export default function BurgerDetailView({
                 alt="shadow"
                 width={550}
                 height={100}
+                className={styles.shadowImage}
               />
               {burger.origin &&
                 <div className={styles.origin}>
@@ -75,6 +77,7 @@ export default function BurgerDetailView({
                     alt="location"
                     width={35}
                     height={40}
+                    
                   />
                   <h2>{burger.origin}</h2>
                 </div>}

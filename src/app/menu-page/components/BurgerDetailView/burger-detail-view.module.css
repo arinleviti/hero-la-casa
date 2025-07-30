@@ -22,18 +22,33 @@
   align-items: center;
   margin-bottom: 1rem;
   position:relative;
+  max-width: 100%; /* make sure container doesn't overflow */
 }
 .imageWrapper {
   display: flex;
   flex-direction: column;  /* stack images vertically */
   align-items: center;     /* center horizontally */
   gap: 0;                  /* no gap, or add small gap if you want */
+  width: 100%; /* allow wrapper to shrink */
+  max-width: 500px; /* max size on large screens */
+  box-sizing: border-box;
+}
+/* Shadow image styling */
+.shadowImage {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  display: block;
+  z-index: 1; /* behind burger */
+  margin-top: -20px; /* slight overlap, adjust as needed */
+  position: relative;
 }
 .burgerImage {
   width: 100%;
   height: auto;
   display: block; /* avoid inline spacing issues */
-  max-width: 400px; /* or whatever max size you want */
+ 
+  position: relative;
 }
 .burgerImage,
 .shadowImage {
@@ -116,4 +131,33 @@ align-items: center;
     margin: 0;             /* ← kill default margins */
   line-height: 1;        /* optional: tighten up vertical spacing */
     
+}
+/* Smaller screens - reduce max-width */
+@media (max-width: 768px) {
+  .imageWrapper {
+    max-width: 450px;  /* slightly smaller max-width on tablets */
+  }
+  .detailView {
+    padding: 1rem ;  /* remove all padding */
+ 
+  }
+  .imageCol, .infoCol {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.infoCol h2{
+  font-size:2.5rem
+}
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    width: 100%;       /* fill parent */
+    max-width: 90vw;   /* nearly full viewport width */
+  }
+  
 }

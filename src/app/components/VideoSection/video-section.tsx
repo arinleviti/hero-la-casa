@@ -28,7 +28,7 @@ const textVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 1,  // stagger appearance by 0.3s per item
+      delay: i * 0.5,  // stagger appearance by 0.3s per item
       duration: 0.5,
       ease: "easeOut",
     },
@@ -41,7 +41,7 @@ const sparkleVariants: Variants = {
     opacity: [0, 1, 1, 0], // fade in, hold, then fade out
     rotate: [0, 0, 800, 800], // spin once
     transition: {
-      delay: 3.2,
+      delay: 0.3,
       duration: 2.5,
       ease: easeInOut,
       times: [0, 0.2, 0.85, 1],
@@ -95,6 +95,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  const viewportAmount = isMobile ? 0.3 : 0.8;
 
   const [isMuted, setIsMuted] = useState(true);
 
@@ -197,7 +198,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                   variants={textVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.8 }}
+                  viewport={{ once: true, amount: viewportAmount }}
                   className={styles.textBlock}
                 >
                   <h2 className={styles.highlightWrapper}>
@@ -230,7 +231,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
                           }}
                           initial={{ x: 0 }}
                           whileInView={{ x: '100%' }}
-                          viewport={{ once: true, amount: 0.6 }} // triggers when 100% of it is visible
+                          viewport={{once: true, amount: viewportAmount }} // triggers when 100% of it is visible
                           transition={{ duration: 0.6, ease: 'easeInOut', delay: 2.5 }}
                         />
                       </motion.div>
@@ -250,7 +251,7 @@ export default function VideoSection({ videoData, textVideoData }: VideoSectionP
               variants={textVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.8 }}  // <-- Triggers when 50% visible, runs once
+              viewport={{ once: true, amount: viewportAmount }}  // <-- Triggers when 50% visible, runs once
               className={styles.textBlock} // Optional, for spacing etc
             >
               <h2>{title}</h2>

@@ -70,3 +70,11 @@
   pointer-events: none;
   opacity: 0.6; /* optional glow look */
 }
+@media (max-width:768px){
+  .cammText h2{
+    font-size: 2.5rem;
+  }
+  .cammText h3{
+    font-size:1.5rem;
+  }
+}

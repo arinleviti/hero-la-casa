@@ -71,7 +71,7 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
         checked={filters.mediumSpicy}
         onClick={() => toggleFilter('mediumSpicy')}
       >
-        LEGGERMENTE PICCANTE
+        LEGG. PICCANTE
       </ToggleButton>
 
       <ToggleButton

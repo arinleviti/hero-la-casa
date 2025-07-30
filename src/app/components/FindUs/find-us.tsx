@@ -13,6 +13,7 @@ export default function WhereWeAre() {
 
   return (
     <Container className={styles.sectionWrapper}>
+      <div className={styles.innerWrapper}>
       <Row className="align-items-center">
 
         {/* TEXT COLUMN */}
@@ -30,6 +31,7 @@ export default function WhereWeAre() {
         </Col>      
       </Row>
 {/* <OpeningHours/> */}
+</div>
     </Container>
   );
 }

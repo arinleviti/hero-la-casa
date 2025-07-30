@@ -41,6 +41,11 @@ const BurgerSwiper = ({ burgers }: Props) => {
               delay: 1,        // no delay between slides
               disableOnInteraction: false,
             }}
+            breakpoints={{
+    768: { slidesPerView: 5 }, // Tablet & up
+    480: { slidesPerView: 3 }, // Small phones
+    0: { slidesPerView: 2 },   // Extra small phones
+  }}
           >
             {burgers.map((burger) => (
               <SwiperSlide key={burger.id}>

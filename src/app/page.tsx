@@ -49,7 +49,7 @@ export default function HomePage() {
       <div id="find-us">
         <FindUs />
       </div>
-      {/* <LatestPost/> */}
+      <LatestPost/>
       <Reviews/>
       <OpeningHours/>
     </div>

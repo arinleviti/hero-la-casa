@@ -25,3 +25,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+@media (max-width: 768px){
+  .textContainer h1{
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  .mainContainer{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .textContainer p{
+    font-size: 1.3rem;
+  }
+}

@@ -129,4 +129,21 @@
   .blogContainer {
     padding: 0; /* Remove padding on larger screens if desired */
   }
+  
+}
+@media (max-width: 768px) {
+  .postTitle{
+    font-size: 2rem;
+  }
+  .postContent p {
+    font-size: 1.2rem;
+
+}
+.postContent h2 {
+  font-size: 1.5rem;
+}
+.postContent ul {
+    font-size: 1.2rem;
+
+}
 }

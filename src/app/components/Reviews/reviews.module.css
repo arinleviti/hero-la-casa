@@ -18,3 +18,13 @@ gap: 1rem;
 .logo {
   transform: translateY(-8px);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 0;
+
+  }
+  .title{
+    font-size:2.5rem;
+  }
+}

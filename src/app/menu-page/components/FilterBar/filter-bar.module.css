@@ -1,16 +1,19 @@
 .filterBar {
-  height: 5vh;
+ 
   display: flex;
   align-items: center;   /* vertically centers children */
   justify-content: center;
   align-items: center;
   font-family: var(--font-anton);
   z-index: 1000;
+
 }
 .filterControls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem; /* Add gap between filter buttons and reset */
+   justify-content: center;
 }
 /* Shared button styles */
 .button {
@@ -42,7 +45,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   height: 100%;
-  max-height: 5vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,4 +80,20 @@
 /* FISH */
 .fish:hover {
   background-color: #117a8b;
+}
+/* Responsive shrink on mobile */
+@media (max-width: 768px) {
+  .button {
+    font-size: 0.7rem;       /* smaller text */
+    padding: 0.5rem 0.4rem;  /* less padding */
+  }
+
+  .resetButton {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.4rem;
+  }
+
+  .filterControls {
+    gap: 0.3rem;
+  }
 }

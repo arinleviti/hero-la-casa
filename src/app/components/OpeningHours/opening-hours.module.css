@@ -24,4 +24,8 @@
 .hourItem {
   white-space: normal;
 }
-
+@media (max-width: 768px){
+  .openingHours h2{
+    font-size: 2.5rem!important;
+  }
+}

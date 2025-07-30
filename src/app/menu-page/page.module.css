@@ -41,3 +41,8 @@ width: 100%;
   padding: 2rem;
   box-sizing: border-box; */
 }
+@media (max-width: 768px) {
+  .detailPage {
+    padding: 0.5rem !important; /* or 0 if you want zero padding */
+  }
+}

@@ -38,7 +38,7 @@ export default function LatestPost() {
     plainText.split(/\s+/).slice(0, maxWords).join(' ') + '...';
 
   return (
-   <Container className="my-4">
+   <Container className={styles.latestPostContainer}>
       <h2 className={styles.postTitle}>{post.title}</h2>
       <p
         className={styles.postExcerpt}
