@@ -25,7 +25,7 @@ export function StoryBlockComponent({ year, title, text, imageUrl, reverse = fal
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
             }}
         >
-            <Container>
+            <Container fluid className={styles.blockContainer}>
                 <Row className={`${reverse ? 'flex-row-reverse' : ''} align-items-center`}>
                     <Col md={6} className={styles.imageWrapper}>
                         <Image

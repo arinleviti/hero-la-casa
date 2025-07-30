@@ -28,4 +28,8 @@
   transform: rotate(20deg) scaleX(-1);
   margin-left: 1.5rem;
 }
-
+@media(max-width: 1200px) {
+  .footprintsContainer{
+    left: 0.2vw;
+  }
+}

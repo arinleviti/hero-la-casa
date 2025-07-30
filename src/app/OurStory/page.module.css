@@ -1,5 +1,6 @@
 .storyPage {
   padding: 0rem 2rem;
+
 }
 
 .block {
@@ -45,4 +46,11 @@
   color: #5E4B3C;
   line-height: 1.6;
    font-family: var(--font-kalam);
+}
+
+@media (max-width: 1300px){
+  .storyPage {
+  padding-right:0px;
+  padding-left:10vw;
+ }
 }

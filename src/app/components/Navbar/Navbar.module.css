@@ -21,7 +21,10 @@
   flex-direction: column;
   width: 100%;
 }
-
+.waveWrapper {
+  position: relative;
+  margin-top: -5px; /* move it 5px up */
+}
 .waveWrapper svg {
   height: 70px;
   width: 100%;

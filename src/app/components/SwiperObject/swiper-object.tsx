@@ -42,9 +42,13 @@ const BurgerSwiper = ({ burgers }: Props) => {
               disableOnInteraction: false,
             }}
             breakpoints={{
-    768: { slidesPerView: 5 }, // Tablet & up
-    480: { slidesPerView: 3 }, // Small phones
-    0: { slidesPerView: 2 },   // Extra small phones
+     0: { slidesPerView: 2 },     // Extra small phones
+    360: { slidesPerView: 2 }, // Slightly bigger phones
+    480: { slidesPerView: 2.5 },   // Small phones
+    640: { slidesPerView: 3.5 }, // Landscape phones / mini tablets
+    768: { slidesPerView: 4 },   // Tablets
+    900: { slidesPerView: 4.5 }, // Large tablets / small laptops
+    1024: { slidesPerView: 5 },  // Desktop
   }}
           >
             {burgers.map((burger) => (
