@@ -13,6 +13,11 @@ export default function Overlay() {
       return
     }
 
+    if (window.scrollY !== 0) {
+      setShowOverlay(false)
+      return
+    }
+
     function handleScroll() {
       setShowOverlay(false)
       window.removeEventListener('scroll', handleScroll)
