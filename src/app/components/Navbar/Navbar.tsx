@@ -21,7 +21,7 @@ export default function NavbarBasic() {
     const pathname = usePathname();
     const isHome = pathname === '/';
     useEffect(() => {
-        const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+        const checkIsMobile = () => setIsMobile(window.innerWidth < 994);
         checkIsMobile();
         window.addEventListener('resize', checkIsMobile);
         return () => window.removeEventListener('resize', checkIsMobile);
@@ -44,7 +44,7 @@ export default function NavbarBasic() {
                         {isHome ? (
                             <motion.div style={{ opacity: navbarLogoOpacity }}>
                                 <Image
-                                id="navbar-logo"
+                                    id="navbar-logo"
                                     src="/logos/logo-crema.svg"
                                     alt="Hero Burger logo"
                                     width={130}
@@ -53,7 +53,7 @@ export default function NavbarBasic() {
                             </motion.div>
                         ) : (
                             <Image
-                            
+
                                 src="/logos/logo-crema.svg"
                                 alt="Hero Burger logo"
                                 width={130}
@@ -61,7 +61,18 @@ export default function NavbarBasic() {
                             />
                         )}
                     </Navbar.Brand>
-
+                    {/* === Always Visible Link on Mobile === */}
+                    {isMobile && (
+                        <Nav.Link
+                            href="https://heroburger.plateform.app/"
+                            className={styles.bookLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setExpanded(false)}
+                        >
+                            PRENOTA
+                        </Nav.Link>
+                    )}
                     {/* === Burger icon to the right === */}
                     <Navbar.Toggle
                         aria-controls="navbar-nav"
@@ -80,14 +91,17 @@ export default function NavbarBasic() {
                                 <Nav.Link as={Link} href="/menu-page" onClick={() => setExpanded(false)}>MENU</Nav.Link>
                                 <Nav.Link as={Link} href="/staffAndPremises" onClick={() => setExpanded(false)}>LO STAFF E IL LOCALE</Nav.Link>
                                 <Nav.Link as={Link} href="/blog/1" onClick={() => setExpanded(false)}>DIARIO DI BORDO</Nav.Link>
-                                <Nav.Link as={Link} href="/Experiences" onClick={() => setExpanded(false)}>ESPERIENZE</Nav.Link>
+                                
+                                <Nav.Link as={Link} href="/OurStory" onClick={() => setExpanded(false)}>LA NOSTRA STORIA</Nav.Link>
                             </Nav>
 
                             {/* Right links */}
                             <Nav className={`${styles.navSide} ${styles.right}`}>
-                                <Nav.Link as={Link} href="/OurStory" onClick={() => setExpanded(false)}>LA NOSTRA STORIA</Nav.Link>
+                                <Nav.Link as={Link} href="/Experiences" onClick={() => setExpanded(false)}>ESPERIENZE</Nav.Link>
                                 <Nav.Link as={Link} href="/WorkWithUs" onClick={() => setExpanded(false)}>LAVORA CON NOI</Nav.Link>
                                 <Nav.Link as={Link} href="/#find-us" onClick={() => setExpanded(false)}>COME RAGGIUNGERCI</Nav.Link>
+                                <Nav.Link as={Link} href="https://heroburger.plateform.app/" onClick={() => setExpanded(false)} target="_blank"
+                            rel="noopener noreferrer">PRENOTA</Nav.Link>
                             </Nav>
                         </div>
                     </Navbar.Collapse>

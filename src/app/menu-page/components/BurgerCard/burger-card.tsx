@@ -4,6 +4,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Burger } from '../../../Services/menuItems'; // adjust the path if needed
 import styles from './burger-card.module.css'; // optional if you want custom styles
+import Image from 'next/image';
 
 interface Props {
   burger: Burger;
@@ -19,15 +20,24 @@ export default function BurgerCard({ burger, onClick }: Props) {
     >
       {burger.imageSmallUrl && (
         <div className={styles.burgerCardImageWrapper}>
-        <Card.Img
-          variant="top"
-          src={burger.imageSmallUrl}
-          alt={burger.name}
-          style={{ objectFit: 'contain', height: '200px', padding: '1rem' }}
-        />
+          <Card.Img
+            variant="top"
+            src={burger.imageSmallUrl}
+            alt={burger.name}
+            style={{ objectFit: 'contain', height: '200px', padding: '1rem' }}
+          />
         </div>
       )}
-
+      {burger.burgHeroUrl ?
+        <Image
+          src={'/CategoryIcons/burgerViaggSmall.png'}
+          alt={burger.name}
+          width={100}
+          height={100}
+          className={styles.planeImage}
+          
+        /> : null
+      }
       <Card.Body className={`${styles.burgerCardBody}`}>
         <Card.Title className={`${styles.burgerCardTitle} text-center `}>
           {burger.name}

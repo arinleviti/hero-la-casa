@@ -32,7 +32,8 @@ export default function BurgerGrid<T extends Burger | Beer>({
         chicken:false,
         mediumSpicy: false,
         spicy: false,
-        fish: false
+        fish: false,
+        burgHero: false
     })
 
     // refs for the burger grid wrapper and filter bar
@@ -69,6 +70,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
     const filteredItems = showFilters
         ? (items as Burger[]).filter(item => {
             if (filters.vegan && !item.categories.includes('vegano')) return false;
+            if (filters.burgHero && !item.categories.includes('burgHero')) return false;
             if (filters.beef && !item.categories.includes('manzo')) return false;
             if (filters.chicken && !item.categories.includes('pollo')) return false;
             if (filters.mediumSpicy && !item.categories.includes('leggermente piccante')) return false;

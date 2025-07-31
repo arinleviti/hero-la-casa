@@ -40,3 +40,10 @@ font-family: var(--font-oswald), sans-serif;
   flex-direction: column;
   height: 100%;
 }
+.planeImage {
+  position: absolute;
+  top:0%;       /* adjust as needed */
+  left:0%;     /* adjust as needed */
+  z-index: 10;     /* higher than the content */
+  pointer-events: none; /* optional: so clicks pass through */
+}

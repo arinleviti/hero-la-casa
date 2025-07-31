@@ -9,6 +9,7 @@ interface Filters {
   mediumSpicy: boolean;
   spicy: boolean;
   fish: boolean;
+  burgHero:boolean;
 }
 
 interface FilterBarProps {
@@ -95,6 +96,16 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
       >
         PESCE
       </ToggleButton>
+      <ToggleButton
+        id="filter-burgHero"
+        value="burgHero"
+        className={`${styles.button} ${styles.burgHero}`}
+        type="checkbox"
+        checked={filters.burgHero}
+        onClick={() => toggleFilter('burgHero')}
+      >
+        BURG-HERO ✈
+      </ToggleButton>
   
     </ButtonGroup >
     {/* Separate button */}
@@ -105,7 +116,8 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
       chicken: false,
       mediumSpicy: false,
       spicy: false,
-      fish: false
+      fish: false,
+      burgHero:false
     })}>
       TOGLI I FILTRI
     </button>

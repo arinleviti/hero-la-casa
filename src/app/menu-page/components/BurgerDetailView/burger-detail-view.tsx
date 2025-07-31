@@ -33,6 +33,8 @@ export default function BurgerDetailView({
         return '/CategoryIcons/hot.png';
       case 'pollo':
         return '/CategoryIcons/chicken.png';
+        case 'burgHero':
+          return '';
       default:
         return '/images/default-icon.png';
     }
@@ -46,6 +48,24 @@ export default function BurgerDetailView({
           <Col xs={12} md={5} className={styles.imageCol}>
 
             <div className={styles.imageWrapper}>
+              {burger.burgHeroUrl ? 
+              <div>
+              <Image
+                  src={burger.burgHeroUrl ?? '/logo-nero.png'}
+                  alt={burger.name}
+                  width={500}
+                  height={500}
+                  className={styles.burgerImage}
+                  layout="responsive"  // <-- makes the image scale with container width
+                /> <Image
+          src={'/CategoryIcons/burgerViaggSmall.png'}
+          alt={burger.name}
+          width={150}
+          height={150}
+          className={styles.planeImage}
+          
+        /></div> :
+            <div>             
               <motion.div
                 animate={{ y: [0, -7, 0] }}
                 transition={{
@@ -63,14 +83,18 @@ export default function BurgerDetailView({
                   layout="responsive"  // <-- makes the image scale with container width
                 />
               </motion.div>
-              <Image
+               <Image
                 src="/shadow.png"
                 alt="shadow"
                 width={550}
                 height={100}
                 className={styles.shadowImage}
               />
-              {burger.origin &&
+              </div>
+              }
+             
+              
+          {/*     {burger.origin &&
                 <div className={styles.origin}>
                   <Image
                     src="/location.png"
@@ -81,7 +105,7 @@ export default function BurgerDetailView({
                   />
                   <h2>{burger.origin}</h2>
                 </div>}
-
+ */}
             </div>
           </Col>
 
@@ -101,6 +125,7 @@ export default function BurgerDetailView({
                 <h2>{burger.name}</h2>
                 <div className={styles.categoryIcons}>
                   {burger.categories.map((category, index) => (
+                    category !== 'burgHero' ? (
                     <Image
                       key={index}
                       src={getCategoryPath(category)}
@@ -108,6 +133,7 @@ export default function BurgerDetailView({
                       width={40}
                       height={40}
                     />
+                  ) : null
                   ))}
                 </div>
               </div>

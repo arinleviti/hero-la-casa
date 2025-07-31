@@ -50,6 +50,7 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
             <Modal.Title className={styles.modalTitle}>{burger.name}</Modal.Title>
             <div className={styles.categoryIcons}>
               {burger.categories.map((category, i) => (
+                category !== 'burgHero' ?(
                 <Image
                   key={i}
                   src={getCategoryIconPath(category)}
@@ -58,6 +59,7 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
                   height={35}
                   title={category}
                 />
+                ): null
               ))}
             </div>
           </div>
@@ -69,12 +71,32 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
           />
           <div className={styles.modalContentOverlay}>
           <div className={burger.backgroundImage ? styles.imageWrapperWithOrigin : styles.imageWrapper}>
-            <Image
+            {burger.burgHeroUrl ? 
+            <div>
+             <Image
+              src={burger.burgHeroUrl || '/images/placeholder.png'}
+              alt={burger.name}
+              layout="fill"
+              objectFit="contain"
+              style={{paddingBottom: "1rem"}}
+            />
+             <Image
+          src={'/CategoryIcons/burgerViaggSmall.png'}
+          alt={burger.name}
+          width={100}
+          height={100}
+          className={styles.planeImage}
+          
+        /></div>
+             :
+             <Image
               src={burger.imageLargeUrl || '/images/placeholder.png'}
               alt={burger.name}
               layout="fill"
               objectFit="contain"
             />
+          }
+           
           </div>
           <p className={styles.description}>{burger.modalDescription}</p>
           <h5>INGREDIENTI:</h5>

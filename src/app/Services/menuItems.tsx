@@ -12,6 +12,7 @@ export interface Burger {
   extras?: ExtraOption[];
   imageSmallUrl?: string;
   imageLargeUrl?: string; // optional for UI, if you have larger images
+  burgHeroUrl?: string;
   backgroundImage?: string;
   origin?: string;
 }
@@ -67,7 +68,7 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
     origin: "2227 Km"
   },
- /*  {
+  {
     id: 2, 
     name: "HOKKAIDO",
     ingredients: [
@@ -83,7 +84,7 @@ export const burgers: Burger[] = [
       "Pane Home Made, 100 g Tartare di WAGYU di HOKKAIDO A4 BMS 12, aromatizzata al Porcino polverizzato, alga Wakame con mousse di Trentingrana, Rapanello e germogli di Pisello",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], 
-    categories: ["manzo"], 
+    categories: ["manzo","burgHero"], 
     priceOptions: [{ weight: 100, price: 13.99 }],
     burgerOfTheMonth: false,
     extras: [
@@ -94,8 +95,9 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
     origin: "12.593 Km"
-  } */
+  },
   {
     id: 3, // unique identifier
     name: "MANGIAFUOCO",
@@ -323,7 +325,7 @@ export const burgers: Burger[] = [
     modalDescription: "Burger di manzo con crudo di Parma, mozzarella di bufala e verdure fresche nel pane HERO.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["manzo","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 100, price: 12.90 },
       { weight: 160, price: 13.90 },
@@ -336,7 +338,8 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1753965149/burg-hero-italiano_oprrea.jpg"
   },
   {
     id: 11, // unique identifier

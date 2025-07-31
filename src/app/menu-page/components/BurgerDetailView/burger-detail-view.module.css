@@ -132,6 +132,13 @@ align-items: center;
   line-height: 1;        /* optional: tighten up vertical spacing */
     
 }
+ .planeImage {
+  position: absolute;
+  top:0%;       /* adjust as needed */
+ right:0%;     /* adjust as needed */
+  z-index: 10;     /* higher than the content */
+  pointer-events: none; /* optional: so clicks pass through */
+}
 /* Smaller screens - reduce max-width */
 @media (max-width: 768px) {
   .imageWrapper {
