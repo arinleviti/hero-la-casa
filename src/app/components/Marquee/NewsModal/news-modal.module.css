@@ -1,0 +1,54 @@
+/* Make modal dialog shrink-wrap content */
+.modal-dialog {
+  max-width: none !important;
+  width: auto !important;
+  display: inline-block;  /* shrink-wrap width */
+  margin: 1rem auto; /* vertical margin */
+background-color: #edd5c3 !important;
+}
+
+/* Remove padding inside modal content */
+.modal-content {
+  padding: 0;
+  border-radius: 0; /* optional */
+  background-color: #edd5c3 !important;
+}
+
+/* Remove padding from modal body */
+.modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center; /* center image horizontally */
+  align-items: center; /* center vertically if modal grows */
+background-color: #edd5c3 !important;
+}
+
+/* Responsive image wrapper */
+.imageWrapper {
+  max-width: 90vw;  /* scale down on smaller screens */
+  max-height: 90vh; /* limit max height */
+  width: auto;
+  height: auto;
+}
+
+/* Image scaling */
+.modalImage {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+.modalTitle {
+  font-family: var(--font-anton);
+  font-weight: 300;
+  font-size: 1.5rem; 
+  color: #edd5c3;
+justify-content: center!important; /* Center title horizontally */
+text-align: center !important; /* Center title text */
+}
+.modalBody{
+    background-color: #edd5c3;
+}
+.modalTitleWrapper {
+    background-color:#5E4B3C ;
+}

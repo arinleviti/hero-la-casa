@@ -6,6 +6,6 @@ export interface NewsItems {
 export const newsItems : NewsItems[]= [
     {
         id: 1,
-        header: "Non perdere la serata SMASH BURGER il 24 luglio!"
+        header: "🍔🎵Locandina BURGER & JUKEBOX 7 agosto – Clicca qui!"
     }
 ]

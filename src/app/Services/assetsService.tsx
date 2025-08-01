@@ -214,3 +214,8 @@ export const reviews: Review[] = [
     tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1017529848-HERO_La_casa_del_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
   },
 ];
+
+export const newsModalContent = {
+	  title: "SERATA JUKEBOX - 7 AGOSTO",
+  imgUrl: "/MarqueeImgs/jukeBox07AgostoSmall.webp"
+}

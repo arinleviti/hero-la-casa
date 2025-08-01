@@ -7,11 +7,13 @@ import { newsItems, NewsItems } from '../../Services/newsItems'
 import SwiperModal from '../SwiperObject/SwiperModal/swiper-modal'
 import Image from "next/image";
 import { useState } from 'react';
+import NewsModal from '../Marquee/NewsModal/news-modal';
 
 export default function BurgerMarquee() {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
+    const [newsModalOpen, setNewsModalOpen] = useState(false);
 
     const burgerOfTheMonth = burgers.find(burger => burger.burgerOfTheMonth === true);
     const newsOfTheMonth = newsItems.reduce((max: NewsItems, news: NewsItems) => news.id > max.id ? news : max, newsItems[0]);
@@ -20,10 +22,15 @@ export default function BurgerMarquee() {
         setSelectedBurger(burger);
         setModalOpen(true);
     }
-
+    const openNewsModal = () => {
+        setNewsModalOpen(true);
+    }
     const closeModal = () => {
         setSelectedBurger(null);
         setModalOpen(false);
+    }
+    const closeNewsModal = () => {
+        setNewsModalOpen(false);
     }
 
     return (
@@ -51,7 +58,7 @@ export default function BurgerMarquee() {
 
                 {/* News of the Month */}
                 {newsOfTheMonth && (
-                    <div className={styles.newsLink}>
+                    <div onClick={openNewsModal} className={styles.newsLink}>
                         {newsOfTheMonth.header}
                     </div>
                 )}
@@ -59,6 +66,9 @@ export default function BurgerMarquee() {
 
             {modalOpen &&
                 <SwiperModal burger={selectedBurger} onClose={closeModal} />
+            }
+            {newsModalOpen &&
+                <NewsModal onClose={closeNewsModal} />
             }
         </>
     );
