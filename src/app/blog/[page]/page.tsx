@@ -8,9 +8,9 @@ const prisma = new PrismaClient();
 
 //For pagination using dynamic routes in Next.js App Router, this structure is always required:
 interface PageProps {
-  params: {
+  params: Promise<{
     page: string;
-  };
+  }>;
 }
 
 const POSTS_PER_PAGE = 1;
@@ -21,9 +21,8 @@ const POSTS_PER_PAGE = 1;
 // This enables pagination or other dynamic content based on the URL.
 
 export default async function BlogPage({ params }: PageProps) {
-  // Await params to ensure it’s resolved if async
-  const resolvedParams = await params;
-  const currentPage = parseInt(resolvedParams.page, 10);
+  const { page } = await params;
+  const currentPage = parseInt(page, 10);
   //isNaN = is Not a Number
   if (isNaN(currentPage) || currentPage < 1) {
     notFound(); // return 404 if the page is invalid
