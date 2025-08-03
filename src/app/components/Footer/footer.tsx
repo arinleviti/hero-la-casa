@@ -1,4 +1,3 @@
-'use client';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';

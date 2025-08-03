@@ -1,9 +1,9 @@
-'use client'
 
 import Image from 'next/image';
 import styles from './hero-section.module.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 /* import { motion } from 'framer-motion'; */
+import HeroButton from './button-client'; // Client-side button component
 
 interface HeroSectionProps {
   textData: {
@@ -28,9 +28,7 @@ export default function HeroSection({ textData, imageData }: HeroSectionProps) {
             <h1>{textData.title2}</h1>
             <h3>{textData.text}</h3>
             <div className={styles.buttonContainer}>
-              <Button className={styles.reserveButton}>
-                RISERVA UN TAVOLO
-              </Button>
+              <HeroButton />
             </div>
           </Col>
 

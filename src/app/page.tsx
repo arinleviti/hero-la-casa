@@ -1,4 +1,4 @@
-'use client';
+/* 'use client'; */
 import styles from './page.module.css';
 import Landing from './components/LandingPage/landing-page';
 import HeroSection from './components/HeroSection/hero-section';
@@ -10,26 +10,15 @@ import SwiperObject from './components/SwiperObject/swiper-object';
 import { burgers } from './Services/menuItems';
 import { StaffSection } from './components/StaffSection/staff-section';
 import MarqueeSection from './components/Marquee/marquee';
-import { useEffect } from 'react';
+/* import { useEffect } from 'react'; */
 import Reviews from './components/Reviews/reviews'
 import LatestPost from './components/LatestPost/latest-post';
 import OpeningHours from './components/OpeningHours/opening-hours';
+import TextForSEO from './components/VideoSection/text-for-seo';
+import ScrollToFindUs from './components/scroll-to-find-us'; // client island
 
 export default function HomePage() {
 
-
-  useEffect(() => {
-    // On client, check if the URL has the hash #find-us
-    if (window.location.hash === '#find-us') {
-      // Delay scrolling to allow page to render
-      setTimeout(() => {
-        const el = document.getElementById('find-us');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, []);
   return (
   
     
@@ -43,6 +32,7 @@ export default function HomePage() {
       <HeroSection textData={heroContent} imageData={heroImage} />
       <MarqueeSection />
       <VideoSection videoData={videoData} textVideoData={textVideoData} />
+      <TextForSEO textVideoData={textVideoData} />
       <PictureBelt pictures={picturesForBelt1} />
       <SwiperObject burgers={burgers} />
       <StaffSection />
@@ -52,6 +42,9 @@ export default function HomePage() {
       <LatestPost/>
       <Reviews/>
       <OpeningHours/>
+
+      {/* Client-side UseEffect isolated here */}
+      <ScrollToFindUs />
     </div>
 
   );

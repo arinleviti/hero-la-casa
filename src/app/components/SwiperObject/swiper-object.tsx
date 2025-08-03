@@ -1,75 +1,27 @@
-'use client'
 
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // <-- ADD THIS
-import { Container, Row, Col } from 'react-bootstrap';
-// Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import styles from './swiper-object.module.css'; // You can create this for custom styles
 
-// Swiper modules
-import { Burger } from '../../Services/menuItems'; // Adjust the import path as necessary
-import BurgerModal from './SwiperModal/swiper-modal';
-import BurgerCardSwiper from './BurgerCardSwiper/burger-card-swiper';
-
+import BurgerSwiperClient from './swiper-object-client';
+import { Burger } from '../../Services/menuItems';
+import { Container,Row,Col } from 'react-bootstrap';
+import styles from './swiper-object.module.css'; 
 interface Props {
   burgers: Burger[];
 }
 
-const BurgerSwiper = ({ burgers }: Props) => {
-  const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
-
+export default function BurgerSwiper({ burgers }: Props) {
   return (
     <Container fluid className={styles.mySwiperWrapper}>
       <Row className="align-items-center">
         <Col md={4} className="mb-4 mb-md-0 px-md-5">
           <h1>BURGER PER TUTTI I GUSTI</h1>
-          <p>Preparati freschi ogni giorno, avete una vasta scelta di hamburger di carne, veggie o pesce, accompagnati con patatine non fritte e salse gourmet</p>
+          <p>
+            Preparati freschi ogni giorno, avete una vasta scelta di hamburger di carne, veggie o pesce, accompagnati con patatine non fritte e salse gourmet
+          </p>
         </Col>
-        <Col md={8} className={styles.noPaddingRight}>
-        <div className={`${styles.sliderContainer} ${styles.swiperFix}`}>
-          <Swiper
-            modules={[ Autoplay]} // <-- Register Pagination here
-            slidesPerView={5}
-            spaceBetween={1}
-            loop={true}
-            className={styles.mySwiper}
-            speed={4000}   // duration of slide animation in ms
-            autoplay={{
-              delay: 1,        // no delay between slides
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-     0: { slidesPerView: 2 },     // Extra small phones
-    360: { slidesPerView: 2 }, // Slightly bigger phones
-    480: { slidesPerView: 2.5 },   // Small phones
-    640: { slidesPerView: 3.5 }, // Landscape phones / mini tablets
-    768: { slidesPerView: 4 },   // Tablets
-    900: { slidesPerView: 4.5 }, // Large tablets / small laptops
-    1024: { slidesPerView: 5 },  // Desktop
-  }}
-          >
-            {burgers.map((burger) => (
-              <SwiperSlide key={burger.id}>
-                <BurgerCardSwiper
-                  burger={burger}
-                  onClick={() => setSelectedBurger(burger)}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className={styles.fadeLeft}></div>
-          </div>
-        </Col>
+
+        {/* Client component renders the other Col */}
+        <BurgerSwiperClient burgers={burgers} />
       </Row>
-      {selectedBurger && (
-        <BurgerModal burger={selectedBurger} onClose={() => setSelectedBurger(null)} />
-      )}
     </Container>
   );
-};
-
-export default BurgerSwiper;
-
+}

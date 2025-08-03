@@ -1,13 +1,10 @@
-'use client';
+
 import styles from './page.module.css';
 import { staffCards } from '../Services/staffPremises';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import StaffCard from './Components/StaffCard/staff-card'
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { picsForStaffAndRestaurantSwiper } from '../Services/assetsService'
-import { Autoplay } from 'swiper/modules';
+import PageClient from './page-client'; // Client-side Swiper component
 
 export default function StaffPremises() {
   return (
@@ -62,38 +59,7 @@ export default function StaffPremises() {
         </Container>
 
       </div>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 2 },   // >=640px wide: show 2 slides
-          1024: { slidesPerView: 5 },  // >=1024px wide: show 3 slides
-        }}
-        loop={true}                           // continuous loop
-        speed={1000}                         // 1 second transition duration
-        autoplay={{
-          delay: 2000,                      // time between transitions
-          disableOnInteraction: false,      // keep autoplay even if user interacts
-          pauseOnMouseEnter: true,          // optional: pause on hover
-        }}
-        modules={[Autoplay]}
-        className={styles.swiper}                                   // enable autoplay module
-      >
-
-        {picsForStaffAndRestaurantSwiper.map((pic, index) => (
-          <SwiperSlide key={index}>
-            <div style={{ position: 'relative', width: '100%', height: '400px' }}>
-              <Image
-                src={pic.url}
-                alt={`Slide ${index + 1}`}
-                fill
-                style={{ objectFit: 'cover', borderRadius: '10px' }}
-                priority={index === 0}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <PageClient /> {/* Client-side Swiper component */}
     </>
 
   )
