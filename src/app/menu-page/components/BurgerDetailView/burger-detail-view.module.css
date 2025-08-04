@@ -50,6 +50,24 @@
  
   position: relative;
 }
+.viaggiatoreImageWrapper {
+  display: flex;
+  flex-direction: column;  /* stack images vertically */
+  align-items: center;     /* center horizontally */
+  gap: 0;                  /* no gap, or add small gap if you want */
+  width: 100%; /* allow wrapper to shrink */
+  max-width: 500px; /* max size on large screens */
+  box-sizing: border-box;
+   border-radius: 8px;
+}
+.burgerViaggiatoreImage {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* limit size */
+  display: block; /* avoid inline spacing issues */
+  position: relative;
+  border-radius: 8px;
+}
 .burgerImage,
 .shadowImage {
   display: block;          /* remove any inline issues */

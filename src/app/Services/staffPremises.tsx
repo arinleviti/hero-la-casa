@@ -34,10 +34,5 @@ export const staffCards = [
         imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753101476/sabrinaStaff_twtkdy.jpg",
         name: "Sabrina",
         description: "Operatrice di sala e accoglienza"
-    },
-     {
-        imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753101476/marcoStaff_chyrkp.jpg",
-        name: "Marco",
-        description: "Operatore di sala e accoglienza"
     }
 ] as StaffCard[]

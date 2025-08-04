@@ -35,7 +35,8 @@ export default function PageClient () {
                 alt={`Slide ${index + 1}`}
                 fill
                 style={{ objectFit: 'cover', borderRadius: '10px' }}
-                priority={index === 0}
+                priority
+                sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw" 
               />
             </div>
           </SwiperSlide>

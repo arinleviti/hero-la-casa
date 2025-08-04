@@ -54,10 +54,14 @@ const kalam = Kalam({
 
 export const metadata: Metadata = {
   title: "HERO - La Casa del Burger",
-  description: "HERO - La Casa del Burger",
+  description: "Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger.",
   icons: {
     icon: "/logo-colors-mini.ico",
   },
+   robots: {
+    index: true,      // allow indexing
+    follow: true,     // allow following links
+  }
 };
 
 export default function RootLayout({

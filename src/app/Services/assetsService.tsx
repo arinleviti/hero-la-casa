@@ -42,11 +42,11 @@ export const heroContent = {
 
 export const heroImage = {
 	src: "/HeroImage/Kepporko-no-bg.webp",
-	alt: "Hero image"
+	alt: "Un succoso hamburger"
 }
 
 export const videoData = {
-	src: "VideoSection/smash-burger-resize.mp4",
+	src: "/VideoSection/smash-burger-resize.mp4",
 	title: "Instagram Video"
 }
 export const textVideoData = {
@@ -59,9 +59,9 @@ export const textVideoData = {
 }
 
 export const picturesForBelt1 = [
-	{ src: "/PictureBelt/sabrina.webp", alt: "Picture 1" },
-	{ src: "/PictureBelt/mauro-serving-cro.webp", alt: "Picture 2" },
-	{ src: "/PictureBelt/chantal-reduced.webp", alt: "Picture 3" }
+	{ src: "/PictureBelt/sabrina.webp", alt: "Sabrina serve dei deliziosi burger" },
+	{ src: "/PictureBelt/mauro-serving-cro.webp", alt: "Mauro serve con passione un hamburger" },
+	{ src: "/PictureBelt/chantal-reduced.webp", alt: "Chantal presenta le salse per i burger" }
 ];
 
 export const picsForStaffAndRestaurantSwiper = [

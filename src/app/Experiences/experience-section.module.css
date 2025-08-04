@@ -30,12 +30,11 @@
 }
 
 .col :global(img) {
-  /* Make images responsive */
-  width: 100%;
-  height: auto;
+  width: auto;    /* keep intrinsic width */
+  height: auto;   /* keep intrinsic height */
+  max-width: 100%; /* constrain if container shrinks */
   border-radius: 8px;
   object-fit: cover;
-  max-height: 500px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 @media(max-width: 768px){

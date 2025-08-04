@@ -13,6 +13,7 @@ export default function StaffFunc({ imageUrl, name, description }: StaffCard) {
                     fill
                     className={styles.image}
                     priority
+                    sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
                 />
             </div>
             <h3 className={styles.name}>{name}</h3>

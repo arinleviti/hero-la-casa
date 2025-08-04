@@ -14,6 +14,7 @@ interface Props<T extends Burger | Beer> {
     showFilters?: boolean;
     renderCard: (item: T) => JSX.Element; // function that returns a card component for item T
     isBeer: boolean;
+    scrollToTop?: () => void; // Optional prop to scroll to top
 }
 //The component is generic — it works for any type T that is either a Burger or a Beer.
 //Because in React + TypeScript, components receive a single props object.
@@ -23,7 +24,8 @@ export default function BurgerGrid<T extends Burger | Beer>({
     title,
     renderCard,
     showFilters = true,
-    isBeer = false
+    isBeer = false,
+    scrollToTop 
 }: Props<T>) {
 
     const [filters, setFilters] = useState({
@@ -102,7 +104,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
 
                 {showFilters && (
                     <div className={`${styles.filterBar} ${isSticky ? styles.sticky : styles.static}`}>
-                        <FilterBar filters={filters} setFilters={setFilters} />
+                        <FilterBar filters={filters} setFilters={setFilters} scrollToTop={scrollToTop} />
                     </div>
                 )}
 

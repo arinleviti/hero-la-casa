@@ -47,16 +47,16 @@ export default function Footer() {
 
           <Col xs={12} md={4} className={styles.rightCol}>
             <div className={styles.socialIcons}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/herolacasadelburger" target="_blank" rel="noopener noreferrer">
                 <Image src="/SocialIcons/facebook.png" alt="Facebook" width={24} height={24} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/herolacasadelburger/" target="_blank" rel="noopener noreferrer">
                 <Image src="/SocialIcons/instagram.png" alt="Instagram" width={24} height={24} />
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@herolacasadelburger1" target="_blank" rel="noopener noreferrer">
                 <Image src="/SocialIcons/tiktok.png" alt="TikTok" width={24} height={24} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@Hero-laCasadelBurger" target="_blank" rel="noopener noreferrer">
                 <Image src="/SocialIcons/youtube.png" alt="YouTube" width={24} height={24} />
               </a>
             </div>

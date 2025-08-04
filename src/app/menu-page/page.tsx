@@ -12,6 +12,8 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
 export default function MenuPage() {
+
+    
     return (
         // useSearchParams() works only on the client side (browser),
         // so we wrap the client-only part in Suspense to delay rendering
@@ -25,6 +27,9 @@ export default function MenuPage() {
 
 
 function MenuPageContent() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     const router = useRouter();
     //“Look at the URL query, get the value of the key named burger.”
@@ -56,7 +61,7 @@ function MenuPageContent() {
         <div className={styles.sliderContainer}>
             <div className={styles.sliderInner}>
                 <div className={styles.gridPage}>
-                    <ProductGrid items={burgers} title="I NOSTRI BURGER" isBeer={false} renderCard={(burger) => (
+                    <ProductGrid items={burgers} title="I NOSTRI BURGER" isBeer={false} scrollToTop={scrollToTop} renderCard={(burger)  => (
                         <BurgerCard
                             burger={burger}
                             onClick={() => handleSelectedBurger(burger)}

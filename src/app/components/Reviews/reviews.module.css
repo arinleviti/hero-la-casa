@@ -18,6 +18,28 @@ gap: 1rem;
 .logo {
   transform: translateY(-8px);
 }
+.bestInTN a {
+  display:flex;
+  width: 80px;
+  align-items: center;
+  flex-direction: column ;
+  justify-content: center ;
+  text-align: center; 
+  text-decoration: none;        /* remove underline */
+  color: inherit;               /* use parent text color */
+  font-family: 'Geist', sans-serif;
+  font-weight: 400; 
+  font-size: 0.7rem;            /* optional: adjust weight */
+  transition: color 0.2s ease;  /* smooth hover transition */
+  padding-bottom: 15px;
+   letter-spacing: -0.5px;
+   line-height: 1.2;
+}
+
+/* Optional hover effect */
+.bestInTN a:hover {
+  color: #120d05; /* pick a brand accent color if desired */
+}
 
 @media (max-width: 768px) {
   .section {

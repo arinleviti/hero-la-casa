@@ -26,96 +26,105 @@ const getCategoryIconPath = (category: string): string => {
       return '/CategoryIcons/mildlyHot.png';
     case 'piccante':
       return '/CategoryIcons/hot.png';
-      case 'pollo':
+    case 'pollo':
       return '/CategoryIcons/chicken.png';
     default:
       return '/images/default-icon.png';
   }
-}
+};
 
 const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
   if (!burger) return null;
 
+  const isHero = Boolean(burger.burgHeroUrl);
+  const imageSrc =
+    burger.burgHeroUrl || burger.imageLargeUrl || '/images/placeholder.png';
+
   return (
-
     <div className={styles.modalWrapper}>
-
-
-      <Modal show={true} onHide={onClose} centered dialogClassName={styles.modalDialog}
-        contentClassName={styles.modalContent}>
-
-
+      <Modal
+        show={true}
+        onHide={onClose}
+        centered
+        dialogClassName={styles.modalDialog}
+        contentClassName={styles.modalContent}
+      >
+        {/* HEADER */}
         <Modal.Header closeButton className={styles.modalHeader}>
           <div className={styles.headerContent}>
-            <Modal.Title className={styles.modalTitle}>{burger.name}</Modal.Title>
+            <Modal.Title className={styles.modalTitle}>
+              {burger.name}
+            </Modal.Title>
             <div className={styles.categoryIcons}>
-              {burger.categories.map((category, i) => (
-                category !== 'burgHero' ?(
-                <Image
-                  key={i}
-                  src={getCategoryIconPath(category)}
-                  alt={category}
-                  width={35}
-                  height={35}
-                  title={category}
-                />
-                ): null
-              ))}
+              {burger.categories.map(
+                (category, i) =>
+                  category !== 'burgHero' && (
+                    <Image
+                      key={i}
+                      src={getCategoryIconPath(category)}
+                      alt={category}
+                      width={35}
+                      height={35}
+                      title={category}
+                    />
+                  )
+              )}
             </div>
           </div>
         </Modal.Header>
+
+        {/* BODY */}
         <Modal.Body className={styles.modalBody}>
-          <div
-            className={styles.backgroundImage}
-            style={{ backgroundImage: `url(${burger.backgroundImage})` }}
-          />
           <div className={styles.modalContentOverlay}>
-          <div className={burger.backgroundImage ? styles.imageWrapperWithOrigin : styles.imageWrapper}>
-            {burger.burgHeroUrl ? 
-            <div>
-             <Image
-              src={burger.burgHeroUrl || '/images/placeholder.png'}
-              alt={burger.name}
-              layout="fill"
-              objectFit="contain"
-              style={{paddingBottom: "1rem"}}
-            />
-             <Image
-          src={'/CategoryIcons/burgerViaggSmall.png'}
-          alt={burger.name}
-          width={100}
-          height={100}
-          className={styles.planeImage}
-          
-        /></div>
-             :
-             <Image
-              src={burger.imageLargeUrl || '/images/placeholder.png'}
-              alt={burger.name}
-              layout="fill"
-              objectFit="contain"
-            />
-          }
-           
-          </div>
-          <p className={styles.description}>{burger.modalDescription}</p>
-          <h5>INGREDIENTI:</h5>
-          <ul className={styles.ingredients}>
-            {burger.ingredients.map((ingredient, i) => (
-              <li key={i} className={styles.ingredientItem}>{ingredient}</li>
-            ))}
-          </ul>
+            <div
+              className={
+                isHero ? styles.heroImageWrapper : styles.imageWrapper
+              }
+            >
+              <Image
+                src={imageSrc}
+                alt={burger.name}
+                fill
+                className={styles.someImageClass}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: 'contain' }}
+              />
+              {isHero && (
+                <Image
+                  src="/CategoryIcons/burgerViaggSmall.png"
+                  alt="Viaggio"
+                  width={100}
+                  height={100}
+                  className={styles.planeImage}
+                />
+              )}
+            </div>
+
+            <p className={styles.description}>{burger.modalDescription}</p>
+            <h5>INGREDIENTI:</h5>
+            <ul className={styles.ingredients}>
+              {burger.ingredients.map((ingredient, i) => (
+                <li key={i} className={styles.ingredientItem}>
+                  {ingredient}
+                </li>
+              ))}
+            </ul>
           </div>
         </Modal.Body>
+
+        {/* FOOTER */}
         <Modal.Footer className={styles.modalFooter}>
-          <Button href="/menu-page" className={styles.goToMenuButton} onClick={onClose}>
+          <Button
+            href="/menu-page"
+            className={styles.goToMenuButton}
+            onClick={onClose}
+          >
             VAI AL MENU COMPLETO
           </Button>
           <Button className={styles.reserveButton} onClick={onClose}>
             RISERVA UN TAVOLO
           </Button>
         </Modal.Footer>
-
       </Modal>
     </div>
   );

@@ -11,11 +11,10 @@ export function StaffSection() {
             <Image
               src="/staff-collage.png"
               alt="staff-img"
-              layout="responsive"
               width={600}
               height={450}
               priority
-              
+              style={{ width: '100%', height: 'auto', borderRadius: '12px' }} 
             />
         </Col>
         <Col md={6} className={style.textContainer}>

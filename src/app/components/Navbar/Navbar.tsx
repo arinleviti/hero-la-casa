@@ -49,6 +49,7 @@ export default function NavbarBasic() {
                                     alt="Hero Burger logo"
                                     width={130}
                                     height={100}
+                                    priority
                                 />
                             </motion.div>
                         ) : (
@@ -58,6 +59,7 @@ export default function NavbarBasic() {
                                 alt="Hero Burger logo"
                                 width={130}
                                 height={100}
+                                priority
                             />
                         )}
                     </Navbar.Brand>

@@ -9,6 +9,7 @@
   font-family: var(--font-kalam), sans-serif;
   font-size: 1.45rem;
   color: #5E4B3C;
+  text-align: justify;
 }
 .postButton {
   background-color:  #7BA6DE;     

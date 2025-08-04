@@ -34,6 +34,7 @@ export function StoryBlockComponent({ year, title, text, imageUrl, reverse = fal
                             width={600} // larger than before
                             height={400}
                             className={styles.image}
+                            priority
                         />
                     </Col>
                     <Col md={6} className={styles.textWrapper}>

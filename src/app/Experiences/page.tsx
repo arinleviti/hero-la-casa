@@ -9,17 +9,17 @@ export default function StaffSection() {
     <>
     <Container className={style.mainContainer}>
       <Row className="align-items-center">
-        <Col md={6} className="mb-4 mb-md-0 px-md-5">
-            <Image
-              src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274769/experiences-main_uni7ht.webp"
-              alt="staff-img"
-              layout="responsive"
-              width={600}
-              height={450}
-              priority
-              
-            />
-        </Col>
+        <Col md={6} className="mb-4 mb-md-0 px-md-5" >
+  <Image
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274769/experiences-main_uni7ht.webp"
+    alt="staff-img"
+    width={600}
+    height={450}
+    priority
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    style={{ width: '100%', height: 'auto' }}
+  />
+</Col>
         <Col md={6} className={style.textContainer}>
         
          

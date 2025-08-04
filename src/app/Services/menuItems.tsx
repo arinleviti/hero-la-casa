@@ -372,7 +372,7 @@ export const burgers: Burger[] = [
   },
   {
     id: 12, // unique identifier
-    name: "MIKONOS",
+    name: "MYKONOS",
     ingredients: [
       "Pane 'Non siamo mica SEMI'",
       "Filetto di pollo grigliato",
@@ -385,7 +385,7 @@ export const burgers: Burger[] = [
     modalDescription: "Burger di pollo grigliato con carciofi, yogurt greco e paprika nel pane ‘Non siamo mica SEMI’.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["pollo","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 100, price: 14.50 }
     ],
@@ -398,6 +398,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
+    burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
   },
   {
@@ -596,7 +597,8 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839753/CAPO-NORD_1_zcgapt.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
-    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png"
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
   },
 ];
 

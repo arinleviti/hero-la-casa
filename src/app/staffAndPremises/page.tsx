@@ -39,6 +39,7 @@ export default function StaffPremises() {
                   fill                /* ← key: let Image fill .ratioBox */
                   className={styles.image}
                   priority
+                  sizes="(max-width: 767px) 100vw, (min-width: 768px) and (max-width: 991px) 50vw, 33vw"
                 />
               </div>
             </Col>
@@ -50,7 +51,11 @@ export default function StaffPremises() {
                 Hero – La casa del burger si trova ora in una <strong>nuova sede</strong> nel centro di Predazzo. Il ristorante, grazie al grande successo ottenuto, si è trasferito in uno <strong>spazio più ampio</strong>, mantenendo però intatti l’arredamento in legno tipico e l’atmosfera calda e familiare che lo hanno reso celebre.
                 Che aspetti? <strong>Prenota un tavolo e assapora tutte le specialità!</strong>
               </p>
-              <Button className={styles.reserveButton}>
+              <Button as="a"
+                href="https://heroburger.plateform.app/"
+                target="_blank"  // optional: opens in new tab
+                rel="noopener noreferrer"
+                className={styles.reserveButton}>
                 RISERVA UN TAVOLO
               </Button>
             </Col>

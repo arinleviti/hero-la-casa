@@ -9,9 +9,13 @@ import Image from 'next/image';
 interface Props {
   burger: Burger;
   onClick: () => void;
+  
 }
 
 export default function BurgerCard({ burger, onClick }: Props) {
+  
+ 
+
   return (
     <Card
       className={`burger-card h-100  border-0 hover-zoom ${styles.card}`}

@@ -24,7 +24,7 @@ export default function Footprints() {
     const [visibleCount, setVisibleCount] = useState(-1);
 
     useEffect(() => {
-        return scrollYProgress.onChange((latest) => {
+        return scrollYProgress.on("change", (latest) => {
             const val = Math.floor(latest * (totalSteps - 1));
             setVisibleCount(val);
         });

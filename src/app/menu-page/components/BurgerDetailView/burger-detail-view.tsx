@@ -33,8 +33,8 @@ export default function BurgerDetailView({
         return '/CategoryIcons/hot.png';
       case 'pollo':
         return '/CategoryIcons/chicken.png';
-        case 'burgHero':
-          return '';
+      case 'burgHero':
+        return '';
       default:
         return '/images/default-icon.png';
     }
@@ -47,66 +47,56 @@ export default function BurgerDetailView({
           {/* Left: Image */}
           <Col xs={12} md={5} className={styles.imageCol}>
 
-            <div className={styles.imageWrapper}>
-              {burger.burgHeroUrl ? 
-              <div>
-              <Image
-                  src={burger.burgHeroUrl ?? '/logo-nero.png'}
-                  alt={burger.name}
-                  width={500}
-                  height={500}
-                  className={styles.burgerImage}
-                  layout="responsive"  // <-- makes the image scale with container width
-                /> <Image
-          src={'/CategoryIcons/burgerViaggSmall.png'}
-          alt={burger.name}
-          width={150}
-          height={150}
-          className={styles.planeImage}
-          
-        /></div> :
-            <div>             
-              <motion.div
-                animate={{ y: [0, -7, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              >
-                <Image
-                  src={burger.imageLargeUrl ?? '/logo-nero.png'}
-                  alt={burger.name}
-                  width={500}
-                  height={500}
-                  className={styles.burgerImage}
-                  layout="responsive"  // <-- makes the image scale with container width
-                />
-              </motion.div>
-               <Image
-                src="/shadow.png"
-                alt="shadow"
-                width={550}
-                height={100}
-                className={styles.shadowImage}
-              />
-              </div>
-              }
-             
+
+            {burger.burgHeroUrl ?(
               
-          {/*     {burger.origin &&
-                <div className={styles.origin}>
+                <div className={styles.viaggiatoreImageWrapper}>
                   <Image
-                    src="/location.png"
-                    alt="location"
-                    width={35}
-                    height={40}
+                    src={burger.burgHeroUrl ?? '/logo-nero.png'}
+                    alt={burger.name}
+                    width={700}
+                    height={700}
+                    className={styles.burgerViaggiatoreImage}
                     
+                  /> <Image
+                    src={'/CategoryIcons/burgerViaggSmall.png'}
+                    alt={burger.name}
+                    width={150}
+                    height={150}
+                    className={styles.planeImage}
+
                   />
-                  <h2>{burger.origin}</h2>
-                </div>}
- */}
-            </div>
+                </div> ): (
+                <div className={styles.imageWrapper}>
+                  {/* <div> */}
+                  <motion.div
+                    animate={{ y: [0, -7, 0] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <Image
+                      src={burger.imageLargeUrl ?? '/logo-nero.png'}
+                      alt={burger.name}
+                      width={500}
+                      height={500}
+                      className={styles.burgerImage}
+                      
+                    />
+                  </motion.div>
+                  <Image
+                    src="/shadow.png"
+                    alt="shadow"
+                    width={550}
+                    height={100}
+                    className={styles.shadowImage}
+                  />
+                </div>
+              )}
+
+           
           </Col>
 
           {/* Right: Details */}
@@ -126,14 +116,14 @@ export default function BurgerDetailView({
                 <div className={styles.categoryIcons}>
                   {burger.categories.map((category, index) => (
                     category !== 'burgHero' ? (
-                    <Image
-                      key={index}
-                      src={getCategoryPath(category)}
-                      alt={category}
-                      width={40}
-                      height={40}
-                    />
-                  ) : null
+                      <Image
+                        key={index}
+                        src={getCategoryPath(category)}
+                        alt={category}
+                        width={40}
+                        height={40}
+                      />
+                    ) : null
                   ))}
                 </div>
               </div>

@@ -78,7 +78,7 @@ export default function ExperienceSection({ header, subheader, picUrls, alt, pop
                             alt={alt}
                             width={600}      // It's good to specify width & height for next/image
                             height={500}
-                            objectFit="cover"
+                           
                         />
                     </Col>
                 ))}
