@@ -17,12 +17,14 @@ import OpeningHours from './components/OpeningHours/opening-hours';
 import TextForSEO from './components/VideoSection/text-for-seo';
 import ScrollToFindUs from './components/scroll-to-find-us'; // client island
 
+
 export default function HomePage() {
 
   return (
   
     
     <div className={styles.homeWrapper} >
+      
       <Landing />
       {/* <Navbar /> */}
       <main style={{ padding: '2rem' }}>
@@ -45,6 +47,7 @@ export default function HomePage() {
 
       {/* Client-side UseEffect isolated here */}
       <ScrollToFindUs />
+
     </div>
 
   );

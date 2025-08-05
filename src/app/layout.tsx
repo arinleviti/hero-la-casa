@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/footer";
 import Overlay from "./components/LandingPage/overlay";
-import Cookiebot from "./Services/cookiebot";
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,9 +73,16 @@ export default function RootLayout({
 
   return (
     <html lang="it">
-      
+      <head>
+        <Script
+          id="cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="875fb5f8-87be-41db-8302-6fba0521f651"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
-<Cookiebot />
+
         <Overlay/>
         
         <Navbar />
