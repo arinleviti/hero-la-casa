@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './footer.module.css';
 import {WaveSeparatorFlipped} from '../../Services/assetsService'
+import { SiReact } from 'react-icons/si';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -74,7 +75,7 @@ export default function Footer() {
       rel="noopener noreferrer"
       className={styles.signatureLink}
     >
-     Designed & built by Arin Leviti
+     Designed & built with React <SiReact style={{ color: '#ccc', verticalAlign: 'middle'}} /> by Arin Leviti
     </a>
   </p>
           </Col>
