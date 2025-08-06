@@ -89,7 +89,11 @@ export default function NavbarBasic() {
                     >
                         <div className={styles.navContent}>
                             {/* Left links */}
+                           
                             <Nav className={`${styles.navSide} ${styles.left}`}>
+                                 {isMobile && (
+                                <Nav.Link as={Link} href="/" onClick={() => setExpanded(false)}>HOME 🏠</Nav.Link>
+                            )}
                                 <Nav.Link as={Link} href="/menu-page" onClick={() => setExpanded(false)}>MENU</Nav.Link>
                                 <Nav.Link as={Link} href="/staffAndPremises" onClick={() => setExpanded(false)}>LO STAFF E IL LOCALE</Nav.Link>
                                 <Nav.Link as={Link} href="/blog/1" onClick={() => setExpanded(false)}>DIARIO DI BORDO</Nav.Link>

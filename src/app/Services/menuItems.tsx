@@ -57,7 +57,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 200, price: 13.99 }],
-    burgerOfTheMonth: true,
+    burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
@@ -325,7 +325,7 @@ export const burgers: Burger[] = [
     modalDescription: "Burger di manzo con crudo di Parma, mozzarella di bufala e verdure fresche nel pane HERO.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["manzo","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 100, price: 12.90 },
       { weight: 160, price: 13.90 },
@@ -338,11 +338,40 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png",
-    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1753965149/burg-hero-italiano_oprrea.jpg"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
+    
   },
   {
     id: 11, // unique identifier
+    name: "WILD",
+    ingredients: [
+      "Ciabattina croccante e morbida",
+      "Tartare di cervo nostrano",
+      "Porcini dei nostri boschi",
+      "Ricotta del caseificio Val di Fiemme all'erba cipollina",
+      "Lamponi freschi",
+      "Scaglie di cioccolato fondente"
+    ],
+    description:
+      "Un panino che unisce eleganza e audacia. La ciabattina croccante e soffice accoglie la tartare di cervo nostrano, esaltata dai porcini dei nostri boschi e dalla ricotta del caseificio Val di Fiemme profumata all’erba cipollina. I lamponi freschi aggiungono una nota acidula e vivace, mentre le scaglie di cioccolato fondente regalano un sorprendente tocco finale per un’esperienza selvaggia e raffinata.",
+    modalDescription: "Tartare di cervo con porcini, ricotta alle erbe, lamponi e scaglie di cioccolato in ciabattina croccante.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 28.90 }
+    ],
+    burgerOfTheMonth: true,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
+  },
+  {
+    id: 12, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
       "Pane ai 7 cereali",
@@ -371,7 +400,7 @@ export const burgers: Burger[] = [
 
   },
   {
-    id: 12, // unique identifier
+    id: 13, // unique identifier
     name: "MYKONOS",
     ingredients: [
       "Pane 'Non siamo mica SEMI'",
@@ -402,7 +431,7 @@ export const burgers: Burger[] = [
     origin: "1260 Km"
   },
   {
-    id: 13, // unique identifier
+    id: 14, // unique identifier
     name: "L'ORTOLANO",
     ingredients: [
       "Burger di verdure",
@@ -431,7 +460,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
   },
   {
-    id: 14, // unique identifier
+    id: 15, // unique identifier
     name: "IL CRUNCH",
     ingredients: [
       "Burger di frumento panato",
@@ -461,7 +490,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   },
   {
-    id: 15, // unique identifier
+    id: 16, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -488,7 +517,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
   {
-    id: 16, // unique identifier
+    id: 17, // unique identifier
     name: "GREEN BURGER",
     ingredients: [
       "Burger vegetale Beyond Meat",
@@ -515,7 +544,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
   {
-    id: 17, // unique identifier
+    id: 18, // unique identifier
     name: "IL KRAKEN",
     ingredients: [
       "Ciabattina croccante e morbida",
@@ -542,7 +571,7 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
   },
   {
-    id: 18, // unique identifier
+    id: 19, // unique identifier
     name: "AVISIO",
     ingredients: [
       "Pane ai 7 cereali",
@@ -571,7 +600,7 @@ export const burgers: Burger[] = [
 
   },
   {
-    id: 19, // unique identifier
+    id: 20, // unique identifier
     name: "CAPO NORD",
     ingredients: [
       "Pane nero come il carbone",
@@ -587,7 +616,7 @@ export const burgers: Burger[] = [
     modalDescription: "Burger con salmone affumicato, robiola fresca e pomodori soleggiati nel pane nero.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
-    categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["pesce","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 120, price: 14.90 }],
     burgerOfTheMonth: false,
     extras: [

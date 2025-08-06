@@ -46,7 +46,7 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "/VideoSection/smash-burger-resize.mp4",
+	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/f_auto,q_auto/v1754488606/Coperto-Video_2_rpcpta.mp4",
 	title: "Instagram Video"
 }
 export const textVideoData = {

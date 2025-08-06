@@ -37,7 +37,7 @@
   /* subtle shadow */
   transform: rotate(-3deg);
   /* Rotate counterclockwise by 3 degrees */
-
+overflow: hidden;
 }
 
 .videoFrame {
@@ -48,7 +48,9 @@
   z-index: 1;
   position: relative;
   object-fit: cover;
-  /* ADD THIS to crop video nicely */
+  
+  /* Move the video up without affecting the frame */
+  transform: translateY(-30px); /* adjust value as needed */
 }
 
 .polaroidImage {

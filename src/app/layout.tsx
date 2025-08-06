@@ -78,6 +78,7 @@ export default function RootLayout({
           id="cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="875fb5f8-87be-41db-8302-6fba0521f651"
+          //strategy="afterInteractive" ensures the script only executes after the page becomes interactive on the client-side, not during server rendering.
           strategy="afterInteractive"
         />
       </head>

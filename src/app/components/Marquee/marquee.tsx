@@ -45,12 +45,12 @@ export default function BurgerMarquee() {
                                 alt={burgerOfTheMonth.name}
                                 width={60}
                                 height={60}
-                                style={{ objectFit: 'contain', marginRight: '1rem' }}
+                                style={{ objectFit: 'contain', marginRight: '0.0rem' }}
                                 priority={false}
                             />
                         </div>
                         <div className={styles.textWrapper}>
-                            <div className={styles.burgerLabel}>EDIZIONE LIMITATA</div>
+                            <div className={styles.burgerLabel}>LIMITED EDITION!</div>
                             <div className={styles.burgerName}>{burgerOfTheMonth.name}</div>
                         </div>
                     </div>
@@ -59,6 +59,14 @@ export default function BurgerMarquee() {
                 {/* News of the Month */}
                 {newsOfTheMonth && (
                     <div onClick={openNewsModal} className={styles.newsLink}>
+                        <Image
+                            src={"/burger-jukebox-tiny.webp"}
+                            alt={newsOfTheMonth.header}
+                            width={80}
+                            height={80}
+                            style={{ objectFit: 'contain', marginRight: '1rem' }}
+                            priority
+                        />
                         {newsOfTheMonth.header}
                     </div>
                 )}

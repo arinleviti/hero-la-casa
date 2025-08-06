@@ -33,7 +33,7 @@ export default function LavoraConNoiPage() {
                     <section className={styles.formSection}>
 
                         <form
-                            action="https://formsubmit.co/arin.leviti@gmail.com"
+                            action="https://formsubmit.co/info@herolacasadelburger.it"
                             method="POST"
                             encType="multipart/form-data"
                         >
