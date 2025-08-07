@@ -6,7 +6,7 @@ interface Filters {
   vegan: boolean;
   beef: boolean;
   chicken: boolean;
-  mediumSpicy: boolean;
+  deer: boolean;
   spicy: boolean;
   fish: boolean;
   burgHero: boolean;
@@ -66,20 +66,20 @@ export default function FilterBar({ filters, setFilters, scrollToTop }: FilterBa
           >
             POLLO
           </ToggleButton>
-          <ToggleButton
+          {<ToggleButton
             id="filter-mediumSpicy"
             value="mediumSpicy"
             type="checkbox"
             className={`${styles.button} ${styles.mediumSpicy}`}
-            checked={filters.mediumSpicy}
-            onClick={() => toggleFilter('mediumSpicy')}
+            checked={filters.deer}
+            onClick={() => toggleFilter('deer')}
           >
-            LEGG. PICCANTE
-          </ToggleButton>
+            CERVO
+          </ToggleButton>}
 
           <ToggleButton
-            id="filter-spicy"
-            value="spicy"
+            id="filter-deer"
+            value="deer"
             type="checkbox"
             className={`${styles.button} ${styles.spicy}`}
             checked={filters.spicy}
@@ -121,7 +121,7 @@ export default function FilterBar({ filters, setFilters, scrollToTop }: FilterBa
               vegan: false,
               beef: false,
               chicken: false,
-              mediumSpicy: false,
+              deer: false,
               spicy: false,
               fish: false,
               burgHero: false,

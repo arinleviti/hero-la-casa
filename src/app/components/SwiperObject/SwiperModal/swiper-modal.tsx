@@ -22,8 +22,8 @@ const getCategoryIconPath = (category: string): string => {
       return '/CategoryIcons/gluten-free.png';
     case 'pesce':
       return '/CategoryIcons/fish.png';
-    case 'leggermente piccante':
-      return '/CategoryIcons/mildlyHot.png';
+    case 'cervo':
+      return '/CategoryIcons/deer.webp';
     case 'piccante':
       return '/CategoryIcons/hot.png';
     case 'pollo':
@@ -121,7 +121,10 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
           >
             VAI AL MENU COMPLETO
           </Button>
-          <Button className={styles.reserveButton} onClick={onClose}>
+          <Button className={styles.reserveButton} onClick={() => {
+            onClose();
+            window.open('https://heroburger.plateform.app/', '_blank');
+          }}>
             RISERVA UN TAVOLO
           </Button>
         </Modal.Footer>

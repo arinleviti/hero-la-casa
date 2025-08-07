@@ -357,7 +357,7 @@ export const burgers: Burger[] = [
     modalDescription: "Tartare di cervo con porcini, ricotta alle erbe, lamponi e scaglie di cioccolato in ciabattina croccante.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["cervo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 100, price: 28.90 }
     ],
@@ -476,7 +476,7 @@ export const burgers: Burger[] = [
     modalDescription: "Burger di frumento panato con bacon di barbabietola, pomodori sott'olio e maionese vegana nel pane casereccio.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
-    categories: ["vegano", "leggermente piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["vegano", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.99 }],
     burgerOfTheMonth: false,
     extras: [
