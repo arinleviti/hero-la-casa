@@ -64,7 +64,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
     origin: "2227 Km"
   },
@@ -93,9 +93,9 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
-    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
     origin: "12.593 Km"
   },
   {
@@ -121,7 +121,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
   {
     id: 4, // unique identifier
@@ -153,7 +153,7 @@ export const burgers: Burger[] = [
     { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
   },
@@ -183,7 +183,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
   {
     id: 6, // unique identifier
@@ -211,7 +211,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
   },
   {
@@ -239,7 +239,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   },
   {
     id: 8, // unique identifier
@@ -272,7 +272,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
 
 
   },
@@ -305,7 +305,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png"
 
   },
   {
@@ -368,7 +368,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
   },
   {
     id: 12, // unique identifier
@@ -396,7 +396,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
 
   },
   {
@@ -425,7 +425,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
@@ -457,7 +457,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
   },
   {
     id: 15, // unique identifier
@@ -487,7 +487,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   },
   {
     id: 16, // unique identifier
@@ -514,7 +514,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
   {
     id: 17, // unique identifier
@@ -541,7 +541,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
   {
     id: 18, // unique identifier
@@ -567,7 +567,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
   },
   {
@@ -595,7 +595,7 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_1300,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
     origin: "Km 0"
 
   },

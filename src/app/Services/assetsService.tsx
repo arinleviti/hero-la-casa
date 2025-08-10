@@ -216,6 +216,6 @@ export const reviews: Review[] = [
 ];
 
 export const newsModalContent = {
-	  title: "SERATA JUKEBOX - 7 AGOSTO",
-  imgUrl: "/MarqueeImgs/jukeBox07AgostoSmall.webp"
+	  title: "SERATA JUKEBOX - 21 AGOSTO",
+  imgUrl: "/MarqueeImgs/jukebox21AgostoSMall.webp"
 }

@@ -58,11 +58,11 @@ export default async function BlogPage({ params }: PageProps) {
         {posts.map((post) => (
           <article key={post.id} className={styles.post}>
             <h1 className={styles.postTitle}>{post.title}</h1>
-            {post.excerpt && (
+            {/* {post.excerpt && (
               <p className={styles.postExcerpt}>
                 <em>{post.excerpt}</em>
               </p>
-            )}
+            )} */}
             <div
               className={styles.postContent}
               dangerouslySetInnerHTML={{ __html: post.content }}
