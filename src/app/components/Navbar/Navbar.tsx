@@ -103,7 +103,7 @@ export default function NavbarBasic() {
 
                             {/* Right links */}
                             <Nav className={`${styles.navSide} ${styles.right}`}>
-                                <Nav.Link as={Link} href="/Experiences" onClick={() => setExpanded(false)}>ESPERIENZE</Nav.Link>
+                                <Nav.Link as={Link} href="/Experiences" onClick={() => setExpanded(false)}>SERATE A TEMA</Nav.Link>
                                 <Nav.Link as={Link} href="/WorkWithUs" onClick={() => setExpanded(false)}>LAVORA CON NOI</Nav.Link>
                                 <Nav.Link as={Link} href="/#find-us" onClick={() => setExpanded(false)}>COME RAGGIUNGERCI</Nav.Link>
                                 <Nav.Link as={Link} href="https://heroburger.plateform.app/" onClick={() => setExpanded(false)} target="_blank"

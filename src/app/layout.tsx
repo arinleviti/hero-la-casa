@@ -1,11 +1,12 @@
 
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Nunito, Oswald, Anton, Alfa_Slab_One, Kalam } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/footer";
 import Overlay from "./components/LandingPage/overlay";
-import Script from 'next/script';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,13 +75,20 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
-        <Script
+    <Script
+          id="cookie-script"
+          src="//cdn.cookie-script.com/s/3c774cdc92826ee08b23abd6f6017a11.js"
+          strategy="afterInteractive"
+          type="text/javascript"
+          charSet="UTF-8"
+        />
+        {/* <Script
           id="cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="875fb5f8-87be-41db-8302-6fba0521f651"
           //strategy="afterInteractive" ensures the script only executes after the page becomes interactive on the client-side, not during server rendering.
           strategy="afterInteractive"
-        />
+        /> */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
 
