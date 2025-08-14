@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/footer";
 import Overlay from "./components/LandingPage/overlay";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,7 +98,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        
+        <GoogleAnalytics gaId="G-468DWJLVY4" />
       </body>
     </html>
   );
