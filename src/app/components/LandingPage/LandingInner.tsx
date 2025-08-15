@@ -65,7 +65,7 @@ export default function LandingInner() {
       {/* Background image */}
       <motion.div style={{ opacity: bgOpacity }} className={styles.landingBgWrapper}>
         <Image
-          src={isMobile ? "/LandingPageImgs/landing-img-mobile5.webp" : "/LandingPageImgs/landing-img6.webp"}
+          src={isMobile ? "/LandingPageImgs/landing-img-mobile2pantaloni.webp" : "/LandingPageImgs/landing-img6.webp"}
           alt="Il team di Hero Burger pronto a servirvi deliziosi hamburger"
           fill
           className={styles.landingBg}
