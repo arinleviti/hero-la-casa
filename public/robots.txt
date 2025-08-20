@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://herolacasadelburger.it
+
+# Sitemaps
+Sitemap: https://herolacasadelburger.it/sitemap.xml
