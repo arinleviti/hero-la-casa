@@ -56,7 +56,7 @@ const kalam = Kalam({
 
 export const metadata: Metadata = {
   title: "HERO - La Casa del Burger",
-  description: "Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger.",
+  description: "Hero Burger a Predazzo: hamburger gourmet, patatine non fritte, opzioni vegan e gluten free. Locale moderno e atmosfera accogliente.",
   icons: {
     icon: "/logo-colors-mini.ico",
   },
@@ -76,6 +76,18 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+         {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="HERO - La Casa del Burger" />
+        <meta property="og:description" content="Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger." />
+        <meta property="og:image" content="https://herolacasadelburger.it/logos/logo-colors.jpg" />
+        <meta property="og:url" content="https://herolacasadelburger.it" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HERO - La Casa del Burger" />
+        <meta name="twitter:description" content="Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger." />
+        <meta name="twitter:image" content="https://herolacasadelburger.it/logos/logo-colors.jpg" />
     <Script
           id="cookie-script"
           src="//cdn.cookie-script.com/s/3c774cdc92826ee08b23abd6f6017a11.js"
@@ -83,13 +95,7 @@ export default function RootLayout({
           type="text/javascript"
           charSet="UTF-8"
         />
-        {/* <Script
-          id="cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="875fb5f8-87be-41db-8302-6fba0521f651"
-          //strategy="afterInteractive" ensures the script only executes after the page becomes interactive on the client-side, not during server rendering.
-          strategy="afterInteractive"
-        /> */}
+       
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
 
