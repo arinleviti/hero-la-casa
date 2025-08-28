@@ -55,13 +55,13 @@
 .newsLink {
   display: flex;
   align-items: center;
-  max-width: 290px;         /* or adjust to fit your layout */
+  max-width: 280px;         /* or adjust to fit your layout */
   white-space: normal;      /* allow wrapping */
   word-break: break-word;   /* wrap long words if needed */
   overflow: hidden;
-
+min-height: 80px;
   color: #5E4B3C;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   font-family: var(--font-kalam);
@@ -69,4 +69,21 @@
 
 .newsLink:hover {
   text-decoration: underline;
+}
+.header2{
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.newsItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+}
+
+.newsLine {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-right:1rem; /* ← 1rem space before and after the line */
+  margin-left:0.6rem;
 }

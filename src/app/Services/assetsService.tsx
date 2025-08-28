@@ -216,6 +216,6 @@ export const reviews: Review[] = [
 ];
 
 export const newsModalContent = {
-	  title: "SERATA JUKEBOX - 21 AGOSTO",
-  imgUrl: "/MarqueeImgs/jukebox21AgostoSMall.webp"
+	  title: "SERATA JUKEBOX - 1° e 3° giovedì del mese",
+  imgUrl: "/MarqueeImgs/burgerJukeboxGeneral.webp"
 }

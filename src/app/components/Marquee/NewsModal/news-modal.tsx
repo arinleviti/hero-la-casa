@@ -1,12 +1,14 @@
 import styles from './news-modal.module.css';
 import { Modal } from 'react-bootstrap';
-import { newsModalContent } from '../../../Services/assetsService';
+
+import { NewsModalContent } from '../../../Services/newsItems';
 import Image from 'next/image';
 
 interface Props {
     onClose: () => void;
+    newsModalContent: NewsModalContent;
 }
-const NewsModal = ({ onClose }: Props) => {
+const NewsModal = ({ onClose, newsModalContent }: Props) => {
     return (
         <Modal className={styles.modal} show={true} onHide={onClose}>
             <Modal.Header className={styles.modalTitleWrapper} closeButton>

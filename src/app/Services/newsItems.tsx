@@ -1,11 +1,32 @@
 export interface NewsItems {
     id: number;
-    header: string;
+    pic?: string;
+    header1: string;
+    header2?: string;
+    urlLink?: string;
+    newsModalContent?: NewsModalContent;
 }
-
-export const newsItems : NewsItems[]= [
+export interface NewsModalContent {
+    title: string;
+    imgUrl: string;
+}
+export const newsItems: NewsItems[] = [
     {
         id: 1,
-        header: "🎶Locandina serata 21 agosto - Clicca qui!🍔"
+        pic: "/burger-jukebox-tiny.webp",
+        header1: "🎶Ogni 1° e 3° giovedì del mese - Clicca qui!",
+        newsModalContent:
+            {
+                title: "SERATA JUKEBOX - 1° e 3° giovedì del mese",
+                imgUrl: "/MarqueeImgs/burgerJukeboxGeneral.webp"
+            }
+       
+    },
+    {
+        id: 2,
+        header1: "Ne parla il Corriere!",
+        header2: "Il nostro panino di trota conquista Milano.",
+        urlLink: "https://corrieredeltrentino.corriere.it/notizie/cronaca/25_agosto_25/tartare-di-trota-in-un-hamburger-la-risposta-trentina-al-sushi-premiata-dall-accademia-del-panino-cinque-mesi-per-farlo-26daf0a9-ca3e-4bc6-be05-bff5d5420xlk.shtml"
     }
 ]
+
