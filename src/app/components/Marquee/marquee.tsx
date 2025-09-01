@@ -40,7 +40,7 @@ export default function BurgerMarquee() {
     }
     return (
         <>
-            <Marquee speed={60} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
+            <Marquee speed={75} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
                 {/* Burger of the Month */}
                 {/* {burgerOfTheMonth && (
                     <div onClick={() => openModal(burgerOfTheMonth)} className={styles.itemWrapper}>
@@ -73,8 +73,8 @@ export default function BurgerMarquee() {
                                     <Image
                                         src={news.pic}
                                         alt={news.header1}
-                                        width={80}
-                                        height={80}
+                                        width={70}
+                                        height={70}
                                         style={{ objectFit: 'contain', marginRight: '1rem' }}
                                         priority
                                     />

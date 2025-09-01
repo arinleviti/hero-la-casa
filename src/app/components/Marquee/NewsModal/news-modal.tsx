@@ -16,6 +16,7 @@ const NewsModal = ({ onClose, newsModalContent }: Props) => {
             </Modal.Header>
             <Modal.Body className={styles.modalBody}>
                 <div className={styles.imageWrapper}>
+                    {newsModalContent.modalLink ? (<a href={newsModalContent.modalLink} target="_blank" rel="noopener noreferrer"> 
                     <Image
                         src={newsModalContent.imgUrl}
                         alt={newsModalContent.title}
@@ -23,7 +24,14 @@ const NewsModal = ({ onClose, newsModalContent }: Props) => {
                         height={989}  // actual image or display height
                         className={styles.modalImage}
                         priority
-                    />
+                    /></a>) :<Image
+                        src={newsModalContent.imgUrl}
+                        alt={newsModalContent.title}
+                        width={700}   // actual image or display width
+                        height={989}  // actual image or display height
+                        className={styles.modalImage}
+                        priority
+                    />}                 
                 </div>
 
             </Modal.Body>
