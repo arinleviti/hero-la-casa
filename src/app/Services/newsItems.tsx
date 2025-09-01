@@ -13,20 +13,9 @@ export interface NewsModalContent {
     modalLink?: string;
 }
 export const newsItems: NewsItems[] = [
-{
+
+     {
         id: 1,
-        pic: "/MarqueeImgs/radioFiemme.webp",
-        header1: "Intervista Radio Fiemme",
-        header2: "Clicca qui per il link",
-        newsModalContent: {
-            title: "Mauro, Anna e Chantal raccontano il loro percorso, dal concept innovativo alla creazione del premiato panino di trota ‘Avisio’, simbolo di eccellenza nelle nostre Valli.",
-            imgUrl: "/MarqueeImgs/RadioFiemmePoster.webp",
-            modalLink: "https://share.transistor.fm/s/83502ccf"
-        }
-    }
-    ,
-    {
-        id: 2,
         pic: "/burger-jukebox-tiny.webp",
         header1: "🎶Ogni 1° e 3° giovedì del mese - Clicca qui!",
         newsModalContent:
@@ -36,6 +25,18 @@ export const newsItems: NewsItems[] = [
             }
        
     },
+    {
+        id: 2,
+        pic: "/MarqueeImgs/radioFiemme.webp",
+        header1: "Intervista Radio Fiemme",
+        header2: "Clicca qui per il link",
+        newsModalContent: {
+            title: "Mauro, Anna e Chantal raccontano il loro percorso, dal concept innovativo alla creazione del premiato panino di trota ‘Avisio’, simbolo di eccellenza nelle nostre Valli.",
+            imgUrl: "/MarqueeImgs/RadioFiemmePoster.webp",
+            modalLink: "https://share.transistor.fm/s/83502ccf"
+        }
+    }
+    , 
     {
         id: 3,
         pic: "/MarqueeImgs/accademiaPanino.webp",
