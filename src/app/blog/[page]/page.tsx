@@ -121,6 +121,13 @@ export default async function BlogPage({ params }: PageProps) {
                   required
                   className={styles.formComment}
                 />
+                {/* Honeypot field - invisible to users */}
+                <input
+                  type="text"
+                  name="website"
+                  placeholder="Leave this empty"
+                  style={{ display: 'none' }}
+                />
                 <button className={styles.formButton} type="submit">Invia</button>
               </form>
             </div>
