@@ -1,6 +1,7 @@
+
 /* Container */
 .container {
-    margin-top: 3rem;
+    margin-top: 0;
     margin-bottom: 3rem;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -124,12 +125,61 @@
     margin-bottom: 0.3rem;
     display: block;
 }
+.introParagraph {
+  font-family: var(--font-kalam), sans-serif;
+  font-size: 1.2rem;
+  color: #5E4B3C;
+  margin-bottom: 2rem;
+  display: block;
+  line-height: 1.6;
+  text-align: justify;
+}
+.menuImageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
 
+.menuImage {
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menuImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+.heroVideoWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+   margin-top: -50px; /* equal to navbar min-height */
+  margin-bottom: 2rem; /* space before the container */
+}
+
+.heroVideo {
+  width: 100%;
+  height: 400px; /* choose the visible height */
+  object-fit: cover;        /* fills the container, crops excess */
+  object-position: top;  /* adjust vertical alignment; use 'top', 'center', or 'bottom' */
+  display: block;
+  
+  /* Fade bottom with mask */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .title {
@@ -156,8 +206,9 @@
    position: fixed;
   top: 6rem;          /* or bottom: 1rem if you want it lower */
   bottom: auto;
-  right: 1rem;
-  
+  right: 1.5rem;
+   max-width: calc(100vw - 2rem);
+  overflow-x: hidden;
   background: rgba(255, 255, 255, 0.95);
   padding: 0.6rem 1rem;
   border-radius: 8px;
@@ -170,5 +221,22 @@
 
   .total {
     font-size: 1.3rem; /* leggermente più piccolo su mobile */
+  }
+    .menuImageWrapper {
+    margin-top: 1rem;
+    overflow: visible; /* prevents clipping on small screens */
+  }
+
+  .menuImage {
+    width: auto;        /* don't stretch to full width */
+    max-width: 90%;     /* shrink image size */
+    height: auto;       /* keep proportions */
+    object-fit: contain; /* show full image, no crop */
+    border-radius: 10px;
+  }
+  .heroVideo{
+    height: 300px; /* choose the visible height */
+  object-fit: cover;        /* fills the container, crops excess */
+  object-position: center;  /* adjust vertical alignment; use 'top', 'center', or 'bottom' */
   }
 }
