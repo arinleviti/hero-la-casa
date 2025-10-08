@@ -30,12 +30,23 @@ export default function LatestPost() {
 
   // Keep <strong> and <em>, remove everything else
   const maxWords = 80;
-  const plainText = post.content.replace(
+
+  // Remove <style> blocks entirely
+let plainText = post.content.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+
+// Remove all tags except <strong> and <em>
+plainText = plainText.replace(/<(?!\/?(strong|em)\b)[^>]+>/gi, '');
+
+// Optionally decode HTML entities (like &nbsp; or &amp;)
+plainText = plainText.replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&');
+
+const preview = plainText.split(/\s+/).slice(0, maxWords).join(' ') + '...';
+ /*  const plainText = post.content.replace(
     /<(?!\/?(strong|b|em|i)\b)[^>]+>/gi,
     ''
   );
   const preview =
-    plainText.split(/\s+/).slice(0, maxWords).join(' ') + '...';
+    plainText.split(/\s+/).slice(0, maxWords).join(' ') + '...'; */
 
   return (
    <Container className={styles.latestPostContainer}>

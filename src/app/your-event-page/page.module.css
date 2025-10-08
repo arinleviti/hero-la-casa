@@ -1,0 +1,174 @@
+/* Container */
+.container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+/* Title */
+.title {
+    font-family: var(--font-anton);
+    font-weight: 1000;
+    font-size: 3rem;
+    color: #4A7729;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Sections */
+.sectionTitle {
+    font-family: var(--font-anton);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #4A7729;
+    margin-bottom: 1rem;
+}
+
+/* Row spacing */
+.row {
+    margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.button,
+.burgerButton {
+    background-color: #7BA6DE;
+    border: none;
+    color: #edd5c3;
+    font-family: var(--font-anton);
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+.activeButton {
+    background-color: #4A7729 !important;
+    color: white !important;
+}
+.button:hover,
+.burgerButton:hover {
+    background-color: #4A7729;
+    color: white;
+}
+
+/* Button containers */
+.buttonGroup,
+.buttonWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Form inputs */
+.input,
+.textarea {
+    font-family: var(--font-kalam), sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+/* Total display */
+.total {
+      display: inline-block;
+  white-space: nowrap;
+}
+
+.totalWrapper {
+    position: fixed;
+    bottom: 1rem;
+    right: 4rem;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: right;
+    font-family: var(--font-anton);
+  font-size: 1.6rem;
+  color: #4A7729;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Submit button */
+.submitButton {
+    width: 100%;
+    font-family: var(--font-anton);
+    font-size: 1.4rem;
+    background-color: #7BA6DE;
+    color: #edd5c3;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+    background-color: #4A7729;
+    color: white;
+}
+
+/* Labels for form inputs */
+.label {
+    font-family: var(--font-kalam), sans-serif;
+    font-size: 1.2rem;
+    color: #5E4B3C;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .input,
+    .textarea {
+        font-size: 1rem;
+    }
+
+    .button,
+    .burgerButton,
+    .submitButton {
+        font-size: 1.1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+   .totalWrapper {
+   position: fixed;
+  top: 6rem;          /* or bottom: 1rem if you want it lower */
+  bottom: auto;
+  right: 1rem;
+  
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-anton);
+  font-size: 1.6rem;
+  color: #4A7729;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+
+  .total {
+    font-size: 1.3rem; /* leggermente più piccolo su mobile */
+  }
+}

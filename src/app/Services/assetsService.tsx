@@ -152,8 +152,8 @@ export const openingHours = [
   { day: 'Mercoledì', hours: '19:00 - 22:00' },
   { day: 'Giovedì', hours: '19:00 - 22:00' },
   { day: 'Venerdì', hours: '19:00 - 22:00' },
-  { day: 'Sabato', hours: '12:00 - 14:00 | 19:00 - 22:00' },
-  { day: 'Domenica', hours: '12:00 - 14:00 | 19:00 - 21:30' },
+  { day: 'Sabato', hours: '19:00 - 22:00' },
+  { day: 'Domenica', hours: '19:00 - 21:30' },
 ];
 
 export interface Review {
