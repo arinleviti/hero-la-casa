@@ -25,7 +25,7 @@ export const newsItems: NewsItems[] = [
             }
        
     },
-    {
+   /*  {
         id: 2,
         pic: "/MarqueeImgs/radioFiemme.webp",
         header1: "Intervista Radio Fiemme",
@@ -36,7 +36,7 @@ export const newsItems: NewsItems[] = [
             modalLink: "https://share.transistor.fm/s/83502ccf"
         }
     }
-    , 
+    ,  */
     {
         id: 3,
         pic: "/MarqueeImgs/accademiaPanino.webp",
@@ -44,6 +44,16 @@ export const newsItems: NewsItems[] = [
         header2: "Il nostro panino di trota conquista Milano.",
         urlLink: "https://corrieredeltrentino.corriere.it/notizie/cronaca/25_agosto_25/tartare-di-trota-in-un-hamburger-la-risposta-trentina-al-sushi-premiata-dall-accademia-del-panino-cinque-mesi-per-farlo-26daf0a9-ca3e-4bc6-be05-bff5d5420xlk.shtml"
     },
-    
+    {
+        id: 4,
+        pic: "/MarqueeImgs/pumpkin.webp",
+        header1: "Calendario eventi Ottobre - 🐄🍺Clicca qui!🎃🍂",
+        newsModalContent:
+            {
+                title: "Non perderti gli eventi di questo mese!",
+                imgUrl: "/MarqueeImgs/eventiOttobre.webp"
+            }
+       
+    }
 ]
 
