@@ -61,7 +61,20 @@
     gap: 0.75rem;
     margin-top: 0.5rem;
 }
-
+/* Prevent focus state from showing active styling on mobile */
+.button:focus,
+.burgerButton:focus {
+    background-color: #7BA6DE;
+    color: #edd5c3;
+    outline: none;
+    box-shadow: none;
+}
+/* Active button focus state */
+.button.activeButton:focus,
+.burgerButton.activeButton:focus {
+    background-color: #4A7729 !important;
+    color: white !important;
+}
 /* Form inputs */
 .input,
 .textarea {
@@ -204,7 +217,7 @@
 
    .totalWrapper {
    position: fixed;
-  top: 6rem;          /* or bottom: 1rem if you want it lower */
+  top: 5.7rem;          /* or bottom: 1rem if you want it lower */
   bottom: auto;
   right: 1.5rem;
    max-width: calc(100vw - 2rem);

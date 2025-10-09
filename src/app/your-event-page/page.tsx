@@ -69,31 +69,31 @@ export default function EventQuoteForm() {
 
   return (
     <>
-   
+
       <Container className={styles.container}>
-         <div className={styles.heroVideoWrapper}>
-  <video
-    src="/events/eventsResized.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className={styles.heroVideo}
-  />
-</div>
+        <div className={styles.heroVideoWrapper}>
+          <video
+            src="/events/eventsResized.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={styles.heroVideo}
+          />
+        </div>
         <h1 className={styles.title}>
           Richiedi un Preventivo per il Tuo Evento
         </h1>
         <p className={styles.introParagraph}>
-  Vuoi organizzare il tuo evento da <strong>Hero</strong>? Ti offriamo la possibilità di
-  scegliere tra un <strong>menù a prezzo fisso</strong> — potrai gustare cinque dei nostri
-  best seller — oppure un <strong>buffet con mini burger</strong>. Se lo desideri,
-  possiamo preparare per te una torta su misura, oppure puoi portare la tua.  
-  Compila questo breve questionario per ricevere un preventivo: inviaci la richiesta
-  e ti risponderemo al più presto! Il nostro locale, <em>raffinatamente semplice</em>
-  e dall’atmosfera accogliente, è perfetto per feste private ed eventi di lavoro.
-  Offriamo anche opzioni <strong>vegan e gluten-free</strong>.
-</p>
+          Vuoi organizzare il tuo evento da <strong>Hero</strong>? Ti offriamo la possibilità di
+          scegliere tra un <strong>menù a prezzo fisso</strong> — potrai gustare cinque dei nostri
+          best seller — oppure un <strong>buffet con mini burger</strong>. Se lo desideri,
+          possiamo preparare per te una torta su misura, oppure puoi portare la tua.
+          Compila questo breve questionario per ricevere un preventivo: inviaci la richiesta
+          e ti risponderemo al più presto! Il nostro locale, <em>raffinatamente semplice</em>
+          e dall’atmosfera accogliente, è perfetto per feste private ed eventi di lavoro.
+          Offriamo anche opzioni <strong>vegan e gluten-free</strong>.
+        </p>
 
         <Form
           action="https://formsubmit.co/prenotazioni@herolacasadelburger.it"
@@ -118,18 +118,16 @@ export default function EventQuoteForm() {
               <h5 className={styles.sectionTitle}>Seleziona tipo di menù</h5>
               <div className={styles.buttonGroup}>
                 <Button
-                  className={`${styles.button} ${
-                    menuType === "fixed" ? styles.activeButton : ""
-                  }`}
+                  className={`${styles.button} ${menuType === "fixed" ? styles.activeButton : ""
+                    }`}
                   onClick={() => setMenuType("fixed")}
                   type="button"
                 >
                   Menù Fisso (5 Burger a scelta)
                 </Button>
                 <Button
-                  className={`${styles.button} ${
-                    menuType === "buffet" ? styles.activeButton : ""
-                  }`}
+                  className={`${styles.button} ${menuType === "buffet" ? styles.activeButton : ""
+                    }`}
                   onClick={() => setMenuType("buffet")}
                   type="button"
                 >
@@ -222,18 +220,16 @@ export default function EventQuoteForm() {
               <h5 className={styles.sectionTitle}>Tipo di evento</h5>
               <div className={styles.buttonGroup}>
                 <Button
-                  className={`${styles.button} ${
-                    eventType === "work" ? styles.activeButton : ""
-                  }`}
+                  className={`${styles.button} ${eventType === "work" ? styles.activeButton : ""
+                    }`}
                   onClick={() => setEventType("work")}
                   type="button"
                 >
                   Lavorativo
                 </Button>
                 <Button
-                  className={`${styles.button} ${
-                    eventType === "private" ? styles.activeButton : ""
-                  }`}
+                  className={`${styles.button} ${eventType === "private" ? styles.activeButton : ""
+                    }`}
                   onClick={() => setEventType("private")}
                   type="button"
                 >
@@ -289,9 +285,8 @@ export default function EventQuoteForm() {
                 {Object.keys(SERVICE_PRICES).map((service) => (
                   <Button
                     key={service}
-                    className={`${styles.button} ${
-                      services.includes(service) ? styles.activeButton : ""
-                    }`}
+                    className={`${styles.button} ${services.includes(service) ? styles.activeButton : ""
+                      }`}
                     onClick={() => handleServiceToggle(service)}
                     type="button"
                   >
@@ -315,14 +310,14 @@ export default function EventQuoteForm() {
                     {key === "name"
                       ? "Nome"
                       : key === "surname"
-                      ? "Cognome"
-                      : key === "email"
-                      ? "Email"
-                      : key === "phone"
-                      ? "Telefono"
-                      : key === "date"
-                      ? "Data evento"
-                      : "Ora evento"}
+                        ? "Cognome"
+                        : key === "email"
+                          ? "Email"
+                          : key === "phone"
+                            ? "Telefono"
+                            : key === "date"
+                              ? "Data evento"
+                              : "Ora evento"}
                   </Form.Label>
 
                   {key === "date" ? (
