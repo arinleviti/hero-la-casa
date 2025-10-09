@@ -19,6 +19,7 @@ const SERVICE_PRICES: Record<string, number> = {
   Cheesecake: 3,
   "Dolce misto": 3,
 };
+const allowedBurgers: string[] = ["ANGUS DI ABERDEEN", "KEPPORKO", "L'ORTOLANO","AVISIO", "GREEN BURGER"];
 
 export default function EventQuoteForm() {
   const [menuType, setMenuType] = useState<"fixed" | "buffet" | null>(null);
@@ -90,7 +91,7 @@ export default function EventQuoteForm() {
           best seller — oppure un <strong>buffet con mini burger</strong>. Se lo desideri,
           possiamo preparare per te una torta su misura, oppure puoi portare la tua.
           Compila questo breve questionario per ricevere un preventivo: inviaci la richiesta
-          e ti risponderemo al più presto! Il nostro locale, <em>raffinatamente semplice</em>
+          e ti risponderemo al più presto! Il nostro locale, raffinatamente semplice
           e dall’atmosfera accogliente, è perfetto per feste private ed eventi di lavoro.
           Offriamo anche opzioni <strong>vegan e gluten-free</strong>.
         </p>
@@ -198,7 +199,7 @@ export default function EventQuoteForm() {
                   Al ristorante potrai scegliere tra questi burger:
                 </h5>
                 <div className={styles.buttonWrap}>
-                  {burgers.map((burger: Burger) => (
+                  {burgers.filter(burger => allowedBurgers.includes(burger.name)).map((burger: Burger) => (
                     <Button
                       key={burger.id}
                       className={styles.burgerButton}
@@ -247,7 +248,7 @@ export default function EventQuoteForm() {
                   <Form.Control
                     type="text"
                     name="eventSubtype"
-                    placeholder="Es. Compleanno, Riunione, Laurea..."
+                    placeholder="Es. Compleanno, Cena Aziendale, Laurea..."
                     value={eventSubtype}
                     onChange={(e) => setEventSubtype(e.target.value)}
                     required
@@ -336,6 +337,8 @@ export default function EventQuoteForm() {
                       className={styles.input}
                       placeholderText="gg/mm/aaaa"
                       name="date"
+                      filterDate={(date) => date.getDay() !== 1} // Exclude Mondays (1 = Monday)
+                      minDate={new Date()} // Optional: prevent past dates
                     />
                   ) : key === "time" ? (
                     <DatePicker
@@ -369,6 +372,8 @@ export default function EventQuoteForm() {
                       placeholderText="Seleziona un orario"
                       timeCaption="Orario"
                       name="time"
+                      minTime={new Date(new Date().setHours(18, 30, 0, 0))} // 18:30
+                      maxTime={new Date(new Date().setHours(21, 0, 0, 0))}  // 21:00
                     />
                   ) : (
                     <Form.Control
