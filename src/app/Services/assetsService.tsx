@@ -46,7 +46,7 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/f_auto,q_auto/v1754488606/Coperto-Video_2_rpcpta.mp4",
+	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/f_auto,q_auto/v1760711176/halloween_full_ujkzqn.mp4",
 	title: "Instagram Video"
 }
 export const textVideoData = {

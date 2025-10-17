@@ -50,7 +50,7 @@ overflow: hidden;
   object-fit: cover;
   
   /* Move the video up without affecting the frame */
-  transform: translateY(-30px); /* adjust value as needed */
+  transform: translateY(-40px); /* adjust value as needed */
 }
 
 .polaroidImage {
