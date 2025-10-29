@@ -24,8 +24,8 @@ export interface Beer {
   beerType: string;
   priceOptions: WeightOption[];
   imageSmallUrl: string;
-  imageLargeUrl: "",
-  backgroundImage?: ""
+  imageLargeUrl: string;
+  backgroundImage?: string;
 }
 export interface WeightOption {
   weight: number; // in grams

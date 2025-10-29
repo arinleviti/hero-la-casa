@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Burger, burgers } from "@/app/Services/menuItems";
+import { Beer, beers } from "@/app/Services/menuItems";
 import BootstrapBurgerModal from "../components/SwiperObject/SwiperModal/swiper-modal";
 import styles from "./page.module.css";
 import DatePicker from "react-datepicker";
@@ -9,26 +10,40 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import { it } from "date-fns/locale";
 import Image from "next/image";
+import BootstrapBeerModal from "./BeerModal/beerModal";
 
 registerLocale("it", it);
 
 const SERVICE_PRICES: Record<string, number> = {
-  "Torta di pasticceria": 5,
-  "Torta propria": 2.5,
-  Tiramisu: 3,
-  Cheesecake: 3,
-  "Dolce misto": 3,
+  "Torta di pasticceria": 4,
+  "Un nostro dolce a scelta": 5
 };
-const allowedBurgers: string[] = ["ANGUS DI ABERDEEN", "KEPPORKO", "L'ORTOLANO","AVISIO", "GREEN BURGER"];
+const EXTRA_FRIED_PRICES: Record<string, number> = {
+  "Chicken Donuts Bacon": 1.5,
+  "Breaded Mini Toast": 1.5
+};
+const allowedBurgersBasic: string[] = ["ANGUS DI ABERDEEN", "ITALIANO", "RUSTICO", "BANGKOK", "SOLEGGIATO"];
+const allowedBurgersPremium: string[] = ["SEASON", "TARTUFO", "CRUDO", "MONACO", "LONDON"];
+
+
+const MENU_DESCRIPTIONS: Record<string, string> = {
+  basic: "Il Menù BASIC include 5 burger a scelta, perfetto per un pasto semplice e gustoso.",
+  premium: "Il Menù PREMIUM offre 5 burger selezionati per un’esperienza più ricca.",
+  hero: "Menù dedicato dalle 15 persone in sù dove per ogni persona ha compreso: 3 miniburger, 3 tipologie di fritti (Anelli di cipolla- ribs di pannocchia - stick di pollo artigianali) 2 tipologie di patate ( rustic - sweet potato )",
+};
 
 export default function EventQuoteForm() {
-  const [menuType, setMenuType] = useState<"fixed" | "buffet" | null>(null);
+  const [menuType, setMenuType] = useState<"basic" | "premium" | "hero" | null>(null);
   const [numAdults, setNumAdults] = useState<string>("");
   const [numChildren, setNumChildren] = useState<string>("");
   const [eventType, setEventType] = useState<"work" | "private" | null>(null);
   const [eventSubtype, setEventSubtype] = useState("");
   const [notes, setNotes] = useState("");
   const [services, setServices] = useState<string[]>([]);
+  const [selectedFried, setSelectedFried] = useState<string | null>(null);
+  const [friedQuantities, setFriedQuantities] = useState<Record<string, number>>({});
+  const [beerSelected, setBeerSelected] = useState(false);
+  const [beerQuantity, setBeerQuantity] = useState(0);
   const [contact, setContact] = useState({
     name: "",
     surname: "",
@@ -38,27 +53,36 @@ export default function EventQuoteForm() {
     time: "",
   });
   const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
+  const [selectedBeer, setSelectedBeer] = useState<Beer | null>(null);
+  const [showHeroAlert, setShowHeroAlert] = useState(false);
 
-  const PRICE_ADULT_FIXED = 15;
-  const PRICE_CHILD_FIXED = 10;
-  const PRICE_ADULT_BUFFET = 18;
-  const PRICE_CHILD_BUFFET = 12;
+  const PRICE_ADULT_BASIC = 13;
+  const PRICE_CHILD_BASIC = 9;
+  const PRICE_ADULT_PREMIUM = 16;
+  const PRICE_CHILD_PREMIUM = 12;
+  const PRICE_ADULT_HERO = 20;
+  const PRICE_CHILD_HERO = 11;
 
   const total = useMemo(() => {
     const adults = Number(numAdults) || 0;
     const children = Number(numChildren) || 0;
     if (!menuType) return 0;
     const baseAdult =
-      menuType === "fixed" ? PRICE_ADULT_FIXED : PRICE_ADULT_BUFFET;
+      menuType === "basic" ? PRICE_ADULT_BASIC : menuType === "premium" ? PRICE_ADULT_PREMIUM : PRICE_ADULT_HERO;
     const baseChild =
-      menuType === "fixed" ? PRICE_CHILD_FIXED : PRICE_CHILD_BUFFET;
+      menuType === "basic" ? PRICE_CHILD_BASIC : menuType === "premium" ? PRICE_CHILD_PREMIUM : PRICE_CHILD_HERO;
     const baseTotal = adults * baseAdult + children * baseChild;
     const servicesTotal = services.reduce(
-      (sum, s) => sum + SERVICE_PRICES[s] * (adults + children),
+      (sum, s) => sum + SERVICE_PRICES[s] * (adults /* + children */),
       0
     );
-    return baseTotal + servicesTotal;
-  }, [menuType, numAdults, numChildren, services]);
+    const extraFriedTotal = Object.entries(friedQuantities).reduce(
+      (sum, [item, qty]) => sum + (EXTRA_FRIED_PRICES[item] || 0) * qty,
+      0
+    );
+    const beerTotal = beerQuantity * 30;
+    return baseTotal + servicesTotal + extraFriedTotal + beerTotal;
+  }, [menuType, numAdults, numChildren, services, friedQuantities, beerQuantity]);
 
   const handleServiceToggle = (service: string) => {
     setServices((prev) =>
@@ -67,7 +91,26 @@ export default function EventQuoteForm() {
         : [...prev, service]
     );
   };
+  const handleFriedClick = (item: string) => {
+    setSelectedFried((prev) => (prev === item ? null : item)); // toggle selection
+  };
 
+  const handleQuantityChange = (item: string, quantity: number) => {
+    setFriedQuantities((prev) => ({
+      ...prev,
+      [item]: quantity,
+    }));
+  };
+  const totalPeople = Number(numAdults || 0) + Number(numChildren || 0);
+
+  useEffect(() => {
+  // Show alert only if HERO menu is selected and total people < 15
+  if (menuType === "hero" && totalPeople < 15) {
+    setShowHeroAlert(true);
+  } else {
+    setShowHeroAlert(false);
+  }
+}, [menuType, totalPeople]);
   return (
     <>
 
@@ -119,45 +162,67 @@ export default function EventQuoteForm() {
               <h5 className={styles.sectionTitle}>Seleziona tipo di menù</h5>
               <div className={styles.buttonGroup}>
                 <Button
-                  className={`${styles.button} ${menuType === "fixed" ? styles.activeButton : ""
-                    }`}
-                  onClick={() => setMenuType("fixed")}
+                  className={`${styles.button} ${menuType === "basic" ? styles.activeButton : ""}`}
+                  onClick={() => setMenuType("basic")}
                   type="button"
                 >
-                  Menù Fisso (5 Burger a scelta)
+                  Menù BASIC
                 </Button>
                 <Button
-                  className={`${styles.button} ${menuType === "buffet" ? styles.activeButton : ""
-                    }`}
-                  onClick={() => setMenuType("buffet")}
+                  className={`${styles.button} ${menuType === "premium" ? styles.activeButton : ""}`}
+                  onClick={() => setMenuType("premium")}
                   type="button"
                 >
-                  Buffet con Mini Burger
+                  Menù PREMIUM
+                </Button>
+                <Button
+                  className={`${styles.button} ${menuType === "hero" ? styles.activeButton : ""}`}
+                  onClick={() => setMenuType("hero")}
+                  type="button"
+                >
+                  Menù HERO
                 </Button>
               </div>
 
               {menuType && (
-                <div className={styles.menuImageWrapper}>
-                  <Image
-                    src={
-                      menuType === "fixed"
-                        ? "/events/compleanno.webp"
-                        : "/events/mini-burger.webp"
-                    }
-                    alt={
-                      menuType === "fixed"
-                        ? "Menù fisso"
-                        : "Buffet con mini burger"
-                    }
-                    width={600}
-                    height={300}
-                    className={styles.menuImage}
-                    priority
-                  />
-                </div>
+                <>
+                  <div className={styles.menuImageWrapper}>
+                    <Image
+                      src={
+                        menuType === "basic"
+                          ? "/events/compleanno.webp"
+                          : menuType === "premium"
+                            ? "/events/premium-buffet.webp"
+                            : "/events/mini-burger.webp"
+                      }
+                      alt={
+                        menuType === "basic"
+                          ? "Menù BASIC"
+                          : menuType === "premium"
+                            ? "Menù PREMIUM"
+                            : "Menù HERO"
+                      }
+                      width={600}
+                      height={300}
+                      className={styles.menuImage}
+                      priority
+                    />
+                  </div>
+
+                  {/* Descrizione dinamica */}
+                  <div className={styles.introParagraph}>
+                    <br></br>
+                    {MENU_DESCRIPTIONS[menuType]}
+                  </div>
+                </>
               )}
             </Col>
           </Row>
+{showHeroAlert && (
+  <p style={{ color: "red", marginTop: "0.5rem" }}>
+    Attenzione: il Menù HERO è disponibile solo da 15 persone in su.
+  </p>
+)}
 
           {/* Step 2: People */}
           <Row className={styles.row}>
@@ -175,7 +240,7 @@ export default function EventQuoteForm() {
                 />
               </Form.Group>
             </Col>
-            <Col md={6}>
+            {<Col md={6}>
               <Form.Group controlId="numChildren" className={styles.formGroup}>
                 <Form.Label className={styles.label}>Bambini</Form.Label>
                 <Form.Control
@@ -188,32 +253,57 @@ export default function EventQuoteForm() {
                   className={styles.input}
                 />
               </Form.Group>
-            </Col>
+            </Col>}
           </Row>
 
-          {/* Step 3: Buffet burgers (if fixed menu) */}
-          {menuType === "fixed" && (
+          {/* Step 3: Buffet burgers */}
+          {menuType === "basic" ? (
             <Row className={styles.row}>
               <Col>
                 <h5 className={styles.sectionTitle}>
                   Al ristorante potrai scegliere tra questi burger:
                 </h5>
                 <div className={styles.buttonWrap}>
-                  {burgers.filter(burger => allowedBurgers.includes(burger.name)).map((burger: Burger) => (
-                    <Button
-                      key={burger.id}
-                      className={styles.burgerButton}
-                      variant="outline-secondary"
-                      onClick={() => setSelectedBurger(burger)}
-                      type="button"
-                    >
-                      {burger.name}
-                    </Button>
-                  ))}
+                  {burgers
+                    .filter((burger) => allowedBurgersBasic.includes(burger.name))
+                    .map((burger: Burger) => (
+                      <Button
+                        key={burger.id}
+                        className={styles.burgerButton}
+                        variant="outline-secondary"
+                        onClick={() => setSelectedBurger(burger)}
+                        type="button"
+                      >
+                        {burger.name}
+                      </Button>
+                    ))}
                 </div>
               </Col>
             </Row>
-          )}
+          ) : menuType === "premium" ? (
+            <Row className={styles.row}>
+              <Col>
+                <h5 className={styles.sectionTitle}>
+                  Al ristorante potrai scegliere tra questi burger:
+                </h5>
+                <div className={styles.buttonWrap}>
+                  {burgers
+                    .filter((burger) => allowedBurgersPremium.includes(burger.name))
+                    .map((burger: Burger) => (
+                      <Button
+                        key={burger.id}
+                        className={styles.burgerButton}
+                        variant="outline-secondary"
+                        onClick={() => setSelectedBurger(burger)}
+                        type="button"
+                      >
+                        {burger.name}
+                      </Button>
+                    ))}
+                </div>
+              </Col>
+            </Row>
+          ) : null}
 
           {/* Step 4: Event type */}
           <Row className={styles.row}>
@@ -298,6 +388,103 @@ export default function EventQuoteForm() {
             </Col>
           </Row>
 
+          {/* Step 7: Extra fried */}
+          <Row className={styles.row}>
+            <Col>
+              <h5 className={styles.sectionTitle}>Fritti Extra</h5>
+              <div className={styles.buttonWrap}>
+                {Object.keys(EXTRA_FRIED_PRICES).map((item) => (
+                  <Button
+                    key={item}
+                    className={`${styles.button} ${selectedFried === item ? styles.activeButton : ""}`}
+                    onClick={() => handleFriedClick(item)}
+                    type="button"
+                    style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}
+                  >
+                    {item} (+€{EXTRA_FRIED_PRICES[item].toFixed(2)} / pezzo)
+                  </Button>
+                ))}
+              </div>
+
+              {/* Show quantity input + photo for selected item */}
+              {selectedFried && (
+                <div style={{ marginTop: "1rem" }}>
+                  <label>Numero di pezzi: </label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={friedQuantities[selectedFried] || ""}
+                    onChange={(e) => handleQuantityChange(selectedFried, Number(e.target.value))}
+                    style={{ width: "60px", marginLeft: "0.5rem" }}
+                    placeholder="0"
+                  />
+                  <div style={{ marginTop: "0.5rem" }}>
+                    <Image
+                      src={`/fritti/${selectedFried.replaceAll(" ", "-")}.webp`}
+                      alt={selectedFried}
+                      width={200}
+                      height={120}
+                    />
+                  </div>
+                </div>
+              )}
+            </Col>
+          </Row>
+          {/* Step 7b: Beer quantity */}
+          <Row className={styles.row}>
+            <Col>
+              <h5 className={styles.sectionTitle}>Mondo di Birra</h5>
+              <Button
+                className={`${styles.button} ${beerSelected ? styles.activeButton : ""}`}
+                onClick={() => setBeerSelected((prev) => !prev)} // solo toggle visibilità
+                type="button"
+                style={{ marginBottom: "0.5rem" }}
+              >
+                Mondo di Birra (3L) - €30 per tanica da 3L
+              </Button>
+
+              {beerSelected && (
+                <>
+                  <div style={{ marginTop: "0.5rem" }}>
+                    <label>Numero di taniche da 3L: </label>
+                    <input
+                      type="number"
+                      min={0}
+                      value={beerQuantity}
+                      onChange={(e) => setBeerQuantity(Number(e.target.value))}
+                      style={{ width: "60px", marginLeft: "0.5rem" }}
+                      placeholder="0"
+                    />
+
+                    <div style={{ marginTop: "0.5rem" }}>
+                      <p>Prezzo: €{beerQuantity * 30}</p>
+                    </div>
+                  </div>
+                  <Row className={styles.row}>
+                    <Col>
+                      <h5 className={styles.sectionTitle}>
+                        Al ristorante potrai scegliere tra queste birre:
+                      </h5>
+                      <div className={styles.buttonWrap}>
+                        {beers
+                          .map((beer: Beer) => (
+                            <Button
+                              key={beer.id}
+                              className={styles.burgerButton}
+                              variant="outline-secondary"
+                              onClick={() => setSelectedBeer(beer)}
+                              type="button"
+                            >
+                              {beer.name}
+                            </Button>
+                          ))}
+                      </div>
+                    </Col>
+                  </Row>
+                </>
+              )}
+            </Col>
+          </Row>
           {/* Step 8: Contact info */}
           <Row className={styles.row}>
             {Object.entries(contact).map(([key, value]) => (
@@ -410,6 +597,13 @@ export default function EventQuoteForm() {
           <BootstrapBurgerModal
             burger={selectedBurger}
             onClose={() => setSelectedBurger(null)}
+          />
+        )}
+        {/* Beer Modal */}
+        {selectedBeer && (
+          <BootstrapBeerModal
+            beer={selectedBeer}
+            onClose={() => setSelectedBeer(null)}
           />
         )}
       </Container>
