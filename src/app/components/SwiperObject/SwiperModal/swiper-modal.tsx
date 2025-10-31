@@ -28,6 +28,8 @@ const getCategoryIconPath = (category: string): string => {
       return '/CategoryIcons/hot.png';
     case 'pollo':
       return '/CategoryIcons/chicken.png';
+    case 'maiale':
+      return '/CategoryIcons/pig.webp';
     default:
       return '/images/default-icon.png';
   }

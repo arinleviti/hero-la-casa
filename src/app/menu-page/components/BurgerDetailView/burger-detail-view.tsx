@@ -30,9 +30,11 @@ export default function BurgerDetailView({
       case 'cervo':
         return '/CategoryIcons/deer.webp';
       case 'piccante':
-        return '/CategoryIcons/hot.png';
+        return '/CategoryIcons/hot.png';       
       case 'pollo':
         return '/CategoryIcons/chicken.png';
+      case 'maiale':
+        return '/CategoryIcons/pig.webp';
       case 'burgHero':
         return '';
       default:

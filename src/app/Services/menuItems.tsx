@@ -56,19 +56,21 @@ export const burgers: Burger[] = [
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 200, price: 13.99 }],
+    priceOptions: [{ weight: 200, price: 13.50 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Uovo al tegamino", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
     origin: "2227 Km"
-  },
-  {
+  }/*,
+   {
     id: 2, 
     name: "HOKKAIDO",
     ingredients: [
@@ -90,15 +92,15 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
     origin: "12.593 Km"
-  },
-  {
+  }, */
+ /*  {
     id: 3, // unique identifier
     name: "MANGIAFUOCO",
     ingredients: [
@@ -118,11 +120,11 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
-  },
+  } *//* ,
   {
     id: 4, // unique identifier
     name: "NOSTRANO",
@@ -150,13 +152,13 @@ export const burgers: Burger[] = [
     extras: [{ name: "Cipolle caramellate", price: 1.5 },
     { name: "Bacon nelle patate", price: 1.50 },
     { name: "Cheddar nelle patate", price: 1.50 },
-    { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+    { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  },
+  } */,
   {
     id: 5, // unique identifier
     name: "CRUDO",
@@ -175,16 +177,19 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 200, price: 13.99 }],
+    priceOptions: [{ weight: 100, price: 14.90 },
+      { weight: 200, price: 17.90 },
+      { weight: 300, price: 20.90 }
+    ],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
-  },
+  }/* ,
   {
     id: 6, // unique identifier
     name: "TIMBER BURGER",
@@ -208,12 +213,12 @@ export const burgers: Burger[] = [
       { name: "Uovo al tegamino", price: 1.5 },
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
-  },
+  } */,
   {
     id: 7, // unique identifier
     name: "KEPPORKO",
@@ -231,12 +236,16 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini", "uova"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 200, price: 13.99 }],
+    priceOptions: [{ weight: 100, price: 13.90 },
+      { weight: 160, price: 14.90 },
+      { weight: 220, price: 15.90 }
+    ],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
@@ -269,7 +278,7 @@ export const burgers: Burger[] = [
       { name: "Uovo al tegamino", price: 1.50 },
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
@@ -281,31 +290,29 @@ export const burgers: Burger[] = [
     name: "IL TARTUFO",
     ingredients: [
       "Pane nero come il carbone",
-      "Tartare di Fassona Piemontese",
-      "Stracciatella di burrata pugliese",
-      "Granella di pistacchi di Bronte",
+      "Carne di bovino nostrano 200 g",
+      "Robiola fresca",
+      "Insalata gentile",
       "Scaglie di tartufo nero",
-      "Olio al tartufo"
+      "Crema alla zucca"
     ],
     description:
-      "Un’eleganza intensa racchiusa in un pane nero come carbone. La pregiata tartare di Fassona Piemontese si fonde con la vellutata stracciatella di burrata pugliese, mentre la croccante granella di pistacchi di Bronte aggiunge un tocco di carattere. Scaglie di tartufo nero e un filo di olio al tartufo esaltano ogni morso, trasformando questo burger in un viaggio raffinato tra profumi e sapori preziosi.",
-    modalDescription: "Burger con tartare di Fassona, burrata, pistacchi di Bronte e tartufo nero nel pane nero.",
+      "Un panino elegante e avvolgente, dove ogni ingrediente racconta un sapore autentico: il pane nero come il carbone ospita una succosa carne di bovino nostrano da 200 g, esaltata dalla delicatezza della robiola fresca e dalla dolcezza vellutata della crema alla zucca. L’insalata gentile dona freschezza, mentre le scaglie di tartufo nero completano il tutto con un tocco pregiato e inconfondibile.",
+    modalDescription: "Pane nero con carne di bovino nostrano, robiola fresca, crema alla zucca, scaglie di tartufo nero e insalata gentile.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 19.90 },
-      { weight: 200, price: 22.90 },
-      { weight: 300, price: 25.90 }
+      { weight: 200, price: 19.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Il-Tartufo_vgsfrj.png"
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp"
 
   },
   {
@@ -335,12 +342,12 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
     
-  },
+  }/* ,
   {
     id: 11, // unique identifier
     name: "WILD",
@@ -365,7 +372,7 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
@@ -393,14 +400,42 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
 
-  },
+  }*/, 
   {
     id: 13, // unique identifier
+    name: "SEASON BURGER",
+    ingredients: [
+      "Ciabattina croccante",
+      "Stinco di maiale sfilacciato",
+      "crema ai funghi porcini",
+      "Chips di polenta"
+    ],
+    description:
+      "Una ciabattina croccante accoglie un irresistibile cuore di stinco di maiale sfilacciato, tenero e ricco di sapore. La crema ai funghi porcini avvolge ogni morso con note intense e vellutate, mentre le chips di polenta croccante aggiungono un tocco rustico e dorato che completa l’esperienza con un perfetto contrasto di consistenze.",
+    modalDescription: "Ciabattina croccante con stinco di maiale sfilacciato, crema ai funghi porcini e chips di polenta croccante.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["maiale"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 16.50 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp"
+
+  }/* ,
+  {
+    id: 14, // unique identifier
     name: "MYKONOS",
     ingredients: [
       "Pane 'Non siamo mica SEMI'",
@@ -422,16 +457,47 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Mykonos_jkztgl.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
+  } */,
+   {
+    id: 15, // unique identifier
+    name: "BANGKOK",
+    ingredients: [
+      "Petto di pollo marinato su salsa di soia",
+      "Zucchine e peperoni al forno",
+      "Anacardi tostati e salati",
+      "Salsa thai",
+      "Pane ai semi di girasole"
+    ],
+    description:
+      "Un’esplosione di profumi e colori dal cuore dell’Asia: il pane ai semi di girasole racchiude un succulento petto di pollo marinato nella salsa di soia, accompagnato da zucchine e peperoni al forno per un tocco fresco e leggermente dolce. Gli anacardi tostati e salati regalano croccantezza e carattere, mentre la salsa thai lega il tutto con un equilibrio perfetto di note piccanti e aromatiche.",
+    modalDescription: "Pane ai semi di girasole con pollo marinato alla soia, verdure al forno, anacardi tostati e salsa thai.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pollo","burgHero","piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 13.50 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858614/BANGKOK_vikslj.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858614/BANGKOK_vikslj.webp",
+    backgroundImage: "",
+    burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860539/STORY_BANKOK_pjlsct.webp",
+    origin: "1260 Km"
   },
   {
-    id: 14, // unique identifier
+    id: 16, // unique identifier
     name: "L'ORTOLANO",
     ingredients: [
       "Burger di verdure",
@@ -447,20 +513,21 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 100, price: 13.99 }],
+    priceOptions: [{ weight: 100, price: 10.50 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Formaggio", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
+      { name: "Cheddar cheese sauce", price: 1.50 },
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
   },
   {
-    id: 15, // unique identifier
+    id: 17, // unique identifier
     name: "IL CRUNCH",
     ingredients: [
       "Burger di frumento panato",
@@ -477,20 +544,21 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 100, price: 13.99 }],
+    priceOptions: [{ weight: 100, price: 9.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Salsa al formaggio cheddar", price: 1.5 },
       { name: "Uovo al tegamino", price: 1.5 },
+      { name: "Cipolle caramellate", price: 1.50 },
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   },
   {
-    id: 16, // unique identifier
+    id: 18, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -506,18 +574,18 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 150, price: 13.99 }],
+    priceOptions: [{ weight: 150, price: 13.50 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
   {
-    id: 17, // unique identifier
+    id: 19, // unique identifier
     name: "GREEN BURGER",
     ingredients: [
       "Burger vegetale Beyond Meat",
@@ -533,18 +601,20 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 115, price: 13.99 }],
+    priceOptions: [{ weight: 115, price: 12.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Cheddar cheese sauce", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
-  {
-    id: 18, // unique identifier
+  /* {
+    id: 20, // unique identifier
     name: "IL KRAKEN",
     ingredients: [
       "Ciabattina croccante e morbida",
@@ -564,14 +634,14 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
-  },
+  }, */
   {
-    id: 19, // unique identifier
+    id: 21, // unique identifier
     name: "AVISIO",
     ingredients: [
       "Pane ai 7 cereali",
@@ -592,7 +662,7 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
@@ -600,7 +670,7 @@ export const burgers: Burger[] = [
 
   },
   {
-    id: 20, // unique identifier
+    id: 22, // unique identifier
     name: "CAPO NORD",
     ingredients: [
       "Pane nero come il carbone",
@@ -622,13 +692,134 @@ export const burgers: Burger[] = [
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 1.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839753/CAPO-NORD_1_zcgapt.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
   },
+  {
+    id: 23, // unique identifier
+    name: "LONDON",
+    ingredients: [
+      "Pane ai 7 cereali",
+      "Crema di piselli home-made",
+      "Nuggets di merluzzo",
+      "Pops di patate impanate",
+    ],
+    description:
+      "Un viaggio di sapori tra tradizione e modernità: il pane ai 7 cereali, ricco e fragrante, racchiude una delicata crema di piselli home-made che esalta la freschezza dei nuggets di merluzzo dorati. A completare il tutto, i pops di patate impanate, croccanti e golosi, aggiungono la giusta dose di comfort food in perfetto stile britannico.",
+    
+    modalDescription: "Pane ai 7 cereali con crema di piselli home-made, nuggets di merluzzo dorati e croccanti pops di patate impanate.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["pesce","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 120, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/LONDON_iscceg.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/LONDON_iscceg.webp",
+    backgroundImage: "",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761859802/London-viaggiatore_u1rkdl.webp"
+  },
+   {
+    id: 24, // unique identifier
+    name: "MONACO",
+    ingredients: [
+      "Pane Hero",
+      "Salsa Ranch",
+      "Insalata gentile",
+      "Bacon croccante",
+      "Petto di pollo panato",
+      "Patate lesse",
+      "Uovo all'occhio di bue"
+    ],
+    description:
+      "Un panino ricco e deciso, perfetto per chi ama i sapori autentici: il pane Hero accoglie un gustoso petto di pollo panato, croccante fuori e morbido dentro, accompagnato da bacon croccante, uovo all’occhio di bue e patate lesse per un tocco sostanzioso. La salsa Ranch e l’insalata gentile completano il tutto con freschezza e cremosità, per un equilibrio perfetto tra comfort e carattere bavarese.",
+    
+    modalDescription: "Pane Hero con pollo panato, bacon croccante, uovo all’occhio di bue, patate lesse, insalata gentile e salsa Ranch.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "uovo", "latte"], // list allergens for allergy info
+    categories: ["pollo","burgHero"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 120, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Doppio bacon", price: 2.00 },
+      { name: "Salsa Cheddar Cheese", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/MONACO_atiego.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/MONACO_atiego.webp",
+    backgroundImage: "",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860804/STORY_MONACO_xoxgfp.webp"
+  },
+  {
+    id: 25, // unique identifier
+    name: "RUSTICO",
+    ingredients: [
+      "Carne di Angus 200g",
+      "Insalata gentile",
+      "Lardo",
+      "Senape dolce bavarese",
+      "Noci tritate",
+      "Pane bretzel"
+    ],
+    description:
+      "Un panino dal carattere forte e autentico: il pane bretzel racchiude un succulento burger di Angus da 200g, avvolto dalla cremosità del lardo e dal tocco aromatico della senape dolce bavarese. L’insalata gentile dona freschezza, mentre le noci tritate aggiungono una nota croccante e raffinata che esalta ogni morso. Un equilibrio perfetto tra sapori decisi e genuinità montana.",
+    
+    modalDescription: "Pane bretzel con burger di Angus, lardo, senape dolce bavarese, insalata gentile e noci tritate.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 200, price: 13.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/RUSTICO_escuqt.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/RUSTICO_escuqt.webp"
+  },
+  {
+    id: 26, // unique identifier
+    name: "SOLEGGIATO",
+    ingredients: [
+      "Pane Hero",
+      "160g di puro manzo",
+      "Insalata gentile",
+      "Pancetta arrotolata",
+      "Scamorza affumicata",
+      "Pomodori soleggiati"
+    ],
+    description:
+      "Un panino dal gusto intenso e mediterraneo: il pane Hero racchiude 160g di puro manzo grigliato alla perfezione, arricchito da scamorza affumicata e pancetta arrotolata croccante per un contrasto irresistibile. L’insalata gentile aggiunge leggerezza, mentre i pomodori soleggiati sprigionano tutto il calore e la dolcezza del sole italiano. Un’esplosione di sapori equilibrati e appaganti.",
+    
+    modalDescription: "Pane Hero con manzo grigliato, scamorza affumicata, pancetta arrotolata, pomodori soleggiati e insalata gentile.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 12.90 },
+      { weight: 160, price: 13.90 },
+      { weight: 220, price: 14.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp"
+  }
 ];
 
 
