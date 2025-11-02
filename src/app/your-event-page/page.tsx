@@ -23,13 +23,13 @@ const EXTRA_FRIED_PRICES: Record<string, number> = {
   "Breaded Mini Toast": 1.5
 };
 const allowedBurgersBasic: string[] = ["ANGUS DI ABERDEEN", "ITALIANO", "RUSTICO", "BANGKOK", "SOLEGGIATO"];
-const allowedBurgersPremium: string[] = ["SEASON", "TARTUFO", "CRUDO", "MONACO", "LONDON"];
+const allowedBurgersPremium: string[] = ["SEASON BURGER", "IL TARTUFO", "CRUDO", "MONACO", "LONDON"];
 
 
 const MENU_DESCRIPTIONS: Record<string, string> = {
   basic: "Il Menù BASIC include 5 burger a scelta, perfetto per un pasto semplice e gustoso.",
   premium: "Il Menù PREMIUM offre 5 burger selezionati per un’esperienza più ricca.",
-  hero: "Menù dedicato dalle 15 persone in sù dove per ogni persona ha compreso: 3 miniburger, 3 tipologie di fritti (Anelli di cipolla- ribs di pannocchia - stick di pollo artigianali) 2 tipologie di patate ( rustic - sweet potato )",
+  hero: "Menù dedicato dalle 15 persone in sù dove per ogni persona sono compresi: 3 miniburger, 3 tipologie di fritti (Anelli di cipolla- ribs di pannocchia - stick di pollo artigianali) 2 tipologie di patate ( rustic - sweet potato )",
 };
 
 export default function EventQuoteForm() {
@@ -76,6 +76,12 @@ export default function EventQuoteForm() {
       (sum, s) => sum + SERVICE_PRICES[s] * (adults /* + children */),
       0
     );
+    // Object.entries turns an object into an array of [key, value] pairs
+    //reduce() takes an array and goes through it element by element keeping track of some ongoing result (called the accumulator)
+    //array.reduce((accumulator, currentValue) => {
+    // combine them somehow
+    // return newAccumulator;
+    //  }, initialValue);
     const extraFriedTotal = Object.entries(friedQuantities).reduce(
       (sum, [item, qty]) => sum + (EXTRA_FRIED_PRICES[item] || 0) * qty,
       0
@@ -84,12 +90,8 @@ export default function EventQuoteForm() {
     return baseTotal + servicesTotal + extraFriedTotal + beerTotal;
   }, [menuType, numAdults, numChildren, services, friedQuantities, beerQuantity]);
 
-  const handleServiceToggle = (service: string) => {
-    setServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
-    );
+  const handleServiceSelect = (service: string) => {
+    setServices((prev) => (prev.includes(service) ? [] : [service]));
   };
   const handleFriedClick = (item: string) => {
     setSelectedFried((prev) => (prev === item ? null : item)); // toggle selection
@@ -104,13 +106,13 @@ export default function EventQuoteForm() {
   const totalPeople = Number(numAdults || 0) + Number(numChildren || 0);
 
   useEffect(() => {
-  // Show alert only if HERO menu is selected and total people < 15
-  if (menuType === "hero" && totalPeople < 15) {
-    setShowHeroAlert(true);
-  } else {
-    setShowHeroAlert(false);
-  }
-}, [menuType, totalPeople]);
+    // Show alert only if HERO menu is selected and total people < 15
+    if (menuType === "hero" && totalPeople < 15) {
+      setShowHeroAlert(true);
+    } else {
+      setShowHeroAlert(false);
+    }
+  }, [menuType, totalPeople]);
   return (
     <>
 
@@ -130,7 +132,7 @@ export default function EventQuoteForm() {
         </h1>
         <p className={styles.introParagraph}>
           Vuoi organizzare il tuo evento da <strong>Hero</strong>? Ti offriamo la possibilità di
-          scegliere tra un <strong>menù a prezzo fisso</strong> — potrai gustare cinque dei nostri
+          scegliere tra due <strong>menù a prezzo fisso</strong> — potrai gustare cinque dei nostri
           best seller — oppure un <strong>buffet con mini burger</strong>. Se lo desideri,
           possiamo preparare per te una torta su misura, oppure puoi portare la tua.
           Compila questo breve questionario per ricevere un preventivo: inviaci la richiesta
@@ -155,6 +157,23 @@ export default function EventQuoteForm() {
           <input type="hidden" name="eventSubtype" value={eventSubtype} />
           <input type="hidden" name="services" value={services.join(", ")} />
           <input type="hidden" name="total" value={total.toFixed(2)} />
+          <input
+            type="hidden"
+            name="friedItems"
+            value={Object.entries(friedQuantities)
+              .map(([item, qty]) => `${item}: ${qty}`)
+              .join(", ")}
+          />
+          <input
+            type="hidden"
+            name="beerSelected"
+            value={beerSelected ? "Yes" : "No"}
+          />
+          <input
+            type="hidden"
+            name="beerQuantity"
+            value={beerQuantity || 0}
+          />
 
           {/* Step 1: Menu type */}
           <Row className={styles.row}>
@@ -166,21 +185,24 @@ export default function EventQuoteForm() {
                   onClick={() => setMenuType("basic")}
                   type="button"
                 >
-                  Menù BASIC
+                  Menù BASIC<br />
+                  <small>(€{PRICE_ADULT_BASIC} adulti / €{PRICE_CHILD_BASIC} bambini)</small>
                 </Button>
                 <Button
                   className={`${styles.button} ${menuType === "premium" ? styles.activeButton : ""}`}
                   onClick={() => setMenuType("premium")}
                   type="button"
                 >
-                  Menù PREMIUM
+                  Menù PREMIUM<br />
+                  <small>(€{PRICE_ADULT_PREMIUM} adulti / €{PRICE_CHILD_PREMIUM} bambini)</small>
                 </Button>
                 <Button
                   className={`${styles.button} ${menuType === "hero" ? styles.activeButton : ""}`}
                   onClick={() => setMenuType("hero")}
                   type="button"
                 >
-                  Menù HERO
+                  Menù HERO<br />
+                  <small>(€{PRICE_ADULT_HERO} adulti / €{PRICE_CHILD_HERO} bambini)</small>
                 </Button>
               </div>
 
@@ -218,11 +240,11 @@ export default function EventQuoteForm() {
               )}
             </Col>
           </Row>
-{showHeroAlert && (
-  <p style={{ color: "red", marginTop: "0.5rem" }}>
-    Attenzione: il Menù HERO è disponibile solo da 15 persone in su.
-  </p>
-)}
+          {showHeroAlert && (
+            <p style={{ color: "red", marginTop: "0.5rem" }}>
+              Attenzione: il Menù HERO è disponibile solo da 15 persone in su.
+            </p>
+          )}
 
           {/* Step 2: People */}
           <Row className={styles.row}>
@@ -368,17 +390,17 @@ export default function EventQuoteForm() {
             </Col>
           </Row>
 
-          {/* Step 6: Extra services */}
+          {/* Step 6: Servizio Dolce */}
           <Row className={styles.row}>
             <Col>
-              <h5 className={styles.sectionTitle}>Servizi Aggiuntivi</h5>
+              <h5 className={styles.sectionTitle}>Servizio Dolce (scegline uno)</h5>
               <div className={styles.buttonWrap}>
                 {Object.keys(SERVICE_PRICES).map((service) => (
                   <Button
                     key={service}
                     className={`${styles.button} ${services.includes(service) ? styles.activeButton : ""
                       }`}
-                    onClick={() => handleServiceToggle(service)}
+                    onClick={() => handleServiceSelect(service)}
                     type="button"
                   >
                     {service} (+€{SERVICE_PRICES[service].toFixed(2)} / persona)
