@@ -1,7 +1,7 @@
 
 'use client';
 
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import { useEffect, useState } from 'react';
@@ -89,25 +89,46 @@ export default function NavbarBasic() {
                     >
                         <div className={styles.navContent}>
                             {/* Left links */}
-                           
+
                             <Nav className={`${styles.navSide} ${styles.left}`}>
-                                 {isMobile && (
-                                <Nav.Link as={Link} href="/" onClick={() => setExpanded(false)}>HOME 🏠</Nav.Link>
-                            )}
+                                {isMobile && (
+                                    <Nav.Link as={Link} href="/" onClick={() => setExpanded(false)}>HOME 🏠</Nav.Link>
+                                )}
                                 <Nav.Link as={Link} href="/menu-page" onClick={() => setExpanded(false)}>MENU</Nav.Link>
                                 <Nav.Link as={Link} href="/staffAndPremises" onClick={() => setExpanded(false)}>LO STAFF E IL LOCALE</Nav.Link>
                                 <Nav.Link as={Link} href="/blog/1" onClick={() => setExpanded(false)}>DIARIO DI BORDO</Nav.Link>
-                                
+
                                 <Nav.Link as={Link} href="/OurStory" onClick={() => setExpanded(false)}>LA NOSTRA STORIA</Nav.Link>
                             </Nav>
 
                             {/* Right links */}
                             <Nav className={`${styles.navSide} ${styles.right}`}>
-                                <Nav.Link as={Link} href="/Experiences" onClick={() => setExpanded(false)}>SERATE A TEMA</Nav.Link>
+                                <NavDropdown
+                                    title="EVENTI"
+                                    id="eventi-dropdown"
+                                    className={styles.dropdown}
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    <NavDropdown.Item
+                                        as={Link}
+                                        href="/Experiences"
+                                        onClick={() => setExpanded(false)}
+                                    >
+                                        SERATE A TEMA
+                                    </NavDropdown.Item>
+
+                                    <NavDropdown.Item
+                                        as={Link}
+                                        href="/your-event-page"
+                                        onClick={() => setExpanded(false)}
+                                    >
+                                        IL TUO EVENTO
+                                    </NavDropdown.Item>
+                                </NavDropdown>
                                 <Nav.Link as={Link} href="/WorkWithUs" onClick={() => setExpanded(false)}>LAVORA CON NOI</Nav.Link>
                                 <Nav.Link as={Link} href="/#find-us" onClick={() => setExpanded(false)}>COME RAGGIUNGERCI</Nav.Link>
                                 <Nav.Link as={Link} href="https://heroburger.plateform.app/" onClick={() => setExpanded(false)} target="_blank"
-                            rel="noopener noreferrer">PRENOTA</Nav.Link>
+                                    rel="noopener noreferrer">PRENOTA</Nav.Link>
                             </Nav>
                         </div>
                     </Navbar.Collapse>

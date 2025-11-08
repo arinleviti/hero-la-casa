@@ -424,7 +424,7 @@ export const burgers: Burger[] = [
     priceOptions: [
       { weight: 100, price: 16.50 }
     ],
-    burgerOfTheMonth: false,
+    burgerOfTheMonth: true,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },

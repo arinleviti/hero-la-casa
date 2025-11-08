@@ -128,6 +128,62 @@
   font-size: medium!important;
   padding-left:20px!important;
 }
+/* === Dropdown Styling (EVENTI) === */
+.dropdown :global(.dropdown-toggle) {
+  color: #fff6ea !important;
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 900;
+  font-size: medium;
+  background: none !important;
+  border: none !important;
+}
+
+.dropdown :global(.dropdown-toggle:hover),
+.dropdown :global(.dropdown-toggle:focus),
+.dropdown :global(.dropdown-toggle.show) {
+  color: #7BA6DE !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* === Dropdown Menu Panel === */
+.dropdown :global(.dropdown-menu) {
+  background-color: #5E4B3C !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* === Dropdown Items === */
+.dropdown :global(.dropdown-item) {
+  color: #fff6ea !important;
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 900;
+  font-size: medium;
+  padding: 0.6rem 1.2rem;
+}
+
+.dropdown :global(.dropdown-item:hover),
+.dropdown :global(.dropdown-item:focus) {
+  background-color: transparent !important;
+  color: #7BA6DE !important;
+}
+
+/* === Mobile Fullscreen Dropdown Behavior === */
+.expandedCollapse .dropdown :global(.dropdown-menu) {
+  position: static !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  width: 100%;
+  text-align: center;
+}
+
+.expandedCollapse .dropdown :global(.dropdown-item) {
+  width: 100%;
+  padding: 0.75rem 0;
+  font-size: 1.3rem;
+}
 /* === Mobile Adjustments === */
 @media (max-width: 991px) {
 .navbarBrandCenteredWrapper {

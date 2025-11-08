@@ -2,36 +2,36 @@
 
 import styles from './marquee.module.css'
 import Marquee from "react-fast-marquee";
-/* import { Burger, burgers } from '../../Services/menuItems' */
+import { Burger, burgers } from '../../Services/menuItems'
 import { newsItems, NewsItems, NewsModalContent } from '../../Services/newsItems'
-/* import SwiperModal from '../SwiperObject/SwiperModal/swiper-modal' */
+import SwiperModal from '../SwiperObject/SwiperModal/swiper-modal'
 import Image from "next/image";
 import { useState } from 'react';
 import NewsModal from '../Marquee/NewsModal/news-modal';
 import React from "react";
 export default function BurgerMarquee() {
 
-    /*    const [modalOpen, setModalOpen] = useState(false);
-       const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null); */
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
     const [newsModalOpen, setNewsModalOpen] = useState(false);
     const [selectedNewsModalContent, setSelectedNewsModalContent] = useState<NewsModalContent | null>(null);
 
-    /*const burgerOfTheMonth = null  burgers.find(burger => burger.burgerOfTheMonth === true) */
+    const burgerOfTheMonth = burgers.find(burger => burger.burgerOfTheMonth === true)
     /* const newsOfTheMonth = newsItems.reduce((max: NewsItems, news: NewsItems) => news.id > max.id ? news : max, newsItems[0]); */
     const newsOfTheMonth = newsItems; // Show all news items
 
-    /*  const openModal = (burger: Burger) => {
-         setSelectedBurger(burger);
-         setModalOpen(true);
-     } */
+    const openModal = (burger: Burger) => {
+        setSelectedBurger(burger);
+        setModalOpen(true);
+    }
     const openNewsModal = (newsModalContent: NewsModalContent) => {
         setSelectedNewsModalContent(newsModalContent);
         setNewsModalOpen(true);
     }
-    /* const closeModal = () => {
+    const closeModal = () => {
         setSelectedBurger(null);
         setModalOpen(false);
-    } */
+    }
     const closeNewsModal = () => {
         setNewsModalOpen(false);
     }
@@ -42,7 +42,7 @@ export default function BurgerMarquee() {
         <>
             <Marquee speed={95} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
                 {/* Burger of the Month */}
-                {/* {burgerOfTheMonth && (
+                {burgerOfTheMonth && (
                     <div onClick={() => openModal(burgerOfTheMonth)} className={styles.itemWrapper}>
                         <div className={styles.imageWrapper}>
                             <Image
@@ -59,8 +59,16 @@ export default function BurgerMarquee() {
                             <div className={styles.burgerName}>{burgerOfTheMonth.name}</div>
                         </div>
                     </div>
-                )} */}
-
+                )}
+                <div className={styles.newsLine}>
+                    <Image
+                        src="/MarqueeImgs/DIviderBrown.webp"
+                        alt="divider"
+                        width={7}
+                        height={60}
+                        priority
+                    />
+                </div>
                 {/* News of the Month */}
                 {newsOfTheMonth.map((news: NewsItems) => (
                     <div key={news.id} className={styles.newsItemWrapper}>
@@ -87,26 +95,26 @@ export default function BurgerMarquee() {
                         </div>
 
                         {/* Divider outside the clickable area */}
-                        
-                            <div className={styles.newsLine}>
-                                <Image
-                                    src="/MarqueeImgs/DIviderBrown.webp"
-                                    alt="divider"
-                                    width={7}
-                                    height={60}
-                                    priority
-                                />
-                            </div>
-                        
+
+                        <div className={styles.newsLine}>
+                            <Image
+                                src="/MarqueeImgs/DIviderBrown.webp"
+                                alt="divider"
+                                width={7}
+                                height={60}
+                                priority
+                            />
+                        </div>
+
                     </div>
                 ))}
 
 
             </Marquee>
 
-            {/*  {modalOpen &&
+            {modalOpen &&
                 <SwiperModal burger={selectedBurger} onClose={closeModal} />
-            } */}
+            }
             {newsModalOpen && selectedNewsModalContent &&
                 <NewsModal onClose={closeNewsModal} newsModalContent={selectedNewsModalContent} />
             }

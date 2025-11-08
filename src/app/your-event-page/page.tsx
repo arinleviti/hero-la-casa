@@ -581,8 +581,8 @@ export default function EventQuoteForm() {
                       placeholderText="Seleziona un orario"
                       timeCaption="Orario"
                       name="time"
-                      minTime={new Date(new Date().setHours(18, 30, 0, 0))} // 18:30
-                      maxTime={new Date(new Date().setHours(21, 0, 0, 0))}  // 21:00
+                      minTime={new Date(new Date().setHours(19, 0, 0, 0))} // 19:00
+                      maxTime={new Date(new Date().setHours(19, 30, 0, 0))}  // 19:30
                     />
                   ) : (
                     <Form.Control

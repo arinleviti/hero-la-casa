@@ -44,7 +44,7 @@ export const newsItems: NewsItems[] = [
         header2: "Il nostro panino di trota conquista Milano.",
         urlLink: "https://corrieredeltrentino.corriere.it/notizie/cronaca/25_agosto_25/tartare-di-trota-in-un-hamburger-la-risposta-trentina-al-sushi-premiata-dall-accademia-del-panino-cinque-mesi-per-farlo-26daf0a9-ca3e-4bc6-be05-bff5d5420xlk.shtml"
     },
-    {
+    /* {
         id: 4,
         pic: "/MarqueeImgs/pumpkin.webp",
         header1: "Calendario eventi Ottobre - 🐄🍺Clicca qui!🎃🍂",
@@ -54,6 +54,6 @@ export const newsItems: NewsItems[] = [
                 imgUrl: "/MarqueeImgs/eventiOttobre.webp"
             }
        
-    }
+    } */
 ]
 
