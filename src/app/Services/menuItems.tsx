@@ -250,7 +250,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   },
-  {
+  /* {
     id: 8, // unique identifier
     name: "GOLOSO",
     ingredients: [
@@ -284,7 +284,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
 
 
-  },
+  }, */
   {
     id: 9, // unique identifier
     name: "IL TARTUFO",
@@ -640,7 +640,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
   }, */
-  {
+ /*  {
     id: 21, // unique identifier
     name: "AVISIO",
     ingredients: [
@@ -668,7 +668,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
     origin: "Km 0"
 
-  },
+  }, */
   {
     id: 22, // unique identifier
     name: "CAPO NORD",

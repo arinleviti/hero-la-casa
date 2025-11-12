@@ -20,11 +20,11 @@ export const staffCards = [
         name: "Anna",
         description: "Responsabile cucina"
     },
-    {
+    /* {
         imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753101475/staffKristian_urr86t.webp",
         name: "Kristian",
         description: "Aiuto cucina"
-    },
+    }, */
     {
         imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753101475/staffLaura_fe2mhh.webp",
         name: "Laura",

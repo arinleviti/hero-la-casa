@@ -32,7 +32,7 @@ export const storyBlocks: StoryBlock[] = [
         year: "2018",
         title: "I sogni si avverano",
         text: "I ragazzi realizzano il loro sogno nel 2018, rilevando un locale a Predazzo, in provincia di Trento. A seguito di una totale ristrutturazione del locale nasce la nuova attività: Hero.",
-        imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_454,c_limit,f_auto,q_auto/v1752768761/storia4_uheikb.jpg",
+        imageUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1762974308/chantalMauro_jeh8rx.webp",
         reverse: true
     },
     {
