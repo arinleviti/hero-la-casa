@@ -62,6 +62,15 @@
 .buttonContainer {
   padding-top: 2rem; /* Add space above button */
 }
+.burgerXmas {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 160px;
+  height: 120px;
+  z-index: 0;
+  rotate: -15deg;
+}
 @media (max-width: 768px) {
   .heroWrapper {
     flex-direction: column;
@@ -83,4 +92,13 @@
     padding-top: 0.5rem;
     justify-content: center;
   }
+  .burgerXmas {
+  position: absolute;
+  top: 20px;
+  left: 00px;
+  width: 100px;
+  height: 70px;
+  z-index: 0;
+  rotate: -15deg;
+}
 }

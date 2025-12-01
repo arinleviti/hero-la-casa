@@ -43,6 +43,14 @@ export default function HeroSection({ textData, imageData }: HeroSectionProps) {
                 sizes="(max-width: 600px) 90vw, (max-width: 1200px) 50vw, 550px"
                 priority
               />
+              <Image
+                src="/HeroImage/MerryChristmas2.webp"
+                alt="Merry Christmas"
+                width={60}
+  height={60}
+                className={styles.burgerXmas}
+                priority
+              />
             </div>
           </Col>
         </Row>

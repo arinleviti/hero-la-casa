@@ -8,7 +8,7 @@ import Footer from "./components/Footer/footer";
 import Overlay from "./components/LandingPage/overlay";
 import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google';
-
+import Snow from "./components/snow/snow";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -98,7 +98,7 @@ export default function RootLayout({
        
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
-
+<Snow />   {/* ❄ Snow overlay */}
         <Overlay/>
         
         <Navbar />

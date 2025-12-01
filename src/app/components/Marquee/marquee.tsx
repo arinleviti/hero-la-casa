@@ -62,10 +62,10 @@ export default function BurgerMarquee() {
                 )}
                 <div className={styles.newsLine}>
                     <Image
-                        src="/MarqueeImgs/DIviderBrown.webp"
+                        src="/MarqueeImgs/Xmas_divider.webp"
                         alt="divider"
-                        width={7}
-                        height={60}
+                        width={20}
+                        height={140}
                         priority
                     />
                 </div>
@@ -98,10 +98,10 @@ export default function BurgerMarquee() {
 
                         <div className={styles.newsLine}>
                             <Image
-                                src="/MarqueeImgs/DIviderBrown.webp"
+                                src="/MarqueeImgs/Xmas_divider.webp"
                                 alt="divider"
-                                width={7}
-                                height={60}
+                                width={20}
+                                height={140}
                                 priority
                             />
                         </div>

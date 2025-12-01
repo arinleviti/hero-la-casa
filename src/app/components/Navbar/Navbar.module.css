@@ -184,6 +184,15 @@
   padding: 0.75rem 0;
   font-size: 1.3rem;
 }
+.christmasBadge {
+  position: absolute;
+  top:-15px;
+  left: 10px;
+  width: 130px;
+  height: 130px;
+  z-index: 1100;
+  rotate: -20deg;
+}
 /* === Mobile Adjustments === */
 @media (max-width: 991px) {
 .navbarBrandCenteredWrapper {
@@ -210,4 +219,13 @@
   .navContent {
     gap: 0; /* no huge gaps on mobile */
   }
+  .christmasBadge {
+  position: absolute;
+  top:-5px;
+  left: 10px;
+  width: 200px;
+  height: 200px;
+  z-index: 1100;
+  rotate: -20deg;
+}
 }
