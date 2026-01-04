@@ -87,6 +87,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
 
             <Container fluid className={styles.burgerGridContainer}>
                 <h2 className={styles.gridTitle}>{title}</h2>
+                {!isBeer && <h3 className={styles.sectionSubtitle}>ℹ️ Non tutti i burger sono da asporto ℹ️</h3>}
 
                 {isBeer && <CammBeer title={cammBeer.title} subtitle={cammBeer.subtitle} description={cammBeer.description} priceOptions={cammBeer.priceOptions}/>}
 

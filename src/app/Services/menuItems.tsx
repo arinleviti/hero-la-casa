@@ -124,7 +124,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
-  } *//* ,
+  } */,
   {
     id: 4, // unique identifier
     name: "NOSTRANO",
@@ -133,7 +133,6 @@ export const burgers: Burger[] = [
       "Insalata gentile",
       "Pomodoro",
       "Speck delle Dolomiti",
-      "Maionese e ketchup",
       "Colata di Fontal di Cavalese",
       "Pane HERO",
     ],
@@ -144,9 +143,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 12.9 },
-      { weight: 160, price: 13.9 },
-      { weight: 220, price: 14.9 },
+      { weight: 100, price: 12.90 },
+      { weight: 160, price: 13.90 }
     ],
     burgerOfTheMonth: false,
     extras: [{ name: "Cipolle caramellate", price: 1.5 },
@@ -158,7 +156,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  } */,
+  },
   {
     id: 5, // unique identifier
     name: "CRUDO",
@@ -178,8 +176,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 14.90 },
-      { weight: 200, price: 17.90 },
-      { weight: 300, price: 20.90 }
+      { weight: 200, price: 18.50 },
+      { weight: 300, price: 21.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -189,24 +187,24 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
-  }/* ,
+  },
   {
     id: 6, // unique identifier
     name: "TIMBER BURGER",
     ingredients: [
+      "Pane Hero",
       "Carne di manzo",
       "Peperoni grigliati",
       "Speck grigliato",
-      "Rosella alla piastra",
-      "Salsa al pepe rosa fatta in casa",
-      "Pane HERO",
+      "Tosella alla piastra",
+      "Salsa al pepe rosa fatta in casa"
     ],
     description: "Il burger ufficiale del Timber Team Giacomelli! Una carica di energia e gusto pensata per chi non teme il bosco né la fame. Robusta carne di manzo, accompagnata da peperoni grigliati e speck scottato alla perfezione, per un’esplosione affumicata e succosa. La rosella alla piastra aggiunge carattere e croccantezza, mentre la protagonista è lei: una salsa al pepe rosa fatta in casa, intensa e profumata come una passeggiata tra i larici. Il tutto avvolto nel fidato pane HERO. Un panino da veri boscaioli. Ma con stile.",
     modalDescription: "Burger di manzo con speck grigliato, peperoni e salsa al pepe rosa nel pane HERO.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 220, price: 13.99 }],
+    priceOptions: [{ weight: 220, price: 15.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Cipolle caramellate", price: 1.5 },
@@ -218,7 +216,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
-  } */,
+  },
   {
     id: 7, // unique identifier
     name: "KEPPORKO",
@@ -237,8 +235,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini", "uova"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 13.90 },
-      { weight: 160, price: 14.90 },
-      { weight: 220, price: 15.90 }
+      { weight: 160, price: 14.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -315,7 +312,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp"
 
   },
-  {
+  /* {
     id: 10, // unique identifier
     name: "ITALIANO",
     ingredients: [
@@ -347,7 +344,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
     
-  }/* ,
+  } *//* ,
   {
     id: 11, // unique identifier
     name: "WILD",
@@ -376,37 +373,37 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
-  },
+  },*/
   {
     id: 12, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
-      "Pane ai 7 cereali",
-      "Filetto di pollo panato",
-      "Mozzarella di bufala campana DOP",
-      "Pomodoro ramato",
-      "Basilico ligure fresco"
+      "Pane al mais e semolino",
+      "Carne di manzo",
+      "Radicchio tardivo di Treviso",
+      "Pancetta arrotolata grigliata",
+      "Crescenza"
     ],
     description:
-      "Il gusto della freschezza di stagione in ogni morso. Un soffice pane ai 7 cereali accoglie un filetto di pollo panato, dorato e croccante. La mozzarella di bufala campana DOP, cremosa e avvolgente, si sposa con il pomodoro ramato succoso e il profumo intenso del basilico fresco ligure, per un burger leggero ma ricco di sapore.",
-    modalDescription: "Burger di pollo panato con mozzarella di bufala, pomodoro e basilico nel pane ai 7 cereali.",
+      "Un burger che celebra i sapori invernali con un tocco di originalità. Il pane al mais e semolino racchiude succulenta carne di manzo, arricchita dal gusto amarognolo del radicchio tardivo di Treviso e dalla croccantezza della pancetta arrotolata grigliata. La morbida crescenza avvolge il tutto, creando un equilibrio perfetto tra sapori intensi e consistenze avvolgenti.",
+    modalDescription: "Burger di manzo con radicchio di Treviso, pancetta grigliata e crescenza nel pane al mais.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 15.90 }
+      { weight: 200, price: 16.50 }
     ],
-    burgerOfTheMonth: false,
+    burgerOfTheMonth: true,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1767545271/season_burger_winter_rjuisj.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/season_burger_winter_rjuisj.webp"
 
-  }*/, 
-  {
+  }, 
+  /* {
     id: 13, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
@@ -433,7 +430,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp"
 
-  }/* ,
+  } *//* ,
   {
     id: 14, // unique identifier
     name: "MYKONOS",
@@ -464,8 +461,8 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
-  } */,
-   {
+  } */
+   /* {
     id: 15, // unique identifier
     name: "BANGKOK",
     ingredients: [
@@ -495,7 +492,7 @@ export const burgers: Burger[] = [
     backgroundImage: "",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860539/STORY_BANKOK_pjlsct.webp",
     origin: "1260 Km"
-  },
+  }, */
   {
     id: 16, // unique identifier
     name: "L'ORTOLANO",
@@ -669,7 +666,7 @@ export const burgers: Burger[] = [
     origin: "Km 0"
 
   }, */
-  {
+  /* {
     id: 22, // unique identifier
     name: "CAPO NORD",
     ingredients: [
@@ -698,7 +695,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
-  },
+  }, */
   {
     id: 23, // unique identifier
     name: "LONDON",
@@ -789,7 +786,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/RUSTICO_escuqt.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/RUSTICO_escuqt.webp"
   },
-  {
+  /* {
     id: 26, // unique identifier
     name: "SOLEGGIATO",
     ingredients: [
@@ -819,7 +816,8 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp"
-  }
+  }, */
+  
 ];
 
 
