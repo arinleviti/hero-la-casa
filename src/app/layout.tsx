@@ -8,7 +8,7 @@ import Footer from "./components/Footer/footer";
 import Overlay from "./components/LandingPage/overlay";
 import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Snow from "./components/snow/snow";
+//import Snow from "./components/snow/snow";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-colors-mini.ico",
   },
-   robots: {
+  robots: {
     index: true,      // allow indexing
     follow: true,     // allow following links
   }
@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
-         {/* Open Graph Meta Tags */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="HERO - La Casa del Burger" />
         <meta property="og:description" content="Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger." />
         <meta property="og:image" content="https://herolacasadelburger.it/logos/logo-colors.jpg" />
@@ -88,19 +88,19 @@ export default function RootLayout({
         <meta name="twitter:title" content="HERO - La Casa del Burger" />
         <meta name="twitter:description" content="Hero Burger a Predazzo ti accoglie con hamburger gourmet di carne, pesce e opzioni vegan o gluten free. Locale moderno e raffinato, patatine non fritte e salse gourmet, atmosfera calda e accogliente. Scopri il nostro menu e vivi un’esperienza unica oltre i confini del burger." />
         <meta name="twitter:image" content="https://herolacasadelburger.it/logos/logo-colors.jpg" />
-    <Script
+        <Script
           id="cookie-script"
           src="//cdn.cookie-script.com/s/3c774cdc92826ee08b23abd6f6017a11.js"
           strategy="afterInteractive"
           type="text/javascript"
           charSet="UTF-8"
         />
-       
+
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${nunito.variable} ${oswald.variable} ${anton.variable} ${alfaSlab.variable} ${kalam.variable}`}>
-<Snow />   {/* ❄ Snow overlay */}
-        <Overlay/>
-        
+        {/* <Snow />   {❄ Snow overlay } */}
+        <Overlay /> 
+
         <Navbar />
         {children}
         <Footer />

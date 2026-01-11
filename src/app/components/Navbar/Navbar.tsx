@@ -51,12 +51,12 @@ export default function NavbarBasic() {
                                     height={100}
                                     priority
                                 />
-                                <Image
+                               {/*  <Image
                                     src="/logos/pungitopo.webp"
                                     alt="Merry Christmas"
                                     fill         // ← lets CSS size the container instead
                                     className={styles.christmasBadge} // optional styling
-                                />
+                                /> */}
                             </motion.div>
                         ) : (
                             <>

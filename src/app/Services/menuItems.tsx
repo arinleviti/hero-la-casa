@@ -610,6 +610,34 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   },
+  {
+    id: 20, // unique identifier
+    name: "QUEBEC",
+    ingredients: [
+      "Pane nero",
+      "Salmone affumicato marinato nello sciroppo d’acero",
+      "Salvia fritta",
+      "Panna acida con pepe al limone",
+      "Insalata di cavolo cappuccio"
+    ],
+    description:
+      "Un tuffo nei sapori del mare e della natura, racchiuso in un pane nero avvolgente. Il salmone affumicato, marinato nello sciroppo d’acero, si scioglie al morso, accompagnato dalla croccantezza dell’insalata di cavolo cappuccio. La panna acida con pepe al limone regala una nota fresca e vivace, mentre la salvia fritta aggiunge un tocco aromatico che completa questo burger unico e raffinato.",
+    modalDescription: "Burger con salmone affumicato marinato nello sciroppo d’acero, panna acida e insalata di cavolo nel pane nero.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini", "pesce"], // list allergens for allergy info
+    categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1768160498/quebec_burger_baxwcj.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1768160498/quebec_burger_baxwcj.webp",
+    backgroundImage: "",
+    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860801/STORY_QUEBEC_fpr6ze.webp"
+  },
   /* {
     id: 20, // unique identifier
     name: "IL KRAKEN",
