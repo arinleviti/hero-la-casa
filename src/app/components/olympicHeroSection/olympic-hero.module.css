@@ -1,0 +1,140 @@
+.heroWrapper {
+  padding: 120px 0;
+  overflow: visible;
+  position: relative;
+}
+
+/* LEFT SIDE (Static) */
+.campaignCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainImageWrapper { width: 100%; }
+.groupImg { width: 100%; height: auto; object-fit: contain; }
+
+.textLayerTop, .textLayerBottom {
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.textLayerTop { margin-bottom: -50px; } 
+.textLayerBottom { margin-top: -40px; }
+
+.antonTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4A7729;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.8;
+}
+
+.discoveryCol {
+  position: relative;
+  z-index: 10;
+  margin-left: -10px; 
+  /* Added display flex to ensure the column contents are centered */
+  display: flex;
+  justify-content: center;
+}
+.flexCenterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the scrollWrapper and the button horizontally */
+  text-align: center;
+  width: 100%;
+}
+
+.scrollWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.kalamLabel {
+  font-family: var(--font-kalam);
+  color: #5E4B3C;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.singleBurgerImg {
+  cursor: pointer;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.7));
+}
+
+.floatingBurger {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+.burgerName {
+  font-family: var(--font-anton);
+  color: #5E4B3C;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.reserveButton {
+  background-color:  #7BA6DE;     
+  border: none;                  /* optional: remove border */
+  color: #edd5c3;                  /* white text */
+  font-family: var(--font-anton);
+  font-size: 1.4rem;             /* adjust size if needed */
+  padding: 0.2rem 1rem;        /* spacing around text */
+  border-radius: 6px;            /* optional: round corners */
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  margin: 0 auto;
+}
+.reserveButton:hover,
+.reserveButton:focus {
+  background-color: #4A7729;     /* darker red on hover */
+  color: white;
+}
+.buttonContainer {
+  padding-top: 2rem; 
+  display: flex;
+  justify-content: center; /* Extra insurance for centering */
+  width: 100%;
+  z-index: 15; /* Ensure it stays above any overlapping images */
+}
+/* Mobile */
+@media (max-width: 991px) {
+  .discoveryCol { 
+    margin-left: 0; 
+    margin-top: 20px; 
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 20px
+  }
+
+  .flexCenterContainer {
+    align-items: center;
+  }
+
+  .heroWrapper {
+    gap: 1rem;
+    padding-bottom: 80px;
+  }
+
+  /* REDUCE GAP HERE */
+  .burgerName {
+    margin-top: 10px; /* Reduce space above the name */
+  }
+
+  .buttonContainer {
+    padding-top: 0.5rem; /* Significantly reduce space between name and button */
+  }
+
+  .textLayerTop { margin-bottom: -30px; }
+  .textLayerBottom { margin-top: -30px; }
+}

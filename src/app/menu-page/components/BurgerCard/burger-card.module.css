@@ -47,3 +47,21 @@ font-family: var(--font-oswald), sans-serif;
   z-index: 10;     /* higher than the content */
   pointer-events: none; /* optional: so clicks pass through */
 }
+.olympicImage {
+  position: absolute;
+  top:5%;       /* adjust as needed */
+  left:5%;     /* adjust as needed */
+  z-index: 10;     /* higher than the content */
+  pointer-events: none; /* optional: so clicks pass through */
+  rotate: -15deg;
+}
+@media screen and (max-width: 768px) {
+  .olympicImage {
+    width: 25%;
+    height: auto;
+    top:5%;       /* adjust as needed */
+    left:5%;     /* adjust as needed */
+    top: 2%;
+    left: 2%;
+  }
+}

@@ -67,7 +67,7 @@ createPost({
 </style>
 
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1765302235/copertinaNovembre25_mtz95f.webp"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768237300/copertina_dicembre_rzi0vk.webp"
      alt="HERO la casa del burger - Dicembre 2025"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
 
@@ -172,8 +172,8 @@ Grazie di cuore a tutti voi per aver reso questo dicembre così speciale ❤️<
   createdAt: new Date('2026-01-11T10:00:00Z'),
  images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1765302235/copertinaNovembre25_mtz95f.webp',
-      caption: 'Copertina placeholder',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768237300/copertina_dicembre_rzi0vk.webp',
+      caption: 'Copertina dicembre 2025',
     },
     {
       url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163890/foto_gruppo_krampus_kpil5q.webp',

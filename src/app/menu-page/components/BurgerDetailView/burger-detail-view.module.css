@@ -157,6 +157,14 @@ align-items: center;
   z-index: 10;     /* higher than the content */
   pointer-events: none; /* optional: so clicks pass through */
 }
+ .olympicImage {
+  position: absolute;
+  top:5%;       /* adjust as needed */
+  right:5%;     /* adjust as needed */
+  z-index: 10;     /* higher than the content */
+  pointer-events: none; /* optional: so clicks pass through */
+  rotate: -15deg;
+}
 /* Smaller screens - reduce max-width */
 @media (max-width: 768px) {
   .imageWrapper {
@@ -177,7 +185,12 @@ align-items: center;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-}
+.olympicImage {
+  width: 70px;
+  height: auto;
+  top:0%;       /* adjust as needed */
+  right:0%;     /* adjust as needed */
+}}
 
 @media (max-width: 480px) {
   .imageWrapper {

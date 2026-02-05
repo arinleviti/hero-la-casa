@@ -46,8 +46,8 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/f_auto,q_auto/v1768163343/Video_Avatar_k27jkq.mp4",
-	title: "Instagram Video"
+	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/v1769966147/Artisti_zhfjr5.mp4",
+	title: "Video Artisti"
 }
 export const textVideoData = {
 	title1: "UN LOCALE RAFFINATAMENTE SEMPLICE",

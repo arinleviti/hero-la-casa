@@ -97,8 +97,15 @@ export default function BurgerDetailView({
                   />
                 </div>
               )}
-
-           
+            {burger.olympian ?
+              <Image
+                src={'/CategoryIcons/hamb_olimpici_logo.png'}
+                alt="Olympian Burger"
+                width={150}
+                height={150}
+                className={styles.olympicImage}
+              />
+            : null}
           </Col>
 
           {/* Right: Details */}

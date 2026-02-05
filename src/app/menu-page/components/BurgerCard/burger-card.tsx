@@ -42,6 +42,16 @@ export default function BurgerCard({ burger, onClick }: Props) {
           
         /> : null
       }
+      {burger.olympian ?
+        <Image
+          src={'/CategoryIcons/hamb_olimpici_logo.png'}
+          alt={burger.name}
+          width={100}
+          height={100}
+          className={styles.olympicImage}
+          
+        /> : null
+      }
       <Card.Body className={`${styles.burgerCardBody}`}>
         <Card.Title className={`${styles.burgerCardTitle} text-center `}>
           {burger.name}
