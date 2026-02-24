@@ -16,7 +16,7 @@ import LatestPost from './components/LatestPost/latest-post';
 import OpeningHours from './components/OpeningHours/opening-hours';
 import TextForSEO from './components/VideoSection/text-for-seo';
 import ScrollToFindUs from './components/scroll-to-find-us'; // client island
-import OlympicHero from './components/olympicHeroSection/olympic-hero';
+/* import OlympicHero from './components/olympicHeroSection/olympic-hero'; */
 
 
 export default function HomePage() {
@@ -32,7 +32,7 @@ export default function HomePage() {
 
         <div style={{ height: '35vh' }}></div> {/* add vertical space to scroll */}
       </main>
-      <OlympicHero burgers={burgers} />
+     {/*  <OlympicHero burgers={burgers} /> */}
       <HeroSection textData={heroContent} imageData={heroImage} />
       <MarqueeSection />
       <VideoSection videoData={videoData} textVideoData={textVideoData} />

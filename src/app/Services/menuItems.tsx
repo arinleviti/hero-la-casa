@@ -39,7 +39,7 @@ export interface ExtraOption {
 }
 
 export const burgers: Burger[] = [
-  {
+ /*  {
     id: 1, // unique identifier
     name: "AFRICA",
     ingredients: [
@@ -67,8 +67,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+  /*  {
     id: 2, // unique identifier
     name: "AMERICA",
     ingredients: [
@@ -98,8 +98,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/America_skhmwd.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/America_skhmwd.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+  /*  {
     id: 3, // unique identifier
     name: "ASIA",
     ingredients: [
@@ -127,8 +127,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Asia_nj11ah.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Asia_nj11ah.webp",
     backgroundImage: "",
-  },
-  {
+  }, */
+ /*  {
     id: 4, // unique identifier
     name: "EUROPA",
     ingredients: [
@@ -157,8 +157,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631913/Europe_irxc5k.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631913/Europe_irxc5k.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+  /*  {
     id: 5, // unique identifier
     name: "OCEANIA",
     ingredients: [
@@ -185,7 +185,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Oceania_w7ipdw.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Oceania_w7ipdw.webp",
     backgroundImage: "",
-  },
+  }, */
   {
     id: 6, // unique identifier
     name: "ANGUS DI ABERDEEN",
