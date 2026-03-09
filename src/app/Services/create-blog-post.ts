@@ -52,10 +52,10 @@ async function createPost(postData: NewPost) {
 
 // Example usage
 createPost({
-  title: 'Diario di Bordo – Dicembre 2025',
-  slug: 'diario-dicembre-2025',
+  title: 'Diario di Bordo – Gennaio e Febbraio 2026',
+  slug: 'diario-gennaio-febbraio-2026',
   excerpt:
-    'Dicembre è stato un mese indimenticabile in casa HERO: Krampus, Avatar Burger, Natale con i più piccoli e un Capodanno pieno di emozioni. ❤️🎄🍔',
+    'In due mesi abbiamo fatto il giro del mondo senza lasciare casa: tra Olimpiadi HERO, nuovi burger e ospiti da ogni parte del mondo, gennaio e febbraio sono stati pieni di emozioni. 🍔🔥',
   content: `
 <style>
   .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -67,138 +67,185 @@ createPost({
 </style>
 
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768237300/copertina_dicembre_rzi0vk.webp"
-     alt="HERO la casa del burger - Dicembre 2025"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/copertina_gen_feb_amfb4p.webp"
+     alt="Diario HERO Gennaio Febbraio 2026"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
 
-<p><strong>Dicembre è stato un mese semplicemente indimenticabile in casa HERO 🍔✨</strong></p>
+<p><strong>Se vi dicessimo che in soli due mesi abbiamo fatto il giro del mondo… senza mai lasciare casa?</strong></p>
 
 <p>
-Non ci siamo mai fermati, non ci siamo mai annoiati… e abbiamo concluso questo mese e questo anno incredibile,
-pieno di soddisfazioni che ci avete trasmesso con i vostri sorrisi e il vostro affetto,
-festeggiando insieme il Capodanno.
+Gennaio e febbraio sono stati un concentrato di emozioni, sapori, sorrisi e momenti che meritano di essere raccontati.
+Mettetevi comodi, perché questo non è solo un aggiornamento… è il nostro <strong>Diario di Bordo 💛</strong>
+</p>
+
+<h2>✨ GENNAIO – Nuovo anno, nuove sfide, stesso spirito HERO</h2>
+
+<p>
+L’anno è iniziato con l’energia delle grandi occasioni. Abbiamo lavorato dietro le quinte,
+studiato, assaggiato, sperimentato… perché le <strong>Olimpiadi HERO</strong> non si improvvisano!
 </p>
 
 <p>
-Un viaggio fatto di emozioni, tradizione, creatività e tanta magia… vogliamo ripercorrerlo insieme a voi.
+Il momento più speciale? La prima cena dell’anno insieme agli <strong>AMICI di HERO</strong>.
+Una serata esclusiva, intima e piena di entusiasmo, dove in anteprima assoluta avete assaggiato
+i nostri burger olimpici.
 </p>
 
-<p><strong>Brindiamo a un nuovo anno che sarà ricco di emozioni, novità e tante sorprese.</strong></p>
-
-<h2>👹 I KRAMPUS A CASA HERO</h2>
-
 <p>
-Abbiamo iniziato il mese con una serata davvero speciale: l’arrivo dei <strong>Krampus in hamburgheria</strong>.
-Un evento suggestivo, intenso e affascinante, che ci ha fatto respirare a pieno la magia della tradizione
-e ci ha regalato un’atmosfera unica, grazie agli amici dei <strong>KrAMPUS DI FIEMME</strong>.
+Vedere i vostri occhi curiosi al primo morso è stata la conferma che stavamo preparando qualcosa di davvero speciale.
 </p>
 
 <div class="gallery">
   <img
-    src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163890/foto_gruppo_krampus_kpil5q.webp"
-    alt="Krampus a casa HERO"
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/ristorante_busy_m0xj3h.webp"
+    alt="Serata HERO con il ristorante pieno"
     class="half-img"
   />
   <img
-    src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163886/fotobimbakrampus_w6es7g.webp"
-    alt="Bimba Krampus a casa HERO"
+    src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773046654/olympic_burger5_npcuus.webp"
+    alt="Burger Olimpico hero Asia"
     class="half-img"
   />
 </div>
 
-<h2>🌌 L’AVATAR DI UN HAMBURGER</h2>
+<p>
+Gennaio è stato il mese della preparazione, della condivisione e di quell’adrenalina
+che precede qualcosa di grande.
+</p>
+
+<h2>🔥 FEBBRAIO – Accendiamo la fiamma</h2>
 
 <p>
-Subito dopo abbiamo deciso di spingerci oltre l’ordinario, dando vita a qualcosa di mai visto prima.
-In occasione dell’uscita del terzo film della saga Avatar, abbiamo voluto rendergli omaggio creando
-un burger dove nulla era come sembrava.
+Il <strong>6 febbraio</strong> si parte ufficialmente con le <strong>Olimpiadi HERO</strong>!
 </p>
 
 <p>
-Così è nato <strong>l’AVATAR di un hamburger</strong>: ciò che vedevi e mangiavi non era ciò che pensavi.
-Un’esperienza visiva e di gusto che ha sorpreso tutti.
+E mentre l’atmosfera olimpica accendeva il territorio con le gare di
+<strong>Milano Cortina 2026</strong> ospitate anche a Predazzo, noi abbiamo acceso la nostra fiamma… in cucina.
+</p>
+
+<p>
+I nostri <strong>5 burger olimpici</strong>, dopo aver viaggiato simbolicamente tra i continenti,
+sono arrivati “a casa” ed entrati ufficialmente nel menù.
+</p>
+
+<p><strong>Risultato? Un successone.</strong></p>
+
+<p>
+Li avete scelti, raccontati, fotografati, condivisi.
+E noi non potremmo essere più orgogliosi.
 </p>
 
 <div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768164206/avatar_pp4dqz.webp"
-       alt="Avatar Burger HERO"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/olympic_burger1_kw1thx.webp"
+       alt="Burger olimpico Africa"
        class="half-img" />
-</div>
 
-<h2>🎄 IL NATALE DEI PICCOLI EROI</h2>
-
-<p>
-Con l’arrivo del Natale non potevamo non ispirarci alla festa più calda dell’inverno.
-Per i nostri piccoli eroi abbiamo creato due burger speciali: <strong>il Grinch e il Babbo</strong>,
-menu pensati apposta per i più piccoli.
-</p>
-
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163887/foto_babbo_da_cucina_gg2g1s.webp"
-       alt="Babbo Natale in cucina da HERO"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045437/olympic_burger2_fxnupc.webp"
+       alt="Burger olimpico America"
        class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163887/foto_grinch_tj13xc.webp"
-       alt="Grinch Burger per bambini"
+
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045439/olympic_burger3_gkqp3f.webp"
+       alt="Burger olimpico Oceania"
        class="half-img" />
+
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045945/olympic_burger4_lsqtcv.webp"
+       alt="Burger olimpico Europa"
+       class="half-img" />
+
 </div>
 
 <p>
-Ad accompagnarli è arrivato anche il <strong>Christmas Burger</strong> in edizione limitata,
-pensato per celebrare le feste con sapori speciali e un tocco di magia natalizia.
+Sui social sono nate le <strong>OLIMP-HERO</strong>: ogni giorno una medaglia, ogni giorno una sfida,
+ogni giorno un podio diverso.
 </p>
-
-<h2>🎅 BABBO NATALE A CASA HERO</h2>
 
 <p>
-Il 23 dicembre Babbo Natale 🎅 in persona è arrivato da HERO per distribuire caramelle e cioccolatini
-a tutti i bambini, regalando sorrisi, momenti di pura felicità e una foto ricordo
-nel nostro salottino natalizio.
+È stato bellissimo vedere il tifo, i commenti e le preferenze accendersi
+come vere competizioni sportive.
 </p>
-
-<p><strong>Un ricordo lo abbiamo anche noi ❤️</strong></p>
-
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163889/foto_ns_ynobwe.webp"
-       alt="Lo staff di HERO"
-       class="half-img" />
-</div>
 
 <p>
-Grazie di cuore a tutti voi per aver reso questo dicembre così speciale ❤️<br/>
-<strong>Il bello… è che siamo solo all’inizio.</strong>
+Ma la cosa più straordinaria è stata un’altra.
 </p>
-<em>Lo staff di HERO la casa del burger.</em></p>
+
+<p>
+A casa HERO abbiamo ospitato <strong>persone di ogni nazionalità</strong>.
+Abbiamo ascoltato lingue diverse, condiviso esperienze e brindato a sorrisi
+che non hanno bisogno di traduzione.
+</p>
+
+<p>
+È stato un vero viaggio nel mondo… restando nel nostro territorio.
+</p>
+
+<p>
+E mentre i nostri ospiti viaggiavano tra i sapori locali e nazionali,
+noi viaggiavamo insieme a loro attraverso storie, racconti e nuove amicizie.
+</p>
+
+<p>
+Gennaio e febbraio ci hanno ricordato perché facciamo tutto questo:
+<strong>non solo per creare burger, ma per creare momenti.</strong>
+</p>
+
+<h2>✨ E ORA?</h2>
+
+<p>
+Marzo è alle porte… e possiamo dirvi solo una cosa:
+<strong>stiamo preparando qualcosa che vi farà parlare, assaggiare e condividere ancora di più.</strong>
+</p>
+
+<p>
+Una sorpresa che cambierà il ritmo delle vostre serate da HERO.
+</p>
+
+<p><strong>Restate connessi.</strong></p>
+
+<p>
+Il bello deve ancora arrivare 😉
+</p>
+
+<p>
+Grazie per essere parte della nostra squadra.<br/>
+Grazie per tifare HERO.
+</p>
+
+<p><strong>Ci vediamo al prossimo morso. 🍔</strong></p>
+
+<em>Lo staff di HERO la casa del burger.</em>
   `,
-  createdAt: new Date('2026-01-11T10:00:00Z'),
- images: [
+  createdAt: new Date('2026-03-09T10:00:00Z'),
+  images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768237300/copertina_dicembre_rzi0vk.webp',
-      caption: 'Copertina dicembre 2025',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/copertina_gen_feb_amfb4p.webp',
+      caption: 'Copertina Gennaio Febbraio 2026',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163890/foto_gruppo_krampus_kpil5q.webp',
-      caption: 'Krampus a casa HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/ristorante_busy_m0xj3h.webp',
+      caption: 'Serata HERO con il ristorante pieno',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163886/fotobimbakrampus_w6es7g.webp',
-      caption: 'Bimba e Krampus a casa HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045436/olympic_burger1_kw1thx.webp',
+      caption: 'Burger olimpico HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768164206/avatar_pp4dqz.webp',
-      caption: 'Avatar Burger',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045437/olympic_burger2_fxnupc.webp',
+      caption: 'Burger olimpico HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163887/foto_babbo_da_cucina_gg2g1s.webp',
-      caption: 'Babbo Natale in cucina',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045439/olympic_burger3_gkqp3f.webp',
+      caption: 'Burger olimpico HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163887/foto_grinch_tj13xc.webp',
-      caption: 'Grinch Burger',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773045945/olympic_burger4_lsqtcv.webp',
+      caption: 'Burger olimpico HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1768163889/foto_ns_ynobwe.webp',
-      caption: 'Lo staff di HERO',
-    },
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1773046654/olympic_burger5_npcuus.webp',
+      caption: 'Burger olimpico HERO',
+    }
+
   ],
 });
 

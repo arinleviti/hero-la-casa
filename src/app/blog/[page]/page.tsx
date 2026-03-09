@@ -128,6 +128,8 @@ export default async function BlogPage({ params }: PageProps) {
                   placeholder="Leave this empty"
                   style={{ display: 'none' }}
                 />
+                {/* Timestamp field to help identify bots */}
+                <input type="hidden" name="formLoadedAt" value={Date.now().toString()} />
                 <button className={styles.formButton} type="submit">Invia</button>
               </form>
             </div>
