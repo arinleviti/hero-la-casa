@@ -28,6 +28,9 @@ export default function BurgerGrid<T extends Burger | Beer>({
     scrollToTop 
 }: Props<T>) {
 
+ // Remove any burgers that are olympian
+    const visibleItems = items.filter(item => !(item as Burger).olympian);
+
     const [filters, setFilters] = useState({
         vegan: false,
         beef: false,
@@ -70,7 +73,7 @@ export default function BurgerGrid<T extends Burger | Beer>({
     }, [showFilters]);
 
     const filteredItems = showFilters
-        ? (items as Burger[]).filter(item => {
+        ? (visibleItems as Burger[]).filter(item => {
             if (filters.vegan && !item.categories.includes('vegano')) return false;
             if (filters.burgHero && !item.categories.includes('burgHero')) return false;
             if (filters.beef && !item.categories.includes('manzo')) return false;

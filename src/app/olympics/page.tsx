@@ -64,13 +64,9 @@ export default function Olympics() {
           </div>
           <p>
             Durante le Olimpiadi e Paralimpiadi Invernali, anche la Val di Fiemme ha respirato un’atmosfera speciale. Atleti e da tutto il mondo hanno trasformato il nostro territorio in un vero punto d’incontro internazionale.
-          </p>
-
-          <p>
+         
             Da HERO abbiamo celebrato questo momento creando qualcosa di unico: cinque burger ispirati ai cinque continenti, un piccolo viaggio nei sapori del mondo.
-          </p>
-
-          <p>
+          
             Questi mesi sono stati molto più di un evento sportivo: un’occasione per condividere momenti, incontrare nuove persone e vivere insieme lo spirito olimpico.
           </p>
 
@@ -78,7 +74,7 @@ export default function Olympics() {
             Questa pagina è il ricordo di quell’esperienza.
           </p>
 
-          <small>Scorri per iniziare il viaggio</small>
+          <strong>Scorri per iniziare il viaggio</strong>
         </motion.div>
       </div>
     </div>
