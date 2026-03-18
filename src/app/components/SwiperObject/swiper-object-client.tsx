@@ -20,6 +20,9 @@ interface Props {
 const BurgerSwiperClient = ({ burgers }: Props) => {
   const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
 
+  // Filter out olympian burgers
+  const visibleBurgers = burgers.filter(burger => !burger.olympian);
+
   return (
     <Col md={8} className={styles.noPaddingRight}>
       <div className={`${styles.sliderContainer} ${styles.swiperFix}`}>
@@ -44,7 +47,7 @@ const BurgerSwiperClient = ({ burgers }: Props) => {
             1024: { slidesPerView: 5 },
           }}
         >
-          {burgers.map((burger) => (
+          {visibleBurgers.map((burger) => (
             <SwiperSlide key={burger.id}>
               <BurgerCardSwiper burger={burger} onClick={() => setSelectedBurger(burger)} />
             </SwiperSlide>
