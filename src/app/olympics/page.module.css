@@ -1,0 +1,175 @@
+.scrollContainer {
+  height: 600vh; /* 100vh for intro + 500vh for the 5 burgers */
+  position: relative;
+  background-color: #edd5c3;
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundHero {
+  position: absolute;
+
+  background-image: url('/HeroImage/burger-olimpici.png');
+  background-size: contain;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Keep the box full size */
+  top: 15vh;    /* Move it down as much as you want now! */
+  background-position: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+.foregroundHero {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Keep the box full size */
+  top: 15vh;
+  background-image: url('/HeroImage/foregroundOlympic.png');
+  background-size: contain;
+  background-position: center;
+  z-index: 2;
+  background-repeat: no-repeat;
+}
+.interactiveLayer {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container for burger image only */
+.burgerImageWrapper {
+  position: relative;
+  width: 50vw;        /* only half the viewport width */
+  height: 100%;
+  overflow: hidden;   /* hide the part outside */
+  display: flex;
+  justify-content: flex-start; /* image slides from left */
+}
+
+.descriptionWrapper {
+  width: 50vw;       /* right half of screen */
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-kalam), sans-serif;
+  font-size: 1.2rem;
+  color: #5E4B3C;
+}
+
+.experienceFooter {
+  font-family: var(--font-kalam), sans-serif;
+  font-size: 1.2rem;
+  color: #5E4B3C;
+  position: absolute;
+  top: 0;  /* invece di bottom */
+  width: 100%;
+  padding: 40px 100px;
+  text-align: center;
+  z-index: 3; /* assicurati sia sopra burger e background */
+}
+.experienceTitle {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.experienceTitle h1 {
+  font-size: 3rem;
+  color: #4A7729;
+  font-family: var(--font-anton);
+  letter-spacing: 1px;
+}
+.burgerName {
+  margin-bottom: 10px; /* space between name and description */
+}
+
+.burgerName h2 {
+  color: #4A7729;
+  font-family: var(--font-anton);
+  font-size: 2rem;
+}
+.burgerBg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 15vh;              /* same as hero images */
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  /* 1. Push Intro Images down ONLY on mobile */
+  .backgroundHero,
+  .foregroundHero,
+  .burgerBg {
+    /* Keeps the desktop 'top: 15vh' but adds extra push down */
+    transform: translateY(20vh)scale(0.8); 
+  }
+ .burgerBgInner {
+    position: relative;  /* needed for Next.js fill */
+    width: 100%;         /* full width of parent */
+    height: 100%;        /* full height of parent */
+    transform: rotate(-5deg);
+  }
+  .experienceTitle h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .experienceFooter {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .burgerFrame {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 2. Push the sliding burgers down ONLY on mobile */
+  .burgerImageWrapper {
+    width: 90% !important;
+    height: 50vh !important; 
+    justify-content: center;
+    align-items: center;
+    /* This pushes the burger itself lower in the frame */
+    padding-top: 60px; 
+    overflow: visible !important;
+  }
+
+  .descriptionWrapper {
+    width: 100% !important;
+    height: 50vh !important;
+    padding: 10px !important;
+    text-align: center;
+    justify-content: flex-start !important;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop only: shrink burger background image */
+@media (min-width: 769px) {
+  .burgerBgInner {
+    width: 30%;          /* shrink width */
+    height: 80%;         /* explicit height so Image fill works */
+    margin: 0 auto;      /* center horizontally */
+     position: absolute;    /* allow bottom/right positioning */
+    bottom: 0;             /* stick to bottom */
+    right: 0;              /* stick to right */
+    transform: rotate(-10deg); /* anti-clockwise rotation */
+    z-index: 1;
+  }
+}

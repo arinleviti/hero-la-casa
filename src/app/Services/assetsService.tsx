@@ -219,3 +219,25 @@ export const newsModalContent = {
 	  title: "SERATA JUKEBOX - 1° e 3° giovedì del mese",
   imgUrl: "/MarqueeImgs/burgerJukeboxGeneral.webp"
 }
+
+export const olympicContent = [
+	{
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	alt: "Ristorante durante le Olimpiadi invernali 1",
+	},
+	{
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192682/21.06-6-min_yt2hjw.jpg",
+	alt: "Ristorante durante le Olimpiadi invernali 2",
+	},
+{
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	alt: "Ristorante durante le Olimpiadi invernali 3",
+	},
+{
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192682/21.06-6-min_yt2hjw.jpg",
+	alt: "Ristorante durante le Olimpiadi invernali 4",
+	},
+{
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	alt: "Ristorante durante le Olimpiadi invernali 5",
+	},	]
