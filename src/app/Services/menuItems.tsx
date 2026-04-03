@@ -188,36 +188,65 @@ export const burgers: Burger[] = [
   },
   {
     id: 6, // unique identifier
-    name: "ANGUS DI ABERDEEN",
+    name: "CLASSICO",
     ingredients: [
-      "Carne di Angus",
-      "Lattuga",
-      "Pomodoro",
-      "Bacon",
+      "Carne di Manzo",
       "Insalata gentile",
-      "Formaggio Cheddar",
+      "Pomodoro",
+      "Irish Bacon",
+      "Insalata gentile",
+      "Cheddar cheese sauce",
       "Pane HERO",
     ],
     description:
-      "Un burger dal gusto deciso con carne di Angus di alta qualità, arricchito da croccante lattuga, pomodoro fresco, bacon saporito e delicata insalata gentile. Il tutto accompagnato da una fetta di formaggio Cheddar fuso e racchiuso nel soffice e fragrante pane HERO.",
-      modalDescription:"Burger di Angus con bacon, Cheddar e verdure fresche nel pane HERO.",
+      "Un burger dal gusto deciso con carne di alta qualità, arricchito da croccante lattuga, pomodoro fresco, bacon saporito e delicata insalata gentile. Il tutto accompagnato da una fetta di formaggio Cheddar fuso e racchiuso nel soffice e fragrante pane HERO.",
+      modalDescription:"Burger di manzo con bacon, Cheddar e verdure fresche nel pane HERO.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 200, price: 13.50 }],
+    priceOptions: [{ weight: 100, price: 11.90 },{ weight: 200, price: 13.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 },
       { name: "Cipolle caramellate", price: 1.50 },
-      { name: "Uovo al tegamino", price: 1.50 }
+      { name: "Uovo al tegamino", price: 2.00 },
+      { name: "Cetriolini", price: 1.00 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
-    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
-    origin: "2227 Km"
-  }/*,
+    /* backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
+    origin: "2227 Km" */
+  },
+  {
+    id: 7, // unique identifier
+    name: "CHICKEN",
+    ingredients: [
+      "Filetto di pollo panato",
+      "Insalata gentile",
+      "Pomodoro fresco",
+      "Pane HERO",
+    ],
+    description:
+      "Un burger di pollo dal gusto avvolgente: il filetto di pollo panato, croccante e saporito, si unisce alla freschezza dell’insalata gentile e del pomodoro maturo, racchiusi nel morbido pane HERO. Un classico intramontabile che conquista con semplicità e bontà.",
+      modalDescription:"Burger di pollo panato con verdure fresche nel pane HERO.",
+    side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 11.90 },{ weight: 200, price: 13.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Bacon croccante", price: 1.50 },
+      { name: "Uovo al tegamino", price: 2.00 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp"
+  }
+  /*,
    {
     id: 2, 
     name: "HOKKAIDO",
@@ -248,33 +277,9 @@ export const burgers: Burger[] = [
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
     origin: "12.593 Km"
   }, */
- /*  {
-    id: 3, // unique identifier
-    name: "MANGIAFUOCO",
-    ingredients: [
-      "Carne piccante",
-      "Insalata gentile",
-      "Bacon alla paprika",
-      "Cheddar al Tabasco",
-      "Pane al peperoncino",
-    ],
-    description: "Un'esplosione di sapori piccanti con carne speziata, bacon alla paprika affumicata e formaggio Cheddar al Tabasco, accompagnati da fresca insalata gentile e racchiusi in un pane al peperoncino che aggiunge un tocco di fuoco a ogni morso.",
-    modalDescription: "Burger piccante con bacon alla paprika, Cheddar al Tabasco e pane al peperoncino.",
-    side: "Accompagnato da patatine non fritte",
-    allergens: ["glutine"], // list allergens for allergy info
-    categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 100, price: 13.99 }],
-    burgerOfTheMonth: false,
-    extras: [
-      { name: "Bacon nelle patate", price: 1.50 },
-      { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
-    ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
-  } */,
+/*  ,
   {
-    id: 7, // unique identifier
+    id: 8, // unique identifier
     name: "NOSTRANO",
     ingredients: [
       "Carne di manzo",
@@ -304,9 +309,9 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  },
+  } */,
   {
-    id: 8, // unique identifier
+    id: 9, // unique identifier
     name: "CRUDO",
     ingredients: [
       "Tartare di Fassona piemontese",
@@ -336,8 +341,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
-  {
-    id: 9, // unique identifier
+  /* {
+    id: 10, // unique identifier
     name: "TIMBER BURGER",
     ingredients: [
       "Pane Hero",
@@ -364,9 +369,9 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
-  },
-  {
-    id: 10, // unique identifier
+  }, */
+ /*  {
+    id: 11, // unique identifier
     name: "KEPPORKO",
     ingredients: [
       "Carne di manzo",
@@ -394,7 +399,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
-  },
+  }, */
   /* {
     id: 8, // unique identifier
     name: "GOLOSO",
@@ -431,7 +436,7 @@ export const burgers: Burger[] = [
 
   }, */
   {
-    id: 11, // unique identifier
+    id: 12, // unique identifier
     name: "IL TARTUFO",
     ingredients: [
       "Pane nero come il carbone",
@@ -460,8 +465,8 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp"
 
   },
-  /* {
-    id: 10, // unique identifier
+  {
+    id: 13, // unique identifier
     name: "ITALIANO",
     ingredients: [
       "Pane HERO",
@@ -480,8 +485,7 @@ export const burgers: Burger[] = [
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 100, price: 12.90 },
-      { weight: 160, price: 13.90 },
-      { weight: 220, price: 14.90 }
+      { weight: 160, price: 13.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -492,7 +496,174 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-ltaliano_s5msgu.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
     
-  } *//* ,
+  },
+ {
+    id: 14, // unique identifier
+    name: "MARRAKESH",
+    ingredients: [
+      "Pane giallo alla curcuma",
+      "Petto di pollo grigliato",
+      "Verdure saltate con spezie",
+      "Chips di platano",
+      "Salsa harissa piccante"
+    ],
+    description:
+      "Un viaggio nei sapori di Marrakesh: il pane giallo alla curcuma racchiude un petto di pollo grigliato, arricchito da verdure saltate con spezie aromatiche. Le chips di platano aggiungono una croccantezza esotica, mentre la salsa harissa piccante completa l’esperienza con un tocco di fuoco e intensità. Un burger che trasporta i sensi in un mercato marocchino, tra profumi e sapori avvolgenti.",
+    modalDescription: "Burger di pollo con verdure saltate con spezie, chips di platano e salsa harissa piccante nel pane giallo alla curcuma.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["pollo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 14.90 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228467/marrakech_dytiei.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228467/marrakech_dytiei.webp"
+    
+  },
+ {
+    id: 15, // unique identifier
+    name: "MANGIAFUOCO",
+    ingredients: [
+      "Carne di manzo",
+      "Insalata gentile",
+      "Bacon",
+      "Salsa fuoco",
+      "Salsa Harissa",
+      "Pane al peperoncino",
+    ],
+    description: "Un burger che non ha paura di accendere i sapori: la carne di manzo succulenta si unisce alla freschezza dell’insalata gentile, mentre il bacon alla paprika aggiunge un tocco affumicato e croccante. La salsa fuoco, con il suo mix di spezie e piccantezza, si fonde con la salsa Harissa, creando un’esplosione di gusto che avvolge ogni morso. Il tutto è racchiuso in un pane al peperoncino, pronto a sfidare anche i palati più audaci. Un burger per chi ama il brivido del piccante, ma con equilibrio e carattere.",
+    modalDescription: "Burger di manzo con insalata gentile, bacon, salsa fuoco e salsa Harissa nel pane al peperoncino.",
+    side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 16.50 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Jalapeno", price: 1.50 },
+      { name: "Peperoncino piccante tritato", price: 1.90 },
+      { name: "Peperoncino Scorpion Trinidad", price: 1.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
+  },
+
+  {
+    id: 16, // unique identifier
+    name: "MARANELLO",
+    ingredients: [
+      "Carne di maiale",
+      "Rucola",
+      "Mortadella",
+      "Aceto balsamico",
+      "Scaglie di Parmigiano Reggiano",
+      "Pane rosso"
+    ],
+    description: "Un burger che celebra i sapori di Maranello: la carne di maiale succulenta si unisce alla freschezza della rucola, mentre la morbida mortadella aggiunge un tocco di dolcezza. L’aceto balsamico dona una nota agrodolce, completata dalle scaglie di Parmigiano Reggiano che regalano un tocco di sapidità e cremosità. Il tutto è racchiuso in un pane rosso, pronto a portare i sapori di Maranello direttamente nel tuo piatto. Un burger per chi ama i gusti autentici e decisi, con un tocco di eleganza.",
+    modalDescription: "Burger di maiale con rucola, mortadella, aceto balsamico e scaglie di Parmigiano Reggiano nel pane rosso.",
+    side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["maiale"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 14.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228467/maranello_yauuip.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228467/maranello_yauuip.webp"
+  },
+
+  {
+    id: 17, // unique identifier
+    name: "SPACCANAPOLI",
+    ingredients: [
+      "Carne di maiale",
+      "Friarielli",
+      "Mozzarella impanata",
+      "Ciabattina croccante"
+    ],
+    description: "Un burger che porta i sapori di Napoli direttamente nel tuo piatto: la carne di maiale succulenta si unisce alla freschezza dei friarielli, mentre la mozzarella impanata aggiunge un tocco di golosità e croccantezza. Il tutto è racchiuso in una ciabattina croccante, pronta a portare i sapori di Spaccanapoli direttamente nel tuo piatto. Un burger per chi ama i gusti autentici e decisi, con un tocco di tradizione partenopea.",
+    modalDescription: "Burger di maiale con friarielli, mozzarella impanata e ciabattina croccante.",
+    side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["maiale"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 15.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp"
+  },
+
+   {
+    id: 18, // unique identifier
+    name: "COLOR-ON",
+    ingredients: [
+      "Burger di verdure e avena",
+      "Hummus di barbabietola",
+      "Bacon di carota",
+      "Insalata di cavolo cappuccio",
+      "Pane giallo alla curcuma"
+    ],
+    description: "Un burger che celebra i colori e i sapori della natura: il burger di verdure e avena, ricco di gusto e consistenza, si unisce all’hummus di barbabietola, che dona una dolcezza terrosa e un colore vibrante. Il bacon di carota aggiunge una nota affumicata e croccante, mentre l’insalata di cavolo cappuccio regala freschezza e croccantezza. Il tutto è racchiuso in un pane giallo alla curcuma, pronto a portare i sapori della natura direttamente nel tuo piatto. Un burger per chi ama i gusti autentici e decisi, con un tocco di creatività e colore.",
+    modalDescription: "Burger di verdure e avena con hummus di barbabietola, bacon di carota, insalata di cavolo cappuccio e pane giallo alla curcuma.",
+    side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["vegano"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 12.90 }],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/ColorOn_ednl0e.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/ColorOn_ednl0e.webp"
+  },
+
+   {
+    id: 25, // unique identifier
+    name: "XI'AN",
+    ingredients: [
+      "Pane verde",
+      "Burger Umami di manzo",
+      "Kimchi",
+      "Cracker di alga",
+      "Crumble di cipolla",
+      "Salsa agrodolce"
+    ],
+    description:
+      "Un burger che porta i sapori di Xi'an direttamente nel tuo piatto: il pane verde racchiude un succulento burger umami di manzo, arricchito dalla piccantezza del kimchi e dalla croccantezza del cracker di alga. Il crumble di cipolla aggiunge una nota dolce e croccante, mentre la salsa agrodolce completa l'esperienza con un equilibrio perfetto tra sapori intensi e contrastanti.",
+    modalDescription: "Burger umami di manzo con kimchi, cracker di alga, crumble di cipolla e salsa agrodolce nel pane verde.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 100, price: 14.50 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/XiAn_jwwwpr.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228468/XiAn_jwwwpr.webp"
+    
+  },/* ,
   {
     id: 11, // unique identifier
     name: "WILD",
@@ -523,18 +694,19 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
   },*/
   {
-    id: 12, // unique identifier
+    id: 26, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
-      "Pane al mais e semolino",
+      "Pane al carbone",
       "Carne di manzo",
-      "Radicchio tardivo di Treviso",
-      "Pancetta arrotolata grigliata",
-      "Crescenza"
+      "Robiola",
+      "Asparagi bianchi",
+      "Salsa bernese",
+      "Uovo al tegamino"
     ],
     description:
-      "Un burger che celebra i sapori invernali con un tocco di originalità. Il pane al mais e semolino racchiude succulenta carne di manzo, arricchita dal gusto amarognolo del radicchio tardivo di Treviso e dalla croccantezza della pancetta arrotolata grigliata. La morbida crescenza avvolge il tutto, creando un equilibrio perfetto tra sapori intensi e consistenze avvolgenti.",
-    modalDescription: "Burger di manzo con radicchio di Treviso, pancetta grigliata e crescenza nel pane al mais.",
+      "Un burger che celebra i sapori della primavera: il pane al carbone accoglie una succulenta carne di manzo, arricchita dalla cremosità della robiola e dalla delicatezza degli asparagi bianchi. La salsa bernese aggiunge un tocco di eleganza, mentre l’uovo al tegamino completa il tutto con una nota ricca e avvolgente. Un’esperienza gustativa che racconta la bellezza dei prodotti stagionali in un panino unico.",
+      modalDescription: "Burger di manzo con robiola, asparagi bianchi, salsa bernese e uovo al tegamino nel pane al carbone.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
@@ -547,8 +719,8 @@ export const burgers: Burger[] = [
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1767545271/season_burger_winter_rjuisj.webp",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/season_burger_winter_rjuisj.webp"
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/season_new_fazxwy.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/season_new_fazxwy.webp"
 
   }, 
   /* {
@@ -641,7 +813,7 @@ export const burgers: Burger[] = [
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860539/STORY_BANKOK_pjlsct.webp",
     origin: "1260 Km"
   }, */
-  {
+ /*  {
     id: 16, // unique identifier
     name: "L'ORTOLANO",
     ingredients: [
@@ -670,7 +842,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Ortolano-no-bg_jbrtwj.png"
-  },
+  } *//* ,
   {
     id: 17, // unique identifier
     name: "IL CRUNCH",
@@ -701,9 +873,9 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
-  },
+  } */
   {
-    id: 18, // unique identifier
+    id: 27, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -729,7 +901,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Donna-Nera-no-bg_j8ktfd.png"
   },
-  {
+  /* {
     id: 19, // unique identifier
     name: "GREEN BURGER",
     ingredients: [
@@ -757,8 +929,8 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
-  },
-  {
+  }, */
+ /*  {
     id: 20, // unique identifier
     name: "QUEBEC",
     ingredients: [
@@ -785,9 +957,9 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1768160498/quebec_burger_baxwcj.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860801/STORY_QUEBEC_fpr6ze.webp"
-  },
-  /* {
-    id: 20, // unique identifier
+  }, */
+  {
+    id: 28, // unique identifier
     name: "IL KRAKEN",
     ingredients: [
       "Ciabattina croccante e morbida",
@@ -812,7 +984,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
-  }, */
+  }
  /*  {
     id: 21, // unique identifier
     name: "AVISIO",
@@ -842,8 +1014,8 @@ export const burgers: Burger[] = [
     origin: "Km 0"
 
   }, */
-  /* {
-    id: 22, // unique identifier
+  ,{
+    id: 29, // unique identifier
     name: "CAPO NORD",
     ingredients: [
       "Pane nero come il carbone",
@@ -871,7 +1043,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
-  }, */
+  }/* ,
   {
     id: 23, // unique identifier
     name: "LONDON",
@@ -899,7 +1071,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/LONDON_iscceg.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761859802/London-viaggiatore_u1rkdl.webp"
-  },
+  } *//* ,
    {
     id: 24, // unique identifier
     name: "MONACO",
@@ -933,9 +1105,9 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/MONACO_atiego.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860804/STORY_MONACO_xoxgfp.webp"
-  },
+  } */,
   {
-    id: 25, // unique identifier
+    id: 30, // unique identifier
     name: "RUSTICO",
     ingredients: [
       "Carne di Angus 200g",
