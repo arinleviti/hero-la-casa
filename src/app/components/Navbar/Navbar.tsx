@@ -9,6 +9,8 @@ import Image from 'next/image';
 import WaveSeparator from '../../Services/assetsService';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+// 1. Import the GA helper
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function NavbarBasic() {
     const [expanded, setExpanded] = useState(false);
@@ -28,6 +30,16 @@ export default function NavbarBasic() {
     }, []);
 
     const navbarLogoOpacity = isMobile ? mobileLogoOpacity : desktopLogoOpacity
+
+    // 2. Helper function to send the event
+    const handlePrenotaClick = (location: string) => {
+        setExpanded(false);
+        sendGAEvent('event', 'prenota_click', { 
+            button_location: location,
+            restaurant: 'Hero Burger Predazzo' 
+        });
+    };
+
     return (
 
         <Navbar
@@ -83,7 +95,8 @@ export default function NavbarBasic() {
                             className={styles.bookLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => setExpanded(false)}
+                            // 3. Track GA mobile click
+                            onClick={() => handlePrenotaClick('mobile_sticky')}
                         >
                             PRENOTA
                         </Nav.Link>
@@ -140,7 +153,8 @@ export default function NavbarBasic() {
                                 </NavDropdown>
                                 <Nav.Link as={Link} href="/WorkWithUs" onClick={() => setExpanded(false)}>LAVORA CON NOI</Nav.Link>
                                 <Nav.Link as={Link} href="/#find-us" onClick={() => setExpanded(false)}>COME RAGGIUNGERCI</Nav.Link>
-                                <Nav.Link as={Link} href="https://heroburger.plateform.app/" onClick={() => setExpanded(false)} target="_blank"
+                                <Nav.Link as={Link} href="https://heroburger.plateform.app/" // 4. Track desktop click
+                                    onClick={() => handlePrenotaClick('desktop_nav')} target="_blank"
                                     rel="noopener noreferrer">PRENOTA</Nav.Link>
                             </Nav>
                         </div>
