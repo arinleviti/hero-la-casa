@@ -25,18 +25,14 @@ export const newsItems: NewsItems[] = [
             }
        
     },
-   /*  {
+    {
         id: 2,
-        pic: "/MarqueeImgs/radioFiemme.webp",
-        header1: "Intervista Radio Fiemme",
-        header2: "Clicca qui per il link",
-        newsModalContent: {
-            title: "Mauro, Anna e Chantal raccontano il loro percorso, dal concept innovativo alla creazione del premiato panino di trota ‘Avisio’, simbolo di eccellenza nelle nostre Valli.",
-            imgUrl: "/MarqueeImgs/RadioFiemmePoster.webp",
-            modalLink: "https://share.transistor.fm/s/83502ccf"
-        }
+        pic: "/CategoryIcons/hamb_olimpici_logo.png",
+        header1: "Il Nostro Viaggio Olimpico",
+        header2: "raccontato qui",
+        urlLink: "/olympics"
     }
-    ,  */
+    , 
     {
         id: 3,
         pic: "/MarqueeImgs/accademiaPanino.webp",

@@ -222,22 +222,22 @@ export const newsModalContent = {
 
 export const olympicContent = [
 	{
-	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648278/atleta_dgitzb.webp",
 	alt: "Ristorante durante le Olimpiadi invernali 1",
 	},
 	{
-	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192682/21.06-6-min_yt2hjw.jpg",
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1776005003/fiamma_nhqxkr.webp",
 	alt: "Ristorante durante le Olimpiadi invernali 2",
 	},
 {
-	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1776005003/tavolata_qkgh31.webp",
 	alt: "Ristorante durante le Olimpiadi invernali 3",
 	},
 {
-	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192682/21.06-6-min_yt2hjw.jpg",
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1776005003/panini_dalehr.webp",
 	alt: "Ristorante durante le Olimpiadi invernali 4",
 	},
 {
-	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753192697/21.06-50-min_hf2t2k.jpg",
+	url: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1776005003/vuoto_vucpjr.webp",
 	alt: "Ristorante durante le Olimpiadi invernali 5",
 	},	]

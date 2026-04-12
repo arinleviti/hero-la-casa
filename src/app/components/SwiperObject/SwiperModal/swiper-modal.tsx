@@ -4,7 +4,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { Burger } from '../../../Services/menuItems';
 import Image from 'next/image';
 import styles from './swiper-modal.module.css';
-
+import {sendGAEvent} from '@next/third-parties/google'; 
 interface Props {
   burger: Burger | null;
   onClose: () => void;
@@ -42,6 +42,13 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
   const imageSrc =
     burger.burgHeroUrl || burger.imageLargeUrl || '/images/placeholder.png';
 
+    const handleReserveClick = () => {
+  sendGAEvent('event', 'prenota_click', { 
+    button_location: 'burger_modal',
+    burger_name: burger?.name || 'unknown',
+    restaurant: 'Hero Burger Predazzo'
+  });
+};
   return (
     <div className={styles.modalWrapper}>
       <Modal
@@ -124,6 +131,7 @@ const BootstrapBurgerModal: React.FC<Props> = ({ burger, onClose }) => {
             VAI AL MENU COMPLETO
           </Button>
           <Button className={styles.reserveButton} onClick={() => {
+            handleReserveClick();   // 🔥 send event
             onClose();
             window.open('https://heroburger.plateform.app/', '_blank');
           }}>

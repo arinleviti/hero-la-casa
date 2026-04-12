@@ -9,8 +9,9 @@ import Image from "next/image";
 import { useState } from 'react';
 import NewsModal from '../Marquee/NewsModal/news-modal';
 import React from "react";
+import { useRouter } from 'next/navigation';
 export default function BurgerMarquee() {
-
+    const router = useRouter();
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
     const [newsModalOpen, setNewsModalOpen] = useState(false);
@@ -35,9 +36,13 @@ export default function BurgerMarquee() {
     const closeNewsModal = () => {
         setNewsModalOpen(false);
     }
-    const openLink = (url: string) => {
-        window.open(url, '_blank');
+   const openLink = (url: string) => {
+    if (url.startsWith('http')) {
+        window.open(url, '_blank'); // link esterno
+    } else {
+        router.push(url); // link interno Next.js
     }
+}
     return (
         <>
             <Marquee speed={95} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
