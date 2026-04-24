@@ -246,37 +246,34 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp"
   }
-  /*,
+  ,
    {
-    id: 2, 
-    name: "HOKKAIDO",
+    id: 8, 
+    name: "SAPORI DI PRIMAVERA",
     ingredients: [
-      "100 g Tartare di WAGYU di HOKKAIDO A4 BMS 12",
-      "Rapanello",
-      "Porcino polverizzato",
-      "Germogli di pisello",
-      "Alga Wakame",
-      "Mousse di Trentingrana",
-      "Pane HERO",
+      "Pane al mais",
+      "Tartare di Carne Salada",
+      "Cremoso alla rucola",
+      "Pomodori datterini gialli",
+      "Punte di asparagi verdi croccanti",
+      "Olio, sale e pepe",
+      "Polvere di limone nero",
     ],
     description:
-      "Pane Home Made, 100 g Tartare di WAGYU di HOKKAIDO A4 BMS 12, aromatizzata al Porcino polverizzato, alga Wakame con mousse di Trentingrana, Rapanello e germogli di Pisello",
+      "Un burger che celebra i sapori freschi e vibranti della primavera: il pane al mais racchiude una pregiata tartare di Carne Salada, arricchita da un cremoso alla rucola che dona una nota erbacea e avvolgente. I pomodori datterini gialli aggiungono dolcezza e colore, mentre le punte di asparagi verdi croccanti offrono una consistenza sorprendente. Il tutto è esaltato da un semplice condimento di olio, sale e pepe, con un tocco finale di polvere di limone nero che dona un aroma unico e irresistibile.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], 
-    categories: ["manzo","burgHero"], 
-    priceOptions: [{ weight: 100, price: 13.99 }],
-    burgerOfTheMonth: false,
+    categories: ["manzo"], 
+    priceOptions: [{ weight: 100, price: 16.50 }],
+    burgerOfTheMonth: true,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639889/okkaido-no-bg_1_xfzmzo.png",
-    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752479202/japan_auzbh3.jpg",
-    burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1753965149/burg-hero-okkaido_hgvp52.jpg",
-    origin: "12.593 Km"
-  }, */
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1777046018/sapori_primavera_1_b9kgds.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1777046018/sapori_primavera_1_b9kgds.webp",
+  },
 /*  ,
   {
     id: 8, // unique identifier
@@ -309,7 +306,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  } */,
+  } */
   {
     id: 9, // unique identifier
     name: "CRUDO",
@@ -713,7 +710,7 @@ export const burgers: Burger[] = [
     priceOptions: [
       { weight: 200, price: 16.50 }
     ],
-    burgerOfTheMonth: true,
+    burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
