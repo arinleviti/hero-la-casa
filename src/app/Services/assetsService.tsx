@@ -59,9 +59,9 @@ export const textVideoData = {
 }
 
 export const picturesForBelt1 = [
-	{ src: "/PictureBelt/sabrina.webp", alt: "Sabrina serve dei deliziosi burger" },
+	{ src: "/PictureBelt/sabrina_laura.webp", alt: "Sabrina e Laura personale di sala" },
 	{ src: "/PictureBelt/mauro-serving-cro.webp", alt: "Mauro serve con passione un hamburger" },
-	{ src: "/PictureBelt/chantal-reduced.webp", alt: "Chantal presenta le salse per i burger" }
+	{ src: "/PictureBelt/chantal_serving.webp", alt: "Chantal presenta le salse per i burger" }
 ];
 
 export const picsForStaffAndRestaurantSwiper = [
@@ -171,36 +171,36 @@ export interface Review {
 export const reviews: Review[] = [
   {
     id: 1,
-	title: "Esperienza meravigliosa, opzioni vegan fantastiche",
-    text: "Nel menu ho trovato diversi burger tra cui scegliere, ho optato per il Green Burger. Era buonissimo, così come la birra analcolica e le patatine di contorno. Come dessert ho optato per la torta simil-margherita preparata da loto: eccezionale! L'atmosfera è all'altezza del gusto, e il servizio se possibile lo supera: persone gentilissime e professionali, trasmettevano entusiasmo e calore anche con -10° fuori dal locale.",
+	title: "Un ristorante da non mancare",
+    text: "Consiglio Hero Burger per tantissimi motivi: ottima qualità del cibo, menù innovativo, novità costanti (sono sempre pronti a modificare il menù in base alla stagione ed agli avvenimenti), personale sempre molto gentile e disponibile, locale molto elegante e moderno. Da provare almeno una volta! E poi vorrete tornarci!",
     rating: 5,
-    reviewerName: "Luca B",
-    date: "Febbraio, 2026",
-    avatarURL: "https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif",
+    reviewerName: "Stefano V",
+    date: "Aprile, 2026",
+    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/73/default-avatar-2020-13.jpg?w=300&h=-1&s=1",
     tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
-    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1048519009-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1057348045-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
   },
   {
     id: 2,
-	title: "È sempre una bella esperienza",
-    text: "È come sentirsi a casa, quando sei qua il vari casini quotidiani spariscono e sei in pace col mondo, servizio ottimo e cibo spettacolare, se volete godervi una serata in buona compagnia mangiando ottimi piatti dovete per forza passare da hero burger.",
+	title: "Miglior Hamburgeria di sempre!",
+    text: "Nuovo locale molto accogliente e ben curato nei minimi dettagli, il personale molto disponibile, gentile e sempre con il sorriso!! Molta attenzione anche per i bambini. La qualità del cibo di altissimo livello, la chicca è il cofanetto delle salse!!! ho girato parecchie hamburgerie in diverse regioni d'Italia ma questa resta la migliore! La prossima volta che saremo di passaggio sicuramente torneremo!! Ringrazio e mi complimento con tutto lo staff per la passione e la professionalità che ci mettete, continuate così",
     rating: 5,
-    reviewerName: "Mario24683",
-    date: "Gennaio, 2026",
-    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/24/default-avatar-2020-60.jpg?w=300&h=-1&s=1",
+    reviewerName: "Gianluca B",
+    date: "Marzo, 2026",
+    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/60/default-avatar-2020-64.jpg?w=300&h=-1&s=1",
     tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
-    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1048001802-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1054285776-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
   },
   {
     id: 3,
-	title: "Migliori",
-    text: "I burger sono buonissimi, la varietà di salse spaziale. Molto buoni anche i dolci. Il servizio eccezionale, grande gentilezza. Torneremo di sicuro!",
+	title: "PANINO BUONISSIMO",
+    text: "È stata una bella esperienza,panini ottimi,con ingredienti freschi e saporiti. Da provarne ogni volta uno diverso. Molto carina l'idea di aver ideato dei panini a tema Olimpiadi.Abbiamo apprezzato la salsa al tartufo,la migliore del cofanetto.Esperienza da ripetere al più presto.",
     rating: 5,
-    reviewerName: "julia g",
-    date: "Gennaio, 2026",
-    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e2/4a/default-avatar-2020-42.jpg?w=300&h=-1&s=1",
+    reviewerName: "771alessio",
+    date: "Febbraio, 2026",
+    avatarURL: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e7/3d/default-avatar-2020-55.jpg?w=300&h=-1&s=1",
     tripAdvisorLogoURL: "/Reviews/tripadvisor.png",
-    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1047016133-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
+    tripAdvisorReviewURL: "https://www.tripadvisor.it/ShowUserReviews-g670804-d15668261-r1050921849-Hero_Burger-Predazzo_Province_of_Trento_Trentino_Alto_Adige.html",
   },
   {
     id: 4,
