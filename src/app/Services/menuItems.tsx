@@ -636,15 +636,15 @@ export const burgers: Burger[] = [
     name: "XI'AN",
     ingredients: [
       "Pane verde",
-      "Burger Umami di manzo",
+      "Burger Umami",
       "Kimchi",
       "Cracker di alga",
       "Crumble di cipolla",
       "Salsa agrodolce"
     ],
     description:
-      "Un burger che porta i sapori di Xi'an direttamente nel tuo piatto: il pane verde racchiude un succulento burger umami di manzo, arricchito dalla piccantezza del kimchi e dalla croccantezza del cracker di alga. Il crumble di cipolla aggiunge una nota dolce e croccante, mentre la salsa agrodolce completa l'esperienza con un equilibrio perfetto tra sapori intensi e contrastanti.",
-    modalDescription: "Burger umami di manzo con kimchi, cracker di alga, crumble di cipolla e salsa agrodolce nel pane verde.",
+      "Un burger che porta i sapori di Xi'an direttamente nel tuo piatto: il pane verde racchiude un succulento burger umami, arricchito dalla piccantezza del kimchi e dalla croccantezza del cracker di alga. Il crumble di cipolla aggiunge una nota dolce e croccante, mentre la salsa agrodolce completa l'esperienza con un equilibrio perfetto tra sapori intensi e contrastanti.",
+    modalDescription: "Burger umami con kimchi, cracker di alga, crumble di cipolla e salsa agrodolce nel pane verde.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
