@@ -17,11 +17,11 @@ export const newsItems: NewsItems[] = [
      {
         id: 1,
         pic: "/burger-jukebox-tiny.webp",
-        header1: "🎶Ogni 1° e 3° giovedì del mese - Clicca qui!",
+        header1: "🎶 con Kanta Game - Clicca qui!",
         newsModalContent:
             {
-                title: "SERATA JUKEBOX - 1° e 3° giovedì del mese",
-                imgUrl: "/MarqueeImgs/burgerJukeboxGeneral.webp"
+                title: "SERATA JUKEBOX - 1° giovedì del mese!",
+                imgUrl: "/MarqueeImgs/burgerJukebox.webp"
             }
        
     },

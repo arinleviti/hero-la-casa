@@ -45,7 +45,7 @@ export default function BurgerMarquee() {
 }
     return (
         <>
-            <Marquee speed={95} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
+            <Marquee speed={105} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
                 {/* Burger of the Month */}
                 {burgerOfTheMonth && (
                     <div onClick={() => openModal(burgerOfTheMonth)} className={styles.itemWrapper}>

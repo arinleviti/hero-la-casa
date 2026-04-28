@@ -46,7 +46,7 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/v1769966147/Artisti_zhfjr5.mp4",
+	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/f_mp4,q_auto:low,vc_h264/v1777392357/Video-2026-04-10-13-37-10_kjtxcr.mp4",
 	title: "Video Artisti"
 }
 export const textVideoData = {
