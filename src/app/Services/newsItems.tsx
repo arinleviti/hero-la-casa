@@ -40,7 +40,7 @@ export const newsItems: NewsItems[] = [
         header2: "Il nostro panino di trota conquista Milano.",
         urlLink: "https://corrieredeltrentino.corriere.it/notizie/cronaca/25_agosto_25/tartare-di-trota-in-un-hamburger-la-risposta-trentina-al-sushi-premiata-dall-accademia-del-panino-cinque-mesi-per-farlo-26daf0a9-ca3e-4bc6-be05-bff5d5420xlk.shtml"
     },
-     , 
+     
     {
         id: 4,
         pic: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315833/inFerie_b0dzln.webp",
