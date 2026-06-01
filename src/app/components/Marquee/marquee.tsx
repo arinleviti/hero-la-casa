@@ -45,7 +45,7 @@ export default function BurgerMarquee() {
 }
     return (
         <>
-            <Marquee speed={105} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
+            <Marquee speed={130} gradient={false} pauseOnHover className={styles.marqueeContainer} autoFill={true}>
                 {/* Burger of the Month */}
                 {burgerOfTheMonth && (
                     <div onClick={() => openModal(burgerOfTheMonth)} className={styles.itemWrapper}>
@@ -65,7 +65,7 @@ export default function BurgerMarquee() {
                         </div>
                     </div>
                 )}
-                <div className={styles.newsLine}>
+                {/* <div className={styles.newsLine}>
                     <Image
                         src="/MarqueeImgs/DIviderBrown.webp"
                         alt="divider"
@@ -73,7 +73,7 @@ export default function BurgerMarquee() {
                         height={60}
                         priority
                     />
-                </div>
+                </div> */}
                 {/* News of the Month */}
                 {newsOfTheMonth.map((news: NewsItems) => (
                     <div key={news.id} className={styles.newsItemWrapper}>

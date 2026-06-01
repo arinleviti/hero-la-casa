@@ -52,108 +52,137 @@ async function createPost(postData: NewPost) {
 
 // Example usage
 createPost({
-  title: 'Diario di Bordo – Marzo 2026',
-  slug: 'diario-marzo-2026',
+  title: 'Diario di Bordo – Maggio 2026',
+  slug: 'diario-maggio-2026',
   excerpt:
-    'Marzo a casa HERO è stato incredibile: paralimpiadi, omaggi per le donne e il nostro San Patrizio a tutto verde! 🍀✨',
+    'Maggio da HERO: 10 anni di storia, i burger storici delle origini, il Bevi e Vinci, Sapori di Primavera e la ruota della fortuna de "OK, Il Prezzo è Giusto"! 🎉🍔🍺',
   content: `
 <style>
   .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .gallery img { border-radius: 10px; height: auto; margin-bottom: 10px; }
   .half-img { max-width: 48%; }
+  .third-img { max-width: 31%; }
   @media (max-width: 600px) {
     .half-img { max-width: 100%; }
+    .third-img { max-width: 100%; }
   }
 </style>
-
+ 
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648090/diario_aprile_copertina_s6isrg.webp"
-     alt="Diario HERO Marzo 2026"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315021/copertina_maggio_a1gviu.webp"
+     alt="Diario HERO Maggio 2026"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
-
-<p><strong>Anche questo mese vogliamo portarvi dentro quello che è successo a casa HERO… e marzo è stato davvero indimenticabile. 🤩</strong></p>
-
-<h2>🏅 PARALIMPIADI – Spirito olimpico in ogni gesto</h2>
+ 
 <p>
-Lo spirito olimpico è continuato con le <strong>Paralimpiadi</strong>: un’esperienza incredibile che ci ha fatto incontrare persone speciali da tutto il mondo.
+Maggio è stato uno di quei mesi dove in cucina, in sala e dietro al bancone non ci siamo annoiati neanche per un secondo. Tra birre, burger storici, ruote della fortuna e tantissime risate, ogni settimana ci ha regalato un'emozione diversa.
 </p>
-
+ 
+<p>Ma questo mese aveva anche qualcosa di ancora più importante per noi.</p>
+ 
+<h2>🎂 10 ANNI!</h2>
 <p>
-In particolare, una sera abbiamo avuto l’onore di ospitare un atleta paralimpico canadese pluri-medagliato con tutta la sua famiglia e… sì, abbiamo visto una medaglia paralimpica dal vivo [spoiler: è pesantissima! 😮‍💨]
+Abbiamo festeggiato un traguardo importantissimo:
 </p>
-
+<ul>
+  <li>10 anni dal primo burger allo <strong>SPORTING CENTER</strong></li>
+  <li>10 anni di collaborazione, crescita e <strong>AMICIZIA</strong> con Anna e Chantal</li>
+  <li>10 anni da quando tutto è partito — una storia che racconta il cammino fatto insieme a voi con entusiasmo, fatica, errori, risate ma tanta voglia di costruire qualcosa di speciale.</li>
+</ul>
+<p>
+Sì, avete capito bene — molti di voi sono parte di questo traguardo. <strong>GRAZIE!</strong>
+</p>
+<p>
+Per l'occasione abbiamo deciso di rendere omaggio ai nostri <strong>primi burger</strong>, quelli storici, iconici, quelli che hanno acceso la scintilla di quello che oggi è HERO.
+</p>
+<p>
+È stato emozionante tornare alle origini, rivedere quei sapori, quei nomi, quei ricordi… e soprattutto condividerli con voi, che in questi anni siete diventati parte della nostra storia.
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315021/anniversario_xnf88k.webp"
+     alt="10 anni di HERO – foto anniversario"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<h2>🍺 BEVI e VINCI</h2>
+<p>
+Maggio ha visto protagonista il nostro <strong>Bevi e Vinci</strong>, che ci ha accompagnato per tutto il mese. Ogni birra ordinata, un gratta e vinci consegnato: potevi vincere subito… oppure no.
+</p>
+<p>
+Ma anche chi non trovava la fortuna sul momento aveva comunque una possibilità finale: entrare nell'estrazione del mitico <strong>fusto da 5L di birra</strong>.
+</p>
+<p>
+E diciamolo… vedere i clienti grattare il biglietto con la stessa tensione di una finale mondiale è stato spettacolare.
+</p>
+ 
+<h2>🌿 Sapori di Primavera</h2>
+<p>
+Poi è arrivato lui: <strong>Sapori di Primavera</strong>. Il burger in edizione limitata che ogni anno riesce nell'impresa di conquistare praticamente tutti. Fresco, delicato, ma al tempo stesso di carattere.
+</p>
+<p>
+Uno di quei burger che appena tornano fanno subito dire: <em>"Ok, lo devo assolutamente gustare."</em>
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315085/sapori_primavera_2_chwocs.webp"
+     alt="Burger Sapori di Primavera – edizione limitata"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<h2>🎡 OK, IL PREZZO È GIUSTO</h2>
+<p>
+E per chiudere in bellezza prima delle nostre ferie è arrivato il momento più divertente: <strong>"OK, Il Prezzo è Giusto"</strong> — il gioco televisivo anni '80-'90 che molti di voi ricorderanno, ma ovviamente in stile HERO.
+</p>
+<p>
+Alla fine della cena, al momento del conto, ogni cliente poteva scegliere di girare la ruota sfidando la fortuna — e la ruota decideva il destino della tua cena… uno sconto? Il prezzo invariato? Una piccola mancia simbolica per il nostro staff?
+</p>
+<p>
+Non potete immaginare quanto ci siamo divertiti a vedere le facce di chi aspettava il verdetto della ruota. C'è chi ha rischiato senza pensarci due volte e chi invece ha optato senza indugio per la scelta più gradita da tutto lo staff: <strong>LA MANCIA</strong>. 😄
+</p>
+ 
 <div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648278/atleta_dgitzb.webp"
-       alt="Atleta paralimpico canadese a casa HERO"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1780319256/OK_il_prezzo_giusto_1_dplasi.webp"
+       alt="OK il Prezzo è Giusto – ruota della fortuna HERO"
+       class="half-img" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1780319255/OK_il_prezzo_giusto_2_xc6jya.webp"
+       alt="OK il Prezzo è Giusto – serata HERO"
        class="half-img" />
 </div>
-
-<h2>💖 FESTA DELLE DONNE – Omaggio speciale</h2>
+ 
 <p>
-Quest’anno l’8 marzo non abbiamo potuto festeggiarlo con le <strong>nostre donne</strong>, ma non ce ne siamo dimenticati.
+Ed è proprio questo che ci piace creare da HERO: non solo una cena, ma <strong>momenti da vivere insieme</strong>.
 </p>
+ 
 <p>
-Dal 9 al 15 marzo abbiamo dedicato un <strong>omaggio speciale</strong> a tutte le donne che sono venute a trovarci, regalando loro un pensiero firmato <strong>SEPHORA</strong>. Un piccolo gesto per dire grazie per la fiducia e l’affetto dimostrati ogni giorno.
+Ora giugno è alle porte e, come sempre, non abbiamo nessuna intenzione di rallentare. Torneremo ancora più carichi, pieni di idee, novità e voglia di farvi stare bene — e visto il grande successo, quest'estate torneranno degli eventi firmati HERO.
 </p>
-
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648278/creme_sk1048.webp"
-       alt="Omaggio per le donne da Sephora"
-       class="half-img" />
-</div>
-
-<h2>🍀 SAN PATRIZIO – Casa HERO si tinge di verde</h2>
+ 
 <p>
-E per chiudere il mese in bellezza… ci siamo tinti di verde! Come ogni anno HERO vola in Irlanda per la festa più verde dell’anno.
+Ma prima… ci prendiamo un attimo per andare a rilassarci sotto il sole con una <strong>CAMM</strong> bella ghiacciata in mano. Tranquilli, è solo un attimo — quando meno ve lo aspettate siamo già di ritorno.
 </p>
-
+ 
 <p>
-4 giorni di festa a tema: casa HERO si è trasformata, tra decorazioni, musica, burger speciale e la famosissima birra irlandese <strong>GUINNESS</strong>.
-</p>
-
-<p>
-Per farvi entrare ancora di più nel <strong>MOOD SAN PATRIZIO</strong> abbiamo creato dei gratta e vinci: proprio come i folletti alla ricerca della loro pentola d’oro, ogni cliente aveva la possibilità di trovare il proprio “premio” nascosto… perché a San Patrizio, la fortuna può spuntare quando meno te lo aspetti. ☘️
-</p>
-
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648370/san_patrizio1_pn7sg0.webp"
-       alt="Decorazioni di San Patrizio a casa HERO"
-       class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648371/san_patrizio2_qttee2.webp"
-       alt="Festa di San Patrizio con burger e Guinness"
-       class="half-img" />
-</div>
-
-<p>
-Marzo è finito, ma noi siamo più carichi che mai. Tante novità in serbo… e come sempre, non ci fermiamo mai.
-</p>
-
-<p>
-Ci vediamo nel mese di <strong>APRILE</strong> da HERO!<br/>
+<strong>Grazie a tutti voi per aver reso anche questo mese così speciale.</strong><br/>
 Il team HERO
 </p>
   `,
-  createdAt: new Date('2026-03-31T10:00:00Z'),
+  createdAt: new Date('2026-05-31T10:00:00Z'),
   images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648090/diario_aprile_copertina_s6isrg.webp',
-      caption: 'Copertina Marzo 2026',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315021/copertina_maggio_a1gviu.webp',
+      caption: 'Copertina Maggio 2026',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648278/atleta_dgitzb.webp',
-      caption: 'Atleta paralimpico canadese a casa HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315021/anniversario_xnf88k.webp',
+      caption: '10 anni di HERO – foto anniversario',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648278/creme_sk1048.webp',
-      caption: 'Omaggio per le donne da Sephora',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315085/sapori_primavera_2_chwocs.webp',
+      caption: 'Burger Sapori di Primavera – edizione limitata',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648370/san_patrizio1_pn7sg0.webp',
-      caption: 'Decorazioni di San Patrizio a casa HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1780319256/OK_il_prezzo_giusto_1_dplasi.webp',
+      caption: 'OK il Prezzo è Giusto – ruota della fortuna HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1775648371/san_patrizio2_qttee2.webp',
-      caption: 'Festa di San Patrizio con burger e Guinness',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1780319255/OK_il_prezzo_giusto_2_xc6jya.webp',
+      caption: 'OK il Prezzo è Giusto – serata HERO',
     },
   ],
 });

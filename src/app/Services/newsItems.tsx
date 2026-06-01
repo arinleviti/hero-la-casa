@@ -17,10 +17,10 @@ export const newsItems: NewsItems[] = [
      {
         id: 1,
         pic: "/burger-jukebox-tiny.webp",
-        header1: "🎶 con Kanta Game - Clicca qui!",
+        header1: "🎶 con Kanta Game - Prossima serata 11 giugno 2026!",
         newsModalContent:
             {
-                title: "SERATA JUKEBOX - 1° giovedì del mese!",
+                title: "SERATA JUKEBOX - 11 giugno 2026!",
                 imgUrl: "/MarqueeImgs/burgerJukebox.webp"
             }
        
@@ -39,6 +39,19 @@ export const newsItems: NewsItems[] = [
         header1: "Ne parla il Corriere!",
         header2: "Il nostro panino di trota conquista Milano.",
         urlLink: "https://corrieredeltrentino.corriere.it/notizie/cronaca/25_agosto_25/tartare-di-trota-in-un-hamburger-la-risposta-trentina-al-sushi-premiata-dall-accademia-del-panino-cinque-mesi-per-farlo-26daf0a9-ca3e-4bc6-be05-bff5d5420xlk.shtml"
+    },
+     , 
+    {
+        id: 4,
+        pic: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315833/inFerie_b0dzln.webp",
+        header1: "Siamo in Ferie!",
+        header2: "Fino al 7 giugno 🌴",
+        newsModalContent:
+            {
+                title: "Siamo in Ferie fino al 7 giugno 🌴!",
+                imgUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1780315833/inFerie_b0dzln.webp"
+            }
+       
     },
     /* {
         id: 4,

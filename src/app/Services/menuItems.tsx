@@ -247,7 +247,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp"
   }
   ,
-   {
+   /* {
     id: 8, 
     name: "SAPORI DI PRIMAVERA",
     ingredients: [
@@ -273,7 +273,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1777046018/sapori_primavera_1_b9kgds.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1777046018/sapori_primavera_1_b9kgds.webp",
-  },
+  }, */
 /*  ,
   {
     id: 8, // unique identifier
