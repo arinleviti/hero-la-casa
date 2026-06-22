@@ -1,4 +1,4 @@
-import { Burger } from "c:/Users/alevi/Documents/GitHub/hero-la-casa/src/app/Services/menuItems"
+import { Burger } from "./menuItems"
 
 export const olympicBurgers: Burger[] = [
   {
