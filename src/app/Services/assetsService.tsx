@@ -146,7 +146,16 @@ export const expHalloween : ExperienceObject = {
 	 "https://res.cloudinary.com/dvr9t29vj/image/upload/v1753274764/experiences-18_kztdcd.webp"
 ]}
 
-export const openingHours = [
+export type OpeningHourEntry = {
+  day: string;
+  hours: string;
+};
+
+export type OpeningHoursData = {
+  entries: OpeningHourEntry[];
+  lunchMenuNote: boolean;
+};
+const openingHoursDefault = [
   { day: 'Lunedì', hours: 'Chiuso' },
   { day: 'Martedì', hours: '19:00 - 22:00' },
   { day: 'Mercoledì', hours: '19:00 - 22:00' },
@@ -155,7 +164,26 @@ export const openingHours = [
   { day: 'Sabato', hours: '19:00 - 22:00' },
   { day: 'Domenica', hours: '19:00 - 21:30' },
 ];
+const openingHoursSummer = [
+  { day: 'Lunedì', hours: 'Chiuso' },
+  { day: 'Martedì', hours: '12:15 - 14:00 / 19:00 - 22:00' },
+  { day: 'Mercoledì', hours: '12:15 - 14:00 / 19:00 - 22:00' },
+  { day: 'Giovedì', hours: '12:15 - 14:00 / 19:00 - 22:00' },
+  { day: 'Venerdì', hours: '12:15 - 14:00 / 19:00 - 22:00' },
+  { day: 'Sabato', hours: '12:15 - 14:00 / 19:00 - 22:00' },
+  { day: 'Domenica', hours: '12:15 - 14:00 / 19:00 - 21:30' },
+];
+export function getOpeningHours(): OpeningHoursData {
+  const now = new Date();
+  const month = now.getMonth();
+  const day = now.getDate();
 
+  const isSummer = (month === 6 && day >= 8) || month === 7;
+  return {
+    entries: isSummer ? openingHoursSummer : openingHoursDefault,
+    lunchMenuNote: isSummer,
+  };
+}
 export interface Review {
   id: number;
   title: string;

@@ -1,7 +1,8 @@
 "use client";
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring, MotionValue } from 'framer-motion';
-import { burgers, Burger } from '../Services/menuItems';
+import { olympicBurgers } from '../Services/olympic-burgers';
+import { Burger } from '../Services/menuItems';
 import { olympicContent } from '../Services/assetsService';
 import styles from './page.module.css';
 import Image from 'next/image';
@@ -37,7 +38,7 @@ export default function Olympics() {
 
         {/* 2. Sliding Burger Sections */}
         <div className={styles.interactiveLayer}>
-          {burgers
+          {olympicBurgers
             .filter(burger => burger.olympian)
             .map((burger, index, filteredArr) => (
               <BurgerSection

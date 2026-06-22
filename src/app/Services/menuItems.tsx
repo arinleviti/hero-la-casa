@@ -39,7 +39,7 @@ export interface ExtraOption {
 }
 
 export const burgers: Burger[] = [
-  {
+  /* {
     id: 1, // unique identifier
     name: "AFRICA",
     ingredients: [
@@ -67,8 +67,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+  /*  {
     id: 2, // unique identifier
     name: "AMERICA",
     ingredients: [
@@ -98,8 +98,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/America_skhmwd.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/America_skhmwd.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+   /* {
     id: 3, // unique identifier
     name: "ASIA",
     ingredients: [
@@ -127,8 +127,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Asia_nj11ah.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Asia_nj11ah.webp",
     backgroundImage: "",
-  },
-  {
+  }, */
+  /* {
     id: 4, // unique identifier
     name: "EUROPA",
     ingredients: [
@@ -157,8 +157,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631913/Europe_irxc5k.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631913/Europe_irxc5k.webp",
     backgroundImage: "",
-  },
-   {
+  }, */
+   /* {
     id: 5, // unique identifier
     name: "OCEANIA",
     ingredients: [
@@ -185,8 +185,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Oceania_w7ipdw.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Oceania_w7ipdw.webp",
     backgroundImage: "",
-  },
-  {
+  }, */
+ /*  {
     id: 6, // unique identifier
     name: "CLASSICO",
     ingredients: [
@@ -217,8 +217,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     /* backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
-    origin: "2227 Km" */
-  },
+    origin: "2227 Km" 
+  }, */
   {
     id: 7, // unique identifier
     name: "CHICKEN",
@@ -246,7 +246,6 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/chicken_t7mrfw.webp"
   }
-  ,
    /* {
     id: 8, 
     name: "SAPORI DI PRIMAVERA",
@@ -274,7 +273,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1777046018/sapori_primavera_1_b9kgds.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1777046018/sapori_primavera_1_b9kgds.webp",
   }, */
-/*  ,
+ ,
   {
     id: 8, // unique identifier
     name: "NOSTRANO",
@@ -306,7 +305,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  } */
+  },
   {
     id: 9, // unique identifier
     name: "CRUDO",
@@ -338,7 +337,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
   },
-  /* {
+  {
     id: 10, // unique identifier
     name: "TIMBER BURGER",
     ingredients: [
@@ -366,7 +365,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
-  }, */
+  },
  /*  {
     id: 11, // unique identifier
     name: "KEPPORKO",
@@ -397,8 +396,8 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   }, */
-  /* {
-    id: 8, // unique identifier
+  {
+    id: 11, // unique identifier
     name: "GOLOSO",
     ingredients: [
       "Pane nero come il carbone",
@@ -431,7 +430,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
 
 
-  }, */
+  },
   {
     id: 12, // unique identifier
     name: "IL TARTUFO",
@@ -494,7 +493,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-ltaliano_s5msgu.png"
     
   },
- {
+ /* {
     id: 14, // unique identifier
     name: "MARRAKESH",
     ingredients: [
@@ -522,7 +521,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228467/marrakech_dytiei.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228467/marrakech_dytiei.webp"
     
-  },
+  }, */
  {
     id: 15, // unique identifier
     name: "MANGIAFUOCO",
@@ -553,7 +552,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
 
-  {
+ /*  {
     id: 16, // unique identifier
     name: "MARANELLO",
     ingredients: [
@@ -578,9 +577,9 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228467/maranello_yauuip.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228467/maranello_yauuip.webp"
-  },
+  }, */
 
-  {
+ /*  {
     id: 17, // unique identifier
     name: "SPACCANAPOLI",
     ingredients: [
@@ -603,7 +602,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp"
-  },
+  }, */
 
    {
     id: 18, // unique identifier
@@ -660,9 +659,9 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/XiAn_jwwwpr.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228468/XiAn_jwwwpr.webp"
     
-  },/* ,
-  {
-    id: 11, // unique identifier
+  },
+ /*  {
+    id: 26, // unique identifier
     name: "WILD",
     ingredients: [
       "Ciabattina croccante e morbida",
@@ -689,8 +688,39 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
-  },*/
+  }, */
+ 
   {
+    id: 27, // unique identifier
+    name: "SEASON BURGER",
+    ingredients: [
+      "Pane integrale",
+      "Petto di pollo impanato",
+      "Pomodoro",
+      "Mozzarella di bufala",
+      "Basilico",
+    ],
+    description:
+      "Un burger che celebra i sapori dell'estate: il pane integrale accoglie un tenero petto di pollo impanato, arricchito dalla freschezza del pomodoro e dalla cremosità della mozzarella di bufala. Il basilico aggiunge un tocco aromatico e profumato, completando un’esperienza gustativa che racconta la bellezza dei prodotti stagionali in un panino unico.",
+      modalDescription: "Burger di pollo impanato con pomodoro, mozzarella di bufala e basilico nel pane integrale.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [
+      { weight: 160, price: 16.50 }
+    ],
+    burgerOfTheMonth: false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
+
+  } ,
+  
+  /* {
     id: 26, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
@@ -719,7 +749,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/season_new_fazxwy.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/season_new_fazxwy.webp"
 
-  }, 
+  }  */
   /* {
     id: 13, // unique identifier
     name: "SEASON BURGER",
@@ -747,9 +777,9 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp"
 
-  } *//* ,
+  } */
   {
-    id: 14, // unique identifier
+    id: 35, // unique identifier
     name: "MYKONOS",
     ingredients: [
       "Pane 'Non siamo mica SEMI'",
@@ -778,7 +808,7 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
-  } */
+  },
    /* {
     id: 15, // unique identifier
     name: "BANGKOK",
@@ -872,7 +902,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639882/Crunch-no-bg_ge9zzl.png"
   } */
   {
-    id: 27, // unique identifier
+    id: 36, // unique identifier
     name: "DONNA NERA",
     ingredients: [
       "Burger di patata viola",
@@ -956,7 +986,7 @@ export const burgers: Burger[] = [
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860801/STORY_QUEBEC_fpr6ze.webp"
   }, */
   {
-    id: 28, // unique identifier
+    id: 37, // unique identifier
     name: "IL KRAKEN",
     ingredients: [
       "Ciabattina croccante e morbida",
@@ -981,9 +1011,9 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
-  }
- /*  {
-    id: 21, // unique identifier
+  },
+  {
+    id: 38, // unique identifier
     name: "AVISIO",
     ingredients: [
       "Pane ai 7 cereali",
@@ -1010,9 +1040,9 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
     origin: "Km 0"
 
-  }, */
-  ,{
-    id: 29, // unique identifier
+  },
+  {
+    id: 39, // unique identifier
     name: "CAPO NORD",
     ingredients: [
       "Pane nero come il carbone",
@@ -1040,7 +1070,39 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
-  }/* ,
+  }
+  ,
+  {
+    id: 40, // unique identifier
+    name: "PARDACIAN",
+    ingredients: [
+      "Pane al pepe nero",
+      "Carne di bovino",
+      "Puzzone di Moena",
+      "Crauti",
+      "Mela",
+      "Speck cotto",
+      "Salsa di senape e miele"
+    ],
+    description:
+      "Un burger che racconta la tradizione Predazzana con un tocco di modernità: il pane al pepe nero avvolge una succulenta carne di bovino, arricchita dal sapore intenso del Puzzone di Moena. I crauti e la mela aggiungono freschezza e dolcezza, mentre lo speck cotto regala una nota affumicata. La salsa di senape e miele completa il tutto con un equilibrio perfetto tra piccantezza e dolcezza.",
+    
+    modalDescription: "Burger di bovino con Puzzone di Moena, crauti, mela e speck nel pane al pepe nero.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 200, price: 16.50 }],
+    burgerOfTheMonth: true,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1781773829/pardacian_1_smkfnv.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1781773829/pardacian_1_smkfnv.webp",
+
+  }
+  /* ,
   {
     id: 23, // unique identifier
     name: "LONDON",
@@ -1102,9 +1164,9 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/MONACO_atiego.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860804/STORY_MONACO_xoxgfp.webp"
-  } */,
+  } *//* ,
   {
-    id: 30, // unique identifier
+    id: 32, // unique identifier
     name: "RUSTICO",
     ingredients: [
       "Carne di Angus 200g",
@@ -1130,7 +1192,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/RUSTICO_escuqt.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/RUSTICO_escuqt.webp"
-  },
+  }, */
   /* {
     id: 26, // unique identifier
     name: "SOLEGGIATO",

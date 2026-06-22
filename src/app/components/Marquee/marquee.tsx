@@ -65,7 +65,7 @@ export default function BurgerMarquee() {
                         </div>
                     </div>
                 )}
-                {/* <div className={styles.newsLine}>
+                <div className={styles.newsLine}>
                     <Image
                         src="/MarqueeImgs/DIviderBrown.webp"
                         alt="divider"
@@ -73,7 +73,7 @@ export default function BurgerMarquee() {
                         height={60}
                         priority
                     />
-                </div> */}
+                </div>
                 {/* News of the Month */}
                 {newsOfTheMonth.map((news: NewsItems) => (
                     <div key={news.id} className={styles.newsItemWrapper}>
