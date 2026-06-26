@@ -176,9 +176,8 @@ const openingHoursSummer = [
 export function getOpeningHours(): OpeningHoursData {
   const now = new Date();
   const month = now.getMonth();
-  const day = now.getDate();
 
-  const isSummer = (month === 6 && day >= 8) || month === 7;
+  const isSummer = month === 6 || month === 7;
   return {
     entries: isSummer ? openingHoursSummer : openingHoursDefault,
     lunchMenuNote: isSummer,
