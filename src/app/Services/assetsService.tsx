@@ -107,7 +107,7 @@ export const expBirthday : ExperienceObject = {
 } 
 
 export const expStPatrick  : ExperienceObject = {
-	header: "SERATA SAN PATRIZIO",
+	header: "SERATA SAN PATRIZIO ",
 	subheader: "Verde che ti voglio verde: una serata di sorrisi, brindisi e magia irlandese",
 	alt:"patrick",
 	popupImg:"/Experiences/stPatrick.png",
