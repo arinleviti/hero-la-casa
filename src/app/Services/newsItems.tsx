@@ -27,6 +27,17 @@ export const newsItems: NewsItems[] = [
     },
     {
         id: 2,
+        pic: "/logo-news.png",
+        header1: "Le novità dell'estate 2026!",
+        newsModalContent:
+            {
+                title: "Da provare assolutamente",
+                imgUrl: "/MarqueeImgs/novita_estive26.webp"
+            }
+       
+    },
+    {
+        id: 3,
         pic: "/CategoryIcons/hamb_olimpici_logo.png",
         header1: "Il Nostro Viaggio Olimpico",
         header2: "raccontato qui",
@@ -34,7 +45,7 @@ export const newsItems: NewsItems[] = [
     }
     , 
     {
-        id: 3,
+        id: 4,
         pic: "/MarqueeImgs/accademiaPanino.webp",
         header1: "Ne parla il Corriere!",
         header2: "Il nostro panino di trota conquista Milano.",

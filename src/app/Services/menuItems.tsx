@@ -39,35 +39,36 @@ export interface ExtraOption {
 }
 
 export const burgers: Burger[] = [
-  /* {
-    id: 1, // unique identifier
-    name: "AFRICA",
+  {
+    id: 2, // unique identifier
+    name: "ALTAMURA",
     ingredients: [
-      "Pane nero",
-      "Verdure wok speziate con coriandolo",
-      "Carne di manzo",
-      "Salsa harissa",
-      "Platano croccante"
+      "Puccia pugliese",
+      "Melanzane grigliate",
+      "Medaglione di mozzarella panata",
+      "Salsa di pomodoro",
+      "Cialda di grana croccante",
+      "Basilico fresco"
     ],
     description:
-      "Un viaggio esotico in ogni morso: il pane nero racchiude succulenta carne di manzo, arricchita da verdure wok speziate con coriandolo fresco. La salsa harissa dona un tocco piccante e avvolgente, mentre il platano croccante aggiunge una nota dolce e croccante che completa l’esperienza con un perfetto equilibrio di sapori intensi e consistenze sorprendenti.",
-      modalDescription:"Burger di manzo con verdure speziate, salsa harissa e platano croccante nel pane nero.",
+      "Un omaggio ai sapori della Puglia: la puccia pugliese racchiude melanzane grigliate, un medaglione di mozzarella panata e una salsa di pomodoro ricca e profumata. La cialda di grana croccante aggiunge un tocco di sapore intenso, mentre il basilico fresco completa l’esperienza con la sua fragranza inconfondibile. Un burger che celebra la tradizione culinaria pugliese con gusto e autenticità.",
+      modalDescription:"Burger di melanzane grigliate con medaglione di mozzarella panata, salsa di pomodoro e cialda di grana nel pane pugliese.",
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
-    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 160, price: 16.90 }],
+    categories: ["vegetariano"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 160, price: 15.90 }],
     burgerOfTheMonth: false,
-    olympian: true,
+    olympian: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 },
-      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Mortadella", price: 2.00 },
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Africa_xzmvny.webp",
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1783253510/Altamura_zix7uj.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1783253510/Altamura_zix7uj.webp",
     backgroundImage: "",
-  }, */
+  },
   /*  {
     id: 2, // unique identifier
     name: "AMERICA",
