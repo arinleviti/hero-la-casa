@@ -16,20 +16,26 @@
 
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import styles from './page.module.css';
+import { useState } from 'react';
 
 const PLACEHOLDER = {
   anno: '2026',
   dataRiapertura: 'data da confermare',
   notaExtra:
-    'Aggiungi qui eventuali condizioni extra: scadenza delle buste, cosa fare se si perde o dimentica la busta, validità della sorpresa, ecc.',
+    'Eventuali condizioni extra: scadenza delle buste, cosa fare se si perde o dimentica la busta, validità della sorpresa, ecc.',
 };
 
+
 export default function CompleannoPage() {
+  
+
   return (
     <div className={styles.contestPage}>
       <div className={styles.hero}>
         <p className={styles.eyebrow}>Settembre&nbsp;→&nbsp;Novembre</p>
         <h1 className={styles.title}>
+          🎂 🎉
+          <br />
           Il compleanno
           <br />
           di Hero&nbsp;Burger
@@ -137,26 +143,46 @@ export default function CompleannoPage() {
 }
 
 function Envelope({ open = false }: { open?: boolean }) {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div className={styles.envelope}>
       {open ? (
         <>
-          <span className={styles.mysteryMark}>?</span>
+          <span className={styles.mysteryMark}>SORPRESA!</span>
           <div className={styles.flapOpen} />
         </>
       ) : (
         <>
           <div className={styles.flap} />
+          
           <div className={styles.seal}>HB</div>
-        </>
-      )}
-      <div className={styles.perforation} />
-      <div className={styles.envelopeLabel}>Per: un cliente curioso</div>
-      <div className={styles.stamp}>
+          <div className={styles.stamp}>
         Apertura
         <br />
         Dicembre
       </div>
+       {clicked ? (
+        <div className={styles.envelopeLabel}>Spiacente, si apre solo a novembre 😏</div>
+      ) : (
+        <div
+          className={styles.envelopeLabel}
+          onClick={() => setClicked(true)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') setClicked(true);
+          }}
+          style={{ cursor: open ? 'default' : 'pointer' }}
+        >
+          Per: un cliente curioso (clicca se vuoi aprire)
+        </div>
+      )}
+        </>
+      )}
+ 
+      <div className={styles.perforation} />
+      
     </div>
   );
 }
