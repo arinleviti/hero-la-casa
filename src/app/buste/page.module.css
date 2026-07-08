@@ -160,17 +160,15 @@
   position: relative;
   width: min(280px, 70vw);
   height: 180px;
-  background: #d8bd86;
-  border-radius: 6px;
-  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
 }
 
-.flap {
-  position: absolute;
-  inset: 0;
-  clip-path: polygon(0 0, 100% 0, 50% 56%);
-  background: #cdae72;
-  border-radius: 6px 6px 0 0;
+.envelopeImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
 }
 
 .perforation {
@@ -194,57 +192,52 @@
   color: #5c4a2e;
 }
 
-.seal {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle at 35% 30%, #c23a52, #8a1f37 70%);
-  border-radius: 48% 52% 51% 49%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-anton);
-  color: #f3e6d8;
-  font-size: 1rem;
-  box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.25),
-    inset 0 -3px 4px rgba(0, 0, 0, 0.25);
-}
-
-.stamp {
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  width: 82px;
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #4a7729;
-  text-align: center;
-  line-height: 1.3;
-  border: 1.5px dashed #4a7729;
-  border-radius: 50%;
-  padding: 8px 4px;
-  transform: rotate(-9deg);
-  opacity: 0.85;
-}
-
 .mysteryMark {
   position: absolute;
   top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-kalam);
-  color: #4a7729;
-  font-size: 2.2rem;
-  opacity: 0.55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
   z-index: 1;
 }
+.titleEmojis {
+  display: block;
+  margin-bottom: 0rem;
+  font-size: 3rem;
+}
+.mysteryText {
+  font-family: var(--font-kalam);
+  color: #4a7729;
+  font-size: 2.4rem;
+  opacity: 0.55;
+  line-height: 1;
+}
 
+.mysteryEmoji {
+  font-size: 2.8rem;
+  opacity: 0.55;
+  line-height: 1;
+}
+.envelope {
+  position: relative;
+  width: min(280px, 70vw);
+  height: 180px;
+  background: #d8bd86;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
+}
+
+.envelopeImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
 .flapOpen {
   position: absolute;
   left: 0;
@@ -257,6 +250,35 @@
   z-index: 2;
 }
 
+.envelopeStack {
+  position: relative;
+  width: min(280px, 70vw);
+}
+
+.scatterLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.miniEnvelope {
+  position: absolute;
+  pointer-events: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+.miniEnvelope img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
 @media (max-width: 1300px) {
   .contestPage {
     padding-right: 0px;
@@ -265,7 +287,24 @@
 }
 
 @media (max-width: 768px) {
+  .contestPage {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .reverse {
     flex-direction: row;
+  }
+
+  .graphicWrapper {
+    order: 2;
+  }
+
+  .textWrapper {
+    order: 1;
+  }
+
+  .envelopeStack {
+    margin-top: 100px;
   }
 }
