@@ -14,14 +14,17 @@
  *                                 buste, busta persa/dimenticata, ecc.)
  *
  * REGOLE (confermate):
- * - Buste distribuite dal 21 settembre al 31 ottobre, una a visita,
- *   sia per adulti che per bambini fino a 13 anni. Nessun limite di
- *   quante se ne possono raccogliere in totale.
+ * - Esistono DUE tipi di busta segreta, distinti e non intercambiabili:
+ *   busta adulti e busta bambini (fino a 13 anni).
+ * - Buste distribuite dal 21 settembre al 31 ottobre, una a visita —
+ *   ogni adulto ritira una busta adulti, ogni bambino una busta
+ *   bambini. Nessun limite di quante se ne possono raccogliere in
+ *   totale.
  * - Le buste si aprono SOLO da novembre in poi (non c'è una
  *   "riapertura": il locale resta sempre aperto).
- * - Al tavolo, gli adulti aprono complessivamente 1 busta ogni 2
- *   adulti (arrotondato per difetto). Ogni bambino apre 1 busta a
- *   testa, indipendentemente da quante ne ha raccolte.
+ * - Al tavolo, gli adulti aprono complessivamente 1 busta adulti ogni
+ *   2 adulti (arrotondato per difetto). Ogni bambino apre 1 busta
+ *   bambini a testa, indipendentemente da quante ne ha raccolte.
  * - Premio principale: weekend per due persone. Premio principale
  *   bambini: ingresso a Gardaland. Più buste raccolte = più
  *   possibilità di vincere.
@@ -36,7 +39,7 @@ const PLACEHOLDER = {
   anno: '2026',
   dataRiapertura: 'inizio novembre',
   notaExtra:
-    'Esempio: un tavolo di 4 adulti e 2 bambini apre 2 buste adulti (4 ÷ 2) e 2 buste bambini, una a testa.',
+    'Esempio: un tavolo di 4 adulti e 2 bambini apre 2 buste segrete adulti (4 ÷ 2) e 2 buste segrete bambini, una a testa. Le due tipologie di busta sono separate: non si possono scambiare tra loro.',
 };
 
 export default function CompleannoPage() {
@@ -55,9 +58,9 @@ export default function CompleannoPage() {
         </h1>
         <p className={styles.subtitle}>
           Dal 21 settembre al 31 ottobre, a ogni visita ritiri una busta
-          sigillata — vale per gli adulti e per i bambini fino a 13 anni.
-          Quello che c&apos;è dentro lo scopriamo tutti insieme da
-          novembre.
+          segreta — una versione per gli adulti, una diversa per i
+          bambini fino a 13 anni. Quello che c&apos;è dentro lo scopriamo
+          tutti insieme da novembre.
         </p>
       </div>
 
@@ -65,13 +68,16 @@ export default function CompleannoPage() {
         <p className={styles.introText}>
           Ogni anno, per il nostro compleanno, dal 21 settembre al 31
           ottobre chi viene a cena da Hero Burger può ritirare una busta
-          sigillata — una a visita, per ogni adulto e per ogni bambino
-          fino a 13 anni. Non c&apos;è un limite: più buste raccogliete,
-          più aumentano le possibilità di vincere. Il primo premio è un
-          weekend per due persone, oltre a tanti altri premi in palio.
-          Per i più piccoli, il traguardo più ambito è l&apos;ingresso a
-          Gardaland 🦕🎡🏰🎢. Le buste restano sigillate — nessuno può sbirciare
-          prima del tempo. Si aprono tutte a partire da novembre.
+          segreta — una a visita, per ogni adulto e per ogni bambino
+          fino a 13 anni. <strong>Attenzione: sono due buste diverse — ognuna vince qualcosa, con premi dedicati per adulti e bambini.</strong> Gli adulti
+          ritirano la busta segreta adulti, i bambini la busta segreta
+          bambini — non sono intercambiabili. Non c&apos;è un limite: più
+          buste raccogliete, più vincerete. Il
+          primo premio è un weekend per due persone, oltre a tanti altri
+          premi in palio. Per i più piccoli, il traguardo più ambito è
+          l&apos;ingresso a Gardaland 🦕🎡🏰🎢. Le buste restano segrete —
+          nessuno può sbirciare prima del tempo. Si aprono tutte a
+          partire da novembre.
         </p>
 
         <Row className={`${styles.block} g-4 align-items-center`}>
@@ -83,10 +89,11 @@ export default function CompleannoPage() {
             <h2 className={styles.actTitle}>La raccolta</h2>
             <p className={styles.actText}>
               Dal 21 settembre al 31 ottobre, a ogni visita si ritira una
-              busta — adulti e bambini fino a 13 anni compresi. Niente da
-              fare se non conservarla: non si apre al tavolo, non si apre
-              a casa, non si scuote per indovinare cosa c&apos;è dentro
-              (va bene, potete provarci).
+              busta segreta — quella adulti o quella bambini a seconda di
+              chi la ritira. Niente da fare se
+              non conservarla: non si apre al tavolo, non si apre a casa,
+              non si scuote per indovinare cosa c&apos;è dentro (va bene,
+              potete provarci).
             </p>
           </Col>
         </Row>
@@ -105,10 +112,12 @@ export default function CompleannoPage() {
             <h2 className={styles.actTitle}>Novembre</h2>
             <p className={styles.actText}>
               Da novembre si torna con le buste raccolte. Al tavolo, gli
-              adulti aprono in tutto 1 busta ogni 2 adulti presenti; ogni
-              bambino, invece, apre la sua — una a testa. In palio il
-              weekend per due persone e, per i più piccoli, l&apos;ingresso
-              a Gardaland.
+              adulti aprono in tutto 1 busta segreta adulti ogni 2 adulti
+              presenti; ogni bambino, invece, apre la sua busta segreta
+              bambini — una a testa. Le due tipologie restano separate:
+              le buste bambini non contano per il conteggio degli adulti,
+              e viceversa. In palio il weekend per due persone e, per i
+              più piccoli, l&apos;ingresso a Gardaland.
             </p>
           </Col>
         </Row>
@@ -122,9 +131,14 @@ export default function CompleannoPage() {
                 </h2>
                 <ol className={styles.rulesList}>
                   <li>
+                    Esistono due tipi di busta segreta, distinti e non
+                    intercambiabili: busta adulti e busta bambini (fino a
+                    13 anni).
+                  </li>
+                  <li>
                     Dal 21 settembre al 31 ottobre {PLACEHOLDER.anno}, a
-                    ogni visita si ritira una busta sigillata — vale per
-                    gli adulti e per i bambini fino a 13 anni.
+                    ogni visita si ritira una busta segreta — gli adulti
+                    la busta adulti, i bambini la busta bambini.
                   </li>
                   <li>
                     Non c&apos;è un limite: più buste si raccolgono, più
@@ -134,13 +148,13 @@ export default function CompleannoPage() {
                     l&apos;ingresso a Gardaland.
                   </li>
                   <li>
-                    Le buste restano sigillate fino a novembre — niente
+                    Le buste restano segrete fino a novembre — niente
                     anticipazioni.
                   </li>
                   <li>
-                    Al tavolo, gli adulti aprono 1 busta ogni 2 adulti
-                    presenti (es. 4 adulti → 2 buste); ogni bambino apre
-                    1 busta tutta sua.
+                    Al tavolo, gli adulti aprono 1 busta adulti ogni 2
+                    adulti presenti (es. 4 adulti → 2 buste); ogni bambino
+                    apre 1 busta bambini tutta sua.
                   </li>
                 </ol>
                 <p className={styles.rulesNote}>{PLACEHOLDER.notaExtra}</p>
@@ -159,8 +173,8 @@ export default function CompleannoPage() {
           <Col>
             <div className={styles.closing}>
               <p className={styles.closingText}>
-                Buon compleanno a noi. Vi aspettiamo dal 21 settembre con
-                le buste, e da novembre per scoprire cosa c&apos;è dentro.
+                Buon compleanno a noi! Vi aspettiamo dal 21 settembre per il ritiro
+                delle buste, e da novembre per scoprire cosa c&apos;è dentro.
               </p>
               <p className={styles.finePrint}>
                 Hero Burger · Predazzo — apertura buste da{' '}
@@ -191,7 +205,7 @@ function EnvelopeCalculator() {
   const [children, setChildren] = useState(0);
 
   const adultEnvelopes = Math.floor(adults / 2);
-  const childEnvelopes = children;  
+  const childEnvelopes = children;
   const totalEnvelopes = adultEnvelopes + childEnvelopes;
 
   const handleAdultsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -212,7 +226,8 @@ function EnvelopeCalculator() {
         </h2>
         <p className={styles.calculatorSubnote}>
           ⚠️ Vale solo da novembre in poi — è il momento in cui le buste
-          raccolte si possono finalmente aprire.
+          raccolte si possono finalmente aprire. Ricorda: busta adulti e
+          busta bambini sono due tipi diversi e si contano separatamente.
         </p>
 
         <div className={styles.calculatorInputs}>
@@ -258,9 +273,9 @@ function EnvelopeCalculator() {
             novembre
           </div>
           <div className={styles.calculatorBreakdown}>
-            {adultEnvelopes} {adultEnvelopes === 1 ? 'busta' : 'buste'}{' '}
-            adulti · {childEnvelopes}{' '}
-            {childEnvelopes === 1 ? 'busta' : 'buste'} bambini
+            {adultEnvelopes} {adultEnvelopes === 1 ? 'busta segreta adulti' : 'buste segrete adulti'}{' '}
+            · {childEnvelopes}{' '}
+            {childEnvelopes === 1 ? 'busta segreta bambini' : 'buste segrete bambini'}
           </div>
         </div>
       </Card.Body>
@@ -291,7 +306,7 @@ function Envelope({ open = false }: { open?: boolean }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/envelopes/envelope-busta-hero.webp"
-            alt="Busta sigillata Hero Burger"
+            alt="Busta segreta Hero Burger"
             className={styles.envelopeImage}
             draggable={false}
           />
