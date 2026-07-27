@@ -1072,7 +1072,7 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
   }
-  ,
+  /* ,
   {
     id: 40, // unique identifier
     name: "PARDACIAN",
@@ -1102,7 +1102,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1781773829/pardacian_1_smkfnv.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1781773829/pardacian_1_smkfnv.webp",
 
-  }
+  } */
   /* ,
   {
     id: 23, // unique identifier
