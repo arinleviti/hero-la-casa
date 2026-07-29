@@ -437,20 +437,19 @@ export const burgers: Burger[] = [
     name: "IL TARTUFO",
     ingredients: [
       "Pane nero come il carbone",
-      "Carne di bovino nostrano 200 g",
-      "Robiola fresca",
-      "Insalata gentile",
-      "Scaglie di tartufo nero",
-      "Crema alla zucca"
+      "Tartare 100 g",
+      "Stracciatella di burrata",
+      "Pistacchi tritati",
+      "Scaglie di tartufo nero"
     ],
     description:
-      "Un panino elegante e avvolgente, dove ogni ingrediente racconta un sapore autentico: il pane nero come il carbone ospita una succosa carne di bovino nostrano da 200 g, esaltata dalla delicatezza della robiola fresca e dalla dolcezza vellutata della crema alla zucca. L’insalata gentile dona freschezza, mentre le scaglie di tartufo nero completano il tutto con un tocco pregiato e inconfondibile.",
-    modalDescription: "Pane nero con carne di bovino nostrano, robiola fresca, crema alla zucca, scaglie di tartufo nero e insalata gentile.",
+      "Un burger che celebra il lusso dei sapori: il pane nero come il carbone racchiude una pregiata tartare di carne di bovino nostrano, arricchita dalla morbidezza della stracciatella di burrata. I pistacchi tritati aggiungono una nota croccante e aromatica, mentre le scaglie di tartufo nero donano un profumo intenso e avvolgente. Un’esperienza gastronomica unica, per chi ama indulgere nei piaceri del palato.",
+    modalDescription: "Pane nero con tartare di bovino nostrano, stracciatella di burrata, pistacchi tritati e scaglie di tartufo nero.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 200, price: 19.90 }
+      { weight: 100, price: 19.90 }
     ],
     burgerOfTheMonth: false,
     extras: [

@@ -50,12 +50,13 @@ async function createPost(postData: NewPost) {
   }
 }
 
+
 // Example usage
 createPost({
-  title: 'Diario di Bordo – Giugno 2026',
-  slug: 'diario-giugno-2026',
+  title: 'Diario di Bordo – Luglio 2026',
+  slug: 'diario-luglio-2026',
   excerpt:
-    'Giugno da HERO: l\'ultimo Kanta Game prima della pausa estiva, il nuovo menu estivo con l\'Altamura, l\'apertura a pranzo in arrivo e il primo anno nella nuova sede! 🎤🍔☀️',
+    'Luglio da HERO: il Genoa Calcio sceglie HERO per cena durante il ritiro a Moena, il ritorno de El Pardacian e dell\'Avisio, e tante giornate d\'estate tra dehor e grigliate! ⚽🍔☀️',
   content: `
 <style>
   .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -69,104 +70,87 @@ createPost({
 </style>
  
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1783257014/copertina_diario_giu26_tw4ncq.webp"
-     alt="Diario HERO Giugno 2026"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/copertinaLuglio26_akstz7.webp"
+     alt="Diario HERO Luglio 2026"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
  
 <p>
-Giugno è stato uno di quei mesi che ci ricorderemo a lungo. Un mix di energia, novità e tanta voglia di fare che ci ha accompagnati dall'inizio alla fine.
+Luglio è stato un mese con un concentrato di gusto, soddisfazioni ed emozioni che vogliamo condividere con tutti voi.
 </p>
  
-<h2>🎤 ULTIMO KANTA GAME</h2>
+<h2>⚽ IL GENOA CALCIO SCEGLIE HERO PER CENA</h2>
 <p>
-Siamo tornati dalle ferie con il botto, inaugurando il mese con l'ultimo Kanta Game prima della pausa estiva. È la cena cantata più figa della Val di Fiemme, una serata piena di divertimento, sfide e risate, proprio come piace a noi.
-</p>
-<p>
-Ora ci prendiamo una piccola pausa, ma niente paura: il Kanta Game tornerà a settembre, ancora più carico.
+Uno dei momenti più emozionanti? Il Genoa Calcio ha scelto HERO la Casa del Burger per una cena durante il loro ritiro a Moena. Vederli seduti ai nostri tavoli è stato un momento di stupore per i clienti che c'erano quella sera e motivo di grande orgoglio, un'esperienza che porteremo con noi.
 </p>
  
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1778004260/kanta_game1_at0heq.webp"
-       alt="Kanta Game – serata HERO"
-       class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1778004260/kanta_game2_tr0dzf.webp"
-       alt="Kanta Game – cena cantata HERO"
-       class="half-img" />
-</div>
- 
-<h2>☀️ NUOVO MENU ESTIVO</h2>
-<p>
-Tra le novità più attese c'è stato anche il cambio di menu. È arrivato il nostro menu estivo, ricco di nuovi sapori, proposte fresche e qualche sorpresa che non vedevamo l'ora di farvi assaggiare.
-</p>
-<p>
-Una novità? <strong>L'Altamura</strong>, una ricetta completamente inedita che racconta un pezzo della Puglia. Ci siamo lasciati ispirare dalla tradizionale parmigiana pugliese rivisitandola per creare un burger dal carattere deciso, ricco di gusto e con un'identità tutta sua. È una di quelle ricette che nascono dalla voglia di sperimentare, senza dimenticare le proprie radici.
-</p>
- 
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1783253510/Altamura_zix7uj.webp"
-     alt="Burger Altamura – novità menu estivo HERO"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/genova_t8utec.webp"
+     alt="Il Genoa Calcio in cena da HERO"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
  
-<h2>🍽️ APERTURA A PRANZO</h2>
+<h2>🌶️ IL RITORNO DE EL PARDACIAN</h2>
 <p>
-Nel frattempo abbiamo lavorato dietro le quinte per un'altra importante novità: l'apertura anche a pranzo. Stiamo preparando tutto per offrirvi HERO in un nuovo momento della giornata. Non vediamo l'ora di accogliervi.
+Abbiamo iniziato il mese con il ritorno del mitico El Pardacian, il nostro hamburger in edizione limitata dedicato al nostro paese. Ormai è una tradizione: ogni anno c'è chi lo aspetta con impazienza e, puntualmente, diventa uno dei panini più richiesti. Vi confessiamo una cosa... questa volta non abbiamo resistito nemmeno noi e ce lo siamo gustato più di una volta!
 </p>
  
-<h2>🎂 UN ANNO NELLA NUOVA SEDE</h2>
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/pardacian_2_lrobdd.webp"
+     alt="El Pardacian – edizione limitata HERO"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<h2>🏔️ L'AVISIO: AUTENTICO PANINO ITALIANO</h2>
 <p>
-E poi c'è un traguardo che ci emoziona particolarmente.
+Un altro grande ritorno è l'Avisio, un hamburger che trovate solo durante l'estate e che ha ottenuto il prestigioso riconoscimento come "AUTENTICO PANINO ITALIANO" conferitoci dall'Accademia del Panino Italiano.
 </p>
 <p>
-È passato un anno da quando Hero – La Casa del Burger si è trasferito nella nuova sede.
+Un consiglio? Approfittatene ora per provarlo.
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-lAvisio_a65ups.png"
+     alt="Hamburger Avisio – Autentico Panino Italiano"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<h2>☀️ ESTATE TRA DEHOR E GRIGLIATE</h2>
+<p>
+Nel frattempo, il nostro locale continua a vivere a pieno ritmo. Tra pranzi, cene e le splendide giornate estive che ci permettono di sfruttare al massimo il dehor, non ci fermiamo praticamente mai. L'energia è tanta e il lavoro non manca, ma ogni tanto ci concediamo anche qualche momento per goderci l'estate, auto invitandoci a casa di Mauro, accendendo il barbecue e condividendo una bella grigliata in compagnia.
 </p>
  
 <div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1783255506/foto_inizio1_nklz2z.webp"
-       alt="Lavori nuova sede HERO – inizio"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/dehorr_rlckdx.webp"
+       alt="Dehor HERO – estate"
        class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1783255504/foto_inizio2_lzbvsx.webp"
-       alt="Lavori nuova sede HERO – fine"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/grigliata_jo2bsu.webp"
+       alt="Grigliata in compagnia – team HERO"
        class="half-img" />
 </div>
  
 <p>
-Sembra ieri che aprivamo le porte con l'entusiasmo, l'ansia e i mille pensieri di un nuovo inizio. In questi dodici mesi sono successe tantissime cose: abbiamo conosciuto nuovi clienti, rivisto tantissimi volti amici, creato nuove ricette, organizzato eventi e vissuto momenti che porteremo sempre con noi.
-</p>
-<p>
-Tra emozioni, sfide e tantissime cose da fare, questo primo anno è davvero volato.
-</p>
-<p>
-E tutto questo è stato possibile anche grazie a voi, che ogni giorno scegliete Hero, ci sostenete e ci date la motivazione per migliorarci continuamente.
-</p>
- 
-<p>
-Se giugno è stato così intenso, possiamo solo immaginare quello che ci aspetta nei prossimi mesi.
+Grazie a tutti voi che continuate a scegliere Hero, a riempire il locale di sorrisi e a rendere ogni mese speciale. Ora siamo pronti a vivere un agosto altrettanto intenso... sempre con il gusto che ci contraddistingue!
 </p>
 <p>
 <strong>Noi siamo pronti. E voi?</strong><br/>
 Il team HERO
 </p>
   `,
-  createdAt: new Date('2026-06-30T10:00:00Z'),
+  createdAt: new Date('2026-07-31T10:00:00Z'),
   images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1778004260/kanta_game1_at0heq.webp',
-      caption: 'Kanta Game – serata HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/genova_t8utec.webp',
+      caption: 'Il Genoa Calcio in cena da HERO',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1778004260/kanta_game2_tr0dzf.webp',
-      caption: 'Kanta Game – cena cantata HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/pardacian_2_lrobdd.webp',
+      caption: 'El Pardacian – edizione limitata',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1783253510/Altamura_zix7uj.webp',
-      caption: 'Burger Altamura – novità menu estivo',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-lAvisio_a65ups.png',
+      caption: 'Avisio – Autentico Panino Italiano',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1783255506/foto_inizio1_nklz2z.webp',
-      caption: 'Lavori nuova sede HERO – inizio',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/dehorr_rlckdx.webp',
+      caption: 'Dehor HERO – estate',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1783255504/foto_inizio2_lzbvsx.webp',
-      caption: 'Lavori nuova sede HERO – fine',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/grigliata_jo2bsu.webp',
+      caption: 'Grigliata in compagnia',
     },
   ],
 });
