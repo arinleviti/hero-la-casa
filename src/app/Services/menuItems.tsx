@@ -660,7 +660,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228468/XiAn_jwwwpr.webp"
     
   },
- /*  {
+  {
     id: 26, // unique identifier
     name: "WILD",
     ingredients: [
@@ -678,7 +678,7 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["cervo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 28.90 }
+      { weight: 100, price: 24.90 }
     ],
     burgerOfTheMonth: true,
     extras: [
@@ -688,7 +688,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
-  }, */
+  },
  
   {
     id: 27, // unique identifier
