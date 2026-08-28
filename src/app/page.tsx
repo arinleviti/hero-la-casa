@@ -49,7 +49,7 @@ export default function HomePage() {
       <Reviews/>
       <OpeningHours/>
 
-      {/* Client-side UseEffect isolated here */}
+      {/* Client-side UseEffect isolated b here */}
       <ScrollToFindUs />
 
     </div>
