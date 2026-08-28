@@ -53,10 +53,10 @@ async function createPost(postData: NewPost) {
 
 // Example usage
 createPost({
-  title: 'Diario di Bordo – Luglio 2026',
-  slug: 'diario-luglio-2026',
+  title: 'Diario di Bordo – Agosto 2026',
+  slug: 'diario-agosto-2026',
   excerpt:
-    'Luglio da HERO: il Genoa Calcio sceglie HERO per cena durante il ritiro a Moena, il ritorno de El Pardacian e dell\'Avisio, e tante giornate d\'estate tra dehor e grigliate! ⚽🍔☀️',
+    'Agosto da HERO: la Limited Edition con tartare di cervo, un Ferragosto a base di spiedo con tutto lo staff, e le misteriose Buste segrete di Buon Compleanno HERO in arrivo! 🦌🔥🎁',
   content: `
 <style>
   .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -70,87 +70,124 @@ createPost({
 </style>
  
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/copertinaLuglio26_akstz7.webp"
-     alt="Diario HERO Luglio 2026"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/copertina-agosto_ddpm5v.webp"
+     alt="Diario HERO Agosto 2026"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
  
 <p>
-Luglio è stato un mese con un concentrato di gusto, soddisfazioni ed emozioni che vogliamo condividere con tutti voi.
-</p>
- 
-<h2>⚽ IL GENOA CALCIO SCEGLIE HERO PER CENA</h2>
-<p>
-Uno dei momenti più emozionanti? Il Genoa Calcio ha scelto HERO la Casa del Burger per una cena durante il loro ritiro a Moena. Vederli seduti ai nostri tavoli è stato un momento di stupore per i clienti che c'erano quella sera e motivo di grande orgoglio, un'esperienza che porteremo con noi.
-</p>
- 
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/genova_t8utec.webp"
-     alt="Il Genoa Calcio in cena da HERO"
-     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
- 
-<h2>🌶️ IL RITORNO DE EL PARDACIAN</h2>
-<p>
-Abbiamo iniziato il mese con il ritorno del mitico El Pardacian, il nostro hamburger in edizione limitata dedicato al nostro paese. Ormai è una tradizione: ogni anno c'è chi lo aspetta con impazienza e, puntualmente, diventa uno dei panini più richiesti. Vi confessiamo una cosa... questa volta non abbiamo resistito nemmeno noi e ce lo siamo gustato più di una volta!
-</p>
- 
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/pardacian_2_lrobdd.webp"
-     alt="El Pardacian – edizione limitata HERO"
-     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
- 
-<h2>🏔️ L'AVISIO: AUTENTICO PANINO ITALIANO</h2>
-<p>
-Un altro grande ritorno è l'Avisio, un hamburger che trovate solo durante l'estate e che ha ottenuto il prestigioso riconoscimento come "AUTENTICO PANINO ITALIANO" conferitoci dall'Accademia del Panino Italiano.
+Ciao Eroi,<br/>
+agosto, per noi, non è mai stato semplicemente "il mese delle ferie".
 </p>
 <p>
-Un consiglio? Approfittatene ora per provarlo.
+È il mese in cui succedono cose. Cose belle, cose buone, da raccontare.
+</p>
+<p>
+E questo mese abbiamo parecchio da dire.
 </p>
  
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-lAvisio_a65ups.png"
-     alt="Hamburger Avisio – Autentico Panino Italiano"
-     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
- 
-<h2>☀️ ESTATE TRA DEHOR E GRIGLIATE</h2>
+<h2>🦌 LA LIMITED EDITION DI AGOSTO: TARTARE DI CERVO</h2>
 <p>
-Nel frattempo, il nostro locale continua a vivere a pieno ritmo. Tra pranzi, cene e le splendide giornate estive che ci permettono di sfruttare al massimo il dehor, non ci fermiamo praticamente mai. L'energia è tanta e il lavoro non manca, ma ogni tanto ci concediamo anche qualche momento per goderci l'estate, auto invitandoci a casa di Mauro, accendendo il barbecue e condividendo una bella grigliata in compagnia.
+Per il Limited Edition del mese abbiamo deciso di fare una cosa un po' folle. Prendere un ingrediente selvaggio, elegante, fuori dagli schemi… ovvero la tartare di cervo, e abbiamo fatto quello che sappiamo fare meglio: l'abbiamo messa dentro un burger.
+</p>
+<p>
+Perché evidentemente da Hero non riusciamo a lasciare in pace nessun ingrediente.
+</p>
+<p>
+Il risultato? Un hamburger selvaggio, elegante, deciso e completamente fuori dagli schemi. Un burger per palati curiosi, per chi davanti alla parola "cervo" non scappa… ma dice: "Ok. Fammi provare."
+</p>
+<p>
+Un limited edition che, come tutte le cose davvero speciali, non è destinato a restare per sempre. Quindi, se non l'hai ancora assaggiata, il messaggio è semplice: il cervo corre. E la Limited Edition anche.
 </p>
  
 <div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/dehorr_rlckdx.webp"
-       alt="Dehor HERO – estate"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/wild_maurino_vzwvfm.webp"
+       alt="Limited Edition tartare di cervo – HERO"
        class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/grigliata_jo2bsu.webp"
-       alt="Grigliata in compagnia – team HERO"
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1754481682/wild-burger_ixpjwo.webp"
+       alt="Wild Burger con tartare di cervo – HERO"
        class="half-img" />
 </div>
  
+<h2>🔥 A FERRAGOSTO ABBIAMO TRADITO I BURGER</h2>
 <p>
-Grazie a tutti voi che continuate a scegliere Hero, a riempire il locale di sorrisi e a rendere ogni mese speciale. Ora siamo pronti a vivere un agosto altrettanto intenso... sempre con il gusto che ci contraddistingue!
+Sì. Lo ammettiamo. Per un giorno abbiamo tradito il nostro grande amore. Abbiamo lasciato stare burger, pane e patatine e abbiamo acceso il fuoco.
 </p>
 <p>
-<strong>Noi siamo pronti. E voi?</strong><br/>
+Ferragosto in stile HERO = Spiedo!
+</p>
+<p>
+Carne che gira lentamente. Fuoco acceso. Bicchieri pieni. Risate. E lo staff finalmente seduto dalla parte giusta del tavolo.
+</p>
+<p>
+Quella dove non devi chiedere: "Patatine normali o al cheddar?" Ma puoi semplicemente dire: "Passami quel pezzo lì."
+</p>
+<p>
+Un pranzo tutti insieme, come si deve. Perché dietro ogni burger che arriva caldo sul tuo tavolo c'è una squadra. E ogni tanto questa squadra ha bisogno di mangiare. Parecchio.
+</p>
+ 
+<div class="gallery">
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_1_greniy.webp"
+       alt="Ferragosto allo spiedo – team HERO"
+       class="half-img" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_2_uaxbqf.webp"
+       alt="Ferragosto allo spiedo – team HERO"
+       class="half-img" />
+</div>
+ 
+<h2>🎁 STIAMO PREPARANDO QUALCOSA DI PERICOLOSAMENTE BELLO</h2>
+<p>
+Qui attenzione. Perché abbiamo iniziato a preparare le Buste segrete di Buon Compleanno HERO.
+</p>
+<p>
+Siamo impazienti di iniziare a distribuirle, perché per il nostro compleanno vogliamo fare un regalo noi a voi, che ci supportate e ci scegliete.
+</p>
+<p>
+Non sai cosa sono? E no, non possiamo ancora raccontarti tutto.
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_buste_xavdtk.webp"
+     alt="Buste segrete di Buon Compleanno HERO"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<p>
+Agosto ci ha ricordato una cosa semplice: che Hero non è solo quello che succede davanti alla piastra. È tutto quello che succede prima, durante e dopo un burger.
+</p>
+<p>
+E noi siamo felici di raccontartelo.
+</p>
+<p>
+E settembre? Beh… meglio non anticipare nulla. Che poi vi abituate.
+</p>
+<p>
+<strong>Ci vediamo da Hero. Portate fame. Al resto pensiamo noi.</strong><br/>
 Il team HERO
 </p>
   `,
-  createdAt: new Date('2026-07-31T10:00:00Z'),
+  createdAt: new Date('2026-08-31T10:00:00Z'),
   images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/genova_t8utec.webp',
-      caption: 'Il Genoa Calcio in cena da HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/copertina-agosto_ddpm5v.webp',
+      caption: 'Diario HERO Agosto 2026',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/pardacian_2_lrobdd.webp',
-      caption: 'El Pardacian – edizione limitata',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/wild_maurino_vzwvfm.webp',
+      caption: 'Limited Edition tartare di cervo',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839752/Hero-lAvisio_a65ups.png',
-      caption: 'Avisio – Autentico Panino Italiano',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1754481682/wild-burger_ixpjwo.webp',
+      caption: 'Wild Burger con tartare di cervo',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356515/dehorr_rlckdx.webp',
-      caption: 'Dehor HERO – estate',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_1_greniy.webp',
+      caption: 'Ferragosto allo spiedo',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1785356514/grigliata_jo2bsu.webp',
-      caption: 'Grigliata in compagnia',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_2_uaxbqf.webp',
+      caption: 'Ferragosto allo spiedo',
+    },
+    {
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_buste_xavdtk.webp',
+      caption: 'Buste segrete di Buon Compleanno HERO',
     },
   ],
 });
