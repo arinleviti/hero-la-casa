@@ -1,0 +1,102 @@
+.wrapper {
+  margin: 3rem auto;
+}
+
+.titleContainer {
+  font-family: var(--font-anton);
+  font-size: 2.2rem;
+  text-align: center;
+  color: #4A7729;
+  margin-bottom: 2rem;
+}
+
+.col {
+  margin-bottom: 1.5rem;
+}
+
+.monthCard {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(40, 39, 39, 0.1);
+  padding: 1rem 1.25rem;
+  height: 100%;
+}
+
+.monthHeader {
+  font-family: var(--font-anton);
+  font-size: 1.3rem;
+  color: #4A7729;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(40, 39, 39, 0.1);
+}
+
+.entryRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(40, 39, 39, 0.08);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.entryRow:last-child {
+  border-bottom: none;
+}
+
+.entryRow:hover,
+.entryRow:focus {
+  background-color: rgba(74, 119, 41, 0.06);
+}
+
+.burgerOfTheMonthRow {
+  background-color: #fbf3e7;
+  border-radius: 8px;
+  padding: 0.6rem 0.5rem;
+  margin-top: 0.4rem;
+  border-bottom: none;
+}
+
+.burgerOfTheMonthRow:hover,
+.burgerOfTheMonthRow:focus {
+  background-color: #f5e6cd;
+}
+
+.entryIcon {
+  flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.entryText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.entryTitle {
+  font-family: var(--font-kalam);
+  font-size: 0.95rem;
+  color: #282727;
+}
+
+.entryDate {
+  font-size: 0.8rem;
+  color: #6b6a67;
+}
+
+.emptyState {
+  font-family: var(--font-kalam);
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}

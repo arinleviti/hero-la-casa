@@ -16,6 +16,7 @@ import LatestPost from './components/LatestPost/latest-post';
 import OpeningHours from './components/OpeningHours/opening-hours';
 import TextForSEO from './components/VideoSection/text-for-seo';
 import ScrollToFindUs from './components/scroll-to-find-us'; // client island
+import EventsCalendar from './components/EventsCalendar/events-calendar';
 /* import OlympicHero from './components/olympicHeroSection/olympic-hero'; */
 
 
@@ -37,6 +38,7 @@ export default function HomePage() {
       <MarqueeSection />
       <VideoSection videoData={videoData} textVideoData={textVideoData} />
       <TextForSEO textVideoData={textVideoData} />
+      <EventsCalendar />
       <PictureBelt pictures={picturesForBelt1} />
       <SwiperObject burgers={burgers} />
       <StaffSection />
