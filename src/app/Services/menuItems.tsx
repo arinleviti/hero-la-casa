@@ -660,7 +660,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1775228468/XiAn_jwwwpr.webp"
     
   },
-  {
+  /* {
     id: 26, // unique identifier
     name: "WILD",
     ingredients: [
@@ -688,7 +688,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1754481682/wild-burger_ixpjwo.webp",
-  },
+  }, */
  
   {
     id: 27, // unique identifier

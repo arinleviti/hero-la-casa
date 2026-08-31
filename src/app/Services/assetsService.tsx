@@ -68,7 +68,6 @@ export const picsForStaffAndRestaurantSwiper = [
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192703/21.06-54-min_yvrslc.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192698/21.06-95-min_t5tofy.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192696/21.06-41-min_ieodze.jpg" },
-	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192697/21.06-50-min_hf2t2k.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192684/21.06-61-min_x3eoua.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192684/21.06-85-min_eof4ps.jpg" },
 	{ url: "https://res.cloudinary.com/dvr9t29vj/image/upload/f_auto,q_auto,w_800/v1753192682/21.06-6-min_yt2hjw.jpg" },
@@ -154,6 +153,14 @@ export type OpeningHourEntry = {
 export type OpeningHoursData = {
   entries: OpeningHourEntry[];
   lunchMenuNote: boolean;
+  closureMessage?: string;
+};
+
+type ClosurePeriod = {
+  startMonth: number; // 0-indexed (0 = gennaio)
+  startDay: number;
+  endMonth: number;
+  endDay: number;
 };
 const openingHoursDefault = [
   { day: 'Lunedì', hours: 'Chiuso' },
@@ -173,8 +180,41 @@ const openingHoursSummer = [
   { day: 'Sabato', hours: '12:15 - 14:00 / 19:00 - 22:00' },
   { day: 'Domenica', hours: '12:15 - 14:00 / 19:00 - 21:30' },
 ];
+
+// Add one entry per closure period. Year is ignored — only month/day matter.
+const closurePeriods: ClosurePeriod[] = [
+  { startMonth: 8, startDay: 7, endMonth: 8, endDay: 20 }, // 7–20 settembre
+];
+
+const italianMonths = [
+  'gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno',
+  'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre',
+];
+
+function formatItalianDate(date: Date): string {
+  return `${date.getDate()} ${italianMonths[date.getMonth()]}`;
+}
+
+function isWithinClosure(period: ClosurePeriod, now: Date): boolean {
+  const year = now.getFullYear();
+  const start = new Date(year, period.startMonth, period.startDay, 0, 0, 0);
+  const end = new Date(year, period.endMonth, period.endDay, 23, 59, 59);
+  return now >= start && now <= end;
+}
+
 export function getOpeningHours(): OpeningHoursData {
   const now = new Date();
+
+	const activeClosure = closurePeriods.find((period) => isWithinClosure(period, now));
+  if (activeClosure) {
+    const endDate = new Date(now.getFullYear(), activeClosure.endMonth, activeClosure.endDay);
+    return {
+      entries: [],
+      lunchMenuNote: false,
+      closureMessage: `Siamo chiusi fino al ${formatItalianDate(endDate)}`,
+    };
+  }
+
   const month = now.getMonth();
 
   const isSummer = month === 6 || month === 7;
