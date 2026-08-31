@@ -27,13 +27,9 @@ export const newsItems: NewsItems[] = [
     },
     {
         id: 2,
-        pic: "/logo-news.png",
-        header1: "Le novità dell'estate 2026!",
-        newsModalContent:
-            {
-                title: "Da provare assolutamente",
-                imgUrl: "/MarqueeImgs/novita_estive26.webp"
-            }
+        pic: "/MarqueeImgs/hero-burger-sleeping.png",
+        header1: "Hero si prende una pausa",
+        header2: "Chiusura 7 -20 settembre",
        
     },
     {
