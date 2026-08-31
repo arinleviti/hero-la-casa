@@ -1,10 +1,11 @@
 // A regular restaurant event (karaoke night, tasting, party, etc.)
 export interface RestaurantEvent {
   id: number;
-  icon: string; // filename only, resolved against /public/events-icons
+  icon: string; // root-relative path into /public, e.g. '/events-icons/karaoke.svg' or '/burger-jukebox-tiny.webp'
   title: string;
   date: string; // ISO date string, e.g. '2026-09-12'
   link: string;
+  videoLink?: string; // optional hosted video URL (e.g. Cloudinary), played directly in an in-page modal instead of opening `link` in a new tab
 }
 
 // The "burger of the month" entry. It doesn't come from a single date but
@@ -30,21 +31,22 @@ export type CalendarEntry =
 export const restaurantEvents: RestaurantEvent[] = [
   {
     id: 1,
-    icon: 'karaoke.svg',
-    title: 'Serata karaoke',
-    date: '2026-09-12',
+    icon: '/burger-jukebox-tiny.webp',
+    title: 'Serata Kanta Game',
+    date: '2026-09-10',
     link: 'https://www.facebook.com/heroburgerpredazzo',
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
   },
   {
     id: 2,
-    icon: 'birra.svg',
+    icon: '/events-icons/birra.svg',
     title: 'Degustazione birre artigianali',
     date: '2026-09-20',
     link: 'https://www.facebook.com/heroburgerpredazzo',
   },
   {
     id: 3,
-    icon: 'halloween.svg',
+    icon: '/events-icons/halloween.svg',
     title: 'Halloween party',
     date: '2026-10-31',
     link: 'https://www.facebook.com/heroburgerpredazzo',

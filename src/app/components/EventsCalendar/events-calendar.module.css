@@ -1,5 +1,6 @@
 .wrapper {
   margin: 3rem auto;
+  overflow-x: hidden;
 }
 
 .titleContainer {
@@ -30,6 +31,10 @@
   padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
   border-bottom: 1px solid rgba(40, 39, 39, 0.1);
+}
+
+.monthEmoji {
+  font-family: initial; /* emoji render best outside the display font stack */
 }
 
 .entryRow {
@@ -71,8 +76,10 @@
 
 .entryIcon {
   flex-shrink: 0;
+  width: 28px;
+  height: 28px;
   border-radius: 6px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .entryText {
@@ -99,4 +106,89 @@
   text-align: center;
   padding: 1rem 0;
   margin: 0;
+}
+
+/* -------------- SECTION: video modal -------------- */
+
+.videoModalDialog {
+  max-width: 420px;
+}
+
+.videoModalContent {
+  border-radius: 16px;
+  border: none;
+  overflow: hidden;
+}
+
+.videoModalHeader {
+  border-bottom: 1px solid rgba(40, 39, 39, 0.1);
+  background: #fff;
+  padding: 1rem 1.25rem;
+}
+
+.videoModalTitle {
+  font-family: var(--font-anton);
+  font-size: 1.1rem;
+  color: #4A7729;
+}
+
+.videoModalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoElement {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.soundToggleButton {
+  z-index: 3;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.videoInfoLink {
+  font-family: var(--font-anton);
+  font-size: 1rem;
+  color: #edd5c3;
+  background-color: #7BA6DE;
+  align-self: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.videoInfoLink:hover,
+.videoInfoLink:focus {
+  background-color: #4A7729;
+  color: white;
 }
