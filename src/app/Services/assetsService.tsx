@@ -41,7 +41,7 @@ export const heroContent = {
 }
 
 export const heroImage = {
-	src: "/HeroImage/Kepporko-no-bg.webp",
+	src: "/HeroImage/bimba-burger.png",
 	alt: "Un succoso hamburger"
 }
 

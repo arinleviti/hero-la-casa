@@ -37,6 +37,22 @@
   line-height: 1.6;
 }
 
+.jumpLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: var(--font-kalam);
+  font-size: 1.1rem;
+  color: #4a7729;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.jumpLink:hover,
+.jumpLink:focus {
+  color: #2f5119;
+}
+
 .introText {
   font-family: var(--font-kalam);
   color: #5e4b3c;
@@ -127,6 +143,12 @@
 }
 
 /* --- Calcolatore buste --- */
+
+.calculatorAnchor {
+  /* Keeps the scroll target from landing flush at the very top of the
+     viewport if a fixed/sticky header is ever added to this page. */
+  scroll-margin-top: 90px;
+}
 
 .calculatorCard {
   max-width: 1100px;

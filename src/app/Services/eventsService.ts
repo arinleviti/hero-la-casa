@@ -1,9 +1,12 @@
-// A regular restaurant event (karaoke night, tasting, party, etc.)
+// A regular restaurant event (karaoke night, tasting, party, etc.). Can span
+// a single day (from === to) or a longer period, just like the
+// burger-of-the-month entries below.
 export interface RestaurantEvent {
   id: number;
   icon: string; // root-relative path into /public, e.g. '/events-icons/karaoke.svg' or '/burger-jukebox-tiny.webp'
   title: string;
-  date: string; // ISO date string, e.g. '2026-09-12'
+  from: string; // ISO date string, e.g. '2026-09-12'. For a one-day event, set to === from.
+  to: string; // ISO date string, e.g. '2026-09-12'
   link: string;
   videoLink?: string; // optional hosted video URL (e.g. Cloudinary), played directly in an in-page modal instead of opening `link` in a new tab
 }
@@ -32,23 +35,26 @@ export const restaurantEvents: RestaurantEvent[] = [
   {
     id: 1,
     icon: '/burger-jukebox-tiny.webp',
-    title: 'Serata Kanta Game',
-    date: '2026-09-10',
+    title: '🧑‍🎤Serata Kanta Game🎤',
+    from: '2026-09-10',
+    to: '2026-09-10',
     link: 'https://www.facebook.com/heroburgerpredazzo',
     videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
   },
   {
     id: 2,
-    icon: '/events-icons/birra.svg',
-    title: 'Degustazione birre artigianali',
-    date: '2026-09-20',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    icon: '/MarqueeImgs/envelopes_stack_shrunk.png',
+    title: '🎂Si parte con le buste del Compleanno Hero!🎁',
+    from: '2026-09-19',
+    to: '2026-10-31',
+    link: '/buste',
   },
   {
     id: 3,
     icon: '/events-icons/halloween.svg',
     title: 'Halloween party',
-    date: '2026-10-31',
+    from: '2026-10-31',
+    to: '2026-10-31',
     link: 'https://www.facebook.com/heroburgerpredazzo',
   },
 ];

@@ -16,13 +16,10 @@ export const newsItems: NewsItems[] = [
 
      {
         id: 1,
-        pic: "/burger-jukebox-tiny.webp",
-        header1: "🎶 con Kanta Game - Tornerà a settembre 2026!",
-        newsModalContent:
-            {
-                title: "Prossimi appuntamenti settembre 2026!",
-                imgUrl: "/MarqueeImgs/burgerJukebox.webp"
-            }
+        pic: "/MarqueeImgs/envelopes_stack_shrunk.png",
+        header1: "19 sett 🔜 Buste del Compleanno Hero!",
+        header2: "Leggi il regolamento",
+        urlLink: "/buste"
        
     },
     {
@@ -30,7 +27,6 @@ export const newsItems: NewsItems[] = [
         pic: "/MarqueeImgs/hero-burger-sleeping.png",
         header1: "Hero si prende una pausa",
         header2: "Chiusura 7 -20 settembre",
-       
     },
     {
         id: 3,

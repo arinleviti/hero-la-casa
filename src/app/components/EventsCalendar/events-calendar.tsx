@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, ReactNode } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './events-calendar.module.css';
 import {
   restaurantEvents,
@@ -58,7 +59,35 @@ function buildEmptyMonthColumns(): MonthColumn[] {
 }
 
 function entrySortDate(entry: CalendarEntry): string {
-  return entry.kind === 'event' ? entry.data.date : entry.data.from;
+  return entry.data.from;
+}
+
+// A link starting with '/' is an internal page — navigate with next/link,
+// same tab. Anything else is treated as external and opens in a new tab.
+function isInternalLink(href: string): boolean {
+  return href.startsWith('/');
+}
+
+interface SmartLinkProps {
+  href: string;
+  className?: string;
+  children: ReactNode;
+}
+
+function SmartLink({ href, className, children }: SmartLinkProps) {
+  if (isInternalLink(href)) {
+    return (
+      <Link href={href} className={className}>
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  );
 }
 
 interface EventVideoModalProps {
@@ -134,14 +163,9 @@ function EventVideoModal({ event, onClose }: EventVideoModalProps) {
             )}
           </button>
         </div>
-        <a
-          href={event.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.videoInfoLink}
-        >
+        <SmartLink href={event.link} className={styles.videoInfoLink}>
           Clicca qui per info
-        </a>
+        </SmartLink>
       </Modal.Body>
     </Modal>
   );
@@ -155,9 +179,9 @@ export default function EventsCalendar() {
     const columns = buildEmptyMonthColumns();
 
     const placeInColumn = (entry: CalendarEntry, isoDate: string) => {
-      const entryDate = new Date(isoDate);
+      const d = new Date(isoDate);
       const column = columns.find(
-        (c) => c.year === entryDate.getFullYear() && c.month === entryDate.getMonth()
+        (c) => c.year === d.getFullYear() && c.month === d.getMonth()
       );
       if (column) {
         column.entries.push(entry);
@@ -165,7 +189,7 @@ export default function EventsCalendar() {
     };
 
     restaurantEvents.forEach((event) => {
-      placeInColumn({ kind: 'event', data: event }, event.date);
+      placeInColumn({ kind: 'event', data: event }, event.from);
     });
 
     burgerOfTheMonthEvents.forEach((bom) => {
@@ -185,9 +209,14 @@ export default function EventsCalendar() {
       month: 'long',
     });
 
+  const formatEventDate = (event: RestaurantEvent) =>
+    event.from === event.to
+      ? formatDayMonth(event.from)
+      : `${formatDayMonth(event.from)} - ${formatDayMonth(event.to)}`;
+
   const renderEntry = (entry: CalendarEntry) => {
     if (entry.kind === 'event') {
-      const { id, icon, title, date, link, videoLink } = entry.data;
+      const { id, icon, title, link, videoLink } = entry.data;
 
       // Events with a videoLink open an in-page video modal instead of
       // navigating away.
@@ -208,20 +237,14 @@ export default function EventsCalendar() {
             />
             <div className={styles.entryText}>
               <span className={styles.entryTitle}>{title}</span>
-              <span className={styles.entryDate}>{formatDayMonth(date)}</span>
+              <span className={styles.entryDate}>{formatEventDate(entry.data)}</span>
             </div>
           </button>
         );
       }
 
       return (
-        <a
-          key={`event-${id}`}
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.entryRow}
-        >
+        <SmartLink key={`event-${id}`} href={link} className={styles.entryRow}>
           <Image
             src={icon}
             alt=""
@@ -231,9 +254,9 @@ export default function EventsCalendar() {
           />
           <div className={styles.entryText}>
             <span className={styles.entryTitle}>{title}</span>
-            <span className={styles.entryDate}>{formatDayMonth(date)}</span>
+            <span className={styles.entryDate}>{formatEventDate(entry.data)}</span>
           </div>
-        </a>
+        </SmartLink>
       );
     }
 

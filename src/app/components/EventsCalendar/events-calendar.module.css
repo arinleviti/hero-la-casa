@@ -42,31 +42,28 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-  background: none;
+  background-color: rgba(123, 166, 222, 0.16); /* light tint of #7BA6DE */
   border: none;
+  border-radius: 8px;
   text-align: left;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(40, 39, 39, 0.08);
+  padding: 0.6rem 0.5rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .entryRow:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .entryRow:hover,
 .entryRow:focus {
-  background-color: rgba(74, 119, 41, 0.06);
+  background-color: rgba(123, 166, 222, 0.28);
 }
 
 .burgerOfTheMonthRow {
   background-color: #fbf3e7;
-  border-radius: 8px;
-  padding: 0.6rem 0.5rem;
-  margin-top: 0.4rem;
-  border-bottom: none;
 }
 
 .burgerOfTheMonthRow:hover,

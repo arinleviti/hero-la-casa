@@ -42,6 +42,15 @@ const PLACEHOLDER = {
     'Esempio: un tavolo di 4 adulti e 2 bambini apre 2 buste segrete adulti (4 ÷ 2) e 2 buste segrete bambini, una a testa. Le due tipologie di busta sono separate: non si possono scambiare tra loro.',
 };
 
+// Smoothly scrolls to the calculator section instead of doing a real
+// navigation — this is an in-page jump, not a link to another page.
+function scrollToCalculator(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  document
+    .getElementById('calcolatore-buste')
+    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 export default function CompleannoPage() {
   return (
     <div className={styles.contestPage}>
@@ -52,9 +61,8 @@ export default function CompleannoPage() {
         <h1 className={styles.title}>
           <span className={styles.titleEmojis}>🎂 🎉</span>
           <br />
-          Il compleanno
-          <br />
-          di Hero&nbsp;Burger
+          Buon compleanno hero
+      
         </h1>
         <p className={styles.subtitle}>
           Dal 21 settembre al 31 ottobre, a ogni visita ritiri una busta
@@ -62,6 +70,9 @@ export default function CompleannoPage() {
           bambini fino a 13 anni. Quello che c&apos;è dentro lo scopriamo
           tutti insieme da novembre.
         </p>
+        <a href="#calcolatore-buste" onClick={scrollToCalculator} className={styles.jumpLink}>
+          Salta subito al calcolatore buste ↓
+        </a>
       </div>
 
       <Container fluid="lg">
@@ -111,7 +122,7 @@ export default function CompleannoPage() {
             <span className={styles.actLabel}>Atto II</span>
             <h2 className={styles.actTitle}>Novembre</h2>
             <p className={styles.actText}>
-              Da novembre si torna con le buste raccolte. Al tavolo, gli
+              Da novembre si torna con le buste raccolte. Alla fine del pasto, alla cassa gli
               adulti aprono in tutto 1 busta segreta adulti ogni 2 adulti
               presenti; ogni bambino, invece, apre la sua busta segreta
               bambini — una a testa. Le due tipologie restano separate:
@@ -163,7 +174,7 @@ export default function CompleannoPage() {
           </Col>
         </Row>
 
-        <Row>
+        <Row id="calcolatore-buste" className={styles.calculatorAnchor}>
           <Col>
             <EnvelopeCalculator />
           </Col>
