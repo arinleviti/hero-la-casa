@@ -44,7 +44,7 @@ export const restaurantEvents: RestaurantEvent[] = [
   {
     id: 2,
     icon: '/burger-jukebox-tiny.webp',
-    title: '🧑‍🎤Burger & Jukebox🎤',
+    title: '🍔Burger & Jukebox🎶',
     from: '2026-10-22',
     to: '2026-10-22',
     link: 'https://www.facebook.com/heroburgerpredazzo',
@@ -78,7 +78,7 @@ export const restaurantEvents: RestaurantEvent[] = [
   {
     id: 6,
     icon: '/burger-jukebox-tiny.webp',
-    title: '🧑‍🎤Burger & Jukebox🎤',
+    title: '🍔Burger & Jukebox🎶',
     from: '2026-11-26',
     to: '2026-11-26',
     link: 'https://www.facebook.com/heroburgerpredazzo',
