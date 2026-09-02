@@ -17,7 +17,7 @@ export const newsItems: NewsItems[] = [
      {
         id: 1,
         pic: "/MarqueeImgs/envelopes_stack_shrunk.png",
-        header1: "19 sett 🔜 Buste del Compleanno Hero!",
+        header1: "21 sett 🔜 Buste del Compleanno Hero!",
         header2: "Leggi il regolamento",
         urlLink: "/buste"
        

@@ -231,8 +231,8 @@ export default function EventsCalendar() {
             <Image
               src={icon}
               alt=""
-              width={28}
-              height={28}
+              width={56}
+              height={56}
               className={styles.entryIcon}
             />
             <div className={styles.entryText}>
@@ -248,8 +248,8 @@ export default function EventsCalendar() {
           <Image
             src={icon}
             alt=""
-            width={28}
-            height={28}
+            width={56}
+            height={56}
             className={styles.entryIcon}
           />
           <div className={styles.entryText}>
@@ -274,8 +274,8 @@ export default function EventsCalendar() {
         <Image
           src={burger.imageSmallUrl || '/images/placeholder.png'}
           alt=""
-          width={28}
-          height={28}
+          width={56}
+          height={56}
           className={styles.entryIcon}
         />
         <div className={styles.entryText}>
