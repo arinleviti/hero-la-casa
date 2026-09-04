@@ -48,7 +48,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     from: '2026-10-22',
     to: '2026-10-22',
     link: 'https://heroburger.plateform.app/frontpage/esperienze/e9528526631b43d3c5b394694c32f6a0',
-    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1777392357/Video-2026-04-10-13-37-10_kjtxcr.mp4',
   },
   {
     id: 3,
@@ -82,7 +82,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     from: '2026-11-26',
     to: '2026-11-26',
     link: 'https://heroburger.plateform.app/frontpage/esperienze/e9528526631b43d3c5b394694c32f6a0',
-    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1777392357/Video-2026-04-10-13-37-10_kjtxcr.mp4',
   },
   {
     id: 7,
@@ -98,6 +98,40 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🔥San Martino🔔',
     from: '2026-11-11',
     to: '2026-11-11',
+    link: 'https://www.facebook.com/heroburgerpredazzo',
+  },
+  {
+    id: 8,
+    icon: '/logos/kanta-game-logo.svg',
+    title: '🧑‍🎤Serata Kanta Game🎤',
+    from: '2026-12-03',
+    to: '2026-12-03',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
+
+  },
+  {
+    id: 9,
+    icon: '/burger-jukebox-tiny.webp',
+    title: '🍔Burger & Jukebox🎶',
+    from: '2026-12-17',
+    to: '2026-12-17',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/e9528526631b43d3c5b394694c32f6a0',
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1777392357/Video-2026-04-10-13-37-10_kjtxcr.mp4',
+  },
+  {
+    id: 10,
+    icon: '/events-icons/krampus-icon.svg',
+    title: '👹Arrivano i Krampus!⛓️',
+    from: '2026-12-06',
+    to: '2026-12-06',
+    link: 'https://www.facebook.com/heroburgerpredazzo',
+  },
+   {
+    id: 11,
+    icon: '/events-icons/santa-grump-icon.svg',
+    title: '🎅Babbo Natale e il Grinch!🤢',
+    from: '2026-12-23',
+    to: '2026-12-23',
     link: 'https://www.facebook.com/heroburgerpredazzo',
   },
 ];
