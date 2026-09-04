@@ -63,8 +63,8 @@
 .introText {
   font-family: var(--font-kalam);
   color: #5e4b3c;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -450,5 +450,9 @@
 
   .calculatorField {
     min-width: 130px;
+  }
+
+  .heroVideoWrapper {
+    width: 85%;
   }
 }
