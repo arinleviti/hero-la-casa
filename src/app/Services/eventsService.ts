@@ -38,7 +38,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🧑‍🎤Serata Kanta Game🎤',
     from: '2026-10-01',
     to: '2026-10-01',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
 
   },
   {
@@ -47,7 +47,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🍔Burger & Jukebox🎶',
     from: '2026-10-22',
     to: '2026-10-22',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/e9528526631b43d3c5b394694c32f6a0',
     videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
   },
   {
@@ -72,7 +72,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🧑‍🎤Serata Kanta Game🎤',
     from: '2026-11-05',
     to: '2026-11-05',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
 
   },
   {
@@ -81,16 +81,16 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🍔Burger & Jukebox🎶',
     from: '2026-11-26',
     to: '2026-11-26',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/e9528526631b43d3c5b394694c32f6a0',
     videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788184404/KangaGame_vpqy6l.mp4',
   },
   {
     id: 7,
     icon: '/events-icons/desmontegada-icon.svg',
-    title: 'Desmontegada',
+    title: '🍺Bavarian Fest🍺',
     from: '2026-10-04',
     to: '2026-10-04',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/3e826753b671cded01d9ced150048a17',
   },
   {
     id: 7,
@@ -108,20 +108,14 @@ export const restaurantEvents: RestaurantEvent[] = [
 export const burgerOfTheMonthEvents: BurgerOfTheMonthEvent[] = [
   {
     id: 1,
-    burgerId: 1, // burger featured this month
-    from: '2026-09-01',
-    to: '2026-09-30',
+    burgerId: 45, // burger featured this month
+    from: '2026-10-12',
+    to: '2026-11-01',
   },
   {
     id: 2,
-    burgerId: 2, // burger featured next month
-    from: '2026-10-01',
-    to: '2026-10-31',
-  },
-  {
-    id: 3,
-    burgerId: 3, // burger featured the month after
-    from: '2026-11-01',
-    to: '2026-11-30',
+    burgerId: 46, // burger featured next month
+    from: '2026-11-16',
+    to: '2026-12-06',
   },
 ];

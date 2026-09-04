@@ -10,6 +10,7 @@ export interface Burger {
   priceOptions: WeightOption[]; // replaces single price
   burgerOfTheMonth: boolean;
   olympian?: boolean;
+  onMenu?: boolean; // if explicitly false, the burger is hidden from the menu page (but still available elsewhere, e.g. the calendar)
   extras?: ExtraOption[];
   imageSmallUrl?: string;
   imageLargeUrl?: string; // optional for UI, if you have larger images
@@ -1070,7 +1071,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
-  }
+  },
   /* ,
   {
     id: 40, // unique identifier
@@ -1224,7 +1225,65 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp"
   }, */
-  
+  {
+    id: 45, // unique identifier
+    name: "HALLOWEEN",
+    ingredients: [
+      "Pane Nero",
+      "Carne di manzo",
+      "Zucca al forno",
+      "Ricotta",
+      "Pancetta grigliata",
+    ],
+    description:
+      "Un panino che celebra la stagione autunnale con un tocco di mistero: il pane nero avvolge una succulenta carne di manzo, arricchita dalla dolcezza della zucca al forno e dalla cremosità della ricotta. La pancetta grigliata aggiunge un contrasto croccante e saporito, creando un equilibrio perfetto tra gusto e stagionalità. Un'esperienza culinaria da brivido.",
+    
+    modalDescription: "Pane Nero con carne di manzo, zucca al forno, ricotta, pancetta grigliata e patatine non fritte.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 16.50 },
+    ],
+    burgerOfTheMonth: false,
+    onMenu:false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1788509261/halloween_burger_bjij7w.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1788509261/halloween_burger_bjij7w.webp"
+  },
+  {
+    id: 46, // unique identifier
+    name: "KRAMPUS",
+    ingredients: [
+      "Pane metà nero e metà rosso",
+      "Carne di maiale",
+      "Rosti di patate",
+      "Formaggio di capra",
+      "Pancetta affumicata e grigliata",
+      "Salsa bbq"
+    ],
+    description:
+      "Un burger da paura, perfetto per chi ama i sapori decisi e la tradizione alpina: il pane metà nero e metà rosso racchiude una succulenta carne di maiale, arricchita da un rosti di patate croccante e dal sapore intenso del formaggio di capra. La pancetta affumicata e grigliata aggiunge un tocco di gusto deciso, mentre la salsa bbq completa il tutto con una nota dolce e affumicata. Un'esperienza culinaria che non lascia indifferenti.",
+    
+    modalDescription: "Pane metà nero e metà rosso con carne di maiale, rosti di patate, formaggio di capra, pancetta affumicata e grigliata e salsa bbq.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["maiale"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 16.50 },
+    ],
+    burgerOfTheMonth: false,
+    onMenu:false,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1788509262/krampus_burger_cth9ou.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1788509262/krampus_burger_cth9ou.webp"
+  },
 ];
 
 

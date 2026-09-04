@@ -81,6 +81,10 @@
 .fish:hover {
   background-color: #117a8b;
 }
+/* MAIALE */
+.maiale:hover {
+  background-color: #c2708a !important;
+}
 /* Responsive shrink on mobile */
 @media (max-width: 768px) {
   .button {
