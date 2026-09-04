@@ -53,13 +53,57 @@
   color: #2f5119;
 }
 
+/* --- Blocco intro (testo + video) --- */
+
+.introRow {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+}
+
 .introText {
   font-family: var(--font-kalam);
   color: #5e4b3c;
-  font-size: 1.3rem;
-  line-height: 1.65;
-  max-width: 760px;
-  margin: 0 auto 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.heroVideoWrapper {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.heroVideo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.heroVideoSoundToggle {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.heroVideoSoundToggle:hover,
+.heroVideoSoundToggle:focus {
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .block {

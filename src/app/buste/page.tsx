@@ -28,11 +28,18 @@
  * - Premio principale: weekend per due persone. Premio principale
  *   bambini: ingresso a Gardaland. Più buste raccolte = più
  *   possibilità di vincere.
+ *
+ * VIDEO INTRO:
+ * - Il video accanto al paragrafo introduttivo è in autoplay/muted/loop,
+ *   affiancato a destra su desktop (Col md={5}) e impilato sotto al
+ *   paragrafo su mobile (ordine naturale nel DOM, Col a piena larghezza
+ *   sotto il breakpoint md). Nessuna cornice: solo angoli leggermente
+ *   smussati via .heroVideo in page.module.css.
  */
 
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import styles from './page.module.css';
 
 const PLACEHOLDER = {
@@ -76,20 +83,27 @@ export default function CompleannoPage() {
       </div>
 
       <Container fluid="lg">
-        <p className={styles.introText}>
-          Ogni anno, per il nostro compleanno, dal 21 settembre al 31
-          ottobre chi viene a cena da Hero Burger può ritirare una busta
-          segreta — una a visita, per ogni adulto e per ogni bambino
-          fino a 13 anni. <strong>Attenzione: sono due buste diverse — ognuna vince qualcosa, con premi dedicati per adulti e bambini.</strong> Gli adulti
-          ritirano la busta segreta adulti, i bambini la busta segreta
-          bambini — non sono intercambiabili. Non c&apos;è un limite: più
-          buste raccogliete, più vincerete. Il
-          primo premio è un weekend per due persone, oltre a tanti altri
-          premi in palio. Per i più piccoli, il traguardo più ambito è
-          l&apos;ingresso a Gardaland 🦕🎡🏰🎢. Le buste restano segrete —
-          nessuno può sbirciare prima del tempo. Si aprono tutte a
-          partire da novembre.
-        </p>
+        <Row className={`${styles.introRow} g-4 align-items-center`}>
+          <Col md={7}>
+            <p className={styles.introText}>
+              Ogni anno, per il nostro compleanno, dal 21 settembre al 31
+              ottobre chi viene a cena da Hero Burger può ritirare una busta
+              segreta — una a visita, per ogni adulto e per ogni bambino
+              fino a 13 anni. <strong>Attenzione: sono due buste diverse — ognuna vince qualcosa, con premi dedicati per adulti e bambini.</strong> Gli adulti
+              ritirano la busta segreta adulti, i bambini la busta segreta
+              bambini — non sono intercambiabili. Non c&apos;è un limite: più
+              buste raccogliete, più vincerete. Il
+              primo premio è <strong>un weekend per due persone al Colonia Resort</strong> a Vittorio Veneto,  <strong>nove gift card</strong> in palio, oltre a tanti altri
+              premi. Per i più piccoli, il traguardo più ambito è
+              l&apos;ingresso a Gardaland 🦕🎡🏰🎢. Le buste restano segrete —
+              nessuno può sbirciare prima del tempo. Si aprono tutte a
+              partire da novembre.
+            </p>
+          </Col>
+          <Col md={5}>
+            <IntroVideo />
+          </Col>
+        </Row>
 
         <Row className={`${styles.block} g-4 align-items-center`}>
           <Col md={6} className={styles.graphicWrapper}>
@@ -203,6 +217,52 @@ export default function CompleannoPage() {
           </Col>
         </Row>
       </Container>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------------- */
+/* Video introduttivo — autoplay muto, clic per attivare l'audio     */
+/* ---------------------------------------------------------------- */
+
+function IntroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleSound = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const nextMuted = !isMuted;
+    video.muted = nextMuted;
+    if (!nextMuted) {
+      // Alcuni browser richiedono una nuova chiamata a play() dopo aver
+      // tolto il muto in risposta a un'interazione utente.
+      video.play().catch(() => {});
+    }
+    setIsMuted(nextMuted);
+  };
+
+  return (
+    <div className={styles.heroVideoWrapper}>
+      <video
+        ref={videoRef}
+        src="https://res.cloudinary.com/dvr9t29vj/video/upload/v1788528276/202609041517-2_vyogmk.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={styles.heroVideo}
+        onClick={toggleSound}
+      />
+      <button
+        type="button"
+        className={styles.heroVideoSoundToggle}
+        onClick={toggleSound}
+        aria-label={isMuted ? 'Attiva audio video' : 'Disattiva audio video'}
+      >
+        {isMuted ? '🔇' : '🔊'}
+      </button>
     </div>
   );
 }

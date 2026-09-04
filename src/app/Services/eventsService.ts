@@ -39,6 +39,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     from: '2026-10-01',
     to: '2026-10-01',
     link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788526568/kanta-game_yzhbgw.mp4'
 
   },
   {
@@ -73,7 +74,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     from: '2026-11-05',
     to: '2026-11-05',
     link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
-
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788526568/kanta-game_yzhbgw.mp4'
   },
   {
     id: 6,
@@ -107,7 +108,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     from: '2026-12-03',
     to: '2026-12-03',
     link: 'https://heroburger.plateform.app/frontpage/esperienze/377bca57f7e0ac982c0f737c0169f9cf',
-
+    videoLink: 'https://res.cloudinary.com/dvr9t29vj/video/upload/v1788526568/kanta-game_yzhbgw.mp4'
   },
   {
     id: 9,
