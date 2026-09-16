@@ -188,7 +188,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1769631912/Oceania_w7ipdw.webp",
     backgroundImage: "",
   }, */
- /*  {
+  {
     id: 6, // unique identifier
     name: "CLASSICO",
     ingredients: [
@@ -206,7 +206,7 @@ export const burgers: Burger[] = [
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 100, price: 11.90 },{ weight: 200, price: 13.90 }],
+    priceOptions: [{ weight: 100, price: 12.40 },{ weight: 200, price: 13.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
@@ -218,9 +218,8 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639883/angus-no-bg_z07lgp.png",
-    /* backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752476282/aberdeen-resized_qno92r.jpg",
-    origin: "2227 Km" 
-  }, */
+
+  },
   {
     id: 7, // unique identifier
     name: "CHICKEN",
@@ -275,7 +274,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1777046018/sapori_primavera_1_b9kgds.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1777046018/sapori_primavera_1_b9kgds.webp",
   }, */
- ,
+ /* ,
   {
     id: 8, // unique identifier
     name: "NOSTRANO",
@@ -307,7 +306,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639875/Nostrano_rree3j.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752841650/Parco-Naturale-Paneveggio-Pale-di-San-Martino-2_1_gn2mdi.png",
     origin: "Km 0"
-  },
+  } */,
   {
     id: 9, // unique identifier
     name: "CRUDO",
@@ -338,8 +337,8 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Crudo-no-bg_q8yizx.png"
-  },
-  {
+  }
+ /*  {
     id: 10, // unique identifier
     name: "TIMBER BURGER",
     ingredients: [
@@ -367,7 +366,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639880/Timber-no-bg_woc0to.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842107/timber-team_pnlr39.jpg"
-  },
+  }, */
  /*  {
     id: 11, // unique identifier
     name: "KEPPORKO",
@@ -398,7 +397,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png", // optional for UI
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639893/Kepporko-no-bg_haupew.png"
   }, */
-  {
+  /* {
     id: 11, // unique identifier
     name: "GOLOSO",
     ingredients: [
@@ -432,25 +431,27 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839750/Hero-Il-Goloso_kci3mu.png"
 
 
-  },
+  } */,
   {
     id: 12, // unique identifier
     name: "IL TARTUFO",
     ingredients: [
+      "Carne di manzo",
       "Pane nero come il carbone",
-      "Tartare 100 g",
-      "Stracciatella di burrata",
-      "Pistacchi tritati",
+      "Crema di zucca",
+      "Robiola",
+      "Insalata gentile",
       "Scaglie di tartufo nero"
     ],
     description:
-      "Un burger che celebra il lusso dei sapori: il pane nero come il carbone racchiude una pregiata tartare di carne di bovino nostrano, arricchita dalla morbidezza della stracciatella di burrata. I pistacchi tritati aggiungono una nota croccante e aromatica, mentre le scaglie di tartufo nero donano un profumo intenso e avvolgente. Un’esperienza gastronomica unica, per chi ama indulgere nei piaceri del palato.",
-    modalDescription: "Pane nero con tartare di bovino nostrano, stracciatella di burrata, pistacchi tritati e scaglie di tartufo nero.",
+      "Un burger che celebra il lusso dei sapori autunnali: il pane nero come il carbone racchiude una vellutata crema di zucca, arricchita dalla morbidezza della robiola. L’insalata gentile aggiunge freschezza e croccantezza, mentre le scaglie di tartufo nero donano un aroma intenso e avvolgente, trasformando ogni morso in un’esperienza gourmet.",
+    modalDescription: "Pane nero con crema di zucca, robiola e scaglie di tartufo nero.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 19.90 }
+      { weight: 100, price: 18.90 },
+      { weight: 160, price: 19.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -458,8 +459,8 @@ export const burgers: Burger[] = [
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858616/TARTUFO_INVERNO_celntu.webp"
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1789559356/tartufoAutunno2026_rtvyml.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1789559356/tartufoAutunno2026_rtvyml.webp"
 
   },
   {
@@ -481,8 +482,8 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 12.90 },
-      { weight: 160, price: 13.90 }
+      { weight: 100, price: 13.50 },
+      { weight: 160, price: 14.50 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -539,7 +540,7 @@ export const burgers: Burger[] = [
     side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo", "piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 100, price: 16.50 }],
+    priceOptions: [{ weight: 200, price: 16.50 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
@@ -547,13 +548,13 @@ export const burgers: Burger[] = [
       { name: "Cheddar + Bacon nelle patate", price: 2.50 },
       { name: "Jalapeno", price: 1.50 },
       { name: "Peperoncino piccante tritato", price: 1.90 },
-      { name: "Peperoncino Scorpion Trinidad", price: 1.50 }
+      { name: "Peperoncino Scorpion Trinidad (SHU 1.463.700)", price: 1.50 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639896/Mangiafuoco-no-bg_ofnztw.png"
   },
 
- /*  {
+  {
     id: 16, // unique identifier
     name: "MARANELLO",
     ingredients: [
@@ -578,9 +579,9 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228467/maranello_yauuip.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228467/maranello_yauuip.webp"
-  }, */
+  },
 
- /*  {
+  {
     id: 17, // unique identifier
     name: "SPACCANAPOLI",
     ingredients: [
@@ -603,7 +604,7 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1775228468/spaccanapoli_znv13z.webp"
-  }, */
+  },
 
    {
     id: 18, // unique identifier
@@ -695,18 +696,17 @@ export const burgers: Burger[] = [
     id: 27, // unique identifier
     name: "SEASON BURGER",
     ingredients: [
-      "Pane integrale",
-      "Petto di pollo impanato",
-      "Pomodoro",
-      "Mozzarella di bufala",
-      "Basilico",
+      "Ciabatta croccante",
+      "Stinco di maiale sfilacciato",
+      "Crema di funchi porcini",
+      "Chips di polenta"
     ],
     description:
-      "Un burger che celebra i sapori dell'estate: il pane integrale accoglie un tenero petto di pollo impanato, arricchito dalla freschezza del pomodoro e dalla cremosità della mozzarella di bufala. Il basilico aggiunge un tocco aromatico e profumato, completando un’esperienza gustativa che racconta la bellezza dei prodotti stagionali in un panino unico.",
-      modalDescription: "Burger di pollo impanato con pomodoro, mozzarella di bufala e basilico nel pane integrale.",
+      "Un panino che celebra i sapori autunnali: la ciabatta croccante racchiude un cuore di stinco di maiale sfilacciato, tenero e ricco di sapore. La crema di funghi porcini avvolge ogni morso con note intense e vellutate, mentre le chips di polenta croccante aggiungono un tocco rustico e dorato che completa l’esperienza con un perfetto contrasto di consistenze.",
+      modalDescription: "Ciabatta croccante con stinco di maiale sfilacciato, crema ai funghi porcini e chips di polenta croccante.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
-    categories: ["pollo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    categories: ["maiale"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
       { weight: 160, price: 16.50 }
     ],
@@ -716,8 +716,8 @@ export const burgers: Burger[] = [
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png",
-    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-Season-Burger_hqq1gb.png"
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp"
 
   } ,
   
@@ -779,8 +779,8 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1761858613/SEASON_OTTOBRE_2025_ksgsif.webp"
 
   } */
-  {
-    id: 35, // unique identifier
+ /*  {
+    id: 31, // unique identifier
     name: "MYKONOS",
     ingredients: [
       "Pane 'Non siamo mica SEMI'",
@@ -809,25 +809,25 @@ export const burgers: Burger[] = [
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752842535/greek_drcjp3.png",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1754308597/mikonos-viaggiatore_ahukp5.webp",
     origin: "1260 Km"
-  },
-   /* {
-    id: 15, // unique identifier
+  } */
+   {
+    id: 32, // unique identifier
     name: "BANGKOK",
     ingredients: [
       "Petto di pollo marinato su salsa di soia",
       "Zucchine e peperoni al forno",
       "Anacardi tostati e salati",
       "Salsa thai",
-      "Pane ai semi di girasole"
+      "Pane ai semi di zucca"
     ],
     description:
-      "Un’esplosione di profumi e colori dal cuore dell’Asia: il pane ai semi di girasole racchiude un succulento petto di pollo marinato nella salsa di soia, accompagnato da zucchine e peperoni al forno per un tocco fresco e leggermente dolce. Gli anacardi tostati e salati regalano croccantezza e carattere, mentre la salsa thai lega il tutto con un equilibrio perfetto di note piccanti e aromatiche.",
-    modalDescription: "Pane ai semi di girasole con pollo marinato alla soia, verdure al forno, anacardi tostati e salsa thai.",
+      "Un’esplosione di profumi e colori dal cuore dell’Asia: il pane ai semi di zucca racchiude un succulento petto di pollo marinato nella salsa di soia, accompagnato da zucchine e peperoni al forno per un tocco fresco e leggermente dolce. Gli anacardi tostati e salati regalano croccantezza e carattere, mentre la salsa thai lega il tutto con un equilibrio perfetto di note piccanti e aromatiche.",
+    modalDescription: "Pane ai semi di zucca con pollo marinato alla soia, verdure al forno, anacardi tostati e salsa thai.",
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["pollo","burgHero","piccante"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [
-      { weight: 100, price: 13.50 }
+      { weight: 100, price: 14.90 }
     ],
     burgerOfTheMonth: false,
     extras: [
@@ -840,7 +840,7 @@ export const burgers: Burger[] = [
     backgroundImage: "",
     burgHeroUrl:"https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860539/STORY_BANKOK_pjlsct.webp",
     origin: "1260 Km"
-  }, */
+  },
  /*  {
     id: 16, // unique identifier
     name: "L'ORTOLANO",
@@ -958,7 +958,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1751639890/Green-Burger-no-bg_iiaewd.png"
   }, */
- /*  {
+  {
     id: 20, // unique identifier
     name: "QUEBEC",
     ingredients: [
@@ -966,7 +966,7 @@ export const burgers: Burger[] = [
       "Salmone affumicato marinato nello sciroppo d’acero",
       "Salvia fritta",
       "Panna acida con pepe al limone",
-      "Insalata di cavolo cappuccio"
+      "Coleslaw di cavolo cappuccio"
     ],
     description:
       "Un tuffo nei sapori del mare e della natura, racchiuso in un pane nero avvolgente. Il salmone affumicato, marinato nello sciroppo d’acero, si scioglie al morso, accompagnato dalla croccantezza dell’insalata di cavolo cappuccio. La panna acida con pepe al limone regala una nota fresca e vivace, mentre la salvia fritta aggiunge un tocco aromatico che completa questo burger unico e raffinato.",
@@ -985,35 +985,36 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1768160498/quebec_burger_baxwcj.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860801/STORY_QUEBEC_fpr6ze.webp"
-  }, */
+  },
   {
     id: 37, // unique identifier
     name: "IL KRAKEN",
     ingredients: [
       "Ciabattina croccante e morbida",
       "Tentacolo di polpo cotto a bassa temperatura",
-      "Insalatina di pomodorini e sedano",
-      "Stracciatella di burrata pugliese",
-      "Pesto di basilico senz'aglio"
+      "Olive taggiasche",
+      "Pomodori soleggiati",
+      "Filetti di acciughe",
+      "Crema di patate"
     ],
     description:
-      "Un tuffo nei sapori del mare e della natura, racchiuso in una ciabattina croccante e soffice. Il tentacolo di polpo, cotto lentamente a bassa temperatura, si scioglie al morso, accompagnato da un’insalatina fresca di pomodorini e sedano. La cremosa stracciatella di burrata pugliese avvolge il tutto, mentre il pesto di basilico, delicato e senza aglio, regala una ventata di freschezza.",
-    modalDescription: "Burger con tentacolo di polpo cotto a bassa temperatura, burrata e pesto di basilico nella ciabattina croccante.",
+      "Un burger che porta il mare nel piatto: la ciabattina croccante e morbida racchiude un tentacolo di polpo cotto a bassa temperatura, avvolto da olive taggiasche e pomodori soleggiati. I filetti di acciughe aggiungono un tocco di sapidità, mentre la crema di patate completa l’esperienza con una nota vellutata e avvolgente. Un equilibrio perfetto tra sapori intensi e freschi, per un viaggio culinario unico.",
+    modalDescription: "Burger con tentacolo di polpo, olive taggiasche, pomodori soleggiati e crema di patate nella ciabattina croccante.",
       side: "Accompagnato da patatine non fritte",
-    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    allergens: ["glutine"], // list allergens for allergy info
     categories: ["pesce"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 115, price: 18.90 }],
+    priceOptions: [{ weight: 115, price: 19.90 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
       { name: "Cheddar + Bacon nelle patate", price: 2.50 }
     ],
-    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1789560134/krakenAutunno2026_swmpsx.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839749/IL-KRAKEN_1_r2hmcp.png",
-    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843013/kraken_oloocf.png"
+    backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1789560134/krakenAutunno2026_swmpsx.webp"
   },
-  {
+  /* {
     id: 38, // unique identifier
     name: "AVISIO",
     ingredients: [
@@ -1041,8 +1042,8 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/w_800,q_auto,f_auto/v1752839752/Hero-lAvisio_a65ups.png",
     origin: "Km 0"
 
-  },
-  {
+  }, */
+ /*  {
     id: 39, // unique identifier
     name: "CAPO NORD",
     ingredients: [
@@ -1071,7 +1072,7 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752839753/CAPO-NORD_1_zcgapt.png",
     backgroundImage: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1752843271/north_cape_tgrhhm.png",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1754299227/capo-nord-viaggiatore_pwaey5.webp"
-  },
+  }, */
   /* ,
   {
     id: 40, // unique identifier
@@ -1165,17 +1166,17 @@ export const burgers: Burger[] = [
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/MONACO_atiego.webp",
     backgroundImage: "",
     burgHeroUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761860804/STORY_MONACO_xoxgfp.webp"
-  } *//* ,
+  } */
   {
-    id: 32, // unique identifier
+    id: 43, // unique identifier
     name: "RUSTICO",
     ingredients: [
-      "Carne di Angus 200g",
+      "Pane bretzel",
+      "Carne di manzo",
       "Insalata gentile",
       "Lardo",
       "Senape dolce bavarese",
       "Noci tritate",
-      "Pane bretzel"
     ],
     description:
       "Un panino dal carattere forte e autentico: il pane bretzel racchiude un succulento burger di Angus da 200g, avvolto dalla cremosità del lardo e dal tocco aromatico della senape dolce bavarese. L’insalata gentile dona freschezza, mentre le noci tritate aggiungono una nota croccante e raffinata che esalta ogni morso. Un equilibrio perfetto tra sapori decisi e genuinità montana.",
@@ -1184,17 +1185,19 @@ export const burgers: Burger[] = [
       side: "Accompagnato da patatine non fritte",
     allergens: ["glutine"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
-    priceOptions: [{ weight: 200, price: 13.90 }],
+    priceOptions: [{ weight: 100, price: 13.00 }, { weight: 200, price: 14.50 }],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Uovo al tegame", price: 2.00 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/RUSTICO_escuqt.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/RUSTICO_escuqt.webp"
-  }, */
-  /* {
+  },
+  {
     id: 26, // unique identifier
     name: "SOLEGGIATO",
     ingredients: [
@@ -1213,18 +1216,20 @@ export const burgers: Burger[] = [
     allergens: ["glutine", "latticini"], // list allergens for allergy info
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 12.90 },
-      { weight: 160, price: 13.90 },
-      { weight: 220, price: 14.90 }
+      { weight: 100, price: 13.50 },
+      { weight: 160, price: 14.50 }
     ],
     burgerOfTheMonth: false,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
-      { name: "Cheddar + Bacon nelle patate", price: 2.50 }
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Uovo al tegame", price: 2.00 }
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp"
-  }, */
+  },
   {
     id: 45, // unique identifier
     name: "HALLOWEEN",
@@ -1283,6 +1288,37 @@ export const burgers: Burger[] = [
     ],
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1788509262/krampus_burger_cth9ou.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1788509262/krampus_burger_cth9ou.webp"
+  },
+  {
+    id: 47, // unique identifier
+    name: "BUENOS AIRES",
+    ingredients: [
+      "Pane blu",
+      "Carne di diaframma",
+      "Chimichurri",
+      "Verdure pastellate",
+      "Coleslaw",
+    ],
+    description:
+      "Un burger che porta i sapori dell’Argentina nel piatto: il pane blu avvolge una succulenta carne di diaframma, arricchita dal gusto intenso del chimichurri e dalla croccantezza delle verdure pastellate. Il coleslaw aggiunge freschezza e leggerezza, creando un equilibrio perfetto tra sapori decisi e texture contrastanti. Un’esperienza culinaria che celebra la tradizione argentina con un tocco moderno.",
+    
+    modalDescription: "Pane blu con carne di diaframma, chimichurri, verdure pastellate e coleslaw.",
+      side: "Accompagnato da patatine non fritte",
+    allergens: ["glutine", "latticini"], // list allergens for allergy info
+    categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
+    priceOptions: [{ weight: 100, price: 16.50 },
+    ],
+    burgerOfTheMonth: false,
+    onMenu:true,
+    extras: [
+      { name: "Bacon nelle patate", price: 1.50 },
+      { name: "Cheddar nelle patate", price: 1.50 },
+      { name: "Cheddar + Bacon nelle patate", price: 2.50 },
+      { name: "Cipolle caramellate", price: 1.50 },
+      { name: "Uovo al tegame", price: 2.00 }
+    ],
+    imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1789560657/buenosaires_juym1z.webp",
+    imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1789560657/buenosaires_juym1z.webp"
   },
 ];
 
