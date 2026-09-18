@@ -1,0 +1,191 @@
+.wrapper {
+  margin: 3rem auto;
+  overflow-x: hidden;
+}
+
+.titleContainer {
+  font-family: var(--font-anton);
+  font-size: 2.2rem;
+  text-align: center;
+  color: #4A7729;
+  margin-bottom: 2rem;
+}
+
+.col {
+  margin-bottom: 1.5rem;
+}
+
+.monthCard {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(40, 39, 39, 0.1);
+  padding: 1rem 1.25rem;
+  height: 100%;
+}
+
+.monthHeader {
+  font-family: var(--font-anton);
+  font-size: 1.3rem;
+  color: #4A7729;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(40, 39, 39, 0.1);
+}
+
+.monthEmoji {
+  font-family: initial; /* emoji render best outside the display font stack */
+}
+
+.entryRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background-color: rgba(123, 166, 222, 0.16); /* light tint of #7BA6DE */
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.entryRow:last-child {
+  margin-bottom: 0;
+}
+
+.entryRow:hover,
+.entryRow:focus {
+  background-color: rgba(123, 166, 222, 0.28);
+}
+
+.burgerOfTheMonthRow {
+  background-color: #fbf3e7;
+}
+
+.burgerOfTheMonthRow:hover,
+.burgerOfTheMonthRow:focus {
+  background-color: #f5e6cd;
+}
+
+.entryIcon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.entryText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.entryTitle {
+  font-family: var(--font-kalam);
+  font-size: 0.95rem;
+  color: #282727;
+}
+
+.entryDate {
+  font-size: 0.8rem;
+  color: #6b6a67;
+}
+
+.emptyState {
+  font-family: var(--font-kalam);
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/* -------------- SECTION: video modal -------------- */
+
+.videoModalDialog {
+  max-width: 420px;
+}
+
+.videoModalContent {
+  border-radius: 16px;
+  border: none;
+  overflow: hidden;
+}
+
+.videoModalHeader {
+  border-bottom: 1px solid rgba(40, 39, 39, 0.1);
+  background: #fff;
+  padding: 1rem 1.25rem;
+}
+
+.videoModalTitle {
+  font-family: var(--font-anton);
+  font-size: 1.1rem;
+  color: #4A7729;
+}
+
+.videoModalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoElement {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.soundToggleButton {
+  z-index: 3;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.videoInfoLink {
+  font-family: var(--font-anton);
+  font-size: 1rem;
+  color: #edd5c3;
+  background-color: #7BA6DE;
+  align-self: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.videoInfoLink:hover,
+.videoInfoLink:focus {
+  background-color: #4A7729;
+  color: white;
+}

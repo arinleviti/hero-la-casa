@@ -28,17 +28,25 @@ export default function BurgerGrid<T extends Burger | Beer>({
     scrollToTop 
 }: Props<T>) {
 
- // Remove any burgers that are olympian
-    const visibleItems = items.filter(item => !(item as Burger).olympian);
+    // Exclude burgers that are olympian or explicitly excluded from the menu (onMenu === false).
+    // Beers don't have these fields, so they pass through untouched.
+    const visibleItems = isBeer
+        ? items
+        : items.filter(item => {
+            const burgerItem = item as Burger;
+            if (burgerItem.olympian) return false;
+            if (burgerItem.onMenu === false) return false;
+            return true;
+        });
 
-    const [filters, setFilters] = useState({
+      const [filters, setFilters] = useState({
         vegan: false,
         beef: false,
         chicken:false,
         deer: false,
         spicy: false,
         fish: false,
-        burgHero: false
+        maiale: false
     })
 
     // refs for the burger grid wrapper and filter bar
@@ -72,17 +80,17 @@ export default function BurgerGrid<T extends Burger | Beer>({
         return () => window.removeEventListener('scroll', onScroll);
     }, [showFilters]);
 
-    const filteredItems = showFilters
+        const filteredItems = showFilters
         ? (visibleItems as Burger[]).filter(item => {
             if (filters.vegan && !item.categories.includes('vegano')) return false;
-            if (filters.burgHero && !item.categories.includes('burgHero')) return false;
+            if (filters.maiale && !item.categories.includes('maiale')) return false;
             if (filters.beef && !item.categories.includes('manzo')) return false;
             if (filters.chicken && !item.categories.includes('pollo')) return false;
             if (filters.deer && !item.categories.includes('cervo')) return false;
             if (filters.spicy && !item.categories.includes('piccante')) return false;
             if (filters.fish && !item.categories.includes('pesce')) return false;
             return true;
-        }) as T[] : items;
+        }) as T[] : visibleItems;
 
     return (
 

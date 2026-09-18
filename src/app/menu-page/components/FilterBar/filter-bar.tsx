@@ -9,7 +9,7 @@ interface Filters {
   deer: boolean;
   spicy: boolean;
   fish: boolean;
-  burgHero: boolean;
+  maiale: boolean;
 }
 
 interface FilterBarProps {
@@ -99,14 +99,14 @@ export default function FilterBar({ filters, setFilters, scrollToTop }: FilterBa
             PESCE
           </ToggleButton>
           <ToggleButton
-            id="filter-burgHero"
-            value="burgHero"
-            className={`${styles.button} ${styles.burgHero}`}
+            id="filter-maiale"
+            value="maiale"
+            className={`${styles.button} ${styles.maiale}`}
             type="checkbox"
-            checked={filters.burgHero}
-            onClick={() => toggleFilter('burgHero')}
+            checked={filters.maiale}
+            onClick={() => toggleFilter('maiale')}
           >
-            BURG-HERO ✈
+            MAIALE
           </ToggleButton>
 
         </ButtonGroup >
@@ -124,7 +124,7 @@ export default function FilterBar({ filters, setFilters, scrollToTop }: FilterBa
               deer: false,
               spicy: false,
               fish: false,
-              burgHero: false,
+              maiale: false,
             });
             scrollToTop?.(); // call scrollToTop if provided
           }}
