@@ -22,12 +22,12 @@ export const newsItems: NewsItems[] = [
         urlLink: "/buste"
        
     },
-    {
+    /* {
         id: 2,
         pic: "/MarqueeImgs/hero-burger-sleeping.png",
         header1: "Hero si prende una pausa",
         header2: "Chiusura 7 -20 settembre",
-    },
+    }, */
     {
         id: 3,
         pic: "/CategoryIcons/hamb_olimpici_logo.png",

@@ -9,6 +9,11 @@ interface Props {
 }
 
 export default function BurgerSwiper({ burgers }: Props) {
+
+  const visibleBurgers = burgers.filter(burger => {
+    if (burger.onMenu === false) return false;
+    return true;
+  });
   return (
     <Container fluid className={styles.mySwiperWrapper}>
       <Row className="align-items-center">
@@ -20,7 +25,7 @@ export default function BurgerSwiper({ burgers }: Props) {
         </Col>
 
         {/* Client component renders the other Col */}
-        <BurgerSwiperClient burgers={burgers} />
+        <BurgerSwiperClient burgers={visibleBurgers} />
       </Row>
     </Container>
   );
