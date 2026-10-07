@@ -163,9 +163,11 @@ function EventVideoModal({ event, onClose }: EventVideoModalProps) {
             )}
           </button>
         </div>
-        <SmartLink href={event.link} className={styles.videoInfoLink}>
-          Clicca qui per info
-        </SmartLink>
+        {event.link && (
+          <SmartLink href={event.link} className={styles.videoInfoLink}>
+            Clicca qui per info
+          </SmartLink>
+        )}
       </Modal.Body>
     </Modal>
   );
@@ -217,24 +219,24 @@ export default function EventsCalendar() {
   const renderEntry = (entry: CalendarEntry) => {
     if (entry.kind === 'event') {
       const { id, icon, title, link, videoLink } = entry.data;
-      
+
       if (!link) {
-      return (
-        <div key={`event-${id}`} className={styles.entryRow}>       
-          <Image
-            src={icon}
-            alt=""
-            width={56}
-            height={56}
-            className={styles.entryIcon}
-          />
-          <div className={styles.entryText}>
-            <span className={styles.entryTitle}>{title}</span>
-            <span className={styles.entryDate}>{formatEventDate(entry.data)}</span>
+        return (
+          <div key={`event-${id}`} className={styles.entryRow}>
+            <Image
+              src={icon}
+              alt=""
+              width={56}
+              height={56}
+              className={styles.entryIcon}
+            />
+            <div className={styles.entryText}>
+              <span className={styles.entryTitle}>{title}</span>
+              <span className={styles.entryDate}>{formatEventDate(entry.data)}</span>
+            </div>
           </div>
-        </div>
-      );
-    }
+        );
+      }
       // Events with a videoLink open an in-page video modal instead of
       // navigating away.
       if (videoLink) {
