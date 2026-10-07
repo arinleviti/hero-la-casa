@@ -7,7 +7,7 @@ export interface RestaurantEvent {
   title: string;
   from: string; // ISO date string, e.g. '2026-09-12'. For a one-day event, set to === from.
   to: string; // ISO date string, e.g. '2026-09-12'
-  link: string;
+  link?: string;
   videoLink?: string; // optional hosted video URL (e.g. Cloudinary), played directly in an in-page modal instead of opening `link` in a new tab
 }
 
@@ -65,7 +65,7 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🧛Halloween party👻',
     from: '2026-10-31',
     to: '2026-10-31',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    link: 'https://heroburger.plateform.app/frontpage/esperienze/3a9c0cdf7849371c384251b0838b2061',
   },
   {
     id: 5,
@@ -99,7 +99,6 @@ export const restaurantEvents: RestaurantEvent[] = [
     title: '🔥San Martino🔔',
     from: '2026-11-11',
     to: '2026-11-11',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
   },
   {
     id: 8,
@@ -124,16 +123,14 @@ export const restaurantEvents: RestaurantEvent[] = [
     icon: '/events-icons/krampus-icon.svg',
     title: '👹Arrivano i Krampus!⛓️',
     from: '2026-12-06',
-    to: '2026-12-06',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    to: '2026-12-06'
   },
    {
     id: 11,
     icon: '/events-icons/santa-grump-icon.svg',
     title: '🎅Babbo Natale e il Grinch!🤢',
     from: '2026-12-23',
-    to: '2026-12-23',
-    link: 'https://www.facebook.com/heroburgerpredazzo',
+    to: '2026-12-23'
   },
 ];
 
