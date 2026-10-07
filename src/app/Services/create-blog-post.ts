@@ -53,10 +53,10 @@ async function createPost(postData: NewPost) {
 
 // Example usage
 createPost({
-  title: 'Diario di Bordo – Agosto 2026',
-  slug: 'diario-agosto-2026',
+  title: 'Diario di Bordo – Settembre 2026',
+  slug: 'diario-settembre-2026',
   excerpt:
-    'Agosto da HERO: la Limited Edition con tartare di cervo, un Ferragosto a base di spiedo con tutto lo staff, e le misteriose Buste segrete di Buon Compleanno HERO in arrivo! 🦌🔥🎁',
+    'Settembre da HERO: una serata con il Timber Team Giacomelli e la ruota della fortuna, la Festa del Boscaiolo, le ferie (anche Mauro!) e il nuovo menu autunnale! 🌲🍔🍂',
   content: `
 <style>
   .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -70,124 +70,111 @@ createPost({
 </style>
  
 <!-- Presentation image -->
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/copertina-agosto_ddpm5v.webp"
-     alt="Diario HERO Agosto 2026"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358260/copertina-settembre-26_zylb6h.webp"
+     alt="Diario HERO Settembre 2026"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
  
 <p>
 Ciao Eroi,<br/>
-agosto, per noi, non è mai stato semplicemente "il mese delle ferie".
-</p>
-<p>
-È il mese in cui succedono cose. Cose belle, cose buone, da raccontare.
-</p>
-<p>
-E questo mese abbiamo parecchio da dire.
+settembre è stato un mese bello pieno, e prima di tuffarci completamente nell'autunno vogliamo raccontarti un po' di quello che è successo da Hero – La Casa del Burger.
 </p>
  
-<h2>🦌 LA LIMITED EDITION DI AGOSTO: TARTARE DI CERVO</h2>
+<h2>🌲 UNA SERATA CON IL TIMBER TEAM</h2>
 <p>
-Per il Limited Edition del mese abbiamo deciso di fare una cosa un po' folle. Prendere un ingrediente selvaggio, elegante, fuori dagli schemi… ovvero la tartare di cervo, e abbiamo fatto quello che sappiamo fare meglio: l'abbiamo messa dentro un burger.
+Abbiamo iniziato il mese a bomba, con una serata dedicata agli amanti del bosco e, soprattutto, al nostro Timber Team Giacomelli, con cui condividiamo una bella collaborazione. Li abbiamo avuti a cena insieme al Team Bucci, anche loro protagonisti di Undercut.
 </p>
 <p>
-Perché evidentemente da Hero non riusciamo a lasciare in pace nessun ingrediente.
-</p>
-<p>
-Il risultato? Un hamburger selvaggio, elegante, deciso e completamente fuori dagli schemi. Un burger per palati curiosi, per chi davanti alla parola "cervo" non scappa… ma dice: "Ok. Fammi provare."
-</p>
-<p>
-Un limited edition che, come tutte le cose davvero speciali, non è destinato a restare per sempre. Quindi, se non l'hai ancora assaggiata, il messaggio è semplice: il cervo corre. E la Limited Edition anche.
+Sabato, per l'occasione, chi ordinava il Timber burger aveva la possibilità di girare la nostra ruota della fortuna e provare a portarsi a casa uno dei premi in palio: la maglietta ufficiale del team, il cappellino oppure una foto insieme a uno dei ragazzi del Timber Team.
 </p>
  
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/wild_maurino_vzwvfm.webp"
-       alt="Limited Edition tartare di cervo – HERO"
-       class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1754481682/wild-burger_ixpjwo.webp"
-       alt="Wild Burger con tartare di cervo – HERO"
-       class="half-img" />
-</div>
- 
-<h2>🔥 A FERRAGOSTO ABBIAMO TRADITO I BURGER</h2>
-<p>
-Sì. Lo ammettiamo. Per un giorno abbiamo tradito il nostro grande amore. Abbiamo lasciato stare burger, pane e patatine e abbiamo acceso il fuoco.
-</p>
-<p>
-Ferragosto in stile HERO = Spiedo!
-</p>
-<p>
-Carne che gira lentamente. Fuoco acceso. Bicchieri pieni. Risate. E lo staff finalmente seduto dalla parte giusta del tavolo.
-</p>
-<p>
-Quella dove non devi chiedere: "Patatine normali o al cheddar?" Ma puoi semplicemente dire: "Passami quel pezzo lì."
-</p>
-<p>
-Un pranzo tutti insieme, come si deve. Perché dietro ogni burger che arriva caldo sul tuo tavolo c'è una squadra. E ogni tanto questa squadra ha bisogno di mangiare. Parecchio.
-</p>
- 
-<div class="gallery">
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_1_greniy.webp"
-       alt="Ferragosto allo spiedo – team HERO"
-       class="half-img" />
-  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_2_uaxbqf.webp"
-       alt="Ferragosto allo spiedo – team HERO"
-       class="half-img" />
-</div>
- 
-<h2>🎁 STIAMO PREPARANDO QUALCOSA DI PERICOLOSAMENTE BELLO</h2>
-<p>
-Qui attenzione. Perché abbiamo iniziato a preparare le Buste segrete di Buon Compleanno HERO.
-</p>
-<p>
-Siamo impazienti di iniziare a distribuirle, perché per il nostro compleanno vogliamo fare un regalo noi a voi, che ci supportate e ci scegliete.
-</p>
-<p>
-Non sai cosa sono? E no, non possiamo ancora raccontarti tutto.
-</p>
- 
-<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_buste_xavdtk.webp"
-     alt="Buste segrete di Buon Compleanno HERO"
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358094/foto_timber_obxu7r.webp"
+     alt="Serata Timber Team Giacomelli – HERO"
      style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
  
 <p>
-Agosto ci ha ricordato una cosa semplice: che Hero non è solo quello che succede davanti alla piastra. È tutto quello che succede prima, durante e dopo un burger.
+Una serata diversa dal solito, tra burger, boschi, risate e un bel po' di fortuna.
+</p>
+ 
+<h2>🪓 ALLA FESTA DEL BOSCAIOLO</h2>
+<p>
+E non ci siamo fermati lì.
 </p>
 <p>
-E noi siamo felici di raccontartelo.
+La domenica siamo andati alla Festa del Boscaiolo, questa volta dall'altra parte del bancone: tutti insieme a fare il tifo per il Timber Team e a vivere una giornata all'insegna della passione per il bosco e per quello che rappresenta.
 </p>
 <p>
-E settembre? Beh… meglio non anticipare nulla. Che poi vi abituate.
+Ma soprattutto siamo andati di persona a controllare che chi aveva vinto la maglietta o il cappellino la sera prima lo stesse sfoggiando. E secondo te…? Avevano la nostra maglietta?
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358094/foto_maglietta_mp6q52.webp"
+     alt="La maglietta del Timber Team alla Festa del Boscaiolo – HERO"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<h2>🏖️ SIAMO ANDATI IN FERIE!</h2>
+<p>
+Poi, finalmente, è arrivato il momento di staccare.
 </p>
 <p>
-<strong>Ci vediamo da Hero. Portate fame. Al resto pensiamo noi.</strong><br/>
+Abbiamo cambiato aria, chi scegliendo il mare, chi la città… insomma, ognuno ha ricaricato le batterie a modo suo.
+</p>
+<p>
+<strong>E ANCHE MAURO È ANDATO IN FERIE.</strong> Cosa incredibile! Non ha perso il vizio di mangiare hamburger e si è sacrificato provando nuovi posti e ricette.
+</p>
+ 
+<div class="gallery">
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_mauro_qn1ibt.webp"
+       alt="Mauro in ferie – HERO"
+       class="half-img" />
+  <img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_mauro_2_tcgwek.webp"
+       alt="Mauro in ferie – HERO"
+       class="half-img" />
+</div>
+ 
+<h2>🍂 È ARRIVATO IL NUOVO MENU AUTUNNALE!</h2>
+<p>
+Abbiamo inserito nuove ricette, rispolverato alcuni best seller che sappiamo essere tra i vostri preferiti e, come sempre, abbiamo cercato di portare in tavola qualcosa che abbia quel sapore che ormai conoscete bene: quello di Hero.
+</p>
+ 
+<img src="https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_menu_beovig.webp"
+     alt="Nuovo menu autunnale – HERO"
+     style="display: block; margin: 0 auto 20px; max-width: 100%; height: auto; border-radius: 10px;" />
+ 
+<p>
+Settembre ci ha regalato una bella ripartenza.
+</p>
+<p>
+Ottobre è appena iniziato e abbiamo già tante cose da raccontarvi.
+</p>
+<p>
+<strong>Noi siamo pronti. E voi?</strong><br/>
 Il team HERO
 </p>
   `,
-  createdAt: new Date('2026-08-31T10:00:00Z'),
+  createdAt: new Date('2026-09-30T10:00:00Z'),
   images: [
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/copertina-agosto_ddpm5v.webp',
-      caption: 'Diario HERO Agosto 2026',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358260/copertina-settembre-26_zylb6h.webp',
+      caption: 'Diario HERO Settembre 2026',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/wild_maurino_vzwvfm.webp',
-      caption: 'Limited Edition tartare di cervo',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358094/foto_timber_obxu7r.webp',
+      caption: 'Serata con il Timber Team Giacomelli',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1754481682/wild-burger_ixpjwo.webp',
-      caption: 'Wild Burger con tartare di cervo',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358094/foto_maglietta_mp6q52.webp',
+      caption: 'La maglietta del Timber Team alla Festa del Boscaiolo',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_1_greniy.webp',
-      caption: 'Ferragosto allo spiedo',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_mauro_qn1ibt.webp',
+      caption: 'Mauro in ferie',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_spiedo_2_uaxbqf.webp',
-      caption: 'Ferragosto allo spiedo',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_mauro_2_tcgwek.webp',
+      caption: 'Mauro in ferie',
     },
     {
-      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1787925925/foto_buste_xavdtk.webp',
-      caption: 'Buste segrete di Buon Compleanno HERO',
+      url: 'https://res.cloudinary.com/dvr9t29vj/image/upload/v1791358093/foto_menu_beovig.webp',
+      caption: 'Nuovo menu autunnale',
     },
   ],
 });
