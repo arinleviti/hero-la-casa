@@ -1249,8 +1249,8 @@ export const burgers: Burger[] = [
     categories: ["manzo"], // e.g., vegan, vegetarian, fish, beef, spicy...
     priceOptions: [{ weight: 100, price: 16.50 },
     ],
-    burgerOfTheMonth: false,
-    onMenu:false,
+    burgerOfTheMonth: true,
+    onMenu:true,
     extras: [
       { name: "Bacon nelle patate", price: 1.50 },
       { name: "Cheddar nelle patate", price: 1.50 },
