@@ -1230,7 +1230,7 @@ export const burgers: Burger[] = [
     imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1761858613/SOLEGGIATO_OTTOBRE_2025_zmsuvo.webp"
   },
-  {
+ /*  {
     id: 45, // unique identifier
     name: "HALLOWEEN",
     ingredients: [
@@ -1258,7 +1258,7 @@ export const burgers: Burger[] = [
     ],
      imageSmallUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/c_fill,g_auto,w_250,q_auto,f_auto/v1788509261/halloween_burger_bjij7w.webp",
     imageLargeUrl: "https://res.cloudinary.com/dvr9t29vj/image/upload/v1788509261/halloween_burger_bjij7w.webp"
-  },
+  }, */
   {
     id: 46, // unique identifier
     name: "KRAMPUS",
