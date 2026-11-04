@@ -312,8 +312,9 @@ export default function EventsCalendar() {
       <div className={styles.titleContainer}>
         <h2>PROSSIMI EVENTI</h2>
       </div>
-      <Row>
-        {monthColumns.map((column) => (
+      <Row className="justify-content-center">
+        {monthColumns.filter((column) => column.entries.length > 0).map((column) => 
+        (
           <Col
             key={`${column.year}-${column.month}`}
             xs={12}

@@ -46,7 +46,7 @@ export const heroImage = {
 }
 
 export const videoData = {
-	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/v1791375287/halloween26_r7vhvg.mp4",
+	src: "https://res.cloudinary.com/dvr9t29vj/video/upload/v1793784019/kanta-game-small_eq7hlo.mp4",
 	title: "Video Artisti"
 }
 export const textVideoData = {

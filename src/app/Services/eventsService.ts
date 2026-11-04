@@ -34,7 +34,7 @@ export type CalendarEntry =
 export const restaurantEvents: RestaurantEvent[] = [
   {
     id: 1,
-    icon: '/logos/kanta-game-logo.svg',
+    icon: '/logos/kanta-game-logo.webp',
     title: '🧑‍🎤Serata Kanta Game🎤',
     from: '2026-10-01',
     to: '2026-10-01',
@@ -69,7 +69,7 @@ export const restaurantEvents: RestaurantEvent[] = [
   },
   {
     id: 5,
-    icon: '/logos/kanta-game-logo.svg',
+    icon: '/logos/kanta-game-logo.webp',
     title: '🧑‍🎤Serata Kanta Game🎤',
     from: '2026-11-05',
     to: '2026-11-05',
@@ -102,7 +102,7 @@ export const restaurantEvents: RestaurantEvent[] = [
   },
   {
     id: 8,
-    icon: '/logos/kanta-game-logo.svg',
+    icon: '/logos/kanta-game-logo.webp',
     title: '🧑‍🎤Serata Kanta Game🎤',
     from: '2026-12-03',
     to: '2026-12-03',
